@@ -276,8 +276,24 @@
       {%- endif -%}
 
       {%- liquid
-        if block.settings.button_link_1 != blank and block.settings.button_link_1_type == 'card'
-          echo '<a href="' | append: block.settings.button_link_1 | append: '" class="section-hero__link">&nbsp;</a>'
+        comment
+          Make the whole hero banner clickable ONLY when the layout is an overlay banner (hero-banner--full).
+          This avoids making split layouts (image + separate text) behave like a linked image.
+          Also avoids invalid nested anchors (we use a separate overlay link element).
+        endcomment
+
+        assign overlay_href = blank
+        if block.settings.button_link_1 != blank
+          assign overlay_href = block.settings.button_link_1
+        elsif block.settings.button_link_2 != blank
+          assign overlay_href = block.settings.button_link_2
+        endif
+
+        assign overlay_label = block.settings.button_label_1 | default: block.settings.button_label_2 | default: block.settings.heading
+        assign overlay_label = overlay_label | strip_html | escape
+
+        if overlay_href != blank and block.settings.banner_layout == 'hero-banner--full'
+          echo '<a href="' | append: overlay_href | append: '" class="section-hero__link" aria-label="' | append: overlay_label | append: '"></a>'
         endif
       -%}
 
