@@ -152,9 +152,39 @@
                           {%- if block.settings.page != blank -%}
                             {{- block.settings.page.content -}}
                           {%- elsif block.settings.content contains '[description]' -%}
-                            {{- product.description -}}
+                            {%- liquid
+                              assign desc_html = product.description
+
+                              assign needs_decode = false
+                              if desc_html contains '&lt;'
+                                assign needs_decode = true
+                              elsif desc_html contains '&amp;lt;'
+                                assign needs_decode = true
+                              endif
+
+                              if needs_decode
+                                assign desc_html = desc_html | replace: '&amp;lt;', '<' | replace: '&amp;gt;', '>' | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&'
+                              endif
+
+                              echo desc_html
+                            -%}
                           {%- elsif block.settings.content != blank -%}
-                            {{- block.settings.content -}}
+                            {%- liquid
+                              assign content_html = block.settings.content
+
+                              assign needs_decode = false
+                              if content_html contains '&lt;'
+                                assign needs_decode = true
+                              elsif content_html contains '&amp;lt;'
+                                assign needs_decode = true
+                              endif
+
+                              if needs_decode
+                                assign content_html = content_html | replace: '&amp;lt;', '<' | replace: '&amp;gt;', '>' | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&'
+                              endif
+
+                              echo content_html
+                            -%}
                           {%- endif -%}
                         </div>
                       </div>
@@ -182,9 +212,39 @@
                           {%- if block.settings.page != blank -%}
                             {{- block.settings.page.content -}}
                           {%- elsif block.settings.content contains '[description]' -%}
-                            {{- product.description -}}
+                            {%- liquid
+                              assign desc_html = product.description
+
+                              assign needs_decode = false
+                              if desc_html contains '&lt;'
+                                assign needs_decode = true
+                              elsif desc_html contains '&amp;lt;'
+                                assign needs_decode = true
+                              endif
+
+                              if needs_decode
+                                assign desc_html = desc_html | replace: '&amp;lt;', '<' | replace: '&amp;gt;', '>' | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&'
+                              endif
+
+                              echo desc_html
+                            -%}
                           {%- elsif block.settings.content != blank -%}
-                            {{- block.settings.content -}}
+                            {%- liquid
+                              assign content_html = block.settings.content
+
+                              assign needs_decode = false
+                              if content_html contains '&lt;'
+                                assign needs_decode = true
+                              elsif content_html contains '&amp;lt;'
+                                assign needs_decode = true
+                              endif
+
+                              if needs_decode
+                                assign content_html = content_html | replace: '&amp;lt;', '<' | replace: '&amp;gt;', '>' | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&'
+                              endif
+
+                              echo content_html
+                            -%}
                           {%- endif -%}
                         </div>
                       </div>
