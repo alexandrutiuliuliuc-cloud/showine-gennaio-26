@@ -168,20 +168,10 @@
 
     {% render 'subify-snippet' %}
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll('form[action*="/contact"]').forEach(form => {
-          if (form.dataset && form.dataset.noReturnTo === 'true') return;
-          if (form.querySelector('input[name="contact[email]"]')) {
-            let input = document.createElement("input");
-            input.type = "hidden";
-            input.name = "return_to";
-            input.value = "/pages/grazie-per-l-iscrizione";
-            form.appendChild(input);
-          }
-        });
-      });
-    </script>
+    {%- comment -%}
+      Disabled: do not force redirects after contact/newsletter submissions.
+      Let Shopify show the in-page success message instead.
+    {%- endcomment -%}
   
   <!-- auto: open only Price filter -->
   <script src="{{ 'z-open-price-filter.js' | asset_url }}" defer></script>

@@ -223,7 +223,7 @@
     "label": "Contatto",
     "message": "Messaggio",
     "message_placeholder": "Il tuo messaggio",
-    "success_message": "Grazie per averci contattato!",
+    "success_message": "Abbiamo ricevuto la tua richiesta, verrai contattato al più presto.",
     "submit": "Invia messaggio"
   },
   "customer": {
