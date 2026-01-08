@@ -203,6 +203,29 @@
                 {{ 'collection.product_count_html' | t: product_count: results.products_count, count: results.all_products_count }}
               {%- endif -%}
             </span>
+            {%- liquid
+              comment
+                Progressbar "prodotti mostrati / totali":
+                - total = risultati correnti (dopo filtri) dove possibile
+                - shown = calcolato via JS contando i <product-card> renderizzati
+              endcomment
+
+              assign total_for_progress = results.results_count | default: results.products_count | default: results.all_products_count
+              if total_for_progress == blank or total_for_progress < 1
+                assign total_for_progress = 0
+              endif
+            -%}
+            {%- if total_for_progress > 0 -%}
+              <span
+                class="collection-facets__products-progress"
+                data-products-progress
+                data-total="{{ total_for_progress }}"
+                role="progressbar"
+                aria-label="Prodotti mostrati"
+              >
+                <span class="collection-facets__products-progress-bar" data-products-progress-bar></span>
+              </span>
+            {%- endif -%}
           </div>
         </div>
       {%- endif -%}

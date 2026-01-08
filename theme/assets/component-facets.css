@@ -34,6 +34,23 @@ facets-clear-filters {
   display: flex;
   flex-direction: column;
 }
+
+/* Products shown / total progressbar */
+.collection-facets__products-progress {
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: 0.8rem;
+  background: rgba(var(--color-foreground), 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.collection-facets__products-progress-bar {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: rgba(var(--color-foreground), 0.8);
+}
 @media screen and (min-width: 750px) {
   .collection-facets__status .collection-facets__product-count {
     color: rgba(var(--color-foreground), 1);
@@ -236,6 +253,100 @@ html.js .facets__drawer .drawer__content, html.no-js .facets__drawer .drawer__co
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1.6rem;
   color: rgb(var(--color-heading-text));
+}
+
+/* Price slider (replace numeric inputs UI) */
+.facets__price--slider {
+  grid-template-columns: 1fr;
+  row-gap: 1.2rem;
+}
+.facets__price--slider .facets__price-row {
+  display: none;
+}
+.facets__price-slider {
+  /* SIMPLE + CLEAN dual range slider */
+  --ps-thumb: 14px;
+  --ps-track: 3px;
+  --ps-inset: calc(var(--ps-thumb) / 2);
+
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 1.6rem; /* room for labels */
+}
+.facets__price-slider-track {
+  position: relative;
+  margin-inline: var(--ps-inset);
+  margin-top: calc((var(--ps-thumb) - var(--ps-track)) / 2);
+  height: var(--ps-track);
+  border-radius: 999px;
+  background: rgba(var(--color-foreground), 0.15);
+}
+.facets__price-slider-range {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0%;
+  right: 0%;
+  border-radius: 999px;
+  background: rgba(var(--color-foreground), 0.8);
+}
+.facets__price-slider-input {
+  position: absolute;
+  left: var(--ps-inset);
+  right: var(--ps-inset);
+  top: 0;
+  height: var(--ps-thumb);
+  width: auto;
+  margin: 0;
+  padding: 0;
+
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+.facets__price-slider-input::-webkit-slider-runnable-track {
+  background: transparent;
+  border: none;
+  height: var(--ps-track);
+}
+.facets__price-slider-input::-webkit-slider-thumb {
+  pointer-events: auto;
+  -webkit-appearance: none;
+  appearance: none;
+  width: var(--ps-thumb);
+  height: var(--ps-thumb);
+  border-radius: 50%;
+  background: rgb(var(--color-background));
+  border: 2px solid rgba(var(--color-foreground), 0.9);
+  box-sizing: border-box;
+  margin-top: calc((var(--ps-track) - var(--ps-thumb)) / 2);
+}
+.facets__price-slider-input::-moz-range-track {
+  background: transparent;
+  border: none;
+  height: var(--ps-track);
+}
+.facets__price-slider-input::-moz-range-thumb {
+  width: var(--ps-thumb);
+  height: var(--ps-thumb);
+  border-radius: 50%;
+  background: rgb(var(--color-background));
+  border: 2px solid rgba(var(--color-foreground), 0.9);
+  box-sizing: border-box;
+}
+.facets__price-slider-input::-moz-range-progress {
+  background: transparent;
+}
+.facets__price-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-static-sm);
+  color: rgba(var(--color-foreground), 0.8);
+  margin-top: 0.9rem;
+  padding-inline: var(--ps-inset);
 }
 
 .facets__price-row {
@@ -486,7 +597,8 @@ html.js .facets__accordion-section {
 }
 
 html.js .facets__accordion-body {
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .facets__accordion .facets__list,

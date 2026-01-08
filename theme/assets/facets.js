@@ -88,6 +88,8 @@ class FacetFiltersForm extends HTMLElement {
       .forEach((element) => {
         element.classList.add('scroll-trigger--cancel');
       });
+
+    if (typeof updateProductsShownProgress === 'function') updateProductsShownProgress();
   }
 
   static renderProductCount(html) {
@@ -100,6 +102,8 @@ class FacetFiltersForm extends HTMLElement {
       containerDesktop.innerHTML = count;
       containerDesktop.classList.remove('loading');
     }
+
+    if (typeof updateProductsShownProgress === 'function') updateProductsShownProgress();
   }
 
   static renderFilters(html, event) {
@@ -257,9 +261,9 @@ class FacetFiltersForm extends HTMLElement {
           params.append(input.name, input.value);
         }
       });
-      // get all price inputs
-      const priceInputs = form.querySelectorAll('input:not([type="checkbox"])');
-      priceInputs.forEach(input => {
+      // get all non-checkbox inputs that should be submitted (exclude range sliders or nameless inputs)
+      const otherInputs = form.querySelectorAll('input[name]:not([type="checkbox"]):not([type="range"])');
+      otherInputs.forEach(input => {
         if (input.value) {
           params.set(input.name, input.value);
         }
@@ -289,16 +293,73 @@ FacetFiltersForm.setListeners();
 class PriceRange extends HTMLElement {
   constructor() {
     super();
-    this.querySelectorAll('input').forEach((element) => {
+
+    this.minInput = this.querySelector('input[data-price-input="min"]');
+    this.maxInput = this.querySelector('input[data-price-input="max"]');
+
+    this.sliderMin = this.querySelector('[data-price-slider-min]');
+    this.sliderMax = this.querySelector('[data-price-slider-max]');
+    this.sliderRange = this.querySelector('[data-price-slider-range]');
+    this.minLabel = this.querySelector('[data-price-slider-min-label]');
+    this.maxLabel = this.querySelector('[data-price-slider-max-label]');
+    this.currencySymbol = this.getAttribute('data-currency-symbol') || '';
+
+    if (!this.minInput || !this.maxInput) return;
+
+    [this.minInput, this.maxInput].forEach((element) => {
       element.addEventListener('change', this.onRangeChange.bind(this));
       element.addEventListener('keydown', this.onKeyDown.bind(this));
     });
+
+    if (this.sliderMin && this.sliderMax) {
+      this.sliderMin.addEventListener('input', () => this.onSliderInput('min'));
+      this.sliderMax.addEventListener('input', () => this.onSliderInput('max'));
+    }
+
     this.setMinAndMaxValues();
+    this.syncFromInputsToSlider();
+  }
+
+  parseNum(v) {
+    if (v == null) return 0;
+    const s = String(v).trim().replace(',', '.');
+    const n = Number(s);
+    return Number.isFinite(n) ? n : 0;
+  }
+
+  formatMoneyLike(v) {
+    const n = this.parseNum(v);
+    return `${this.currencySymbol}${n}`;
+  }
+
+  onSliderInput(which) {
+    if (!this.sliderMin || !this.sliderMax) return;
+
+    const min = this.parseNum(this.sliderMin.value);
+    const max = this.parseNum(this.sliderMax.value);
+
+    if (which === 'min' && min > max) this.sliderMin.value = String(max);
+    if (which === 'max' && max < min) this.sliderMax.value = String(min);
+
+    // write to real inputs Shopify reads
+    this.minInput.value = this.sliderMin.value;
+    this.maxInput.value = this.sliderMax.value;
+
+    // trigger events:
+    // - change: keep internal validation logic (this element listens on change)
+    // - input: FacetFiltersForm listens on `input` to submit filters
+    this.minInput.dispatchEvent(new Event('change', { bubbles: true }));
+    this.maxInput.dispatchEvent(new Event('change', { bubbles: true }));
+    this.minInput.dispatchEvent(new Event('input', { bubbles: true }));
+    this.maxInput.dispatchEvent(new Event('input', { bubbles: true }));
+
+    this.syncSliderUI();
   }
 
   onRangeChange(event) {
     this.adjustToValidValues(event.currentTarget);
     this.setMinAndMaxValues();
+    this.syncFromInputsToSlider();
   }
 
   onKeyDown(event) {
@@ -309,9 +370,8 @@ class PriceRange extends HTMLElement {
   }
 
   setMinAndMaxValues() {
-    const inputs = this.querySelectorAll('input');
-    const minInput = inputs[0];
-    const maxInput = inputs[1];
+    const minInput = this.minInput;
+    const maxInput = this.maxInput;
 
     if (maxInput.value) {
       minInput.setAttribute('data-max', maxInput.value);
@@ -327,16 +387,106 @@ class PriceRange extends HTMLElement {
   }
 
   adjustToValidValues(input) {
-    const value = Number(input.value);
-    const min = Number(input.getAttribute('min')) || 0; // Default to input's min attribute
-    const max = Number(input.getAttribute('max')); // Default to input's max attribute
+    const value = this.parseNum(input.value);
+    const min = this.parseNum(input.getAttribute('min')) || 0;
+    const max = this.parseNum(input.getAttribute('max'));
 
     if (!isNaN(min) && value < min) input.value = min;
     if (!isNaN(max) && value > max) input.value = max;
   }
+
+  syncFromInputsToSlider() {
+    if (!this.sliderMin || !this.sliderMax) return;
+
+    const min = this.minInput.value || this.sliderMin.getAttribute('min') || '0';
+    const max = this.maxInput.value || this.sliderMax.getAttribute('max') || this.sliderMax.getAttribute('max');
+
+    this.sliderMin.value = min;
+    this.sliderMax.value = max;
+
+    if (this.parseNum(this.sliderMin.value) > this.parseNum(this.sliderMax.value)) {
+      this.sliderMin.value = this.sliderMax.value;
+    }
+
+    this.syncSliderUI();
+  }
+
+  syncSliderUI() {
+    if (!this.sliderMin || !this.sliderMax) return;
+
+    const min = this.parseNum(this.sliderMin.value);
+    const max = this.parseNum(this.sliderMax.value);
+    const minAttr = this.parseNum(this.sliderMin.getAttribute('min') || 0);
+    const maxAttr = this.parseNum(this.sliderMax.getAttribute('max') || 0);
+    const span = maxAttr - minAttr || 1;
+
+    const leftPct = ((min - minAttr) / span) * 100;
+    const rightPct = ((maxAttr - max) / span) * 100;
+
+    if (this.sliderRange) {
+      this.sliderRange.style.left = `${Math.max(0, Math.min(100, leftPct))}%`;
+      this.sliderRange.style.right = `${Math.max(0, Math.min(100, rightPct))}%`;
+    }
+
+    if (this.minLabel) this.minLabel.textContent = this.formatMoneyLike(this.sliderMin.value);
+    if (this.maxLabel) this.maxLabel.textContent = this.formatMoneyLike(this.sliderMax.value);
+  }
 }
 
 customElements.define('price-range', PriceRange);
+
+function updateProductsShownProgress() {
+  const progress = document.querySelector('[data-products-progress]');
+  if (!progress) return;
+
+  // Prefer parsing the already-rendered count text (source of truth in the UI),
+  // e.g. "12 di 15 prodotti" / "12 of 15 products".
+  let shown = 0;
+  let total = 0;
+  const countEl = document.getElementById('ProductCount');
+  if (countEl) {
+    const text = (countEl.textContent || '').replace(/\s+/g, ' ').trim();
+    // Try "X di Y" or "X of Y"
+    const m = text.match(/(\d+)\s*(?:di|of)\s*(\d+)/i);
+    if (m) {
+      shown = Number(m[1]);
+      total = Number(m[2]);
+    } else {
+      // Fallback: first two integers in the string
+      const nums = text.match(/\d+/g);
+      if (nums && nums.length >= 2) {
+        shown = Number(nums[0]);
+        total = Number(nums[1]);
+      }
+    }
+  }
+
+  // Fallback to dataset total + DOM count if parsing failed
+  if (!total) total = Number(progress.dataset.total || 0);
+  if (!shown) shown = document.querySelectorAll('#product-grid product-card').length;
+
+  if (!total) return;
+
+  const bar = progress.querySelector('[data-products-progress-bar]');
+  if (!bar) return;
+
+  const pct = Math.max(0, Math.min(100, (shown / total) * 100));
+  bar.style.width = `${pct}%`;
+
+  progress.setAttribute('aria-valuemin', '0');
+  progress.setAttribute('aria-valuemax', String(total));
+  progress.setAttribute('aria-valuenow', String(shown));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateProductsShownProgress();
+
+  const grid = document.getElementById('product-grid');
+  if (!grid) return;
+
+  const mo = new MutationObserver(() => updateProductsShownProgress());
+  mo.observe(grid, { childList: true, subtree: true });
+});
 
 class FacetRemove extends HTMLElement {
   constructor() {

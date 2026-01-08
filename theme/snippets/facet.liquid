@@ -92,47 +92,85 @@
             {%- endfor -%}
           </ul>
         {%- when 'price_range' -%}
-          <price-range class="facets__price">
+          {%- liquid
+            comment
+              IMPORTANT:
+              - `filter.range_max` and `filter.min_value.value` / `filter.max_value.value` are amounts in cents.
+              - For slider + input[type=number] we use major units (e.g. 19.99) via divided_by: 100.0 (locale-agnostic).
+            endcomment
+
+            assign range_max_major = filter.range_max | divided_by: 100.0
+
+            assign current_min_major = 0
+            if filter.min_value.value
+              assign current_min_major = filter.min_value.value | divided_by: 100.0
+            endif
+
+            assign current_max_major = range_max_major
+            if filter.max_value.value
+              assign current_max_major = filter.max_value.value | divided_by: 100.0
+            endif
+          -%}
+
+          <price-range class="facets__price facets__price--slider" data-currency-symbol="{{ cart.currency.symbol }}">
+            <div class="facets__price-slider" data-price-slider>
+              <div class="facets__price-slider-track" aria-hidden="true">
+                <span class="facets__price-slider-range" data-price-slider-range></span>
+              </div>
+
+              <input
+                type="range"
+                class="facets__price-slider-input facets__price-slider-input--min"
+                min="0"
+                max="{{ range_max_major }}"
+                step="1"
+                value="{{ current_min_major }}"
+                data-price-slider-min
+              >
+
+              <input
+                type="range"
+                class="facets__price-slider-input facets__price-slider-input--max"
+                min="0"
+                max="{{ range_max_major }}"
+                step="1"
+                value="{{ current_max_major }}"
+                data-price-slider-max
+              >
+
+              <div class="facets__price-slider-labels">
+                <span data-price-slider-min-label></span>
+                <span data-price-slider-max-label></span>
+              </div>
+            </div>
+
+            {% comment %} Hidden inputs that Shopify reads for the actual filter submission (kept in DOM) {% endcomment %}
             <div class="facets__price-row">
               <span>{{- cart.currency.symbol -}}</span>
-
               {%-
                 liquid
                 assign label = 'collection.filters_from' | t
                 assign filter_label = filter.label | escape
                 assign id = 'Filter-' | append: filter_label | append: '-GTE'
-                assign input_placeholder = '0' | money_without_currency
-                if filter.min_value.value
-                  assign value = filter.min_value.value | money_without_currency
-                endif
-                assign max = filter.range_max | money_without_currency
+                assign input_placeholder = '0'
+                assign max = range_max_major
+                assign value = current_min_major
 
-                render 'text-input', type: 'number', class: 'facets__price-field' name: filter.min_value.param_name, id: id, label: label, placeholder: input_placeholder, min: 0, max: max, hide_label: false
-
-                assign label = nil
-                assign id = nil
-                assign value = nil
-                assign max = nil
+                render 'text-input', type: 'number', class: 'facets__price-field', name: filter.min_value.param_name, id: id, value: value, label: label, placeholder: input_placeholder, min: 0, max: max, hide_label: false, attr: 'data-price-input="min"'
               -%}
             </div>
+
             <div class="facets__price-row">
               <span>{{- cart.currency.symbol -}}</span>
               {%- liquid
                 assign label = 'collection.filters_to' | t
                 assign filter_label = filter.label | escape
                 assign id = 'Filter-' | append: filter_label | append: '-LTE'
-                assign input_placeholder = filter.range_max | money_without_currency
-                if filter.max_value.value
-                  assign value = filter.max_value.value | money_without_currency
-                endif
-                assign max = filter.range_max | money_without_currency
+                assign input_placeholder = range_max_major
+                assign max = range_max_major
+                assign value = current_max_major
 
-                render 'text-input', type: 'number', class: 'facets__price-field' name: filter.max_value.param_name, id: id, value: value, label: label, placeholder: input_placeholder, min: 0, max: max, hide_label: false
-
-                assign label = nil
-                assign id = nil
-                assign value = nil
-                assign max = nil
+                render 'text-input', type: 'number', class: 'facets__price-field', name: filter.max_value.param_name, id: id, value: value, label: label, placeholder: input_placeholder, min: 0, max: max, hide_label: false, attr: 'data-price-input="max"'
               -%}
             </div>
           </price-range>
