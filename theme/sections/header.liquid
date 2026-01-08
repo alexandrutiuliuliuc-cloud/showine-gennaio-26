@@ -443,7 +443,6 @@
       {%- capture header_utils -%}
         <nav class="header__utils">
           <ul class="header__utils-items list-unstyled">
-            @@additional_links_placeholder@@
           {% comment %} 
             {%- if section.settings.country_drawer_header -%}
               <li class="header__utils-item">
@@ -509,10 +508,8 @@
 
       {%- liquid
         assign header_additional_links_nav = header_additional_links | replace: '@@type@@', 'nav'
-        assign header_additional_links_utils = header_additional_links | replace: '@@type@@', 'utils'
 
         assign header_nav_additional_links = header_nav | replace_first: '@@additional_links_placeholder@@', header_additional_links_nav
-        assign header_utils_additional_links = header_utils | replace_first: '@@additional_links_placeholder@@', header_additional_links_utils
 
         assign header_nav = header_nav | remove_first: '@@additional_links_placeholder@@'
         assign header_utils = header_utils | remove_first: '@@additional_links_placeholder@@'
@@ -538,287 +535,19 @@
     <div class="header__search-center">
       {%- render 'search', with input_id: 'home-fixed', input_class: ' js-search-home' -%}
     </div>
-    {{ header_utils_additional_links }}
+    {{ header_utils }}
 {%- endcase -%}
+
+</div>
 
 <!-- Navbar sotto -->
 <div class="header__nav-below">
   {{ header_nav_additional_links }}
 </div>
-
 </div>
 </div>
-</div>
-
-<style>
-
-@media (max-width: 989px) {
-  .header__inner {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-  }
-
-  .header__search-center {
-    order: 3;                 
-    width: 100%;
-
-  }
-
-  .header__search-center .predictive-search__input-wrapper {
-    max-width: 100%;
-  }
-
-  .header__inner {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-  }
 
 
-  /* keep search always visible */
-}
-
-#header,
-#header .container,
-.header__inner,
-.header__nav-below { overflow: visible; }
-
-.header__nav-below { 
-  margin-top: .25rem;
-  position: relative;
-  z-index: 12;                 
-}
-
-.header__nav-item .header__nav-link:not(:focus)+.header__nav-dropdown {
-    margin-top: 5px;
-    padding-top: 12px;
-    transition-delay: 0s;
-    z-index: 1;
-}
-
-
-.header__inner::after { pointer-events: none; }
-
-
-.header__nav-below > .header__nav {
-  display: flex;
-  justify-content: center;
-}
-
-.header__nav-dropdown { z-index: 50; }
-
-
-.search-bar-fixed-wrapper{
-  position:fixed;left:0;right:0;
-  background:#fff;padding:1rem 1.5rem;
-  box-shadow:0 2px 6px rgba(0,0,0,.08);
-  z-index:9;
-  transition:opacity .45s cubic-bezier(.4,0,.2,1),
-             transform .45s cubic-bezier(.4,0,.2,1);
-}
-
-
-.search-bar-fixed-wrapper.is-hidden{
-  opacity:0;transform:translateY(-100%);pointer-events:none;
-}
-
-
-body.menu-open .search-bar-fixed-wrapper{
-  opacity:0;pointer-events:none;      
-}
-
-.search-bar-fixed-wrapper .predictive-search__input-wrapper{max-width:none;width:100%;}
-.search-bar-fixed-wrapper .predictive-search__search{display:none;}
-.search-bar-fixed-wrapper .predictive-search{
-  max-height:var(--search-body-height,60vh);overflow-y:auto;padding-inline:0;
-}
-.search-fixed-proxy .predictive-search__results{position:relative;}
-.search-fixed-proxy .predictive-search__results>.predictive-search__col:last-child{
-  margin-block-start:var(--spacing-7);
-}
-  .search__controls .drawer__button-close {
-  display: none;
-}
-  .search-bar-fixed-wrapper {
-  background-color: transparent;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.search-bar-fixed-wrapper.has-bg {
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
-
-.search-bar-fixed-wrapper .search__button svg {
-  color: #fff;
-}
-
-.search-bar-fixed-wrapper.has-bg .search__button svg {
-  color: #222;
-}
-
-.search-bar-fixed-wrapper.has-bg {
-  color: #222;
-}
-
-.search-bar-fixed-wrapper.has-bg .predictive-search__input-wrapper input,
-.search-bar-fixed-wrapper.has-bg .predictive-search__input-wrapper svg {
-  color: #222;
-  fill: #222;
-}
-.search-bar-fixed-wrapper ::placeholder {
-  color: white;
-  opacity: 1;
-}
-
-.search-bar-fixed-wrapper.has-bg ::placeholder {
-  color: #555;
-}
-
-body:not(.template--index):not(.template--arredamento-cantina-vino) .search-bar-fixed-wrapper input::placeholder {
-  color: #555;
-}
-
-body:not(.template--index):not(.template--arredamento-cantina-vino) .search__button svg {
-  color: #000;
-}
-
-</style>
-
-<script>
-(()=>{
-  /* keep search always visible (no hiding based on drawers) */
-
-(() => {
-  const header = document.querySelector("#header");
-  if (!header) return;
-
-  const body = document.body;
-  // Detect real transparent-header context (hero/banner sections add .header-is-transparent)
-  const hasTransparentHeaderContext = () => !!document.querySelector(".header-is-transparent");
-
-  const updateHeaderBg = () => {
-    const isTransparent = hasTransparentHeaderContext() && window.scrollY === 0;
-    const shouldHaveBg = !isTransparent;
-    header.classList.toggle("has-bg", shouldHaveBg);
-  };
-
-  document.addEventListener("DOMContentLoaded", updateHeaderBg);
-  document.addEventListener("scroll", updateHeaderBg, { passive: true });
-  window.addEventListener("resize", updateHeaderBg, { passive: true });
-  updateHeaderBg();
-})();
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const navDrawer = document.getElementById("Navigation-drawer-header"); // il <details> del menu
-
-  if (!navDrawer) return;
-});
-
-  const bar    = document.getElementById('search-bar-fixed');
-  const header = document.querySelector('#header');
-  const body   = document.body;
-  if(!bar||!header) return;
-
-  const HIDE=300,SHOW=5,GAP=20;
-  const setOffset=()=>{
-    const top=header.getBoundingClientRect().bottom;
-    bar.style.top=`${top}px`;
-    const free=innerHeight-(top+bar.offsetHeight)-GAP;
-    document.documentElement.style.setProperty('--search-body-height',`${free}px`);
-  };
-const handleScroll = () => {
-  if (body.classList.contains('menu-open')) return;
-
-  const scrollY = window.scrollY;
-
-  if (
-    body.classList.contains('template--index') ||
-    body.classList.contains('template--arredamento-cantina-vino')
-  ) {
-    if (scrollY > 0) {
-      bar.classList.add('has-bg');
-    } else {
-      bar.classList.remove('has-bg');
-    }
-  } else {
-    bar.classList.add('has-bg');
-  }
-
-  setOffset();
-};
-
-const searchInput = document.querySelector('.js-search-home'); 
-let alreadyScrolled = false;
-
-if (searchInput) {
-  searchInput.addEventListener('input', function () {
-    if (this.value.length > 0 && !alreadyScrolled) {
-      window.scrollBy({ top: 1, behavior: 'smooth' }); 
-      alreadyScrolled = true;
-    } else if (this.value.length === 0 && alreadyScrolled) {
-      window.scrollBy({ top: -1, behavior: 'smooth' }); 
-      alreadyScrolled = false;
-    }
-  });
-}
-
-  addEventListener('scroll',handleScroll,{passive:true});
-  ['load','resize','orientationchange'].forEach(e=>addEventListener(e,setOffset,{passive:true}));
-  document.addEventListener('shopify:section:load',setOffset);
-  setOffset();
-
-  const selectorOpen='.header__nav-dropdown.is-visible';
-  const updateState=()=>{
-    body.classList.toggle('menu-open',!!document.querySelector(selectorOpen));
-  };
-  document.querySelectorAll('.header__nav-dropdown')
-          .forEach(dd=>new MutationObserver(updateState)
-          .observe(dd,{attributes:true,attributeFilter:['class']}));
-  const navWrap=document.querySelector('.header__nav')||header;
-  new MutationObserver(updateState).observe(navWrap,{childList:true,subtree:true});
-  addEventListener('click',e=>{
-    if(!header.contains(e.target)) body.classList.remove('menu-open');
-  });
-  updateState();
-const countryDrawer = document.querySelector('details.country-drawer');
-
-if (countryDrawer) {
-  const observer = new MutationObserver(() => {
-    const isOpen = countryDrawer.hasAttribute('open');
-    bar.classList.toggle('is-hidden', isOpen);
-  });
-
-  observer.observe(countryDrawer, {
-    attributes: true,
-    attributeFilter: ['open']
-  });
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  const bar = document.getElementById('search-bar-fixed');
-  const filtersDrawer = document.querySelector('details[id^="Filters-drawer-template"]');
-
-  if (!bar || !filtersDrawer) return;
-
-  const observer = new MutationObserver(() => {
-    const isOpen = filtersDrawer.hasAttribute('open');
-
-    if (window.innerWidth < 768) {
-      bar.classList.toggle('is-hidden', isOpen);
-    }
-  });
-
-  observer.observe(filtersDrawer, {
-    attributes: true,
-    attributeFilter: ['open']
-  });
-});
-
-
-})();
-</script>
 
 
 

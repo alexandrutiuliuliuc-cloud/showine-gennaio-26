@@ -46,23 +46,38 @@
     grid-column: 2;
     justify-self: center;
     width: 100%;
-    max-width: 68rem;
+    /* Match menu width when available (set by z-header-sync-search-width.js) */
+    max-width: min(100%, var(--header-menu-width, 68rem));
   }
 
   #header .header__utils {
     justify-self: end;
   }
 
-  /* Center the nav items below the header on desktop */
-  #header .header__nav-below > .header__nav-items,
-  #header .header__nav-below .header__nav-items {
+  /* Navbar below: center the whole nav row */
+  #header .header__nav-below {
+    display: flex;
+    justify-content: center;
+    /* More breathing room from the search and from the header bottom border */
+    margin-top: 0.9rem;
+    padding-bottom: 1.1rem;
+  }
+
+  /* The theme makes `.header__nav` full width with negative margins.
+     In the "nav-below" row we want the menu to be its natural width. */
+  #header .header__nav-below .header__nav {
+    width: auto;
+    margin-block: 0;
     justify-content: center;
   }
 
-  /* Ensure the nav list itself shrinks, so "center" is visually centered */
   #header .header__nav-below .header__nav-items {
     width: fit-content;
     margin-inline: auto;
+    justify-content: center;
+    /* Remove asymmetric padding from `header__nav-items--border` variants
+       (it visually shifts the menu to the left) */
+    padding-inline: 0 !important;
   }
 }
 .header__nav-centered .header__nav {
@@ -375,6 +390,13 @@ nav.slide-out-menu div.menu-panels ul li .header__card .card__content a {
 .header__utils-link--icon svg {
   width: 2.6rem;
   height: 2.6rem;
+}
+
+@media screen and (min-width: 990px) {
+  .header__utils-link--icon svg {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
 }
 
 /* Better vertical centering for icons */

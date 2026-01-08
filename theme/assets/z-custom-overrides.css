@@ -5,11 +5,13 @@
 */
 
 #header {
-  --header-search-fg: #222;
-  --header-search-border: rgba(34, 34, 34, 0.22);
-  --header-search-bg: rgba(255, 255, 255, 0.72);
-  --header-search-bg-focus: rgba(255, 255, 255, 0.92);
-  --header-search-ring: rgba(34, 34, 34, 0.22);
+  /* Inherit from the header's computed foreground color.
+     This automatically becomes white on transparent headers (see base.css) */
+  --header-search-fg: rgb(var(--color-foreground));
+  --header-search-border: rgba(var(--color-foreground), 0.28);
+  --header-search-bg: transparent;
+  --header-search-bg-focus: rgba(var(--color-foreground), 0.06);
+  --header-search-ring: rgba(var(--color-foreground), 0.18);
 }
 
 /* NOTE: keep search readable even if header transparency logic changes.
@@ -34,15 +36,15 @@
 #header .header__search-center .search__controls {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   height: auto;
   border: 1px solid var(--header-search-border);
   border-radius: 999px;
-  padding: 0.4rem 1rem;
+  /* Make the search pill more compact */
+  padding: 0.25rem 0.85rem;
   background: var(--header-search-bg);
   color: var(--header-search-fg);
   transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
-  backdrop-filter: blur(6px);
 }
 
 #header .header__search-center .search__controls:focus-within {
@@ -61,11 +63,16 @@
   width: 100%;
   background: transparent;
   border: 0;
-  padding: 0.5rem 0;
-  font-size: 1.3rem;
+  padding: 0.35rem 0;
+  font-size: 1.2rem;
   color: inherit;
   -webkit-text-fill-color: currentColor;
   outline: none;
+}
+
+#header .header__search-center .field__input::placeholder {
+  color: currentColor;
+  opacity: 0.75;
 }
 
 #header .header__search-center .search__button {
@@ -81,5 +88,38 @@
 }
 
 /* fine override */
+
+/* Header predictive search results dropdown:
+   ensure readability when the header is transparent (white foreground over hero images). */
+@media screen and (min-width: 990px) {
+  #header .header__search-center .search {
+    position: relative;
+  }
+
+  #header .header__search-center .search__body {
+    position: absolute;
+    inset-inline: 0;
+    top: calc(100% + 0.6rem);
+
+    /* Force a readable panel regardless of transparent header foreground */
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-heading-text));
+    --color-foreground: var(--color-heading-text);
+    --color-link: var(--color-heading-text);
+
+    border: 1px solid rgba(var(--color-heading-text), 0.14);
+    border-radius: 1.2rem;
+    padding: 1.2rem 1.2rem 1rem;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+
+    max-height: min(70vh, 36rem);
+    overflow: auto;
+    z-index: 70;
+  }
+
+  #header .header__search-center predictive-search.is-open {
+    z-index: 70;
+  }
+}
 
 

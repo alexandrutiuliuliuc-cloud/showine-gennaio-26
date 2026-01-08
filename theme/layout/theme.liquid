@@ -61,6 +61,8 @@
     <script src="{{ 'cookies.js' | asset_url }}" defer="defer"></script>
     {%- comment -%} Keep navigation inside localhost theme dev preview (no effect on live) {%- endcomment -%}
     <script src="{{ 'z-local-preview-links.js' | asset_url }}" defer="defer"></script>
+    {%- comment -%} Sync header search width with centered menu width (desktop) {%- endcomment -%}
+    <script src="{{ 'z-header-sync-search-width.js' | asset_url }}" defer="defer"></script>
 
     {{ content_for_header }}
 
