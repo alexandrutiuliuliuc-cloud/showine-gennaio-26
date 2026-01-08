@@ -177,4 +177,27 @@
   text-align: left !important;
 }
 
+/* Lavori eseguiti: injected info request form spacing */
+.z-info-request-form {
+  margin-top: 3.2rem;
+}
+
+/* Info request form: spacing between title/text and form + breathing room under form */
+.form-contact--info-request .form-contact__heading h2 {
+  margin: 0 0 0.8rem;
+}
+
+.form-contact--info-request .form-contact__heading .rte {
+  margin: 0;
+}
+
+.form-contact--info-request .form-contact__heading {
+  margin-bottom: 2.2rem;
+}
+
+.form-contact--info-request .contact-form {
+  margin-top: 0;
+  margin-bottom: 2.2rem;
+}
+
 

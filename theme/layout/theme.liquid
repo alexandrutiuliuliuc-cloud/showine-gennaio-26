@@ -63,6 +63,8 @@
     <script src="{{ 'z-local-preview-links.js' | asset_url }}" defer="defer"></script>
     {%- comment -%} Sync header search width with centered menu width (desktop) {%- endcomment -%}
     <script src="{{ 'z-header-sync-search-width.js' | asset_url }}" defer="defer"></script>
+    {%- comment -%} Inject info request form on "lavori eseguiti" subpages when arriving from the index page {%- endcomment -%}
+    <script src="{{ 'z-lavori-eseguiti-contact-form.js' | asset_url }}" defer="defer"></script>
 
     {{ content_for_header }}
 
@@ -169,6 +171,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll('form[action*="/contact"]').forEach(form => {
+          if (form.dataset && form.dataset.noReturnTo === 'true') return;
           if (form.querySelector('input[name="contact[email]"]')) {
             let input = document.createElement("input");
             input.type = "hidden";
