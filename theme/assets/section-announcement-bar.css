@@ -48,10 +48,24 @@ announcement-bar-slider {
   .announcement_bar__marquee, .announcement-bar__slider {
     width: 100%;
   }
+
+  /* Showine: hide country/localization button (e.g. "ITALIA") on mobile */
+  .announcement-bar__localization,
+  .section-announcement-bar desktop-drawer {
+    display: none !important;
+  }
 }
 
 .announcement-bar__localization .drawer__button {
   white-space: nowrap;
+}
+
+/* Showine: ensure the country drawer popup overlays above header/menu on desktop */
+.section-announcement-bar .country-drawer > .drawer__content {
+  z-index: calc(var(--z-modals) + 500);
+}
+.section-announcement-bar .country-drawer > .drawer__button::after {
+  z-index: calc(var(--z-modals) + 500);
 }
 
 .announcement-bar__link {

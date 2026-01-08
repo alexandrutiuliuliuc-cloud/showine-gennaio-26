@@ -173,6 +173,42 @@
   .header__logo {
     margin-inline: auto;
   }
+
+  /* Showine mobile header:
+     Row 1: menu (left) | logo (center) | cart/utils (right)
+     Row 2: full-width search bar under the logo row */
+  #header .header__inner {
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-areas:
+      "menu logo utils"
+      "search search search";
+    gap: 1.2rem 1.6rem;
+    padding-block: var(--spacing-3);
+  }
+
+  #header .header__drawer {
+    grid-area: menu;
+    justify-self: start;
+  }
+
+  #header .header__logo {
+    grid-area: logo;
+    justify-self: center;
+    margin-inline: 0;
+  }
+
+  #header .header__utils {
+    grid-area: utils;
+    justify-self: end;
+  }
+
+  #header .header__search-center {
+    grid-area: search;
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+    margin-top: 0.6rem;
+  }
 }
 
 @media screen and (min-width: 990px) {
@@ -1195,6 +1231,48 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
     margin-block-start: -0.1rem;
     z-index: var(--z-modals);
     position: fixed;
+  }
+
+  /* Showine: when mobile menu is open, keep announcement + header visible and clickable.
+     The drawer starts right under (announcement visible height + header height) and covers the page content (hero/slideshow). */
+  html.js .header__drawer > .drawer__container[open] > .drawer__content,
+  html.no-js .header__drawer > .drawer__container[open] {
+    inset-block-start: calc(var(--announcement-bars-before-header-visible-heights, 0px) + var(--header-height, 5.6rem)) !important;
+  }
+
+  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content {
+    height: calc(100dvh - var(--announcement-bars-before-header-visible-heights, 0px) - var(--header-height, 5.6rem));
+    margin-block-start: 0;
+    /* Force a solid background so the hero/slideshow never shows through */
+    background: rgb(var(--color-background)) !important;
+    z-index: var(--z-modals);
+    padding-inline: var(--page-gutter);
+    padding-block-start: 1.6rem;
+    padding-block-end: 2.4rem;
+  }
+
+  /* Hide the internal drawer close button on mobile to avoid the extra arrow overlapping the menu.
+     The header toggle already becomes an "X" when open. */
+  .header__drawer .header-drawer__button-close {
+    display: none !important;
+  }
+
+  /* Showine: when menu is open on mobile, show a compact header bar (logo + cart + close)
+     and hide the search bar. */
+  #header.menu-open .header__search-center {
+    display: none !important;
+  }
+
+  #header.menu-open .header__inner {
+    grid-template-areas: "menu logo utils";
+    grid-template-columns: max-content 1fr max-content;
+    gap: 1.2rem 1.6rem;
+    padding-block: var(--spacing-3);
+  }
+
+  /* Ensure the below-desktop nav row doesn't interfere visually when the drawer is open */
+  #header.menu-open .header__nav-below {
+    display: none !important;
   }
 }
 
