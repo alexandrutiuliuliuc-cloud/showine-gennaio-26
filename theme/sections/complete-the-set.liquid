@@ -111,6 +111,7 @@
                 </h2>
               </header>
             {%- endif -%}
+
             {%- for block in section.blocks -%}
               {%- if block.settings.block_type == 'link' and block.settings.link -%}
                 <div class="section__drawer" {{ block.shopify_attributes }}>

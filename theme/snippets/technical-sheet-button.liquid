@@ -1,0 +1,59 @@
+{% doc %}
+  Renders an optional "View technical sheet" button for a product.
+
+  It supports either:
+  - a file_reference metafield (uses the file URL), or
+  - a text metafield containing a filename (with or without `.pdf`), or a full URL.
+
+  @param {product} product - The product object.
+
+  @example
+  {% render 'technical-sheet-button', product: product %}
+{% enddoc %}
+
+{%- liquid
+  assign technical_sheet_metafield = product.metafields.magento.scheda_tecnica | default: product.metafields.global.scheda_tecnica
+  assign technical_sheet_url = blank
+
+  if technical_sheet_metafield != blank
+    if technical_sheet_metafield.value != blank
+      assign sheet_val = technical_sheet_metafield.value
+
+      if sheet_val.url != blank
+        assign technical_sheet_url = sheet_val.url
+      else
+        assign technical_sheet_url = sheet_val
+      endif
+    else
+      assign technical_sheet_url = technical_sheet_metafield
+    endif
+  endif
+
+  if technical_sheet_url != blank
+    if technical_sheet_url contains 'http' or technical_sheet_url contains '/files/'
+      assign technical_sheet_url_final = technical_sheet_url
+    else
+      if technical_sheet_url contains '.pdf'
+        assign technical_sheet_url_final = technical_sheet_url | file_url
+      else
+        assign technical_sheet_url_final = technical_sheet_url | append: '.pdf' | file_url
+      endif
+    endif
+  endif
+-%}
+
+{%- if technical_sheet_url_final != blank -%}
+  <a
+    class="technical-sheet-button"
+    href="{{- technical_sheet_url_final -}}"
+    target="_blank"
+    rel="noopener"
+  >
+    <span class="technical-sheet-button__label">{{- 'product.visualizza_scheda_tecnica' | t -}}</span>
+    <span class="technical-sheet-button__icon" aria-hidden="true">
+      {%- render 'icon', icon_name: 'theme-chevron', class: 'icon-chevron-end' -%}
+    </span>
+  </a>
+{%- endif -%}
+
+

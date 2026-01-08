@@ -8,6 +8,7 @@
   class="product__content product__content--{{ section.settings.grid_content_alignment }}"
 >
   {% assign content_grid_settings = section.blocks | where: 'type', 'content_grid' %}
+  {% assign content_grid_rendered = false %}
 
   {%- for block in section.blocks -%}
     {%- assign product_block_spacing = block.settings.spacing_bottom | default: '1' %}
@@ -256,6 +257,7 @@
           endif
         -%}
         <div class="{{ product_block_class }}" {{ block.shopify_attributes }}>
+          {%- render 'technical-sheet-button', product: product -%}
           {% if block.settings.behaviour == 'plain' %}
             {%- if product_description != blank -%}
               <div class="rte">
@@ -682,8 +684,10 @@
         </product-tabs>
 
       {%- when 'content_grid' -%}
-        {% assign content_grid_first = content_grid_settings | first %}
-        {% if block.id == content_grid_first.id %}
+        {% if content_grid_rendered %}
+          {% continue %}
+        {% endif %}
+        {% assign content_grid_rendered = true %}
           {%- assign product_block_class = 'product__content-grid' | append: ' ' | append: product_block_class -%}
           <div class="{{ product_block_class }}{% if content_grid_settings.size == 1 %} product__content-grid--single{% endif %}" {{ block.shopify_attributes }}>
             {% for item in content_grid_settings %}
@@ -742,7 +746,6 @@
               </script>
             {% endif %}
           </div>
-        {% endif %}
       {%- when 'richtext' -%}
         {%- assign product_block_class = 'product__text' | append: ' ' | append: product_block_class -%}
         <div class="{{ product_block_class }}" {{ block.shopify_attributes }}>

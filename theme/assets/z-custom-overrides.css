@@ -122,4 +122,49 @@
   }
 }
 
+/* Technical sheet button (product page) */
+.technical-sheet-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.85rem 1.2rem;
+  margin: 0 0 1.2rem;
+
+  border: 1px solid rgba(var(--color-border), var(--alpha-border));
+  border-radius: 1.2rem;
+  background: rgba(var(--color-background), 0.85);
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+
+  font-size: 1.4rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.technical-sheet-button:hover {
+  text-decoration: none;
+  border-color: rgba(var(--color-foreground), 0.25);
+}
+
+.technical-sheet-button__label {
+  font-weight: 600;
+}
+
+.technical-sheet-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  opacity: 0.8;
+}
+
+.technical-sheet-button__icon svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
 
