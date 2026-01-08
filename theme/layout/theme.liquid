@@ -181,8 +181,10 @@
   <!-- auto: open only Price filter -->
   <script src="{{ 'z-open-price-filter.js' | asset_url }}" defer></script>
 
-  <!-- auto: always header search -->
-  <script src="{{ 'z-always-header-search.js' | asset_url }}" defer></script>
+  {%- comment -%}
+    Disabled: this script injects a fallback search in the header and can create a duplicate "mini" search.
+    The theme already renders the header search via `snippets/search.liquid`.
+  {%- endcomment -%}
 
     <script>
       function updateMetaRobotsForFilters() {

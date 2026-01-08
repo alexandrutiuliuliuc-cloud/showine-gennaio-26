@@ -1,71 +1,85 @@
-/* override: search input bg white (auto-generated) */
-/* input nei vari stati dell'header (normale, trasparente, sticky) */
-.header input[type="search"],
-.header input[name="q"],
-.header .search__input,
-.header .field__input,
-.predictive-search__input,
-.search-modal__form input[type="search"],
-/* stati trasparenti/sticky */
-.header-wrapper--transparent .header input[type="search"],
-.header-wrapper--transparent .header input[name="q"],
-.header-wrapper--transparent .header .search__input,
-.header-wrapper--transparent .header .field__input,
-.header--transparent input[type="search"],
-.header--transparent input[name="q"],
-.header--transparent .search__input,
-.header--transparent .field__input {
-  background-color: #fff !important;
-  color: #111 !important;
-  -webkit-text-fill-color: #111 !important; /* Safari/iOS */
+/*
+  Header search restyle (Showine):
+  - centered search bar with border in the middle of the header
+  - adapts color: dark on white header, white on transparent header
+*/
+
+#header {
+  --header-search-fg: #222;
+  --header-search-border: rgba(34, 34, 34, 0.22);
+  --header-search-bg: rgba(255, 255, 255, 0.72);
+  --header-search-bg-focus: rgba(255, 255, 255, 0.92);
+  --header-search-ring: rgba(34, 34, 34, 0.22);
 }
 
-/* placeholder sempre nero (tutte le varianti) */
-.header input[type="search"]::placeholder,
-.header input[name="q"]::placeholder,
-.header .search__input::placeholder,
-.header .field__input::placeholder,
-.predictive-search__input::placeholder,
-.search-modal__form input[type="search"]::placeholder,
-.header input[type="search"]::-webkit-input-placeholder,
-.header input[name="q"]::-webkit-input-placeholder,
-.header .search__input::-webkit-input-placeholder,
-.header .field__input::-webkit-input-placeholder,
-.predictive-search__input::-webkit-input-placeholder,
-.search-modal__form input[type="search"]::-webkit-input-placeholder,
-.header input[type="search"]:-ms-input-placeholder,
-.header input[name="q"]:-ms-input-placeholder,
-.header .search__input:-ms-input-placeholder,
-.header .field__input:-ms-input-placeholder,
-.predictive-search__input:-ms-input-placeholder,
-.search-modal__form input[type="search"]:-ms-input-placeholder,
-.header-wrapper--transparent .header input[type="search"]::placeholder,
-.header-wrapper--transparent .header input[name="q"]::placeholder,
-.header-wrapper--transparent .header .search__input::placeholder,
-.header-wrapper--transparent .header .field__input::placeholder,
-.header--transparent input[type="search"]::placeholder,
-.header--transparent input[name="q"]::placeholder,
-.header--transparent .search__input::placeholder,
-.header--transparent .field__input::placeholder,
-.header-wrapper--transparent .header input[type="search"]::-webkit-input-placeholder,
-.header-wrapper--transparent .header input[name="q"]::-webkit-input-placeholder,
-.header-wrapper--transparent .header .search__input::-webkit-input-placeholder,
-.header-wrapper--transparent .header .field__input::-webkit-input-placeholder,
-.header--transparent input[type="search"]::-webkit-input-placeholder,
-.header--transparent input[name="q"]::-webkit-input-placeholder,
-.header--transparent .search__input::-webkit-input-placeholder,
-.header--transparent .field__input::-webkit-input-placeholder,
-.header-wrapper--transparent .header input[type="search"]:-ms-input-placeholder,
-.header-wrapper--transparent .header input[name="q"]:-ms-input-placeholder,
-.header-wrapper--transparent .header .search__input:-ms-input-placeholder,
-.header-wrapper--transparent .header .field__input:-ms-input-placeholder,
-.header--transparent input[type="search"]:-ms-input-placeholder,
-.header--transparent input[name="q"]:-ms-input-placeholder,
-.header--transparent .search__input:-ms-input-placeholder,
-.header--transparent .field__input:-ms-input-placeholder {
-  color: #111 !important;
-  opacity: 1 !important;
+/* NOTE: keep search readable even if header transparency logic changes.
+   If you need white-on-transparent again, reintroduce a dedicated `.is-transparent` class. */
+
+/* Let `section-header.css` handle positioning; here we only style the search */
+
+#header .header__search-center .search,
+#header .header__search-center predictive-search,
+#header .header__search-center form,
+#header .header__search-center .search__head,
+#header .header__search-center .search__controls {
+  width: 100%;
 }
+
+/* Safety: hide any legacy injected/fixed search */
+#zPersistentSearch,
+.search-bar-fixed-wrapper {
+  display: none !important;
+}
+
+#header .header__search-center .search__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  height: auto;
+  border: 1px solid var(--header-search-border);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  background: var(--header-search-bg);
+  color: var(--header-search-fg);
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  backdrop-filter: blur(6px);
+}
+
+#header .header__search-center .search__controls:focus-within {
+  background: var(--header-search-bg-focus);
+  box-shadow: 0 0 0 2px var(--header-search-ring);
+}
+
+#header .header__search-center .field,
+#header .header__search-center .field--search {
+  flex: 1 1 auto;
+  margin: 0;
+  width: auto;
+}
+
+#header .header__search-center .field__input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 0.5rem 0;
+  font-size: 1.3rem;
+  color: inherit;
+  -webkit-text-fill-color: currentColor;
+  outline: none;
+}
+
+#header .header__search-center .search__button {
+  color: inherit;
+}
+
+#header .header__search-center .search__button svg path {
+  stroke: currentColor;
+}
+
+#header .header__search-center .drawer__button-close {
+  display: none;
+}
+
 /* fine override */
 
 

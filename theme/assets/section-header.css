@@ -26,9 +26,43 @@
   padding: var(--spacing-4) 0;
 }
 @media screen and (min-width: 990px) {
-  .header--nav-centered .header__inner,
-  .header--logo-nav-aligned-start .header__inner {
-    grid-template-columns: max-content minmax(0, 100%) auto;
+  .header__inner {
+    /* reduce extra vertical space on desktop */
+    padding-block: var(--spacing-3);
+  }
+
+  /* Desktop header layout (stable):
+     keep the theme's structure: logo | flexible center | utils */
+  #header.header--logo-nav-aligned-start .header__inner,
+  #header.header--nav-centered .header__inner {
+    grid-template-columns: max-content minmax(0, 1fr) max-content;
+  }
+
+  #header .header__logo {
+    justify-self: start;
+  }
+
+  #header .header__search-center {
+    grid-column: 2;
+    justify-self: center;
+    width: 100%;
+    max-width: 68rem;
+  }
+
+  #header .header__utils {
+    justify-self: end;
+  }
+
+  /* Center the nav items below the header on desktop */
+  #header .header__nav-below > .header__nav-items,
+  #header .header__nav-below .header__nav-items {
+    justify-content: center;
+  }
+
+  /* Ensure the nav list itself shrinks, so "center" is visually centered */
+  #header .header__nav-below .header__nav-items {
+    width: fit-content;
+    margin-inline: auto;
   }
 }
 .header__nav-centered .header__nav {
@@ -288,6 +322,27 @@ nav.slide-out-menu div.menu-panels ul li .header__card .card__content a {
   padding: .3rem .8rem;
 }
 
+/* Desktop: make utils perfectly centered vertically and reduce extra bottom space */
+@media screen and (min-width: 990px) {
+  .header__utils {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .header__utils-items {
+    height: 100%;
+    align-items: center;
+    margin: 0 !important; /* override later breakpoint rules */
+  }
+
+  .header__utils-item {
+    display: flex;
+    align-items: center;
+    padding-block: 0 !important;
+  }
+}
+
 .header__utils-item .icon-with-text .icon {
   display: block;
 }
@@ -318,7 +373,15 @@ nav.slide-out-menu div.menu-panels ul li .header__card .card__content a {
 }
 
 .header__utils-link--icon svg {
-  width: 2.0rem; height: 2.0rem;
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+/* Better vertical centering for icons */
+.header__utils-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__utils-item--cart {
@@ -329,6 +392,13 @@ nav.slide-out-menu div.menu-panels ul li .header__card .card__content a {
 @media screen and (min-width: 750px) {
   .header__utils-item:not(.header__utils-item--cart) {
     display: initial;
+  }
+
+  /* Remove vertical separator lines in header (as requested) */
+  .header__nav-items--border .header__utils-items > li:first-child::before,
+  .header__nav-items--border.header--nav-centered .header__logo::before,
+  .header__nav-items--border:not(.header--nav-centered) .header__nav-items > li:last-child::before {
+    content: none !important;
   }
 
   .header__nav-items--border .header__utils-items>li:first-child,
@@ -355,8 +425,13 @@ nav.slide-out-menu div.menu-panels ul li .header__card .card__content a {
 }
 
 @media screen and (min-width: 990px) {
+  /* Nav below must be centered even when header uses `header__nav-items--border` */
+  #header .header__nav-below .header__nav-items {
+    justify-content: center;
+  }
+
   .header__nav-items--border:not(.header--nav-centered) .header__nav-items {
-    border-inline-end: 0.1rem solid rgba(var(--color-foreground), var(--header-inner-after-opacity));
+    border-inline-end: none;
     padding-inline-end: var(--spacing-7);
   }
 
@@ -427,6 +502,36 @@ nav.slide-out-menu div.menu-panels ul li .header__card .card__content a {
   flex-wrap: wrap;
   align-items: center;
   column-gap: 1.6rem;
+}
+
+/* Keep desktop nav in one line (prevents "Lavori Eseguiti" from wrapping) */
+@media screen and (min-width: 990px) {
+  .header__nav-items {
+    flex-wrap: nowrap;
+  }
+}
+
+/* CTA button in nav */
+.header__nav-item--cta {
+  flex: 0 0 auto;
+}
+.header__nav-item--cta .btn-red {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: #631F22;
+  color: #fff !important;
+  padding: 0.625rem 1.2rem;
+  border-radius: 999px;
+  position: relative;
+  font-family: var(--font-heading-family);
+  font-size: var(--font-size-static-xs);
+  font-weight: var(--font-heading-weight);
+  line-height: var(--line-height-static-sm);
+  text-transform: uppercase;
+  letter-spacing: .14rem;
+  white-space: nowrap;
 }
 
 .header__nav-item {

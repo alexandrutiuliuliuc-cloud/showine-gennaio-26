@@ -359,28 +359,11 @@
                   {%- endif -%}
                 </li>
               {%- endfor -%}
-              <li class="header__nav-link js-nav-link">
-                <a href="https://www.showine.it/pages/lavori-eseguiti" class="btn-red">
+              <li class="header__nav-item header__nav-item--cta">
+                <a href="https://www.showine.it/pages/lavori-eseguiti" class="header__nav-link btn-red">
                   Lavori Eseguiti
                 </a>
               </li>
-              <style>
-                .btn-red{
-                  background-color: #631F22;
-                  color: white !important;
-                  padding: 0.6rem 1.2rem;
-                  border-radius: 14px;
-                  position: relative;
-                  font-family: var(--font-heading-family);
-                  font-size: var(--font-size-static-xs);
-                  font-weight: var(--font-heading-weight);
-                  line-height: var(--line-height-static-sm);
-                  text-transform: uppercase;
-                  letter-spacing: .14rem;
-                  margin-block-end: -.4rem;
-                  padding-block: .625rem;
-                }
-              </style>
               @@additional_links_placeholder@@
             </ul>
           </nav>
@@ -558,9 +541,6 @@
     {{ header_utils_additional_links }}
 {%- endcase -%}
 
-<div class="header__search-center">
-</div>
-
 <!-- Navbar sotto -->
 <div class="header__nav-below">
   {{ header_nav_additional_links }}
@@ -570,36 +550,7 @@
 </div>
 </div>
 
-
 <style>
-body.template--index .header__search-center input,
-body.template--arredamento-cantina-vino .header__search-center input,
-body.template--index .header__search-center input::placeholder,
-body.template--arredamento-cantina-vino .header__search-center input::placeholder {
-  color: #fff !important;
-}
-
-body.template--index .header__search-center .search__button svg path,
-body.template--arredamento-cantina-vino .header__search-center .search__button svg path {
-  fill: none !important;
-  stroke: #fff !important;
-  stroke-width: 2px;
-}
-
-body.template--index #header.has-bg .header__search-center input,
-body.template--arredamento-cantina-vino #header.has-bg .header__search-center input,
-body.template--index #header.has-bg .header__search-center input::placeholder,
-body.template--arredamento-cantina-vino #header.has-bg .header__search-center input::placeholder {
-  color: #222 !important;
-}
-
-body.template--index #header.has-bg .header__search-center .search__button svg path,
-body.template--arredamento-cantina-vino #header.has-bg .header__search-center .search__button svg path {
-  fill: none !important;
-  stroke: #222 !important;
-  stroke-width: 2px;
-}
-
 
 @media (max-width: 989px) {
   .header__inner {
@@ -624,9 +575,7 @@ body.template--arredamento-cantina-vino #header.has-bg .header__search-center .s
   }
 
 
-  details[open] .header__search-center {
-    display: none;
-  }
+  /* keep search always visible */
 }
 
 #header,
@@ -738,50 +687,33 @@ body:not(.template--index):not(.template--arredamento-cantina-vino) .search__but
 
 <script>
 (()=>{
-  document.addEventListener("DOMContentLoaded", function () {
-  const searchBar = document.querySelector(".header__search-center"); 
-  const filtersDrawer = document.querySelector('details[id^="Filters-drawer-template"]');
+  /* keep search always visible (no hiding based on drawers) */
 
-  if (!searchBar || !filtersDrawer) return;
-
-  const observer = new MutationObserver(() => {
-    const isOpen = filtersDrawer.hasAttribute("open");
-    searchBar.style.display = isOpen ? "none" : "";
-  });
-
-  observer.observe(filtersDrawer, {
-    attributes: true,
-    attributeFilter: ["open"],
-  });
-});
-
-document.addEventListener("scroll", () => {
+(() => {
   const header = document.querySelector("#header");
   if (!header) return;
 
-  if (window.scrollY > 0) {
-    header.classList.add("has-bg");
-  } else {
-    header.classList.remove("has-bg");
-  }
-});
+  const body = document.body;
+  // Detect real transparent-header context (hero/banner sections add .header-is-transparent)
+  const hasTransparentHeaderContext = () => !!document.querySelector(".header-is-transparent");
+
+  const updateHeaderBg = () => {
+    const isTransparent = hasTransparentHeaderContext() && window.scrollY === 0;
+    const shouldHaveBg = !isTransparent;
+    header.classList.toggle("has-bg", shouldHaveBg);
+  };
+
+  document.addEventListener("DOMContentLoaded", updateHeaderBg);
+  document.addEventListener("scroll", updateHeaderBg, { passive: true });
+  window.addEventListener("resize", updateHeaderBg, { passive: true });
+  updateHeaderBg();
+})();
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const searchBar = document.querySelector(".header__search-center");
   const navDrawer = document.getElementById("Navigation-drawer-header"); // il <details> del menu
 
-  if (!searchBar || !navDrawer) return;
-
-  const observer = new MutationObserver(() => {
-    if (navDrawer.hasAttribute("open")) {
-      searchBar.style.display = "none";
-    } else {
-      searchBar.style.display = "";
-    }
-  });
-
-  observer.observe(navDrawer, { attributes: true, attributeFilter: ["open"] });
+  if (!navDrawer) return;
 });
 
   const bar    = document.getElementById('search-bar-fixed');
