@@ -167,4 +167,14 @@
   height: 1.6rem;
 }
 
+/* Lavori eseguiti: force all project tiles to be left-aligned (both columns) */
+.template--lavori-eseguiti .section-multitile__content.align-center {
+  align-items: flex-start !important;
+}
+
+.template--lavori-eseguiti .section-multitile__content.text-center,
+.template--lavori-eseguiti .section-multitile__content.text-center * {
+  text-align: left !important;
+}
+
 
