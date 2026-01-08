@@ -7,7 +7,9 @@
 (function () {
   const INDEX_PATH = '/pages/lavori-eseguiti';
   const STORAGE_KEY = 'showine:lavoriEseguiti:nav';
+  const PERSIST_KEY = 'showine:lavoriEseguiti:formPersist';
   const TTL_MS = 15 * 60 * 1000;
+  const PERSIST_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 
   function now() {
     return Date.now();
@@ -41,6 +43,50 @@
   function clearNavIntent() {
     try {
       sessionStorage.removeItem(STORAGE_KEY);
+    } catch {
+      // ignore
+    }
+  }
+
+  function getPersistMap() {
+    try {
+      return safeParse(sessionStorage.getItem(PERSIST_KEY)) || {};
+    } catch {
+      return {};
+    }
+  }
+
+  function setPersistForPath(pathname) {
+    const map = getPersistMap();
+    map[pathname] = { t: now() };
+    try {
+      sessionStorage.setItem(PERSIST_KEY, JSON.stringify(map));
+    } catch {
+      // ignore
+    }
+  }
+
+  function hasPersistForPath(pathname) {
+    const map = getPersistMap();
+    const entry = map && map[pathname];
+    if (!entry || !entry.t) return false;
+    if (now() - entry.t > PERSIST_TTL_MS) return false;
+    return true;
+  }
+
+  function cleanupPersistMap() {
+    const map = getPersistMap();
+    let changed = false;
+    Object.keys(map).forEach((k) => {
+      const entry = map[k];
+      if (!entry || !entry.t || now() - entry.t > PERSIST_TTL_MS) {
+        delete map[k];
+        changed = true;
+      }
+    });
+    if (!changed) return;
+    try {
+      sessionStorage.setItem(PERSIST_KEY, JSON.stringify(map));
     } catch {
       // ignore
     }
@@ -102,6 +148,14 @@
     // Never inject on the index itself
     if (window.location.pathname === INDEX_PATH) return;
 
+    cleanupPersistMap();
+
+    // If the user has already seen the form on this page in this session, keep showing it (refresh-safe)
+    if (hasPersistForPath(window.location.pathname)) {
+      await injectForm();
+      return;
+    }
+
     const intent = getNavIntent();
     if (!intent || !intent.t || !intent.target) return;
 
@@ -114,6 +168,7 @@
 
     try {
       await injectForm();
+      setPersistForPath(window.location.pathname);
     } finally {
       // single-use to avoid "sticking" across browsing
       clearNavIntent();
