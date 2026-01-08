@@ -1,0 +1,1454 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "seo_content_TikanY": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Lavori eseguiti",
+        "heading_size": "h2",
+        "text": "<p>Una selezioni di nostri lavori eseguiti per tipologia di intervento, scopri come abbiamo trasformato molti ambienti in splendide cantine vino.</p>",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "4",
+        "spacing_top": "6",
+        "spacing_bottom": "4"
+      }
+    },
+    "multitile_9NbAXB": {
+      "type": "multitile",
+      "blocks": {
+        "tile_MmeCGk": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Caveau Nel Sottotetto",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/cantina-a-vista-climatizzata-in-un-sottotetto",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Copertina_d15c7978-7bb9-4009-ae57-581ff8253e75.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_M9KefV": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Cantina a Vista Climatizzata In Ambiente Living",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/cantina-a-vista-climatizzata-in-ambiente-living",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/10_1350x_53761f8f-92cf-4f1f-b103-55f91f31fd6e.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_MmeCGk",
+        "tile_M9KefV"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_fM3qmf": {
+      "type": "multitile",
+      "blocks": {
+        "tile_Qm9mx8": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Sottoscala climatizzato",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/sottoscala-climatizzato",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Sottoscala_Climatizzato_q_530x_ee707751-7bf6-44df-9fe7-1c5335c26c31_1.png",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_AyGcNA": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Cantina a Vista Climatizzata",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/cantina-a-vista-climatizzata",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Immagine_13_3590e3b3-1e5c-4aa3-9504-2978f6da797c.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_Qm9mx8",
+        "tile_AyGcNA"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_XVz9PN": {
+      "type": "multitile",
+      "blocks": {
+        "tile_JnX7TJ": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Da Ripostiglio a Cantina Climattizata",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/arredamento-cantina",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Immagine_13_0bb43969-b229-4652-b445-9a56cd32ff7f.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_QCRKxg": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Allestimento Cantina Interrata",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/allestimento-cantina-interrata",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/IMG_1864_1.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_JnX7TJ",
+        "tile_QCRKxg"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_twVPVy": {
+      "type": "multitile",
+      "blocks": {
+        "tile_jQgMB7": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Da guardaroba a cantina a vista",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/da-guardaroba-a-cantina-a-vista-climatizzata",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Da_Guardaroba_a_Cantina_a_vista_Climatizzata_q_530x_4b7a48dd-10f9-4e3e-b8cb-da99827b33de.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_EKPBn8": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Wine room in ambiente living",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/wine-room-in-ambiente-living",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Wine_Room_Climatizzata_in_Ambiente_Living_q_530x_1_b88c0048-750b-4302-864b-eb44b64db19a.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_jQgMB7",
+        "tile_EKPBn8"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_8fPKFh": {
+      "type": "multitile",
+      "blocks": {
+        "tile_MpQChW": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Cantina a Vista Climatizzata Attico - Milano",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/cantina-a-vista-climatizzata-e-zone-vetrate-a-vista-lavori-eseguiti",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/q26_lavori_eseguiti.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_FrDCPE": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Arredamento Taverna",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/cantina-a-vista-con-arredamento-in-legno-massello",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/15_bf02d651-6acb-47c6-b128-18e7962b70a3.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_MpQChW",
+        "tile_FrDCPE"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_fjRtrH": {
+      "type": "multitile",
+      "blocks": {
+        "tile_3bYXLc": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Cantina A Vista Climatizzata Con Arredamento In Legno Massello.",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/cantina-a-vista-climatizzata-con-arredamento-in-legno-massello",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/IMG-20240223-WA0011_5d4aabae-8b30-4978-ba8b-018314d18ab9.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_dVkRar": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Sottoscala Climatizzato Con Arredo Personalizzato su Misura",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/sottoscala-climatizzato-con-arredo-personalizzato-su-misura",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/1_755e9a74-8657-4630-b810-e999754dc0c4.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_3bYXLc",
+        "tile_dVkRar"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_HkCzqz": {
+      "type": "multitile",
+      "blocks": {
+        "tile_PxkrA3": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Cantina Climatizzata A Vista - Privata",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/cantina-climatizzata-a-vista",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/IMG-20230724-WA0005_2f6b9f7c-376e-49d2-b12c-4ab4d872b943.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_MTTqyJ": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Allestimento Cantina Privata - Toscana",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/arredamento-cantina-privata-marzotto-lavori-eseguiti",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/25_q_lavori_eseguiti.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_PxkrA3",
+        "tile_MTTqyJ"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_r7wcjm": {
+      "type": "multitile",
+      "blocks": {
+        "tile_XYPC4a": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Cantina a vista interrata Helicave Oval mt. 3,50 x 2,55",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/cantina-a-vista-interrata",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Cantina_a_vista_Interrata_q_530x_99c81098-a0ef-4943-bc67-a94b37e1acdc.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_HDLBAT": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Da Scantinato a Cantina Climatizzata - La Casa Del Vino (VR)",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/da-scantinato-a-cantina-climatizzata-casa-del-vino-a-pampuro-vr",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/IMG-20230919-WA0007_292f3fd4-b4e3-4bcb-897f-e4f0081c582c.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_XYPC4a",
+        "tile_HDLBAT"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_argLbw": {
+      "type": "multitile",
+      "blocks": {
+        "tile_PPYELi": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Arredo Cantina Vino + Rifacimento Soffitto con Volte a Mattoni - Privato",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/arredo-cantina-vino-rifacimento-a-soffitto-con-volte-a-mattoni-privato",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/13_4972e744-56e5-4de2-bec9-90b32cb383f9.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_RWqpFw": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Nicchia del soggiorno diventa Angolo Bar",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/parete-allestita-living-privato",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Immagine_Copertina_a867819d-f46f-407c-8e58-62b308e0a9b5.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_PPYELi",
+        "tile_RWqpFw"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_AwtMB3": {
+      "type": "multitile",
+      "blocks": {
+        "tile_4KVmTM": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Cantina a Vista Climatizzata Ristorante",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/cantina-a-vista-climatizzata-ristorante",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/cantina-ristorante.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_iga4Aa": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Wine room living climatizzata",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/wine-room-con-living-climatizzata",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Wine_Room_zona_Living_Climatizzata_q.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_4KVmTM",
+        "tile_iga4Aa"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_YPFqbd": {
+      "type": "multitile",
+      "blocks": {
+        "tile_6ynt8Y": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Da garage a cantina degustazione",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/da-garage-a-cantina-degustazione",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Da_Garage_a_Cantina_degustazione_q_530x_041ae9fc-eeff-447d-933a-53d03bc38584.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_HTREeh": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Cantina climatizzata",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/cantina-climatizzata",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Cantina_Climatizzata_q_7451e0be-cc38-43ad-a569-fb928d545da2.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_6ynt8Y",
+        "tile_HTREeh"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_9zrMYC": {
+      "type": "multitile",
+      "blocks": {
+        "tile_wWpwBU": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Da studio a cantina climatizzata",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/da-studio-a-cantina-climatizzata",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Cantina_Climatizzata_q_530x_1.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_T9rUbz": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Wine room climatizzata",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/wine-room-climatizzata",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Wine_Room_Climatizzata_q_b12778ae-965d-4453-8504-5a4de0c17988.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_wWpwBU",
+        "tile_T9rUbz"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_7c8HCH": {
+      "type": "multitile",
+      "blocks": {
+        "tile_dMUVyL": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Cantina climatizzata in Ripostiglio Privato",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/wine-room-living-climatizzata-lavori-eseguiti",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Copertina.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_TqwUTA": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Da magazzino a cantina degustazione",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/da-magazzino-a-cantina-da-degustazione-i-nostri-lavori",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Da_magazzino_a_Cantina_degustazione_q_38e17a6d-71aa-4662-aa62-0b281aebe04b.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_dMUVyL",
+        "tile_TqwUTA"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_qnxCzW": {
+      "type": "multitile",
+      "blocks": {
+        "tile_VcM6Hj": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Da ripostiglio a cantina climatizzata",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/da-ripostiglio-a-cantina-climatizzata",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Da_ripostiglio_a_Cantina_Climatizzata_q_530x_f5177f0d-8bca-4758-97aa-fd7fc9332b18.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_TWPdK6": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Cantina climatizzata in garage",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/realizzazione-cantina-climatizzata-in-garage",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Realizzazione_Cantina_Climatizzata_in_Garage_q_16bad3a9-6dfa-4350-a787-813d66c1266b.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_VcM6Hj",
+        "tile_TWPdK6"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_BBTbpP": {
+      "type": "multitile",
+      "blocks": {
+        "tile_eRKacE": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Ristrutturazione ambiente a cantina climatizzata",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/ristrutturazione-ambiente-a-cantina-climatizzata",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Ristrutturazione_ambiente_a_Cantina_Climatizzata_q_30eba1cd-7b16-4b73-a643-fe3ce0e0b7c7.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_4CJ8dR": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Nuova cantina in giardino",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/realizzazione-nuova-cantina-in-giardino",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/realizzazione-nuova-cantina-in-giardino-00_530x_643a5a4e-4f13-4b4e-90ed-c53adbb6cf44.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_eRKacE",
+        "tile_4CJ8dR"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_BYwAp7": {
+      "type": "multitile",
+      "blocks": {
+        "tile_XTrYNb": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Da libreria a cantina a vista climatizzata",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/da-libreria-a-cantina-a-vista-climatizzata",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Da_Libreria_a_Cantina_a_Vista_Climatizzata_q_8f92fec9-db7d-40b0-a864-edf62d43d3e5.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_N8NHzH": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Allestimento cantina",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/allestimento-cantina",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Allestimento_Cantina_q_4f1f7f7b-71c1-4fc4-aa4a-b3d1f206338d.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_XTrYNb",
+        "tile_N8NHzH"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_Fp9gBU": {
+      "type": "multitile",
+      "blocks": {
+        "tile_8HPKUD": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Da ripostiglio a cantina climatizzata",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/da-ripostiglio-a-cantina-climatizzata",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Da_Ripostiglio_a_Cantina_Climatizzata_q_e2149044-94e7-49ed-a86e-7fc507598ad8.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_WPazga": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Wine room a vista climatizzata arredo taverna",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/wine-room-a-vista-climatizzata-e-arredamento-taverna",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Wine_Room_a_vista_Climatizzata_e_Arredo_Taverna_q_2da4d5b2-ecbd-4fc1-8d95-bf8ec2b91768.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_8HPKUD",
+        "tile_WPazga"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_XJyPUh": {
+      "type": "multitile",
+      "blocks": {
+        "tile_wiXKkR": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Arredo e climatizzazione cantina",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/arredo-e-climatizzazione-cantina",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Arredo_e_Climatizzazione_Cantina_q_67fd3a3c-f86b-473a-8f9c-07d6762a1c0b.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_4WQ4TF": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Wine room a vista climatizzata",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/wine-room-a-vista-climatizzata",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Wine_Room_a_vista_Climatizzata_q_76e79ef9-d4b7-49ef-bafd-4ec6f98ddfc3.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_wiXKkR",
+        "tile_4WQ4TF"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_Fd3Hi6": {
+      "type": "multitile",
+      "blocks": {
+        "tile_64dNm6": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Arredamento e stoccaggio",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/arredamento-e-stoccaggio",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Arredamento_e_Stoccaggio_q_530x_3ade8509-1ce8-4771-8a77-19811f4ba86f.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_nVDBDA": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Sottoscala climatizzato",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/sottoscala-climatizzato",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Sottoscala_Climatizzato_q_2954de4e-1cbd-43de-ad70-229309b5bfe5.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_64dNm6",
+        "tile_nVDBDA"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "seo_content_TikanY",
+    "multitile_9NbAXB",
+    "multitile_fM3qmf",
+    "multitile_XVz9PN",
+    "multitile_twVPVy",
+    "multitile_8fPKFh",
+    "multitile_fjRtrH",
+    "multitile_HkCzqz",
+    "multitile_r7wcjm",
+    "multitile_argLbw",
+    "multitile_AwtMB3",
+    "multitile_YPFqbd",
+    "multitile_9zrMYC",
+    "multitile_7c8HCH",
+    "multitile_qnxCzW",
+    "multitile_BBTbpP",
+    "multitile_BYwAp7",
+    "multitile_Fp9gBU",
+    "multitile_XJyPUh",
+    "multitile_Fd3Hi6"
+  ]
+}

@@ -1,0 +1,227 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "trust_indicators_DXmKCE": {
+      "type": "trust-indicators",
+      "blocks": {
+        "indicator_HepHix": {
+          "type": "indicator",
+          "settings": {
+            "title": "SPEDIZIONE VELOCE E SICURA",
+            "subheading": "Consegne rapide e tracciabili, in Italia e nel mondo, anche per articoli fragili e su misura.",
+            "link_label": "",
+            "link": "/",
+            "icon": "option-truck"
+          }
+        },
+        "indicator_WfHAMC": {
+          "type": "indicator",
+          "settings": {
+            "title": "ASSISTENZA CONTINUA",
+            "subheading": "Supporto telefonico e online, 24 ore su 24, 7 giorni su 7, con persone reali e competenti.",
+            "link_label": "",
+            "link": "/",
+            "icon": "option-chat_bubble"
+          }
+        },
+        "indicator_GAtac7": {
+          "type": "indicator",
+          "settings": {
+            "title": "PROGETTI SU MISURA",
+            "subheading": "Cantine e soluzioni d’arredo pensate esclusivamente sulle tue esigenze.",
+            "link_label": "",
+            "link": "/",
+            "icon": "theme-heart"
+          }
+        },
+        "indicator_JpT8DX": {
+          "type": "indicator",
+          "settings": {
+            "title": "PRODOTTI SELEZIONATI",
+            "subheading": "Vini, accessori e arredi scelti da esperti per veri appassionati di qualità ed eccellenza.",
+            "link_label": "",
+            "link": "/",
+            "icon": "option-box"
+          }
+        }
+      },
+      "block_order": [
+        "indicator_HepHix",
+        "indicator_WfHAMC",
+        "indicator_GAtac7",
+        "indicator_JpT8DX"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "swipe_on_mobile": true,
+        "slideshow_autoplay_interval": 3,
+        "content_direction": "vertical",
+        "content_alignment": "text-center",
+        "content_size": "h6",
+        "color_scheme_for_blocks": "scheme-7",
+        "section_width": "max-w-full",
+        "color_scheme": "scheme-5",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "footer_XJF67G": {
+      "type": "footer",
+      "blocks": {
+        "brand_HCQ4a9": {
+          "type": "brand",
+          "settings": {
+            "column_factor": 2,
+            "row_factor": 1,
+            "logo": "shopify://shop_images/af965cb6-ffa6-4810-86f9-452277c09699_1.png",
+            "logo_svg_code": "",
+            "logo_width": 180,
+            "logo_width_mobile": 140,
+            "text": "<p><strong>Showine srl</strong><br/><strong>Indirizzo: </strong>Via Parigi, 8/d46047, Porto Mantovano MN<br/><strong>Lunedì - Venerdì:</strong> 8.30 - 12.30 / 14.00 - 18.00<br/><strong>Sabato e Domenica:</strong> su appuntamento.<br/><strong>Telefono:</strong> +39 0376 408127<br/><strong>Email:</strong> info@showine.it<br/><br/><strong>Showine Svizzera</strong><br/><strong>Indirizzo:</strong> Gaumenfreuden Seestrasse 147 Horgen<br/><strong>Telefono:</strong> +41 78 723 23 38<br/><strong>Email:</strong> info@showine.ch</p>",
+            "content_position_vertical": "center",
+            "content_alignment": "start",
+            "content_alignment_for_mobile": "start"
+          }
+        },
+        "link_list_pMCiaX": {
+          "type": "link_list",
+          "settings": {
+            "column_factor": 1,
+            "row_factor": 1,
+            "menu_layout": "vertical",
+            "menu": "ordini-e-pagamenti",
+            "title": "",
+            "title_url": "",
+            "menu_link_opacity": 100,
+            "show_first_menu_on_mobile": true
+          }
+        },
+        "link_list_rdzAWk": {
+          "type": "link_list",
+          "settings": {
+            "column_factor": 1,
+            "row_factor": 1,
+            "menu_layout": "vertical",
+            "menu": "contatti",
+            "title": "",
+            "title_url": "",
+            "menu_link_opacity": 100,
+            "show_first_menu_on_mobile": true
+          }
+        },
+        "social_media_p3xmpd": {
+          "type": "social_media",
+          "settings": {
+            "column_factor": 1,
+            "row_factor": 1,
+            "icons": true,
+            "social_links_in_new_tab": true,
+            "heading": "Seguici su",
+            "content_position_vertical": "start",
+            "content_alignment": "start",
+            "content_alignment_for_mobile": "start"
+          }
+        },
+        "newsletter_cmdGD6": {
+          "type": "newsletter",
+          "settings": {
+            "column_factor": 1,
+            "row_factor": 1,
+            "heading": "ENTRA NELLA COMMUNITY",
+            "text": "",
+            "content_position_vertical": "start",
+            "content_alignment": "start",
+            "content_alignment_for_mobile": "start"
+          }
+        }
+      },
+      "block_order": [
+        "brand_HCQ4a9",
+        "link_list_pMCiaX",
+        "link_list_rdzAWk",
+        "social_media_p3xmpd",
+        "newsletter_cmdGD6"
+      ],
+      "custom_css": [
+        "h4 {font-size: 14px;}",
+        "h3 {font-size: 14px;}"
+      ],
+      "settings": {
+        "spacing_grid": "0",
+        "show_border_top": false,
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-6",
+        "spacing_top": "4",
+        "spacing_bottom": "2"
+      }
+    },
+    "footer_JadcgE": {
+      "type": "footer",
+      "blocks": {
+        "richtext_GWFib7": {
+          "type": "richtext",
+          "settings": {
+            "column_factor": 2,
+            "row_factor": 1,
+            "heading": "",
+            "text": "<p>© [year] DigiFist. Tutti i diritti sono riservati.</p>",
+            "content_position_vertical": "center",
+            "content_alignment": "start",
+            "content_alignment_for_mobile": "center"
+          }
+        },
+        "payment_icons_g4NcKc": {
+          "type": "payment_icons",
+          "settings": {
+            "column_factor": 2,
+            "row_factor": 1,
+            "custom_payment_types": "master,visa,american_express,apple_pay,shopify_pay,diners_club,discover,google_pay",
+            "payment_icons_color": true,
+            "content_position_vertical": "center",
+            "content_alignment": "center",
+            "content_alignment_for_mobile": "center"
+          }
+        },
+        "follow_on_shop_KpEWtJ": {
+          "type": "follow_on_shop",
+          "settings": {
+            "column_factor": 2,
+            "row_factor": 1,
+            "content_position_vertical": "center",
+            "content_alignment": "end",
+            "content_alignment_for_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_GWFib7",
+        "payment_icons_g4NcKc",
+        "follow_on_shop_KpEWtJ"
+      ],
+      "settings": {
+        "spacing_grid": "1",
+        "show_border_top": true,
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-6",
+        "spacing_top": "1",
+        "spacing_bottom": "1"
+      }
+    }
+  },
+  "order": [
+    "trust_indicators_DXmKCE",
+    "footer_XJF67G",
+    "footer_JadcgE"
+  ]
+}

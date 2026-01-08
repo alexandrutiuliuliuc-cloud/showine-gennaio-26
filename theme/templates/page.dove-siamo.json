@@ -1,0 +1,60 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "seo_content_6H7zj4": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Dove siamo?",
+        "heading_size": "h2",
+        "text": "<p>Ci troviamo a Porto Mantovano, in <strong>Via Parigi 8/D, 46047 Malpensata-Gombetto (MN)</strong>.<br/><br/>Qui nasce Showine, dove ogni giorno progettiamo e realizziamo cantine su misura per appassionati e professionisti del vino.<br/><br/>Puoi venirci a trovare su appuntamento oppure contattarci per una consulenza personalizzata.</p>",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "4",
+        "spacing_top": "4",
+        "spacing_bottom": "2"
+      }
+    },
+    "custom_liquid_ELNdWD": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "<div style=\"position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;\">\n  <iframe \n    src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5623.747645382569!2d10.771397076300895!3d45.18965037107081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781d1373ec9a193%3A0x37f429e0a5a805de!2sVia%20Parigi%2C%208%2Fd%2C%2046047%20Malpensata-gombetto%20MN!5e0!3m2!1sit!2sit!4v1746450700719!5m2!1sit!2sit\" \n    style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;\" \n    allowfullscreen=\"\" \n    loading=\"lazy\" \n    referrerpolicy=\"no-referrer-when-downgrade\">\n  </iframe>\n</div>",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "1",
+        "spacing_bottom": "4"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "seo_content_6H7zj4",
+    "custom_liquid_ELNdWD"
+  ]
+}

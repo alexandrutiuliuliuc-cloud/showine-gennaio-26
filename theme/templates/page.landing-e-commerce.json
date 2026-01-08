@@ -1,0 +1,399 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "hero_banner_GwPrKL": {
+      "type": "hero-banner",
+      "blocks": {
+        "slide_4AKTzi": {
+          "type": "slide",
+          "settings": {
+            "banner_layout": "hero-banner--full",
+            "color_scheme": "scheme-2",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<h2>Shopping</h2>",
+            "subheading": "",
+            "subheading_link": "",
+            "text": "",
+            "button_link_1": "/",
+            "button_link_1_type": "button",
+            "button_label_1": "",
+            "button_style_1": "button--filled",
+            "button_link_2": "/",
+            "button_label_2": "",
+            "button_style_2": "button--outlined",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/slide_chi_siamo.png",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": true,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "slide_4AKTzi"
+      ],
+      "settings": {
+        "enable_transparent_header": true,
+        "slider_height": 70,
+        "slideshow_autoplay_interval": 6,
+        "show_slideshow_navigation": true,
+        "slideshow_navigation_position": "hero__swiper-buttons--start",
+        "color_scheme_arrows": "",
+        "show_slideshow_pagination": false,
+        "slideshow_pagination_style": "style-1",
+        "floating_bar": false
+      }
+    },
+    "featured_products_YyUJKM": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_BEACEn": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "vetrina-homepage",
+            "products": [],
+            "vendor": "",
+            "collection_of_products": "",
+            "show_unavailable_products": true,
+            "card_text_heading": "",
+            "card_text_button_label": "",
+            "card_text_button_style": "button--filled",
+            "card_text_button_link": "",
+            "content_position": "center",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_BEACEn"
+      ],
+      "settings": {
+        "layout": "layout-1",
+        "heading": "Bestseller",
+        "heading_size": "h3",
+        "subheading": "<strong>IN EVIDENZA</strong>",
+        "button_label": "vedi tutti",
+        "button_link": "shopify://collections/vetrina-homepage",
+        "button_style": "button--text",
+        "max_products": 12,
+        "enable_slideshow_overflow": true,
+        "show_navigation_arrows": true,
+        "slideshow_autoplay_interval": 3,
+        "tab_button_style": "button--filled",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_top": "4",
+        "spacing_bottom": "2"
+      }
+    },
+    "seo_content_9bJKKJ": {
+      "type": "seo-content",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Le nostre <em>collezioni</em>",
+        "heading_size": "h3",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-narrower",
+        "color_scheme": "scheme-1",
+        "spacing_inner": "0",
+        "spacing_top": "2",
+        "spacing_bottom": "1"
+      }
+    },
+    "main_list_collections_zwkd6L": {
+      "type": "main-list-collections",
+      "blocks": {
+        "collection_rKYPj7": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "collection": "accessori",
+            "image": "shopify://shop_images/Tappo-per-Champagne-e-Spumante-2.webp",
+            "heading": "",
+            "heading_size": "h4",
+            "subheading": ""
+          }
+        },
+        "collection_X7Waie": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "collection": "arredo",
+            "image": "shopify://shop_images/Beker-Tavolo.webp",
+            "heading": "",
+            "heading_size": "h4",
+            "subheading": ""
+          }
+        },
+        "collection_d8Cacr": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "collection": "cantine-frigo",
+            "image": "shopify://shop_images/Composizione_3.jpg",
+            "heading": "",
+            "heading_size": "h4",
+            "subheading": ""
+          }
+        },
+        "collection_VQPPH3": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "collection": "climatizzatori",
+            "image": "shopify://shop_images/Sottoscala_Climatizzato_q_530x_ee707751-7bf6-44df-9fe7-1c5335c26c31_1.png",
+            "heading": "",
+            "heading_size": "h4",
+            "subheading": ""
+          }
+        },
+        "collection_GU89bE": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "collection": "portabottiglie",
+            "image": "shopify://shop_images/Pannelli-in-metallo-Boiserie-per-ancoraggio-accessori-portabottiglie-magnetici-10_1b441a8f-d702-4dd6-9d45-16c866081025.jpg",
+            "heading": "",
+            "heading_size": "h4",
+            "subheading": ""
+          }
+        },
+        "collection_bm6tzU": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "collection": "mescita",
+            "image": "shopify://shop_images/ViininKaatolaiteVCANTERRustico6_VCNTRU06_5_1.png",
+            "heading": "",
+            "heading_size": "h4",
+            "subheading": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_rKYPj7",
+        "collection_X7Waie",
+        "collection_d8Cacr",
+        "collection_VQPPH3",
+        "collection_GU89bE",
+        "collection_bm6tzU"
+      ],
+      "settings": {
+        "collections_to_show": "selected",
+        "card_title_style": "card-single-text",
+        "collection_product_count": "show",
+        "collections_per_page": 12,
+        "pagination_style": "default",
+        "enable_infinity_scroll": false,
+        "section_width": "max-w-page",
+        "color_scheme": "scheme-1",
+        "spacing_top": "0",
+        "spacing_bottom": "4"
+      }
+    },
+    "featured_products_aYfN9Y": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_bUyJ6p": {
+          "type": "collection",
+          "settings": {
+            "title": "Ultimi arrivi",
+            "collection": "ultimi-arrivi",
+            "products": [],
+            "vendor": "",
+            "collection_of_products": "",
+            "show_unavailable_products": true,
+            "card_text_heading": "",
+            "card_text_button_label": "",
+            "card_text_button_style": "button--filled",
+            "card_text_button_link": "",
+            "content_position": "center",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_bUyJ6p"
+      ],
+      "settings": {
+        "layout": "layout-2",
+        "heading": "Ultimi <em>arrivi</em>",
+        "heading_size": "h3",
+        "subheading": "SHOWINE COLLECTION",
+        "button_label": "VEDI TUTTI",
+        "button_link": "shopify://collections/ultimi-arrivi",
+        "button_style": "button--filled",
+        "max_products": 12,
+        "enable_slideshow_overflow": true,
+        "show_navigation_arrows": true,
+        "slideshow_autoplay_interval": 2,
+        "tab_button_style": "button--filled",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_iqVDQF": {
+      "type": "seo-content",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Ti potrebbe interessare",
+        "heading_size": "h3",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-narrower",
+        "color_scheme": "scheme-1",
+        "spacing_inner": "0",
+        "spacing_top": "4",
+        "spacing_bottom": "1"
+      }
+    },
+    "interactive_banner_wLBHfk": {
+      "type": "interactive-banner",
+      "blocks": {
+        "slide_VntKfk": {
+          "type": "slide",
+          "settings": {
+            "heading": "PORTACALICI",
+            "url": "shopify://collections/portacalici",
+            "image_desktop": "shopify://shop_images/Stact-Pro-Portacalici-in-Alluminio-8_1.jpg",
+            "video_desktop_external": "",
+            "video_mobile_external": ""
+          }
+        },
+        "slide_rpP4b9": {
+          "type": "slide",
+          "settings": {
+            "heading": "IDEE REGALO",
+            "url": "shopify://collections/idee-regalo",
+            "image_desktop": "shopify://shop_images/6_61d971bd-221f-4194-be34-8381de03d32d.jpg",
+            "video_desktop_external": "",
+            "video_mobile_external": ""
+          }
+        },
+        "slide_MPR9bW": {
+          "type": "slide",
+          "settings": {
+            "heading": "CORAVIN",
+            "url": "shopify://collections/coravin",
+            "image_desktop": "shopify://shop_images/coravin.png",
+            "video_desktop_external": "",
+            "video_mobile_external": ""
+          }
+        },
+        "slide_tGYpTK": {
+          "type": "slide",
+          "settings": {
+            "heading": "CONSERVAZIONE",
+            "url": "shopify://collections/conservazione",
+            "image_desktop": "shopify://shop_images/6_4743de1b-b089-4327-8587-07cb7f612b8f.jpg",
+            "video_desktop_external": "",
+            "video_mobile_external": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_VntKfk",
+        "slide_rpP4b9",
+        "slide_MPR9bW",
+        "slide_tGYpTK"
+      ],
+      "settings": {
+        "full_width_banner_height": 90,
+        "full_width_banner_mobile_height": 75,
+        "content_width": "max-w-small",
+        "section_width": "max-w-full",
+        "color_scheme": "scheme-2",
+        "color_scheme_for_content": "scheme-2",
+        "spacing_top": "0",
+        "spacing_bottom": "0"
+      }
+    },
+    "featured_products_qh9ak7": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_qJkBtd": {
+          "type": "collection",
+          "settings": {
+            "title": "Sconti",
+            "collection": "outlet",
+            "products": [],
+            "vendor": "",
+            "collection_of_products": "",
+            "show_unavailable_products": true,
+            "card_text_heading": "",
+            "card_text_button_label": "",
+            "card_text_button_style": "button--filled",
+            "card_text_button_link": "",
+            "content_position": "center",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_qJkBtd"
+      ],
+      "settings": {
+        "layout": "layout-2",
+        "heading": "Sconti da <em>non perdere</em>",
+        "heading_size": "h3",
+        "subheading": "SHOWINE",
+        "button_label": "VEDI TUTTI",
+        "button_link": "shopify://collections/outlet",
+        "button_style": "button--filled",
+        "max_products": 12,
+        "enable_slideshow_overflow": true,
+        "show_navigation_arrows": true,
+        "slideshow_autoplay_interval": 2,
+        "tab_button_style": "button--filled",
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-1",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_banner_GwPrKL",
+    "featured_products_YyUJKM",
+    "seo_content_9bJKKJ",
+    "main_list_collections_zwkd6L",
+    "featured_products_aYfN9Y",
+    "seo_content_iqVDQF",
+    "interactive_banner_wLBHfk",
+    "featured_products_qh9ak7"
+  ]
+}

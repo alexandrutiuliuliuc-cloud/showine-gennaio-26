@@ -1,0 +1,225 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1658995208ad05f95f": {
+      "type": "hero-banner",
+      "blocks": {
+        "e3867974-072c-4cfe-968e-a10d22e8941a": {
+          "type": "slide",
+          "settings": {
+            "banner_layout": "hero-banner--full",
+            "color_scheme": "scheme-2",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<h2>Dove nasce la dedizione, vive il vino</h2>",
+            "subheading": "",
+            "subheading_link": "",
+            "text": "",
+            "button_link_1": "/",
+            "button_link_1_type": "button",
+            "button_label_1": "",
+            "button_style_1": "button--filled",
+            "button_link_2": "/",
+            "button_label_2": "",
+            "button_style_2": "button--outlined",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/slide_chi_siamo.png",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": true,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "e3867974-072c-4cfe-968e-a10d22e8941a"
+      ],
+      "settings": {
+        "enable_transparent_header": true,
+        "slider_height": 70,
+        "slideshow_autoplay_interval": 6,
+        "show_slideshow_navigation": true,
+        "slideshow_navigation_position": "hero__swiper-buttons--start",
+        "color_scheme_arrows": "",
+        "show_slideshow_pagination": false,
+        "slideshow_pagination_style": "style-1",
+        "floating_bar": false
+      }
+    },
+    "9585dbdf-5519-43bd-a4c5-6aa99afe9a31": {
+      "type": "seo-content",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "",
+        "heading_size": "h3",
+        "text": "<p>Ogni bottiglia racconta una storia. Di territori, di mani sapienti, di attese e celebrazioni. Da Showine, crediamo che un grande vino meriti uno spazio altrettanto speciale. Per questo da anni progettiamo luoghi che custodiscono emozioni: cantine dove ogni etichetta trova il suo posto, dove ogni sorso è già un ricordo. Showine è nata per accompagnare chi ama il vino nella sua forma più autentica: quella che si conserva, si degusta, si condivide.</p>",
+        "content_alignment": "center",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_inner": "4",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "multitile_3RVTYn": {
+      "type": "multitile",
+      "blocks": {
+        "tile_DpxYM4": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "16/9",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/team_Showine.png",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_AhkFYf": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-6",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "Passione per il <em>vino</em>, dal <em>2006</em>",
+            "heading_size": "h3",
+            "text": "<p>Dal 2006, Showine è un punto di riferimento per gli amanti del vino in Italia. <br/><br/>Con sede a Porto Mantovano, selezioniamo e consegniamo nel Bel Paese prodotti dei migliori marchi internazionali specializzati nello stoccaggio e nella conservazione enologica. <br/><br/>Siamo orgogliosi di essere esclusivisti per l’Italia del marchio francese <em>Le Bloc Cellier</em>, leader nei sistemi di scaffalature in pietra ricostituita.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_DpxYM4",
+        "tile_AhkFYf"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "multitile_CjaFEa": {
+      "type": "multitile",
+      "blocks": {
+        "tile_7Vdhbm": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 2,
+            "color_scheme": "",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Cantine personalizzate e arredamenti su misura",
+            "heading_size": "h3",
+            "text": "<p>Il cuore della nostra attività è la progettazione e realizzazione di cantine su misura, sia per clienti privati che per enoteche, ristoranti, wine bar e aziende vinicole. Ogni spazio è pensato per preservare le qualità del vino e valorizzare il contesto in cui si inserisce. Ci occupiamo anche dell’arredo completo di scantinati e taverne, trasformandoli in luoghi accoglienti e funzionali, perfetti per vivere e condividere la passione per il vino.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Immagine13.jpg",
+            "show_controls_on_video": false,
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_Xi7yAy": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 1,
+            "color_scheme": "",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Accessori, bottiglie selezionate e idee regalo",
+            "heading_size": "h3",
+            "text": "<p>Accanto alla progettazione, Showine propone una curata selezione di bottiglie pregiate e accessori: cantinette frigo, portabottiglie in acciaio, legno o tufo, pupitre per spumanti e champagne, bottiglie magnum, calici da degustazione, decanter e originali idee regalo per appassionati e professionisti.<br/>Conservare una grande annata in una cantina firmata Showine rende ogni momento ancora più speciale.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Immagine14.jpg",
+            "show_controls_on_video": false,
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_7Vdhbm",
+        "tile_Xi7yAy"
+      ],
+      "name": "t:sections.multitile.name",
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    }
+  },
+  "order": [
+    "1658995208ad05f95f",
+    "9585dbdf-5519-43bd-a4c5-6aa99afe9a31",
+    "multitile_3RVTYn",
+    "multitile_CjaFEa"
+  ]
+}

@@ -1,0 +1,136 @@
+{% comment %}
+  Section: Mega Links
+  Scopo: mostra una griglia di colonne con un titolo e una lista di link (menu di navigazione) per ogni colonna.
+  Utilizzo: aggiungere la sezione nell'editor del tema e, per ogni blocco colonna, selezionare un menu.
+{% endcomment %}
+
+<section class="mega-links-section{% if section.settings.show_dividers %} mega-links--dividers{% endif %}" data-section-id="{{ section.id }}">
+  {% if section.settings.section_title != blank %}
+    <div class="mega-links__section-title-wrapper">
+      <h2 class="mega-links__section-title">{{ section.settings.section_title }}</h2>
+    </div>
+  {% endif %}
+
+  <div class="mega-links__grid">
+    {% for block in section.blocks %}
+      <div class="mega-links__column" {{ block.shopify_attributes }}>
+        {% if block.settings.heading != blank %}
+          <h3 class="mega-links__heading">{{ block.settings.heading }}</h3>
+        {% endif %}
+
+        {% assign links = blank %}
+        {% if block.settings.menu and block.settings.menu.links and block.settings.menu.links.size > 0 %}
+          {% assign links = block.settings.menu.links %}
+        {% elsif block.settings.menu != blank and linklists[block.settings.menu] and linklists[block.settings.menu].links.size > 0 %}
+          {% assign links = linklists[block.settings.menu].links %}
+        {% endif %}
+
+        {% comment %} Gestione lista menu ed eventuale link esterno {% endcomment %}
+        {% if links and links.size > 0 %}
+          <ul class="mega-links__list">
+            {% for link in links %}
+              <li class="mega-links__item">
+                <a class="mega-links__link" href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+            {% if block.settings.extra_link_label != blank and block.settings.extra_link_url != blank %}
+              <li class="mega-links__item">
+                <a class="mega-links__link" href="{{ block.settings.extra_link_url }}"{% if block.settings.extra_link_new_tab %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ block.settings.extra_link_label }}</a>
+              </li>
+            {% endif %}
+          </ul>
+        {% elsif block.settings.extra_link_label != blank and block.settings.extra_link_url != blank %}
+          <ul class="mega-links__list">
+            <li class="mega-links__item">
+              <a class="mega-links__link" href="{{ block.settings.extra_link_url }}"{% if block.settings.extra_link_new_tab %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ block.settings.extra_link_label }}</a>
+            </li>
+          </ul>
+        {% else %}
+          <div class="mega-links__empty">Seleziona un menu o aggiungi link a quello scelto.</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <style>
+    .mega-links-section {
+      padding: 32px 50px;
+    }
+    .mega-links__section-title-wrapper { margin-bottom: 16px; }
+    .mega-links__section-title { font-size: 20px; font-weight: 700; margin: 0; }
+
+    .mega-links__grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 16px 24px;
+    }
+
+    .mega-links__column {}
+
+    .mega-links__heading {
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+    }
+
+    .mega-links__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+
+    .mega-links__link { text-decoration: none; color: inherit; }
+    .mega-links__link:hover { text-decoration: underline; }
+
+    .mega-links--dividers .mega-links__column { border-left: 1px solid rgba(0,0,0,0.08); padding-left: 16px; }
+    /* Prima colonna di OGNI riga (desktop 6-col) senza bordo sinistro */
+    .mega-links--dividers .mega-links__column:nth-child(6n+1) { border-left: none; padding-left: 0; }
+
+    @media (max-width: 1024px) {
+      .mega-links__grid { grid-template-columns: repeat(3, 1fr); }
+      /* Prima colonna di ogni riga a 3-col */
+      .mega-links--dividers .mega-links__column { padding-left: 16px; }
+      .mega-links--dividers .mega-links__column:nth-child(3n+1) { border-left: none; padding-left: 0; }
+    }
+
+    @media (max-width: 768px) {
+      .mega-links__grid { grid-template-columns: 1fr 1fr; }
+      /* Prima colonna di ogni riga a 2-col */
+      .mega-links--dividers .mega-links__column:nth-child(2n+1) { border-left: none; padding-left: 0; }
+    }
+
+    @media (max-width: 480px) {
+      .mega-links__grid { grid-template-columns: 1fr; }
+      /* Singola colonna: nessun bordo sinistro */
+      .mega-links--dividers .mega-links__column { border-left: none; padding-left: 0; }
+    }
+  </style>
+</section>
+
+{% schema %}
+{
+  "name": "Mega Links",
+  "tag": "section",
+  "class": "mega-links",
+  "settings": [
+    { "type": "text", "id": "section_title", "label": "Titolo sezione", "default": "Mega Links" },
+    { "type": "checkbox", "id": "show_dividers", "label": "Mostra divisori tra colonne", "default": false }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Colonna",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Titolo colonna", "default": "Titolo colonna" },
+        { "type": "link_list", "id": "menu", "label": "Menu da visualizzare" },
+        { "type": "text", "id": "extra_link_label", "label": "Link esterno - testo" },
+        { "type": "url", "id": "extra_link_url", "label": "Link esterno - URL" },
+        { "type": "checkbox", "id": "extra_link_new_tab", "label": "Apri link esterno in una nuova scheda", "default": true }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Mega links",
+      "blocks": [ { "type": "column" }, { "type": "column" }, { "type": "column" } ]
+    }
+  ]
+}
+{% endschema %}

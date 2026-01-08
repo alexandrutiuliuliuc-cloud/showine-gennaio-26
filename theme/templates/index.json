@@ -1,0 +1,1554 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1658995208ad05f95f": {
+      "type": "hero-banner",
+      "blocks": {
+        "8d591e0b-d408-44f1-8bd2-9b71f529aa90": {
+          "type": "slide",
+          "settings": {
+            "banner_layout": "hero-banner--full",
+            "color_scheme": "scheme-6",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<h2>Il punto di riferimento più autorevole per tutti i wine-lover</h2>",
+            "subheading": "<strong>Oltre 20 anni di esperienza</strong>",
+            "subheading_link": "",
+            "text": "<h6>Realizziamo e arrediamo cantine su misura. <br/>Selezioniamo i migliori accessori per tutti gli appassionati di vino.</h6>",
+            "button_link_1": "",
+            "button_link_1_type": "button",
+            "button_label_1": "",
+            "button_style_1": "button--filled",
+            "button_link_2": "",
+            "button_label_2": "",
+            "button_style_2": "button--outlined",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/slide_iniziale_showine.png",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": true,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        },
+        "slide_T7L9qy": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "banner_layout": "hero-banner--full",
+            "color_scheme": "scheme-6",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<h2>Realizziamo Wine Room climatizzate</h2>",
+            "subheading": "<strong>Il tuo vino se lo merita</strong>",
+            "subheading_link": "",
+            "text": "<h6>Progettiamo la tua wine-room su misura 'chiavi in mano'. </h6><h6>In qualsiasi spazio, di qualsiasi dimensione.</h6>",
+            "button_link_1": "#",
+            "button_link_1_type": "button",
+            "button_label_1": "GUARDA LAVORI ESEGUITI",
+            "button_style_1": "button--filled",
+            "button_link_2": "",
+            "button_label_2": "",
+            "button_style_2": "button--outlined",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/slide_2_homepage_showine.png",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": true,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        },
+        "slide_DzBC9m": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "banner_layout": "hero-banner--full",
+            "color_scheme": "scheme-6",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<h2>Il team Showine</h2>",
+            "subheading": "<strong>CHI SIAMO</strong>",
+            "subheading_link": "",
+            "text": "<h6>Condividiamo il nostro amore per il vino con tutti gli appassionati </h6><h6>Mettiamo passione, esperienza e cura in ogni progetto.</h6>",
+            "button_link_1": "/",
+            "button_link_1_type": "button",
+            "button_label_1": "Conosci il nostro team",
+            "button_style_1": "button--filled",
+            "button_link_2": "/",
+            "button_label_2": "",
+            "button_style_2": "button--outlined",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/slide_team_1.png",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": true,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "8d591e0b-d408-44f1-8bd2-9b71f529aa90",
+        "slide_T7L9qy",
+        "slide_DzBC9m"
+      ],
+      "custom_css": [
+        "p {color: white;}",
+        ".button {font-weight: bold;}",
+        "@media (max-width: 876px) {h2 {font-size: 42px; }}"
+      ],
+      "settings": {
+        "enable_transparent_header": false,
+        "slider_height": 65,
+        "slideshow_autoplay_interval": 7,
+        "show_slideshow_navigation": true,
+        "slideshow_navigation_position": "hero__swiper-buttons--sides",
+        "color_scheme_arrows": "scheme-6",
+        "show_slideshow_pagination": true,
+        "slideshow_pagination_style": "style-2",
+        "floating_bar": false
+      }
+    },
+    "trust_indicators_MdtG6e": {
+      "type": "trust-indicators",
+      "blocks": {
+        "indicator_XaPTe7": {
+          "type": "indicator",
+          "settings": {
+            "title": "Spedizione sicura",
+            "subheading": "Consegne rapide e tracciabili, in Italia e nel mondo, anche per articoli fragili e su misura.",
+            "link_label": "",
+            "link": "/",
+            "icon": "option-truck"
+          }
+        },
+        "indicator_8cpfgN": {
+          "type": "indicator",
+          "settings": {
+            "title": "Assistenza continua",
+            "subheading": "Supporto telefonico e online, 24 ore su 24, 7 giorni su 7, con persone reali e competenti.",
+            "link_label": "",
+            "link": "/",
+            "icon": "option-chat_bubble"
+          }
+        },
+        "indicator_Q8zyxy": {
+          "type": "indicator",
+          "settings": {
+            "title": "Progetti su misura",
+            "subheading": "Cantine e soluzioni d’arredo pensate esclusivamente sulle tue esigenze.",
+            "link_label": "",
+            "link": "/",
+            "icon": "theme-heart"
+          }
+        },
+        "indicator_AmwC7R": {
+          "type": "indicator",
+          "settings": {
+            "title": "Prodotti selezionati",
+            "subheading": "Vini, accessori e arredi scelti da esperti per veri appassionati di qualità ed eccellenza.",
+            "link_label": "",
+            "link": "/",
+            "icon": "option-box"
+          }
+        }
+      },
+      "block_order": [
+        "indicator_XaPTe7",
+        "indicator_8cpfgN",
+        "indicator_Q8zyxy",
+        "indicator_AmwC7R"
+      ],
+      "settings": {
+        "swipe_on_mobile": true,
+        "slideshow_autoplay_interval": 3,
+        "content_direction": "vertical",
+        "content_alignment": "text-center",
+        "content_size": "h5",
+        "color_scheme_for_blocks": "scheme-5",
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "dual_tiles_HdRHRA": {
+      "type": "dual-tiles",
+      "blocks": {
+        "tile_aedmbg": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "color_scheme": "scheme-6",
+            "custom_background_color": "",
+            "heading": "I nostri prodotti per il vino",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/landing-e-commerce",
+            "button_style": "button--filled",
+            "product": "",
+            "product_width": 24,
+            "show_other_elements_with_product": true,
+            "aspect_ratio": "4/3",
+            "vertical_position": "stretch",
+            "content_position": "justify-center",
+            "content_alignment": "text-center align-center",
+            "product_position": "0",
+            "image": "shopify://shop_images/shopping_2_1.png",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "aspect_ratio_mobile": "auto",
+            "content_alignment_mobile": "text-center--mobile align-center--mobile",
+            "content_position_mobile": "justify-center--mobile",
+            "product_position_mobile": "0",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "3"
+          }
+        },
+        "tile_bwXCDM": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "color_scheme": "scheme-6",
+            "custom_background_color": "",
+            "heading": "I nostri progetti su misura",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://pages/landing-progetti",
+            "button_style": "button--filled",
+            "product": "",
+            "product_width": 24,
+            "show_other_elements_with_product": true,
+            "aspect_ratio": "4/3",
+            "vertical_position": "stretch",
+            "content_position": "justify-center",
+            "content_alignment": "text-center align-center",
+            "product_position": "0",
+            "image": "shopify://shop_images/progetti_2_1.png",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "aspect_ratio_mobile": "auto",
+            "content_alignment_mobile": "text-center--mobile align-center--mobile",
+            "content_position_mobile": "justify-center--mobile",
+            "product_position_mobile": "0",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "3"
+          }
+        }
+      },
+      "block_order": [
+        "tile_aedmbg",
+        "tile_bwXCDM"
+      ],
+      "custom_css": [
+        "button {font-weight: bold;}"
+      ],
+      "name": "t:sections.dual-tiles.name",
+      "settings": {
+        "section_layout": "seperated",
+        "block_size": "half",
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-fluid",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "multitile_FeaqHw": {
+      "type": "multitile",
+      "blocks": {
+        "tile_d8HHVq": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-6",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "3/2",
+            "content_position_vertical": "justify-end",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "Shopping",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://collections",
+            "button_style": "button--text",
+            "image": "shopify://shop_images/6_1280x853_750x_8664f047-e4bc-4854-8c6e-6ce4d8eae7de.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_tmHbjn": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-6",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "3/2",
+            "content_position_vertical": "justify-end",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "Progetti su misura",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify://collections/conservazione",
+            "button_style": "button--text",
+            "image": "shopify://shop_images/16_1350x_77f2ef21-a896-41fc-9823-96ba1420572e.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_d8HHVq",
+        "tile_tmHbjn"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".button {font-weight: bold;}"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "scheme-1",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "featured_products_4eL4yE": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_waiCtD": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "vetrina-homepage",
+            "products": [],
+            "vendor": "",
+            "collection_of_products": "",
+            "show_unavailable_products": true,
+            "card_text_heading": "",
+            "card_text_button_label": "",
+            "card_text_button_style": "button--filled",
+            "card_text_button_link": "",
+            "content_position": "center",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_waiCtD"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "layout-1",
+        "heading": "Bestseller",
+        "heading_size": "h3",
+        "subheading": "<strong>IN EVIDENZA</strong>",
+        "button_label": "vedi tutti",
+        "button_link": "shopify://collections/vetrina-homepage",
+        "button_style": "button--text",
+        "max_products": 12,
+        "enable_slideshow_overflow": true,
+        "show_navigation_arrows": true,
+        "slideshow_autoplay_interval": 3,
+        "tab_button_style": "button--filled",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_top": "4",
+        "spacing_bottom": "2"
+      }
+    },
+    "full_width_banner_JMAceU": {
+      "type": "full-width-banner",
+      "blocks": {
+        "subheading_gUTqPz": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "SHOWINE: il tuo vino se lo merita",
+            "link": ""
+          }
+        },
+        "heading_Ymr9i7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Trasformiamo la tua passione per il vino in un'esperienza straordinaria</em>",
+            "heading_size": "h3"
+          }
+        },
+        "content_raj6Vw": {
+          "type": "content",
+          "settings": {
+            "content": "<p><strong>Showine</strong> è un punto di riferimento autorevole per tutti i winelover. <br/>Da oltre 20 anni diffondiamo la cultura della conservazione del vino e il piacere della degustazione.</p><p>Noi di <strong>Showine </strong>siaamo leader nella creazione di arredi per cantine e di Wine Room climatizzate.<br/>Offriamo un’ampia selezione dei migliori articoli per l'esposizione e la degustazione del vino.</p><p><strong>Showine</strong> offre soluzioni su misura e 'chiavi in mano' per<strong> </strong>tutti i wine-lover e i professionisti del settore:<br/>architetti e progettisti, wine manager di hotel, ristoranti ed enoteche.</p>"
+          }
+        },
+        "buttons_7BWxeA": {
+          "type": "buttons",
+          "settings": {
+            "button_link_1": "shopify://pages/cantinette-vino-arredo-cantine",
+            "button_link_1_type": "button",
+            "button_label_1": "SCOPRI CHI SIAMO",
+            "button_style_1": "button--filled",
+            "color_scheme_first_button": "scheme-6",
+            "button_link_2": "",
+            "button_label_2": "",
+            "button_style_2": "button--outlined",
+            "color_scheme_second_button": "scheme-6"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_gUTqPz",
+        "heading_Ymr9i7",
+        "content_raj6Vw",
+        "buttons_7BWxeA"
+      ],
+      "custom_css": [
+        ".button {font-weight: bold;}"
+      ],
+      "settings": {
+        "enable_transparent_header": true,
+        "media_position": "top",
+        "section_height": "auto",
+        "content_position": "center",
+        "content_alignment": "center",
+        "video_external": "",
+        "show_controls_on_video": false,
+        "aspect_ratio": "auto",
+        "section_height_mobile": "auto",
+        "content_position_mobile": "center",
+        "content_alignment_mobile": "center",
+        "video_external_mobile": "",
+        "show_controls_on_video_mobile": false,
+        "aspect_ratio_mobile": "auto",
+        "section_width": "max-w-narrow",
+        "color_scheme": "scheme-1",
+        "color_scheme_for_content": "scheme-6",
+        "spacing_inner": "2",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "featured_products_RCNfYV": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_W9LnU4": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "vetrina-homepage",
+            "products": [],
+            "vendor": "",
+            "collection_of_products": "",
+            "show_unavailable_products": true,
+            "card_text_heading": "",
+            "card_text_button_label": "",
+            "card_text_button_style": "button--filled",
+            "card_text_button_link": "",
+            "content_position": "center",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_W9LnU4"
+      ],
+      "settings": {
+        "layout": "layout-1",
+        "heading": "Bestseller",
+        "heading_size": "h3",
+        "subheading": "<strong>IN EVIDENZA</strong>",
+        "button_label": "vedi tutti",
+        "button_link": "shopify://collections/vetrina-homepage",
+        "button_style": "button--text",
+        "max_products": 12,
+        "enable_slideshow_overflow": true,
+        "show_navigation_arrows": true,
+        "slideshow_autoplay_interval": 3,
+        "tab_button_style": "button--filled",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "1"
+      }
+    },
+    "seo_content_LTPf7R": {
+      "type": "seo-content",
+      "disabled": true,
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Le nostre <em>collezioni</em>",
+        "heading_size": "h3",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-narrower",
+        "color_scheme": "scheme-1",
+        "spacing_inner": "0",
+        "spacing_top": "2",
+        "spacing_bottom": "1"
+      }
+    },
+    "main_list_collections_yNNNqg": {
+      "type": "main-list-collections",
+      "blocks": {
+        "collection_QegihW": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "collection": "accessori",
+            "image": "shopify://shop_images/Tappo-per-Champagne-e-Spumante-2.webp",
+            "heading": "",
+            "heading_size": "h4",
+            "subheading": ""
+          }
+        },
+        "collection_xAamDE": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "collection": "arredo",
+            "image": "shopify://shop_images/Beker-Tavolo.webp",
+            "heading": "",
+            "heading_size": "h4",
+            "subheading": ""
+          }
+        },
+        "collection_RBYnt6": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "collection": "cantine-frigo",
+            "image": "shopify://shop_images/Composizione_3.jpg",
+            "heading": "",
+            "heading_size": "h4",
+            "subheading": ""
+          }
+        },
+        "collection_W7c78V": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "collection": "climatizzatori",
+            "image": "shopify://shop_images/Sottoscala_Climatizzato_q_530x_ee707751-7bf6-44df-9fe7-1c5335c26c31_1.png",
+            "heading": "",
+            "heading_size": "h4",
+            "subheading": ""
+          }
+        },
+        "collection_RTtm46": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "collection": "portabottiglie",
+            "image": "shopify://shop_images/Pannelli-in-metallo-Boiserie-per-ancoraggio-accessori-portabottiglie-magnetici-10_1b441a8f-d702-4dd6-9d45-16c866081025.jpg",
+            "heading": "",
+            "heading_size": "h4",
+            "subheading": ""
+          }
+        },
+        "collection_adqTKi": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "collection": "mescita",
+            "image": "shopify://shop_images/ViininKaatolaiteVCANTERRustico6_VCNTRU06_5_1.png",
+            "heading": "",
+            "heading_size": "h4",
+            "subheading": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_QegihW",
+        "collection_xAamDE",
+        "collection_RBYnt6",
+        "collection_W7c78V",
+        "collection_RTtm46",
+        "collection_adqTKi"
+      ],
+      "disabled": true,
+      "settings": {
+        "collections_to_show": "selected",
+        "card_title_style": "card-single-text",
+        "collection_product_count": "show",
+        "collections_per_page": 12,
+        "pagination_style": "default",
+        "enable_infinity_scroll": false,
+        "section_width": "max-w-page",
+        "color_scheme": "scheme-1",
+        "spacing_top": "0",
+        "spacing_bottom": "4"
+      }
+    },
+    "featured_products_9NJzmF": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_JBz4Aj": {
+          "type": "collection",
+          "settings": {
+            "title": "Ultimi arrivi",
+            "collection": "ultimi-arrivi",
+            "products": [],
+            "vendor": "",
+            "collection_of_products": "",
+            "show_unavailable_products": true,
+            "card_text_heading": "",
+            "card_text_button_label": "",
+            "card_text_button_style": "button--filled",
+            "card_text_button_link": "",
+            "content_position": "center",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_JBz4Aj"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".button {font-weight: bold;}"
+      ],
+      "settings": {
+        "layout": "layout-2",
+        "heading": "Ultimi <em>arrivi</em>",
+        "heading_size": "h3",
+        "subheading": "SHOWINE COLLECTION",
+        "button_label": "VEDI TUTTI",
+        "button_link": "shopify://collections/ultimi-arrivi",
+        "button_style": "button--filled",
+        "max_products": 12,
+        "enable_slideshow_overflow": true,
+        "show_navigation_arrows": true,
+        "slideshow_autoplay_interval": 2,
+        "tab_button_style": "button--filled",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "shop_the_look_AckaFj": {
+      "type": "shop-the-look",
+      "blocks": {
+        "slide_xdcfGe": {
+          "type": "slide",
+          "settings": {
+            "product": "cantina-frigo-102-bottiglie-doppia-temperatura",
+            "dot_position_horizontal": 75,
+            "dot_position_vertical": 75
+          }
+        },
+        "slide_Df7jHE": {
+          "type": "slide",
+          "settings": {
+            "product": "cantina-frigo-incasso-154-doppia-temperatura",
+            "dot_position_horizontal": 50,
+            "dot_position_vertical": 50
+          }
+        }
+      },
+      "block_order": [
+        "slide_xdcfGe",
+        "slide_Df7jHE"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Acquista il set",
+        "heading_size": "h3",
+        "text": "",
+        "section_layout": "dual-content",
+        "image": "shopify://shop_images/IMG_0443_77a4d036-1f68-4791-828c-c8dcc901d51a.jpg",
+        "image_mobile": "shopify://shop_images/IMG_0443_77a4d036-1f68-4791-828c-c8dcc901d51a.jpg",
+        "reverse_positions": false,
+        "show_dots": true,
+        "button_label": "View product",
+        "button_style": "button--filled",
+        "aspect_ratio": "auto",
+        "aspect_ratio_mobile": "auto",
+        "section_width": "max-w-page",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "seo_content_rkgBc3": {
+      "type": "seo-content",
+      "disabled": true,
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Ti potrebbe interessare",
+        "heading_size": "h3",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-narrower",
+        "color_scheme": "scheme-1",
+        "spacing_inner": "0",
+        "spacing_top": "4",
+        "spacing_bottom": "1"
+      }
+    },
+    "interactive_banner_wdEKjA": {
+      "type": "interactive-banner",
+      "blocks": {
+        "slide_XeUkRF": {
+          "type": "slide",
+          "settings": {
+            "heading": "PORTACALICI",
+            "url": "shopify://collections/portacalici",
+            "image_desktop": "shopify://shop_images/Stact-Pro-Portacalici-in-Alluminio-8_1.jpg",
+            "video_desktop_external": "",
+            "video_mobile_external": ""
+          }
+        },
+        "slide_dWaem4": {
+          "type": "slide",
+          "settings": {
+            "heading": "IDEE REGALO",
+            "url": "shopify://collections/idee-regalo",
+            "image_desktop": "shopify://shop_images/6_61d971bd-221f-4194-be34-8381de03d32d.jpg",
+            "video_desktop_external": "",
+            "video_mobile_external": ""
+          }
+        },
+        "slide_hniATm": {
+          "type": "slide",
+          "settings": {
+            "heading": "CORAVIN",
+            "url": "shopify://collections/coravin",
+            "image_desktop": "shopify://shop_images/coravin.png",
+            "video_desktop_external": "",
+            "video_mobile_external": ""
+          }
+        },
+        "slide_8KKVRG": {
+          "type": "slide",
+          "settings": {
+            "heading": "CONSERVAZIONE",
+            "url": "shopify://collections/conservazione",
+            "image_desktop": "shopify://shop_images/6_4743de1b-b089-4327-8587-07cb7f612b8f.jpg",
+            "video_desktop_external": "",
+            "video_mobile_external": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_XeUkRF",
+        "slide_dWaem4",
+        "slide_hniATm",
+        "slide_8KKVRG"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width_banner_height": 90,
+        "full_width_banner_mobile_height": 75,
+        "content_width": "max-w-small",
+        "section_width": "max-w-full",
+        "color_scheme": "scheme-2",
+        "color_scheme_for_content": "scheme-2",
+        "spacing_top": "0",
+        "spacing_bottom": "0"
+      }
+    },
+    "featured_products_fcHHKi": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_GGnTja": {
+          "type": "collection",
+          "settings": {
+            "title": "Sconti",
+            "collection": "outlet",
+            "products": [],
+            "vendor": "",
+            "collection_of_products": "",
+            "show_unavailable_products": true,
+            "card_text_heading": "",
+            "card_text_button_label": "",
+            "card_text_button_style": "button--filled",
+            "card_text_button_link": "",
+            "content_position": "center",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_GGnTja"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".button {font-weight: bold;}"
+      ],
+      "settings": {
+        "layout": "layout-2",
+        "heading": "Sconti da <em>non perdere</em>",
+        "heading_size": "h3",
+        "subheading": "SHOWINE",
+        "button_label": "VEDI TUTTI",
+        "button_link": "shopify://collections/outlet",
+        "button_style": "button--filled",
+        "max_products": 12,
+        "enable_slideshow_overflow": true,
+        "show_navigation_arrows": true,
+        "slideshow_autoplay_interval": 2,
+        "tab_button_style": "button--filled",
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-1",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "carousel_P7MkHQ": {
+      "type": "carousel",
+      "blocks": {
+        "card_EViQ4R": {
+          "type": "card",
+          "settings": {
+            "heading": "Realizza la tua cantina",
+            "heading_size": "h5",
+            "text": "<p>Scopri come avere una cantina interrata</p>",
+            "button_label": "ESPLORA ORA",
+            "button_link": "shopify://pages/cantina-monoblocco",
+            "button_style": "button--filled",
+            "aspect_ratio": "5/4",
+            "color_scheme": "scheme-5",
+            "media_position": "top",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/14_-_Cantina_a_vista_Interrata_750x_489decef-9fa1-4589-be3c-90c5d8e4f225.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "card_jnfVnk": {
+          "type": "card",
+          "settings": {
+            "heading": "Helicave",
+            "heading_size": "h5",
+            "text": "<p>Scopri come avere una stanza in più a casa tua </p>",
+            "button_label": "ESPLORA ORA",
+            "button_link": "shopify://pages/helicave",
+            "button_style": "button--filled",
+            "aspect_ratio": "5/4",
+            "color_scheme": "scheme-5",
+            "media_position": "top",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/Ronde_28.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "card_T9CaPL": {
+          "type": "card",
+          "settings": {
+            "heading": "Arredo Personalizzato",
+            "heading_size": "h5",
+            "text": "<p>Le migliori soluzioni per creare la tua cantina</p>",
+            "button_label": "ESPLORA ORA",
+            "button_link": "shopify://pages/arredamento-cantina-vino",
+            "button_style": "button--filled",
+            "aspect_ratio": "5/4",
+            "color_scheme": "scheme-5",
+            "media_position": "top",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/banner-cantina-showine.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "card_HVnVnk": {
+          "type": "card",
+          "settings": {
+            "heading": "Lavori eseguiti",
+            "heading_size": "h5",
+            "text": "<p>Scopri i lavori eseguiti da Showine</p>",
+            "button_label": "ESPLORA ORA",
+            "button_link": "shopify://pages/lavori-eseguiti",
+            "button_style": "button--filled",
+            "aspect_ratio": "5/4",
+            "color_scheme": "scheme-5",
+            "media_position": "top",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/1_1350x_3a51c8dc-d94b-4a00-abac-7611f8d828b4.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "card_EViQ4R",
+        "card_jnfVnk",
+        "card_T9CaPL",
+        "card_HVnVnk"
+      ],
+      "disabled": true,
+      "name": "t:sections.carousel.name",
+      "settings": {
+        "show_navigation_arrows": false,
+        "slideshow_autoplay_interval": 0,
+        "slides_per_view": 4,
+        "layout": "layout-2",
+        "heading": "Progettazione",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--filled",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "multitile_MBV33E": {
+      "type": "multitile",
+      "blocks": {
+        "tile_gVEM3q": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "4/3",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/2_a1e3ef56-f5a8-48d8-981d-1631783e1549.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_XXcXGK": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-6",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "L'esposizione <em>del</em> <em>vino</em>",
+            "heading_size": "h4",
+            "text": "<p>Esporre il vino non è solo una questione estetica: è un modo per raccontare la propria passione e dare valore a ogni bottiglia. </p><p>Una collezione di vini merita di essere guardata, condivisa e vissuta come parte integrante della casa, del ristorante o della cantina. </p><p><strong>Showine</strong> propone soluzioni su misura e una vasta gamma di sistemi per l’esposizione del vino: scaffalature di design, strutture tradizionali in legno, espositori in metallo e soluzioni modulari che trasformano ogni ambiente in una vera libreria di bottiglie. </p><p>Ogni progetto nasce dall’ascolto delle esigenze dei winelover e si traduce in spazi funzionali e raffinati, capaci di coniugare estetica, praticità e cura dei dettagli. </p><p>Perché l’esposizione del vino non è solo ordine, ma esperienza: un piacere da condividere ogni giorno.</p>",
+            "button_label": "SCOPRI I NOSTRI PRODOTTI PER L'ESPOSIZIONE DEL VINO",
+            "button_link": "shopify://collections/conservazione",
+            "button_style": "button--filled",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_gVEM3q",
+        "tile_XXcXGK"
+      ],
+      "custom_css": [
+        ".button {font-weight: bold;}"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "compare_slider_FCDTTc": {
+      "type": "compare-slider",
+      "blocks": {
+        "image_before_slide_XUaPRb": {
+          "type": "image-before-slide",
+          "settings": {
+            "image": "shopify://shop_images/5a.webp",
+            "title": "PRIMA",
+            "color_scheme": ""
+          }
+        },
+        "image_after_slide_6y9WQj": {
+          "type": "image-after-slide",
+          "settings": {
+            "image": "shopify://shop_images/16_c4247c37-bc69-454d-8db1-df109bb472c8.webp",
+            "title": "DOPO",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_before_slide_XUaPRb",
+        "image_after_slide_6y9WQj"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".button {font-weight: bold;}"
+      ],
+      "settings": {
+        "section_layout": "shrink",
+        "heading": "Dove il progetto diventa atmosfera",
+        "heading_size": "h3",
+        "text": "<h4>Prima / <em>Dopo</em></h4><p><em><br/></em>Ogni lavoro realizzato è il risultato di ascolto, visione e precisione artigianale.<br/><br/>Trasformiamo semplici spazi in cantine d’autore, ambienti eleganti dove il vino può esprimere il meglio di sé.<br/><br/>Materiali di pregio, dettagli su misura e una progettazione funzionale rendono ogni intervento unico, come la passione di chi lo vive.</p>",
+        "button_label": "ESPLORA ORA",
+        "button_link": "/",
+        "button_style": "button--filled",
+        "media_aspect_ratio": "3/2",
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-5",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "multitile_aK7gpi": {
+      "type": "multitile",
+      "blocks": {
+        "tile_qEWN7C": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "La conservazione <em>del vino</em>",
+            "heading_size": "h4",
+            "text": "<p>La conservazione del vino richiede attenzione e competenza: temperatura, umidità e illuminazione sono variabili decisive per preservare aromi e caratteristiche di ogni bottiglia. </p><p>Ogni tipologia di vino ha esigenze specifiche e solo un ambiente controllato può garantirne la perfetta evoluzione. </p><p><strong>Showine</strong> realizza wine room climatizzate su misura e propone soluzioni complete per la conservazione: dalle cantinette refrigerate agli abbattitori, dai condizionatori agli umidificatori. </p><p>Da oltre 20 anni trasformiamo la passione dei winelover in spazi funzionali ed eleganti, dove la tecnica incontra il design. </p><p>Conservare il vino non significa solo proteggerlo, ma valorizzarlo: custodire la memoria di ogni annata e preparare il terreno per un’esperienza di degustazione unica.</p>",
+            "button_label": "SCOPRI I NOSTRI PRODOTTI PER LA CONSERVAZIONE DEL VINO",
+            "button_link": "shopify://collections/conservazione",
+            "button_style": "button--filled",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_yGNgDQ": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "4/3",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/01_1c5500df-2844-447f-985e-7c74b7a93cf8.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_qEWN7C",
+        "tile_yGNgDQ"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "multitile_YftwQK": {
+      "type": "multitile",
+      "blocks": {
+        "tile_4aNfxd": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "4/3",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Immagine_11_1350x_2301afeb-f291-4eb6-b7ef-98d2e3e3e04b.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_apAeRX": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-6",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "La degustazione <em>del vino</em>",
+            "heading_size": "h4",
+            "text": "<p>La degustazione è il momento in cui il vino esprime tutta la sua anima. Ogni dettaglio, dagli strumenti al servizio, può esaltare o limitare questa esperienza. </p><p>Da oltre vent’anni <strong>Showine</strong> accompagna i winelover nella scelta dei migliori accessori per degustare ogni tipologia di vino nel modo più corretto e piacevole: cavatappi professionali, sistemi Coravin, decanter che favoriscono l’ossigenazione e calici studiati per esaltare aromi e sfumature. <br/>Non semplici oggetti, ma strumenti capaci di trasformare un gesto quotidiano in un rito di piacere e conoscenza. </p><p>La nostra esperienza e la nostra selezione accurata rendono ogni degustazione un’esperienza unica, dove la passione incontra la perfezione tecnica e la convivialità diventa arte.</p>",
+            "button_label": "SCOPRI I NOSTRI PRODOTTI PER LA DEGUSTAZIONE DEL VINO",
+            "button_link": "shopify://collections/conservazione",
+            "button_style": "button--filled",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_4aNfxd",
+        "tile_apAeRX"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "store_locator_BeJxk9": {
+      "type": "store-locator",
+      "blocks": {
+        "pin_e4wEhd": {
+          "type": "pin",
+          "settings": {
+            "store_title": "<h3><em>Showine</em><br/>Mantova</h3>",
+            "store_address": "Via Parigi, 8/d46047, Porto Mantovano",
+            "store_opening_hours": "<p>LUN - VEN: 8.30 - 12.30 / 14.00 - 18.00<br/>SAB - DOM: su appuntamento.</p>",
+            "store_image": "shopify://shop_images/GIG_0796.jpg",
+            "store_latitude": "",
+            "store_longitude": "",
+            "coordinate_title": "",
+            "button_style": "button--filled",
+            "store_tel_button": "CONTATTACI",
+            "store_tel": "+39 0376 408127",
+            "store_pin": "INDICAZIONI",
+            "store_pin_link": "https://www.google.com/maps/place/Via+Parigi,+8%2Fd,+46047+Malpensata-gombetto+MN/@45.1896504,10.7713971,654m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4781d1373ec9a193:0x37f429e0a5a805de!8m2!3d45.1896504!4d10.773972!16s%2Fg%2F11c4ldf20f?entry=ttu&g_ep=EgoyMDI1MDQyMC4wIKXMDSoASAFQAw%3D%3D",
+            "color_scheme": "scheme-6"
+          }
+        },
+        "pin_JLtBNE": {
+          "type": "pin",
+          "settings": {
+            "store_title": "<h3><em>Showine</em><br/>Svizzera</h3>",
+            "store_address": "Gaumenfreuden Seestrasse 147 Horgen",
+            "store_opening_hours": "<p>LUN - VEN: 8.30 - 12.30 / 14.00 - 18.00<br/>SAB - DOM: su appuntamento.</p>",
+            "store_image": "shopify://shop_images/DC3801-003-sm.jpg",
+            "store_latitude": "",
+            "store_longitude": "",
+            "coordinate_title": "",
+            "button_style": "button--filled",
+            "store_tel_button": "CONTATTACI",
+            "store_tel": "+41 78 723 23 38",
+            "store_pin": "INDICAZIONI",
+            "store_pin_link": "https://www.google.com/maps/place/Gaumenfreuden/@47.2608688,8.5934064,630m/data=!3m1!1e3!4m6!3m5!1s0x479aa990a0519187:0x7bebc344a4e1b1ba!8m2!3d47.2608689!4d8.5982773!16s%2Fg%2F11tjzq96nf?entry=ttu&g_ep=EgoyMDI1MDQyMC4wIKXMDSoASAFQAw%3D%3D",
+            "color_scheme": "scheme-6"
+          }
+        }
+      },
+      "block_order": [
+        "pin_e4wEhd",
+        "pin_JLtBNE"
+      ],
+      "custom_css": [
+        ".button {font-weight: bold;}"
+      ],
+      "settings": {
+        "heading": "Le nostre <em>due sedi</em>",
+        "heading_size": "h3",
+        "layout": "image",
+        "image_grid_columns": "auto",
+        "cards_height": 80,
+        "cards_height_auto": false,
+        "cards_height_mobile": 66,
+        "api_key": "",
+        "zoom_level": 4,
+        "card_background_style": "solid",
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-1",
+        "spacing_top": "1",
+        "spacing_bottom": "2"
+      }
+    },
+    "custom_liquid_4XxRbq": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<img src=\"https://cdn.shopify.com/s/files/1/0561/8535/6486/files/Screenshot_2025-04-22_alle_14.14.21.png?v=1745324111\" alt=\"Screenshot\" style=\"max-width:100%; height:auto;\">",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "social_media_highlights_rHdmDk": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_Bpyxic": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DC3801-003-sm.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "5/4"
+          }
+        },
+        "image_pr4HCU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/cantina_frigo1.png",
+            "image_url": "",
+            "card_aspect_ratio": "5/4"
+          }
+        },
+        "image_3VmGLB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/MILLESIME140DBZoomZoneBasse.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "5/4"
+          }
+        },
+        "image_MJdkxy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6_4743de1b-b089-4327-8587-07cb7f612b8f.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "5/4"
+          }
+        },
+        "image_8wgQg6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_4d630832-d42f-4dcf-ae55-c22de8287766.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "5/4"
+          }
+        },
+        "image_G9PVUW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_e53e1fcf-925c-4a8d-8ead-b40607c992d6.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "5/4"
+          }
+        },
+        "image_gCMA4c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_fc93ef7d-1222-4e66-9c9e-98ab9719353b.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "5/4"
+          }
+        }
+      },
+      "block_order": [
+        "image_Bpyxic",
+        "image_pr4HCU",
+        "image_3VmGLB",
+        "image_MJdkxy",
+        "image_8wgQg6",
+        "image_G9PVUW",
+        "image_gCMA4c"
+      ],
+      "settings": {
+        "layout": "default",
+        "heading": "Seguici su",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "SHOWINE",
+        "button_link": "https://www.instagram.com/showine.it/",
+        "button_style": "button--outlined",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "scheme-5",
+        "media_aspect_ratio": "5/4",
+        "autoplay_speed": 7,
+        "section_width": "max-w-full",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "blog_articles_ThCgzt": {
+      "type": "blog-articles",
+      "custom_css": [],
+      "settings": {
+        "heading": "Il nostro <em>Blog</em>",
+        "heading_size": "h3",
+        "blog": "notizie",
+        "button_text": "VEDI TUTTI",
+        "layout": "layout-2",
+        "card_media_aspect_ratio": "3/2",
+        "show_excerpt": false,
+        "show_date": true,
+        "show_author": true,
+        "show_read_more": true,
+        "content_alignment": "text-start",
+        "button_style": "button--filled",
+        "section_width": "max-w-page",
+        "color_scheme": "scheme-1",
+        "spacing_grid": "2",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "testimonials_HhkVea": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_CUhwMk": {
+          "type": "testimonial",
+          "settings": {
+            "author": "",
+            "quote": "<p>Gucci Hosteria - FI<br/>Castello Banfi<br/>Carpineto<br/>Masi<br/>Cà RugateI <br/>Due Cippi - GR<br/>Enoproject<br/>Bottega<br/>Zorzetti<br/>Az. Agr. Bussia <br/>Soprana<br/>Barone Ricasoli<br/>Ruffino<br/>Fattoria di Calcinaia<br/>Podere Salicutti<br/>Ruggeri<br/>Montalbera<br/>Lebovitz<br/>Soc. Agr. San Felice<br/>Tenuta di Biserno<br/>IYO Restaurant – MI<br/>eWibe - Advisory<br/>Masciarelli Tenute Agricole<br/>Ristorante Oseleta - VR<br/>Glam - VE<br/>Dopolavoro - VE<br/>Osteria Enoteca 325 - PO<br/>Cuzziol Grandi Vini<br/>Widder Restaurant – Zug <br/>Tenuta di Ghizzano<br/>Retrobottega – Roma<br/>Enoteche Piave<br/>Osteria Casa del Vino - VR<br/>Gueuleton  - Crans Montana <br/>Da Giannino - MI<br/>Achilli al Parlamento - Roma<br/>Checco Er Carettiere - Roma<br/>Sucar Brusc - MN<br/>Tiratappi - MN<br/>Laboratorio - MN</p>",
+            "rating_score": 5,
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_CUhwMk"
+      ],
+      "name": "t:sections.testimonials.name",
+      "settings": {
+        "heading": "Hanno scelto Showine",
+        "heading_size": "h3",
+        "subheading": "",
+        "rating_icon": "star",
+        "layout": "vertical-w-media",
+        "slider_autoplay": 3,
+        "image": "shopify://shop_images/team_Showine.png",
+        "image_position": "image-start",
+        "image_aspect_ratio": "1/1",
+        "media_show_on": "desktop",
+        "spacing_inner": "2",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "mega_links_iXqhB6": {
+      "type": "mega-links",
+      "blocks": {
+        "column_hDRr7q": {
+          "type": "column",
+          "settings": {
+            "heading": "Portabottiglie",
+            "menu": "portabottiglie",
+            "extra_link_label": "",
+            "extra_link_url": "",
+            "extra_link_new_tab": true
+          }
+        },
+        "column_APfpAw": {
+          "type": "column",
+          "settings": {
+            "heading": "Cantinette",
+            "menu": "cantine-frigo",
+            "extra_link_label": "",
+            "extra_link_url": "",
+            "extra_link_new_tab": true
+          }
+        },
+        "column_xHAnpg": {
+          "type": "column",
+          "settings": {
+            "heading": "Mescita",
+            "menu": "mescita",
+            "extra_link_label": "",
+            "extra_link_url": "",
+            "extra_link_new_tab": true
+          }
+        },
+        "column_BtjKQn": {
+          "type": "column",
+          "settings": {
+            "heading": "Accessori",
+            "menu": "accessori",
+            "extra_link_label": "",
+            "extra_link_url": "",
+            "extra_link_new_tab": true
+          }
+        },
+        "column_zwHGTW": {
+          "type": "column",
+          "settings": {
+            "heading": "Climattizzatori",
+            "menu": "climatizzatori",
+            "extra_link_label": "",
+            "extra_link_url": "",
+            "extra_link_new_tab": true
+          }
+        },
+        "column_TCDJE8": {
+          "type": "column",
+          "settings": {
+            "heading": "Arredo",
+            "menu": "arredo",
+            "extra_link_label": "",
+            "extra_link_url": "",
+            "extra_link_new_tab": true
+          }
+        }
+      },
+      "block_order": [
+        "column_hDRr7q",
+        "column_APfpAw",
+        "column_xHAnpg",
+        "column_BtjKQn",
+        "column_zwHGTW",
+        "column_TCDJE8"
+      ],
+      "custom_css": [],
+      "name": "Mega links",
+      "settings": {
+        "section_title": "Categorie in Evidenza",
+        "show_dividers": false
+      }
+    }
+  },
+  "order": [
+    "1658995208ad05f95f",
+    "trust_indicators_MdtG6e",
+    "dual_tiles_HdRHRA",
+    "multitile_FeaqHw",
+    "featured_products_4eL4yE",
+    "full_width_banner_JMAceU",
+    "featured_products_RCNfYV",
+    "seo_content_LTPf7R",
+    "main_list_collections_yNNNqg",
+    "featured_products_9NJzmF",
+    "shop_the_look_AckaFj",
+    "seo_content_rkgBc3",
+    "interactive_banner_wdEKjA",
+    "featured_products_fcHHKi",
+    "carousel_P7MkHQ",
+    "multitile_MBV33E",
+    "compare_slider_FCDTTc",
+    "multitile_aK7gpi",
+    "multitile_YftwQK",
+    "store_locator_BeJxk9",
+    "custom_liquid_4XxRbq",
+    "social_media_highlights_rHdmDk",
+    "blog_articles_ThCgzt",
+    "testimonials_HhkVea",
+    "mega_links_iXqhB6"
+  ]
+}

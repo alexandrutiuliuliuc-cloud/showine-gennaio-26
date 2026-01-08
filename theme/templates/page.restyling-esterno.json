@@ -1,0 +1,378 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "seo_content_fhmmHk": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Progetti di restyling esterno",
+        "heading_size": "h2",
+        "text": "<h5>L'evoluzione di cantine preesistenti<br/><br/></h5><p>Nell’affrontare il tema delle cantine dal punto di vista della progettazione, spesso ci si imbatte nella richiesta di offrire soluzioni di completamento o di intervento parziale. Spesso la proposta deve assecondare una fase di sviluppo di un’azienda che non può, o spesso non vuole, costruire ex-novo la propria struttura, ma deve completarla ed evolverla, soprattutto nel trasmettere la nuova fase di sviluppo dell’attività insediata.</p><p>In questo caso, una copertura esterna della zona di stoccaggio, il cui disegno richiama un grappolo d'uva.</p>",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "4",
+        "spacing_top": "6",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_FqcndR": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "boxed",
+        "heading": "Rivestimenti di facciate",
+        "heading_size": "h2",
+        "text": "<p>L’involucro di un edificio può determinarne la performance e l’impatto architettonico: lo studio del rivestimento è un’area critica nella progettazione di edifici, e ricopre un ruolo centrale nel dar vita alla vision dell’architetto.<br/>Le facciate sono da considerarsi anche come importanti mediatori ambientali nel successo commerciale dell’edificio.<br/>L’innovazione tecnica è fondamentale nella progettazione di facciate:<br/>nuove soluzioni e materiali di rivestimento vengono continuamente sviluppati alla ricerca di migliori prestazioni, rendendo la progettazione e la costruzione dell’involucro dell’edificio una disciplina altamente complessa.<br/>Showine è in grado di proporre soluzioni nel campo delle facciate capaci di conferire valore a edifici nuovi e già esistenti, dall’aumento della durabilità e il risparmio energetico.<br/>Showine consiglia i propri clienti la via migliore per progettare e costruire l’involucro dell’edificio, collaborando con professionisti e tecnici di provata esperienza e knowhow multidisciplinare, garantendo una consulenza tecnica di alto livello durante l’intero processo, tra cui la scelta di materiali, colori e grafiche, servizi tecnici e sistemi. Il nostro obiettivo è di produrre soluzioni di valore, in grado di ottimizzare i costi e di fornire le migliori prestazioni nel rispetto del budget e i tempi preventivati.</p>",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-6",
+        "spacing_inner": "4",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_URJ64W": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Rivestimento facciata in legno (Affi)",
+        "heading_size": "h3",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "4",
+        "spacing_top": "4",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_XVyh4a": {
+      "type": "multitile",
+      "blocks": {
+        "tile_gLPK8G": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 4,
+            "row_factor": 2,
+            "color_scheme": "",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/freepik__enhance__71954.jpg",
+            "show_controls_on_video": false,
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_YQFe4U": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 2,
+            "row_factor": 1,
+            "color_scheme": "",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/progettiRestylingEsterno_3.jpg",
+            "show_controls_on_video": false,
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_FJccym": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 2,
+            "row_factor": 1,
+            "color_scheme": "",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/progettiRestylingEsterno_6.jpg",
+            "show_controls_on_video": false,
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_gLPK8G",
+        "tile_YQFe4U",
+        "tile_FJccym"
+      ],
+      "name": "t:sections.multitile.name",
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "seo_content_nEDeRA": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "La facciata di un centro commerciale",
+        "heading_size": "h3",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "4",
+        "spacing_top": "6",
+        "spacing_bottom": "1"
+      }
+    },
+    "multitile_HkjqUh": {
+      "type": "multitile",
+      "blocks": {
+        "tile_cm46Gy": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/freepik__enhance__71955.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_qCgQGR": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/freepik__enhance__34577.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_cm46Gy",
+        "tile_qCgQGR"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "1",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_GgRmrz": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "La facciata di un complesso commerciale (Conselve)",
+        "heading_size": "h3",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "4",
+        "spacing_top": "4",
+        "spacing_bottom": "1"
+      }
+    },
+    "multitile_DRxxFG": {
+      "type": "multitile",
+      "blocks": {
+        "tile_jJUBVQ": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/freepik__enhance__34578.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_BD9Ttn": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/freepik__enhance__34579.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_jJUBVQ",
+        "tile_BD9Ttn"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "1",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_XAdjyP": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Richiedi informazioni",
+        "heading_size": "h2",
+        "text": "<p>Inviaci una piantina di quello che vuoi realizzare o descrivici l'idea che hai in mente.<br/>Ti risponderemo senza alcun impegno da parte tua inviandoti il progetto dei tuoi sogni!Se vuoi un contatto diretto puoi chiamarci allo 0376 408127<br/><br/><a href=\"/pages/info-cantinette-portabottiglie-vino\" target=\"_blank\" title=\"Contattaci\"><strong>CONTATTACI ORA</strong></a></p>",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "4",
+        "spacing_top": "2",
+        "spacing_bottom": "6"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "seo_content_fhmmHk",
+    "seo_content_FqcndR",
+    "seo_content_URJ64W",
+    "multitile_XVyh4a",
+    "seo_content_nEDeRA",
+    "multitile_HkjqUh",
+    "seo_content_GgRmrz",
+    "multitile_DRxxFG",
+    "seo_content_XAdjyP"
+  ]
+}

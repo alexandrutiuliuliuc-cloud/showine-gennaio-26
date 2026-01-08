@@ -1,0 +1,71 @@
+/* override: search input bg white (auto-generated) */
+/* input nei vari stati dell'header (normale, trasparente, sticky) */
+.header input[type="search"],
+.header input[name="q"],
+.header .search__input,
+.header .field__input,
+.predictive-search__input,
+.search-modal__form input[type="search"],
+/* stati trasparenti/sticky */
+.header-wrapper--transparent .header input[type="search"],
+.header-wrapper--transparent .header input[name="q"],
+.header-wrapper--transparent .header .search__input,
+.header-wrapper--transparent .header .field__input,
+.header--transparent input[type="search"],
+.header--transparent input[name="q"],
+.header--transparent .search__input,
+.header--transparent .field__input {
+  background-color: #fff !important;
+  color: #111 !important;
+  -webkit-text-fill-color: #111 !important; /* Safari/iOS */
+}
+
+/* placeholder sempre nero (tutte le varianti) */
+.header input[type="search"]::placeholder,
+.header input[name="q"]::placeholder,
+.header .search__input::placeholder,
+.header .field__input::placeholder,
+.predictive-search__input::placeholder,
+.search-modal__form input[type="search"]::placeholder,
+.header input[type="search"]::-webkit-input-placeholder,
+.header input[name="q"]::-webkit-input-placeholder,
+.header .search__input::-webkit-input-placeholder,
+.header .field__input::-webkit-input-placeholder,
+.predictive-search__input::-webkit-input-placeholder,
+.search-modal__form input[type="search"]::-webkit-input-placeholder,
+.header input[type="search"]:-ms-input-placeholder,
+.header input[name="q"]:-ms-input-placeholder,
+.header .search__input:-ms-input-placeholder,
+.header .field__input:-ms-input-placeholder,
+.predictive-search__input:-ms-input-placeholder,
+.search-modal__form input[type="search"]:-ms-input-placeholder,
+.header-wrapper--transparent .header input[type="search"]::placeholder,
+.header-wrapper--transparent .header input[name="q"]::placeholder,
+.header-wrapper--transparent .header .search__input::placeholder,
+.header-wrapper--transparent .header .field__input::placeholder,
+.header--transparent input[type="search"]::placeholder,
+.header--transparent input[name="q"]::placeholder,
+.header--transparent .search__input::placeholder,
+.header--transparent .field__input::placeholder,
+.header-wrapper--transparent .header input[type="search"]::-webkit-input-placeholder,
+.header-wrapper--transparent .header input[name="q"]::-webkit-input-placeholder,
+.header-wrapper--transparent .header .search__input::-webkit-input-placeholder,
+.header-wrapper--transparent .header .field__input::-webkit-input-placeholder,
+.header--transparent input[type="search"]::-webkit-input-placeholder,
+.header--transparent input[name="q"]::-webkit-input-placeholder,
+.header--transparent .search__input::-webkit-input-placeholder,
+.header--transparent .field__input::-webkit-input-placeholder,
+.header-wrapper--transparent .header input[type="search"]:-ms-input-placeholder,
+.header-wrapper--transparent .header input[name="q"]:-ms-input-placeholder,
+.header-wrapper--transparent .header .search__input:-ms-input-placeholder,
+.header-wrapper--transparent .header .field__input:-ms-input-placeholder,
+.header--transparent input[type="search"]:-ms-input-placeholder,
+.header--transparent input[name="q"]:-ms-input-placeholder,
+.header--transparent .search__input:-ms-input-placeholder,
+.header--transparent .field__input:-ms-input-placeholder {
+  color: #111 !important;
+  opacity: 1 !important;
+}
+/* fine override */
+
+

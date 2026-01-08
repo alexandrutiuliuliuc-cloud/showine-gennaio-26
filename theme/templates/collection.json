@@ -1,0 +1,105 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "page-banner",
+      "settings": {
+        "enable_transparent_header": true,
+        "heading": "{{ collection.metafields.custom.h1_aggiuntivo.value }}",
+        "heading_size": "h2",
+        "text": "<p>{{ collection.metafields.custom.text_under_collection_h1 | metafield_tag }}<br/></p>",
+        "show_default_description": true,
+        "show_on_description": "desktop",
+        "content_position": "center",
+        "content_alignment": "center",
+        "media_position": "background",
+        "page_menu": "",
+        "enable_breadcrumbs": true,
+        "section_height": "auto",
+        "content_width": "100%",
+        "video_external": "",
+        "show_controls_on_video": false,
+        "section_height_mobile": "auto",
+        "video_external_mobile": "",
+        "show_controls_on_video_mobile": false,
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-5",
+        "color_scheme_for_media": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "custom_liquid_AnUfQ6": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "{%- if collection.metafields.custom.links_under_collection_h1 != blank -%}\n  <div class=\"collection-links-under-h1\" style=\"text-align: center; margin: 1rem 0;\">\n    <ul style=\"list-style: none; padding: 0; margin: 0; display: inline-block;\">\n      {%- for link in collection.metafields.custom.links_under_collection_h1.value -%}\n        <li style=\"display: inline; margin: 0 10px;\">\n          <a href=\"{{ link.url }}\" target=\"_blank\">\n            {{ link.title | default: link.url }}\n          </a>\n        </li>\n      {%- endfor -%}\n    </ul>\n  </div>\n{%- endif -%}",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "0",
+        "spacing_bottom": "0"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_top_border_for_utilities_bar": false,
+        "enable_products_count": true,
+        "enable_sorting": true,
+        "enable_opened_accordions": false,
+        "filters": "sidebar",
+        "products_per_row": "4",
+        "products_per_row_mobile": "2",
+        "products_per_page": 22,
+        "pagination_style": "default",
+        "enable_infinity_scroll": false,
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "page_banner_YzMGjC": {
+      "type": "page-banner",
+      "settings": {
+        "enable_transparent_header": true,
+        "heading": "Showine",
+        "heading_size": "h6",
+        "text": "{{ collection.description }}",
+        "show_default_description": true,
+        "show_on_description": "both",
+        "content_position": "center",
+        "content_alignment": "center",
+        "media_position": "background",
+        "page_menu": "",
+        "enable_breadcrumbs": false,
+        "section_height": "auto",
+        "content_width": "100%",
+        "video_external": "",
+        "show_controls_on_video": false,
+        "section_height_mobile": "auto",
+        "video_external_mobile": "",
+        "show_controls_on_video_mobile": false,
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-5",
+        "color_scheme_for_media": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "custom_liquid_AnUfQ6",
+    "main",
+    "page_banner_YzMGjC"
+  ]
+}

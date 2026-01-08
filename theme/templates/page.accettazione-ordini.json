@@ -1,0 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "seo_content_94MHrC": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "",
+        "heading_size": "h3",
+        "text": "<p>Tutti gli ordini di acquisto di prodotti inviati a  <strong>Showine</strong> dovranno essere completi in ogni loro parte e dovranno contenere tutti gli elementi necessari per la corretta individuazione dei prodotti ordinati. Ciascun ordine di prodotti trasmesso a <strong>Showine </strong>costituisce proposta contrattuale del Cliente e, pertanto, sarà vincolante per<br/> <strong>Showine</strong> solo se dalla stessa confermato per accettazione.<br/><br/>L'evasione dell'ordine da parte di <strong>Showine</strong> equivale a conferma ed accettazione dello stesso<strong> Showine </strong>si riserva il diritto di non accettare ordini incompleti, non debitamente compilati. In caso di mancata esecuzione dell'ordine da parte di <strong>Showine</strong> (qualora la stessa sia dovuta ad indisponibilità dei prodotti ordinati dal Cliente) <strong>Showine</strong> provvederà al più presto ad informare il Cliente, rimborsando le somme da questi eventualmente già versate a fronte della fornitura non eseguita. In tal caso il Cliente non avrà diritto ad alcun rimborso né ad indennizzi o risarcimenti di sorta.<br/><br/>La documentazione fiscale relativa ai prodotti ordinati verrà emessa da <strong>Showine</strong> al momento della spedizione dei prodotti stessi al Cliente. Qualora il Cliente sia titolare di Partita IVA e desideri ricevere fattura a proprio nome, dovrà indicare tale richiesta nell'ordine. In difetto, <strong>Showine</strong> non emetterà fattura fiscale.</p><p>L’avvenuta corretta ricezione della proposta del Cliente è confermata da Showine mediante una risposta automatica inviata all'indirizzo di posta elettronica comunicato dal Cliente. La risposta di Showine è generata in modo automatico dal sistema del Sito e conferma solamente la corretta ricezione della proposta all’interno dei sistemi informativi. Tale messaggio di conferma indicherà il giorno previsto per la spedizione e un 'Numero Ordine Cliente', da utilizzarsi in ogni successiva comunicazione con Showine. Il messaggio ripropone, oltre alle informazioni obbligatorie per legge, tutti i dati inseriti dal Cliente il quale si impegna a verificarne la correttezza e a comunicare tempestivamente eventuali correzioni.</p><p><strong>Ciascun ordine può essere visionato dal Cliente sul Sito, nella propria area personale, immediatamente dopo l’invio dell’ordine stesso. Fino al momento di avvenuta evasione dell’ordine da parte di Showine (comunicata al Cliente attraverso l’aggiornamento delle informazioni contenute nella sua area personale) il Cliente ha la facoltà di modificare o annullare l’ordine, esclusivamente attraverso le specifiche funzioni d’accesso e modifica prevista nell’anzidetta area personale.<br/></strong></p><p>Ciascun Contratto d’Acquisto stipulato tra Showine e il Cliente deve intendersi concluso con l'accettazione dell'ordine da parte di Showine. Showine ha la facoltà di accettare o meno, a propria discrezione, l’ordine inviato dal Cliente, senza che quest’ultimo possa avanzare pretese o diritti di sorta, a qualsiasi titolo, anche risarcitorio, in caso di mancata accettazione dell’ordine stesso. L’accettazione di Showine si ritiene tacitamente rilasciata, se non altrimenti comunicato al Cliente entro 48 ore dall’invio dell’ordine, a mezzo di un messaggio di posta elettronica inviato all’indirizzo comunicato dal Cliente.</p>",
+        "content_alignment": "center",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_inner": "2",
+        "spacing_top": "0",
+        "spacing_bottom": "6"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "seo_content_94MHrC"
+  ]
+}

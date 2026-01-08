@@ -1,0 +1,911 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "hero_banner_tmfMpW": {
+      "type": "hero-banner",
+      "blocks": {
+        "slide_yfPqyh": {
+          "type": "slide",
+          "settings": {
+            "banner_layout": "hero-banner--full",
+            "color_scheme": "scheme-2",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<h2>Cantine Private, Enoteche Wine-Bar e Ristoranti</h2>",
+            "subheading": "<strong>Desideri la cantina dei tuoi sogni?</strong>",
+            "subheading_link": "",
+            "text": "<p>Scopri le migliori soluzioni per creare la tua cantina</p>",
+            "button_link_1": "/",
+            "button_link_1_type": "button",
+            "button_label_1": "",
+            "button_style_1": "button--filled",
+            "button_link_2": "/",
+            "button_label_2": "",
+            "button_style_2": "button--outlined",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/banner-cantina-showine.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": true,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "slide_yfPqyh"
+      ],
+      "custom_css": [
+        "p {color: white;}",
+        ".hero-banner .hero__media.media--overlay:before {background: #00000063;}"
+      ],
+      "settings": {
+        "enable_transparent_header": true,
+        "slider_height": 85,
+        "slideshow_autoplay_interval": 6,
+        "show_slideshow_navigation": true,
+        "slideshow_navigation_position": "hero__swiper-buttons--start",
+        "color_scheme_arrows": "",
+        "show_slideshow_pagination": false,
+        "slideshow_pagination_style": "style-1",
+        "floating_bar": false
+      }
+    },
+    "seo_content_byTKt3": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "",
+        "heading_size": "h3",
+        "text": "<h4>Desideri la cantina dei tuoi sogni? Una soluzione che sia il perfetto connubio tra tecnica e design, bellezza ed efficacia? ShoWine è la tua risposta.</h4><p><br/>Sottoponici le tue necessità. Noi troveremo la soluzione più adatta a te. Lavoriamo in sinergia con Architetti, Artigiani ed Aziende specializzate. <br/>Ti proponiamo una consulenza completa se necessario. Le nostre parole d’ordine sono professionalità e serietà. Un servizio completo, chiavi in mano.</p><p>Vantiamo una conoscenza ventennale nel mondo del vino. Perché, per noi, degustare è un’arte.</p>",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "2",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_g3qMNd": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Cantine in taverne",
+        "heading_size": "h3",
+        "text": "<p>Progettiamo e realizziamo cantine all'interno di taverne preesistenti o di nuova costruzione</p>",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "2",
+        "spacing_top": "4",
+        "spacing_bottom": "0"
+      }
+    },
+    "social_media_highlights_CPPram": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_YeVLD9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/80t.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_MAWmzA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/75t.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_EN6aFJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/53t.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_qaKrex": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/9t.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_7EeiWQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Cantina_Vino_Legno.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_dR9dth": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Cantina_Vini_Acciaio_3_c315a6d5-47d0-41e1-8365-1cecafcdb60d.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_nhN8WQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Cantina_Metallo_Vino_1_f138e9d5-7f6b-4fbf-af5f-09738826f1ca.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_QgiQTR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Cantina_Vino_in_Legno_2_4479a69a-64a3-43ba-a8a6-fffe940706ae.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_YJcdjG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/07_4d45a430-eea3-4ec3-a723-253edff885e0.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_3AgdcT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/05_3c049715-dd7b-4e54-8f3c-89c1474c3e7c.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        }
+      },
+      "block_order": [
+        "image_YeVLD9",
+        "image_MAWmzA",
+        "image_EN6aFJ",
+        "image_qaKrex",
+        "image_7EeiWQ",
+        "image_dR9dth",
+        "image_nhN8WQ",
+        "image_QgiQTR",
+        "image_YJcdjG",
+        "image_3AgdcT"
+      ],
+      "settings": {
+        "layout": "stacked",
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--outlined",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "scheme-5",
+        "media_aspect_ratio": "1/1",
+        "autoplay_speed": 7,
+        "section_width": "max-w-full",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_YEdVpW": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Cantina in Cucina, Living",
+        "heading_size": "h3",
+        "text": "<p>Vetrine Refrigerate e Sistemi di stoccaggio personalizzabili</p>",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "2",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "social_media_highlights_eXbgq6": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_4VpwDM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Sito_7_750x_d2c2add7-11da-4a2b-ae9a-2257bd5ced2c.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_J4QmpF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/20_1280x853_750x_f9ce7faa-9a7f-4c9b-bdb8-fb05a2f843da.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_KNQHLr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6_1280x853_750x_8664f047-e4bc-4854-8c6e-6ce4d8eae7de.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_AeB3eF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Sito_4_750x_77d29046-3230-433b-9d7d-865a1e1f8391.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_Wngffb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_750x_35128376-6386-4a8d-a1f9-05842f262ded.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_q8QHqK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_1280x797_750x_b2191cf1-073a-469f-b909-72d220ba3f65.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_qdDUhj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/9_1280x817_750x_6b06468e-165c-403f-9602-fa76e130d521.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_YeFYGm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/16_1280x854_750x_0bbee12a-bfbf-4e56-94d5-d4dd7b275bee.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_zXjdMi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_1280x717_750x_0606856c-1909-41d3-accd-a759cde2c18e.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_DNPq7B": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_1280x640_750x_b4a542b6-0f4c-4f0e-92df-5fdf6d6eb5d1.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        }
+      },
+      "block_order": [
+        "image_4VpwDM",
+        "image_J4QmpF",
+        "image_KNQHLr",
+        "image_AeB3eF",
+        "image_Wngffb",
+        "image_q8QHqK",
+        "image_qdDUhj",
+        "image_YeFYGm",
+        "image_zXjdMi",
+        "image_DNPq7B"
+      ],
+      "settings": {
+        "layout": "stacked",
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--outlined",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "scheme-5",
+        "media_aspect_ratio": "1/1",
+        "autoplay_speed": 7,
+        "section_width": "max-w-full",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_q6UiVK": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Wine Room Climatizzate",
+        "heading_size": "h3",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "2",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "social_media_highlights_enQ4zF": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_piEp9U": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_750x_9c63071a-0fc3-43bd-9530-3027527d2611.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_8YjUyM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/11_750x_206265d6-35a9-42e2-a7ea-b8e170a4cc41.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_MMDtPg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_750x_2ded2f96-2fe3-4bf9-8d7e-098c9b4b5405.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_DEeckM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Sito_750x_8d99bcef-ef23-49e2-a6f6-344aa464f545.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_UGfLzh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Sito_1_750x_593376b2-058c-40a5-8cb5-267009769b1e.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_RWjqyf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/download_750x_1165c401-ccb6-4655-85a6-1cacaadf7f6b.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_JmUFrr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Vinrum_med_glas___Wine_room_with_glass_750x_92279341-dc9d-4543-b8e6-331bb7ee8ee0.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_xWPyRY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/39a_750x_8e29443f-3613-48f0-94d9-841f6bb7050b.png",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_r7GjEE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/30a_750x_4a3cc0e0-4b22-4c3b-96dc-c63ff1bae7f5.png",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_9bygtk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/29a_750x_5c9bc225-317b-4d32-8051-a763929a87b8.png",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        }
+      },
+      "block_order": [
+        "image_piEp9U",
+        "image_8YjUyM",
+        "image_MMDtPg",
+        "image_DEeckM",
+        "image_UGfLzh",
+        "image_RWjqyf",
+        "image_JmUFrr",
+        "image_xWPyRY",
+        "image_r7GjEE",
+        "image_9bygtk"
+      ],
+      "settings": {
+        "layout": "stacked",
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--outlined",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "scheme-5",
+        "media_aspect_ratio": "1/1",
+        "autoplay_speed": 7,
+        "section_width": "max-w-full",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_3r4paX": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Cantina interrata a vista",
+        "heading_size": "h3",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "2",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "social_media_highlights_BARiLz": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_tLcfgi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_750x_fee6af4e-3db0-41c5-b54b-9b671d4a978a.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_W4pMjz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_750x_027ee139-d862-4855-b022-a3d9a5105b9b.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_VyiWWB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/14_750x_2befb910-3820-458a-8095-5707d5917024.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_gwYedt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/15_750x_733ff8ce-a6f4-40e0-a78b-f8204568bcc9.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_RE3h6G": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/21_750x_8132830d-1861-447c-9a9f-40f8379b567f.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_CHrBbq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/25_750x_310fc032-5b76-46ed-93f2-3a3ad829c006.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_4j9r6e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/28_750x_654f53e1-d40e-4ae2-b0c7-f92f6ac07f19.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_8jiFM4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/35_750x_d8214df2-169f-4c59-9d27-86f8230ee9f1.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_FDBACM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/36_750x_0048cd54-ba77-4f62-8cc9-3e73f537cc93.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_PiYBpx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/38_750x_8521cc58-5042-4251-9192-7c1ab0682933.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        }
+      },
+      "block_order": [
+        "image_tLcfgi",
+        "image_W4pMjz",
+        "image_VyiWWB",
+        "image_gwYedt",
+        "image_RE3h6G",
+        "image_CHrBbq",
+        "image_4j9r6e",
+        "image_8jiFM4",
+        "image_FDBACM",
+        "image_PiYBpx"
+      ],
+      "settings": {
+        "layout": "stacked",
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--outlined",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "scheme-5",
+        "media_aspect_ratio": "1/1",
+        "autoplay_speed": 7,
+        "section_width": "max-w-full",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_6x6Ubw": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Soluzioni Sottoscala",
+        "heading_size": "h3",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "2",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "social_media_highlights_zc3A4X": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_YQPjgR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Cave_vin_sous_escalier_750x_d4f2ee21-b88b-4c37-a487-205a4b98deaa.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_jQKmFy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Wine_under_the_stairs_750x_3ee9641f-ed8e-4e7c-b49b-8310996ac82a.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_6LYEJK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/29_750x_a4300301-fca2-40b2-be3a-24f3a08e8ede.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_nQT86P": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/28_750x_e4932f4e-3ee5-4d42-b41c-b54a6fb6f780.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_E4Hw6R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/26_750x_0965cf40-2c00-49a1-948d-39074b4549fa.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_eNJ9yx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/24_750x_690fa12c-e675-4409-90fd-1a9e4081ff52.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_gFx7DU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/15_750x_5d76c527-3329-42c7-9170-1b0c7e3b5e34.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_Xfb99m": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6_750x_3b024fee-533b-40be-8e36-a60516cd3d8f.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_7cECxH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_750x_fcbf028b-45d6-4253-b125-291f5077f0c2.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_ahwTay": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0_750x_52fe3527-d18b-432b-9612-6ce30358b127.webp",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        }
+      },
+      "block_order": [
+        "image_YQPjgR",
+        "image_jQKmFy",
+        "image_6LYEJK",
+        "image_nQT86P",
+        "image_E4Hw6R",
+        "image_eNJ9yx",
+        "image_gFx7DU",
+        "image_Xfb99m",
+        "image_7cECxH",
+        "image_ahwTay"
+      ],
+      "settings": {
+        "layout": "stacked",
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--outlined",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "scheme-5",
+        "media_aspect_ratio": "1/1",
+        "autoplay_speed": 7,
+        "section_width": "max-w-full",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_rcfxaC": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Punto Vendita",
+        "heading_size": "h3",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "2",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "social_media_highlights_8dHJdm": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_wBeU64": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/13_750x_1.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_pywRNG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/21_1f8007b9-e363-4d58-a5f3-05baaea53483_750x_1.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_zNNJLm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/38_7412332a-9e5a-4ff3-86f5-855f2d061427_750x_1.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_jQYwpU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/54_750x_1.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_fzkx6X": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/62_750x_1.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_BaUzLb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/77_750x_1.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_dDCt63": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/95_750x_1.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_tKnJUL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/107_750x_1.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_TPELWL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/138_750x_1.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        },
+        "image_fLLRn6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/11800_750x_1.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "1/1"
+          }
+        }
+      },
+      "block_order": [
+        "image_wBeU64",
+        "image_pywRNG",
+        "image_zNNJLm",
+        "image_jQYwpU",
+        "image_fzkx6X",
+        "image_BaUzLb",
+        "image_dDCt63",
+        "image_tKnJUL",
+        "image_TPELWL",
+        "image_fLLRn6"
+      ],
+      "settings": {
+        "layout": "stacked",
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--outlined",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "scheme-5",
+        "media_aspect_ratio": "1/1",
+        "autoplay_speed": 7,
+        "section_width": "max-w-full",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_dpY9rV": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "",
+        "heading_size": "h3",
+        "text": "<h3>Arredo Taverna Cantina, Arredamento Per Vineria ed Enoteca</h3><p><br/>Grazie alla stretta collaborazione con artigiani e aziende specializzate, siamo in grado di offrirti una <strong>consulenza completa per arredare la cantina e per l'arredamento di enoteche e wine bar,<br/>Arredamenti per cantine o taverne</strong> di degustazione per privati e attività commerciali, con <strong>soluzioni personalizzate.</strong></p><p><strong>Showine è il</strong> <strong>partner ideale </strong>perché, una volta capite le tue esigenze, può consigliarti sulle migliori soluzioni di progettazione e realizzazione di ambienti e arredamenti su misura (anche con fornitori di tua fiducia).<br/>Potrai ammirare le tue bottiglie e conservarle nel tempo nelle migliori condizioni possibili, per poi degustarle in un ambiente caldo e confortevole, finemente arredato e studiato appositamente per te, impreziosendo così il valore di casa tua o del tuo locale.</p><p>Lo staff di Showine ti guida nel progetto della tua cantina, passo dopo passo, dalla consulenza alla realizzazione completa e curata in ogni dettaglio.</p><p>Per condividere al meglio la passione per il vino con parenti e amici, gli esperti Showine ti seguiranno anche in caso di ristrutturazione e arredo d’interni con un servizio completo “chiavi in mano”.</p><p><strong>Scopri insieme a noi come possiamo ideare e realizzare al meglio la tua cantina privata!<br/><br/></strong><a href=\"/pages/info-cantinette-portabottiglie-vino\" target=\"_blank\" title=\"Contattaci\"><strong>RICHIEDI INFORMAZIONI</strong></a></p>",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "2",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_banner_tmfMpW",
+    "seo_content_byTKt3",
+    "seo_content_g3qMNd",
+    "social_media_highlights_CPPram",
+    "seo_content_YEdVpW",
+    "social_media_highlights_eXbgq6",
+    "seo_content_q6UiVK",
+    "social_media_highlights_enQ4zF",
+    "seo_content_3r4paX",
+    "social_media_highlights_BARiLz",
+    "seo_content_6x6Ubw",
+    "social_media_highlights_zc3A4X",
+    "seo_content_rcfxaC",
+    "social_media_highlights_8dHJdm",
+    "seo_content_dpY9rV"
+  ]
+}

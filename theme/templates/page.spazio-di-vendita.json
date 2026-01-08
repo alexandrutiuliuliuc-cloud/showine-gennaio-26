@@ -1,0 +1,202 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "seo_content_fhmmHk": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Spazio di vendita",
+        "heading_size": "h2",
+        "text": "<h4>Integrazione tra produzione e vendita<br/><br/></h4><p>La sempre più frequente presenza di visitatori in azienda e l’importanza oggi attribuita all’enoturismo, divenuto molto diffuso nei territori caratterizzati da produzioni e paesaggi vitivinicoli di pregio, arricchiscono le cantine di nuove funzioni che integrano quelle strettamente produttive e chiedono per queste ultime una nuova modulazione.<br/>Gli spazi di visita delle cantine costituiscono un notevole attrattore per il turismo enogastronomico o più in generale per il turismo rurale nell’area interessata.<br/>Per il successo del progetto diventa essenziale una buona integrazione degli spazi di visita con quelli operativi, e al tempo stesso la riduzione dell’interferenza della presenza di visitatori nelle aree di lavorazione.<br/>La cantina è inoltre attrezzata con locali di rappresentanza e di accoglienza per i visitatori e comunica in essi i tratti caratteristici del proprio prodotto. Lo stretto rapporto tra vino e territorio può essere efficacemente comunicato in questi spazi se si riesce ad organizzare per il visitatore un’ “esperienza di percezione del vino”, fatta di informazione, di degustazione, di godimento del paesaggio, di piacevolezza.<br/>Una Particolare importanza è stata attribuita ad ambienti specificamente riservati alla degustazione, dotati di banchi attrezzati, tavoli e aree di servizio il pubblico che, in relazione ai possibili abbinamenti alimentari che caratterizzano la degustazione, possono essere collegati a una cucina utilizzabile per la preparazione dei prodotti. In continuità visiva e funzionale con questi locali sono state concepite la zona di esposizione e vendita dei prodotti, e un’area esterna che possa fungere da estensione attrezzata di tali spazi.<br/>All’area di degustazione ed espositiva viene conferita una grande rilevanza, sia in termini di superfici destinate, sia per la qualità architettonica, essendo delegato ad essa il compito di esprimere le caratteristiche peculiari e l’immagine dell’azienda. In relazione agli spazi di ampliamento disponibili, tale area può essere connessa con vere e proprie attrezzature turistico-culturali: spazi ricettivi, ristoranti, musei del vino, mostre d’arte, spazi espositivi o per eventi quali concerti, letture, spettacoli.</p>",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "4",
+        "spacing_top": "6",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_URJ64W": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Bar \"Toniolo\" a Casale sul Sile e Interno della Food Boutique \"Bel e Bon\" ad Affi.",
+        "heading_size": "h4",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "4",
+        "spacing_top": "4",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_XVyh4a": {
+      "type": "multitile",
+      "blocks": {
+        "tile_gLPK8G": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 4,
+            "row_factor": 2,
+            "color_scheme": "",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/freepik__enhance__71757.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_YQFe4U": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 2,
+            "row_factor": 1,
+            "color_scheme": "",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/spazi-vendita_3_1.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_FJccym": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 2,
+            "row_factor": 1,
+            "color_scheme": "",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/freepik__enhance__71756.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_gLPK8G",
+        "tile_YQFe4U",
+        "tile_FJccym"
+      ],
+      "name": "t:sections.multitile.name",
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "seo_content_7pViVk": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "boxed",
+        "heading": "Architettura: dalla cantina al Retail",
+        "heading_size": "h2",
+        "text": "<p>L’architettura deve risolvere, in una efficace sintesi, immagine e funzione. Deve avere come mission offrire risposte sostenibili di qualità. L’immagine architettonica rappresenta un linguaggio comunicativo internazionale e universalmente riconosciuto. L’architettura manifesta le caratteristiche di un’azienda e le comunica contribuendo a selezionare il target di clientela di riferimento.<br/>Nel mondo vitivinicolo l’architettura vuol dire spesso anche architettura del paesaggio che deve valorizzare e confermare le aspettative dell’immaginario suscitato dal mondo del vino. L’architettura entra pienamente nelle scelte della strategia commerciale delle aziende, soprattutto.<br/>nel settore vitivinicolo. Il processo progettuale deve tenere in considerazione le caratteristiche della funzione che giustifica la realizzazione di un’opera. Le esigenze funzionali impongono l’organizzazione degli spazi, la loro successione e la loro possibilità di adattarsi nel tempo. Il progetto deve essere sostenibile economicamente nel momento della realizzazione dell’opera così come nella sua gestione nel tempo.<br/>Questi sono i principi che muovono la nostra azione e che vengono proposti con WinebrandTM.</p>",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-6",
+        "spacing_inner": "4",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_XAdjyP": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Richiedi informazioni",
+        "heading_size": "h2",
+        "text": "<p>Inviaci una piantina di quello che vuoi realizzare o descrivici l'idea che hai in mente<br/><br/>Ti risponderemo senza alcun impegno da parte tua inviandoti il progetto dei tuoi sogni! <br/>Se vuoi un contatto diretto puoi chiamarci allo 0376 408127<br/><br/><a href=\"/pages/info-cantinette-portabottiglie-vino\" target=\"_blank\" title=\"Contattaci\"><strong>CONTATTACI ORA</strong></a></p>",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "4",
+        "spacing_top": "2",
+        "spacing_bottom": "6"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "seo_content_fhmmHk",
+    "seo_content_URJ64W",
+    "multitile_XVyh4a",
+    "seo_content_7pViVk",
+    "seo_content_XAdjyP"
+  ]
+}

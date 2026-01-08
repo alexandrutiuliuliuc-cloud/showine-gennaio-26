@@ -1,0 +1,392 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "hero_banner_GwPrKL": {
+      "type": "hero-banner",
+      "blocks": {
+        "slide_4AKTzi": {
+          "type": "slide",
+          "settings": {
+            "banner_layout": "hero-banner--full",
+            "color_scheme": "scheme-2",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<h2>Progetti su misura</h2>",
+            "subheading": "",
+            "subheading_link": "",
+            "text": "",
+            "button_link_1": "/",
+            "button_link_1_type": "button",
+            "button_label_1": "",
+            "button_style_1": "button--filled",
+            "button_link_2": "/",
+            "button_label_2": "",
+            "button_style_2": "button--outlined",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/slide_chi_siamo.png",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": true,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "slide_4AKTzi"
+      ],
+      "settings": {
+        "enable_transparent_header": true,
+        "slider_height": 70,
+        "slideshow_autoplay_interval": 6,
+        "show_slideshow_navigation": true,
+        "slideshow_navigation_position": "hero__swiper-buttons--start",
+        "color_scheme_arrows": "",
+        "show_slideshow_pagination": false,
+        "slideshow_pagination_style": "style-1",
+        "floating_bar": false
+      }
+    },
+    "carousel_nP4MFD": {
+      "type": "carousel",
+      "blocks": {
+        "card_EY6Rad": {
+          "type": "card",
+          "settings": {
+            "heading": "Realizza la tua cantina",
+            "heading_size": "h5",
+            "text": "<p>Scopri come avere una cantina interrata</p>",
+            "button_label": "ESPLORA ORA",
+            "button_link": "shopify://pages/cantina-monoblocco",
+            "button_style": "button--filled",
+            "aspect_ratio": "5/4",
+            "color_scheme": "scheme-6",
+            "media_position": "top",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/14_-_Cantina_a_vista_Interrata_750x_489decef-9fa1-4589-be3c-90c5d8e4f225.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "card_RPXwmW": {
+          "type": "card",
+          "settings": {
+            "heading": "Helicave",
+            "heading_size": "h5",
+            "text": "<p>Scopri come avere una stanza in più a casa tua </p>",
+            "button_label": "ESPLORA ORA",
+            "button_link": "shopify://pages/helicave",
+            "button_style": "button--filled",
+            "aspect_ratio": "5/4",
+            "color_scheme": "scheme-6",
+            "media_position": "top",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/Ronde_28.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "card_N4AUJQ": {
+          "type": "card",
+          "settings": {
+            "heading": "Arredo Personalizzato",
+            "heading_size": "h5",
+            "text": "<p>Le migliori soluzioni per creare la tua cantina</p>",
+            "button_label": "ESPLORA ORA",
+            "button_link": "shopify://pages/arredamento-cantina-vino",
+            "button_style": "button--filled",
+            "aspect_ratio": "5/4",
+            "color_scheme": "scheme-6",
+            "media_position": "top",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/banner-cantina-showine.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "card_xerCn8": {
+          "type": "card",
+          "settings": {
+            "heading": "Lavori eseguiti",
+            "heading_size": "h5",
+            "text": "<p>Scopri i lavori eseguiti da Showine</p>",
+            "button_label": "ESPLORA ORA",
+            "button_link": "shopify://pages/lavori-eseguiti",
+            "button_style": "button--filled",
+            "aspect_ratio": "5/4",
+            "color_scheme": "scheme-6",
+            "media_position": "top",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/1_1350x_3a51c8dc-d94b-4a00-abac-7611f8d828b4.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "card_EY6Rad",
+        "card_RPXwmW",
+        "card_N4AUJQ",
+        "card_xerCn8"
+      ],
+      "name": "t:sections.carousel.name",
+      "settings": {
+        "show_navigation_arrows": false,
+        "slideshow_autoplay_interval": 0,
+        "slides_per_view": 4,
+        "layout": "layout-2",
+        "heading": "Progettazione",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--filled",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "multitile_epWWzg": {
+      "type": "multitile",
+      "blocks": {
+        "tile_fUijGR": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "La conservazione del <em>vino</em>",
+            "heading_size": "h3",
+            "text": "<p>Chi ama davvero il vino lo sa: servirlo alla temperatura sbagliata significa perderne l’anima. Le sfumature aromatiche, i profumi più sottili, la struttura stessa del vino dipendono da come viene conservato.</p><p>Per questo Showine seleziona, progetta e realizza <strong>soluzioni professionali per la conservazione del vino</strong> capaci di garantire condizioni ottimali in ogni fase: dalla maturazione alla degustazione.<br/><br/>Cantinette refrigerate, vetrine frigo di design, portabottiglie funzionali e cantine su misura: ogni prodotto è studiato per <strong>mantenere costante la temperatura</strong>, <strong>proteggere il vino dalla luce</strong> e <strong>favorirne l’evoluzione nel tempo</strong>, senza compromessi.</p><p>Non si tratta solo di tecnologia: si tratta di cultura.<br/><br/>Showine porta nelle case e nei locali la <strong>competenza maturata in anni di esperienza</strong>, unita a un’estetica curata nei minimi dettagli. Perché anche l’occhio vuole la sua parte, e il vino merita di essere esposto con eleganza, oltre che custodito con precisione.</p>",
+            "button_label": "SCOPRI LE NOSTRE SOLUZIONI",
+            "button_link": "shopify://collections/conservazione",
+            "button_style": "button--filled",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_UUfVMk": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "4/3",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/2_a1e3ef56-f5a8-48d8-981d-1631783e1549.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_fUijGR",
+        "tile_UUfVMk"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "multitile_jf7mwb": {
+      "type": "multitile",
+      "blocks": {
+        "tile_UiMJ4i": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "4/3",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/upscalemedia-transformed.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_emR9d8": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-6",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "Helicave: profonda <em>qualità</em>",
+            "heading_size": "h3",
+            "text": "<p>Helicave non è una semplice cantina: è un capolavoro di ingegneria e design, pensato per chi desidera conservare e valorizzare il vino nel modo più raffinato possibile.</p><p>Scavata nel cuore della tua casa, <strong>Helicave® è una cantina interrata modulare</strong>, progettata per garantire le condizioni ideali di temperatura, umidità e oscurità.<br/><br/>Perfettamente integrabile in qualsiasi contesto architettonico, unisce <strong>funzionalità, estetica e impatto scenico</strong>. È la soluzione definitiva per collezionisti, ristoratori e veri intenditori.</p><p>Con Showine, puoi progettare e installare la tua Helicave su misura, affidandoti a un team specializzato che ti accompagna in ogni fase, dalla consulenza alla realizzazione.</p>",
+            "button_label": "SCOPRI HELICAVE",
+            "button_link": "#",
+            "button_style": "button--filled",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_UiMJ4i",
+        "tile_emR9d8"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "compare_slider_6rWL9P": {
+      "type": "compare-slider",
+      "blocks": {
+        "image_before_slide_qmdE8M": {
+          "type": "image-before-slide",
+          "settings": {
+            "image": "shopify://shop_images/5a.webp",
+            "title": "PRIMA",
+            "color_scheme": ""
+          }
+        },
+        "image_after_slide_xc7A4J": {
+          "type": "image-after-slide",
+          "settings": {
+            "image": "shopify://shop_images/16_c4247c37-bc69-454d-8db1-df109bb472c8.webp",
+            "title": "DOPO",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_before_slide_qmdE8M",
+        "image_after_slide_xc7A4J"
+      ],
+      "settings": {
+        "section_layout": "shrink",
+        "heading": "Dove il progetto diventa atmosfera",
+        "heading_size": "h3",
+        "text": "<h4>Prima / <em>Dopo</em></h4><p><em><br/></em>Ogni lavoro realizzato è il risultato di ascolto, visione e precisione artigianale.<br/><br/>Trasformiamo semplici spazi in cantine d’autore, ambienti eleganti dove il vino può esprimere il meglio di sé.<br/><br/>Materiali di pregio, dettagli su misura e una progettazione funzionale rendono ogni intervento unico, come la passione di chi lo vive.</p>",
+        "button_label": "ESPLORA ORA",
+        "button_link": "/",
+        "button_style": "button--filled",
+        "media_aspect_ratio": "3/2",
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-5",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_banner_GwPrKL",
+    "carousel_nP4MFD",
+    "multitile_epWWzg",
+    "multitile_jf7mwb",
+    "compare_slider_6rWL9P"
+  ]
+}

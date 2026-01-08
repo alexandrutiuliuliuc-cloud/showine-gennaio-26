@@ -1,0 +1,10 @@
+.DS_Store
+
+# Shopify CLI
+.shopify/
+**/.shopify/
+
+# Logs
+*.log
+
+

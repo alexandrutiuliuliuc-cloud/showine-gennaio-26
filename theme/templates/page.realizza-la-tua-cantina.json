@@ -1,0 +1,448 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "seo_content_RgNyP3": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "",
+        "heading_size": "h3",
+        "text": "<h3>Hai sempre desiderato una cantina per la conservazione del vino a casa tua? Showine ti svela qualche segreto per realizzare i tuoi desideri.</h3><p><br/>La <strong>perfetta conservazione del vino</strong> dovrebbe essere la priorità principale per tutti gli appassionati del nettare di Bacco. Il vino, infatti, è una sostanza che nel tempo evolve e si modifica: in una parola vive.</p><p>Conservare le bottiglie nel migliore dei modi quindi non diventa solo una priorità ma una vera e propria necessità <strong>per poter godere dei profumi e dei sapori di ogni tipo di vino.</strong></p>",
+        "content_alignment": "center",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_inner": "4",
+        "spacing_top": "6",
+        "spacing_bottom": "4"
+      }
+    },
+    "multitile_JWF8LH": {
+      "type": "multitile",
+      "blocks": {
+        "tile_3pyjQm": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/cantina_a_volta_1000x_610493c1-1615-464d-ac37-12c134734649.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_wNgte3": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-6",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "Progettazione e installazione di cantine a Volta prefabbricate in Argilla",
+            "heading_size": "h4",
+            "text": "<p>Vuoi <strong>trasformare la tua cantina</strong> o un altro locale (interrato o meno) in una <strong>perfetta cantina per vini</strong>? Dove conservare i tuoi vini nel tempo nelle migliori condizioni? Oppure trasformare il locale anche  in un luogo di conviviali degustazioni? <strong>Affidati a ShoWine!</strong>... e <strong>contatta senza impegno i nostri esperti</strong>.</p><p><strong>L'esperienza e la competenza dei nostri esperti</strong>, abbinata all'ampia gamma di specifiche <strong>soluzioni costruttive e arredi per cantine di alta qualità</strong>, potranno<strong> soddisfare le tue esigenze</strong> più specifiche e particolari, ma soprattutto concretizzare i tuoi desideri realizzando il tuo \"<strong>tempio del vino</strong>\".<br/><br/>Showine è in grado di offrire tutto il<strong> supporto</strong> tecnico necessario per il tuo progetto di cantina. <strong>Forniremo ad architetti, ingegneri e direttori lavori tutta la documentazione tecnica di progetto e la consulenza</strong> necessaria per raggiungere i migliori risultati.</p><p>Showine<strong> progetta, realizza e arreda cantine a volta interrate</strong> garantendo il mantenimento di una<strong> temperatura stabile</strong>, di un'adeguata <strong>ventilazione </strong>ed un controllo costante del<strong> grado di umidità </strong>dell'ambiente, per favorire una perfetta e ideale conservazione del vino. Inoltre noi di Showine valorizziamo gli <strong>aspetti estetici, di servizio e di comfort</strong> che la cantina può offrire attraverso numerose soluzioni di arredamento alternative e accessori di alta qualità per venire incontro alle tue specifiche esigenze, con la massima <strong>cura dei dettagli</strong>. Sempre.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_3pyjQm",
+        "tile_wNgte3"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "seo_content_UQJVFY": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Cantina a volta",
+        "heading_size": "h2",
+        "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/0561/8535/6486/files/brochure_cantine_a_volta.pdf?v=1735035171\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0561/8535/6486/files/brochure_cantine_a_volta.pdf?v=1735035171\"><strong>CATALOGO</strong></a> - <a href=\"https://cdn.shopify.com/s/files/1/0561/8535/6486/files/dimensioni_e_tabella_misure.pdf?v=1735035419\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0561/8535/6486/files/dimensioni_e_tabella_misure.pdf?v=1735035419\"><strong>DIMENSIONI</strong></a></p>",
+        "content_alignment": "center",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_inner": "4",
+        "spacing_top": "6",
+        "spacing_bottom": "1"
+      }
+    },
+    "custom_liquid_Ldbb8G": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "<style>\n  @media (max-width: 768px) {\n    .img-desktop {\n      display: none !important;\n    }\n    .img-mobile {\n      display: block !important;\n    }\n  }\n\n  @media (min-width: 769px) {\n    .img-desktop {\n      display: block !important;\n    }\n    .img-mobile {\n      display: none !important;\n    }\n  }\n</style>\n\n<!-- Immagine per Desktop -->\n<img class=\"img-desktop\"\n     src=\"https://cdn.shopify.com/s/files/1/0561/8535/6486/files/Senza_titolo-1.webp?v=1748940375\"\n     alt=\"Cantina a volta - desktop\"\n     width=\"100%\"\n     style=\"max-width: 1000px; height: auto; margin: 0 auto; display: block;\" />\n\n<!-- Immagine per Mobile -->\n<img class=\"img-mobile\"\n     src=\"https://cdn.shopify.com/s/files/1/0561/8535/6486/files/immagine_2_cantina_a_volta.png?v=1748940908\"\n     alt=\"Cantina a volta - mobile\"\n     width=\"100%\"\n     style=\"max-width: 100%; height: auto; margin: 0 auto; display: none;\" />",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "1",
+        "spacing_bottom": "4"
+      }
+    },
+    "multitile_gNLXGh": {
+      "type": "multitile",
+      "blocks": {
+        "tile_QcHd3f": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-6",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "Cantina interrata prefabbricata in calcestruzzo armato e impermeabilizzato - Modulo base da 8,75 mq. + monoblocco scala",
+            "heading_size": "h4",
+            "text": "<p><strong>Esclusive</strong>: fornite in cemento, possono essere completate con soffitto a volta in mattone antico o in pietra.</p><p><strong>Modulari</strong>: si compongono liberamente di più moduli base, secondo ciascuna esigenza.</p><p><strong>Personalizzabili</strong>: una gamma di optional e di finiture permettono di costruire la cantina che è solo tua.</p><p><strong>A prova d’acqua e d’umidità</strong>. A differenza delle altre cantine sotterranee, le cantine sono costruite con cemento impermeabilizzato e rivestite di una pellicola vetrificante.</p><p><strong>Climatizzate</strong>: sono disegnate per utilizzare la propria massa in cemento e la stabilità termale del terreno al fine di mantenere un ambiente confortevole in modo naturale.</p><p><strong>Costo</strong>: i costi delle cantine sono minimizzati in quanto i moduli sono precostruiti in fabbrica ed istallati a casa vostra già completi di accessori.</p><p><strong>Tempi</strong>: i tempi di posa sono ridottissimi, il più delle volte si concludono in giornata.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_KhdWeD": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "1/1",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/monoblocco1_1_1.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_QcHd3f",
+        "tile_KhdWeD"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "multitile_EH9FBc": {
+      "type": "multitile",
+      "blocks": {
+        "tile_UHQfL3": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 2,
+            "color_scheme": "",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Modulo Base Cantina Monoblocco",
+            "heading_size": "h4",
+            "text": "<p>Il <strong>Modulo Base Cantina Monoblocco</strong> è disponibile in due versioni: <strong>cemento grezzo</strong> con pavimento lisciato o <strong>rivestita</strong> con mattoni vecchi, per adattarsi a diverse esigenze estetiche. Questo modulo ha una <strong>larghezza di 250 cm</strong>, <strong>altezza di 250 cm</strong> e <strong>profondità di 350 cm</strong>, con una <strong>superficie lorda di 8,75 m²</strong>. La struttura in calcestruzzo monolitico è armata e vibrata, addittivata con impermeabilizzanti per garantire robustezza e durabilità. Il pavimento è in cemento lisciato, mentre il soffitto a volta a crociera, alto 54 cm, è finito anch’esso con cemento lisciato e presenta archi perimetrali in rilievo. Il monoblocco è interrato fino a 40 cm dalla sommità della volta, con un pannello di fondazione di 20 cm che include una camera d’aria per la ventilazione e il raffreddamento naturali. Sono previsti <strong>sette punti luce</strong> e una <strong>presa</strong> elettrica, oltre alla predisposizione per <strong>impianto idrico</strong> con rubinetto e scarico per lavello. La porta di ingresso è zincata, con dimensioni di <strong>85 x 200 cm</strong>.</p>",
+            "button_label": "COMPILA LA RICHIESTA DI PREVENTIVO",
+            "button_link": "https://cdn.shopify.com/s/files/1/0561/8535/6486/files/SWmonoblocco_955ca2e8-9d57-435d-9d29-0032fca71d9c.pdf?v=1635767345",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/monoblocco3_900x_55737230-b399-44bb-b43a-4385705b939c.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_xjV8Mr": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 1,
+            "color_scheme": "",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Monoblocco Scala e Combinazioni Possibili",
+            "heading_size": "h4",
+            "text": "<p>Il <strong>Monoblocco Scala</strong> è in calcestruzzo monolitico e misura <strong>180 cm di larghezza</strong>, <strong>308 cm di altezza</strong> e <strong>224 cm di profondità</strong>. Comprende quattordici <strong>scalini</strong> (larghezza 80 cm, alzata 20 cm, pedata 22 cm). Anche questo modulo ha un pannello di fondazione da 20 cm con camera d’aria per il raffreddamento naturale e la ventilazione. È predisposto per un <strong>impianto idrico</strong>, con <strong>pozzetto di raccolta acqua</strong> e <strong>elettropompa</strong> di espulsione.</p><p>Le <strong>possibili combinazioni</strong> includono moduli <strong>sottoscala</strong> e <strong>cantina</strong>, con la possibilità di unire il <strong>Modulo Base Cantina</strong> da <strong>250 cm di larghezza</strong>, <strong>250 cm di altezza</strong> e <strong>350 cm di profondità</strong> con il <strong>Modulo Base Scala</strong> da <strong>180 cm di larghezza</strong>, <strong>308 cm di altezza</strong> e <strong>224 cm di profondità</strong>. Queste combinazioni offrono soluzioni versatili per soddisfare diverse esigenze di spazio e funzionalità.</p>",
+            "button_label": "SCARICA LA PRESENTAZIONE",
+            "button_link": "https://cdn.shopify.com/s/files/1/0561/8535/6486/files/Showine-Monoblocco_5f0ef66b-6b57-45ec-be20-9818add27bf7.pdf?v=1635767345",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/monoblocco4_900x_8a5a68ce-3cbf-4a03-b1cf-0b66e128fd7e.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_UHQfL3",
+        "tile_xjV8Mr"
+      ],
+      "name": "t:sections.multitile.name",
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "accordions_LbGgGh": {
+      "type": "accordions",
+      "blocks": {
+        "topic_XiYXAn": {
+          "type": "topic",
+          "settings": {
+            "is_open": true,
+            "title": "PAVIMENTO MODULO sup. lorda 3,50 X 2,50",
+            "text": "<p>Mattoni nuovi a pasta molle posati di lato su sabbia, tipo “a secco” cm 6 x cm 25 ( A correre )<br/><br/>Mattoni nuovi a pasta molle posati di lato su sabbia, tipo “a secco” cm 6 x cm 25 ca. (A spina di pesce)<br/><br/>Mattoni antichi di recupero da demolizioni, posati su lato cm 6 x cm 5 ca. ( A correre )<br/><br/>Mattoni antichi di recupero da demolizioni, posati su lato cm 6 x cm 25 ca. (A spina di pesce)</p>",
+            "page": ""
+          }
+        },
+        "topic_9MVHhC": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "SOFFITTO A VOLTA MODULO sup. est. 3,50 X 2,50",
+            "text": "<p>Cemento bocciardato (a correre)<br/><br/>Mattoni nuovi a pasta molle posati sul lato cm 6 x cm 25 con fugati (A spina di pesce)<br/><br/>Mattoni antichi di recupero da demolizioni, posati sul lato cm 6 x cm 25 ca fugati (a correre)<br/><br/>Pietra arenaria naturale, posatura tipo \"a secco\" (A spina di pesce)<br/></p>",
+            "page": ""
+          }
+        },
+        "topic_ViirMW": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "N. 4 COLONNE",
+            "text": "<p>Mattoni nuovi a pasta molle posati di lato cm 6 x cm 25 e fugati<br/><br/>Mattoni antichi di recupero da demolizioni, posati su lato cm 6 x cm 25 ca<br/></p>",
+            "page": ""
+          }
+        },
+        "topic_Lyik39": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "4 CAPITELLI sagomati altezza cm 10 – 13, dimensioni cm 30 x cm 30",
+            "text": "<p>In mattone nuovo tipo a pasta molle<br/><br/>In mattone antico da recupero<br/><br/>In pietra bianca d’Istria<br/></p>",
+            "page": ""
+          }
+        },
+        "topic_tpLXMm": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "PORTA",
+            "text": "<p>Porta in legno massello<br/><br/>Porta in legno coibentata tamburata<br/><br/>Porta a vetro due ante ad arco tra due moduli - cm 160 x cm 214<br/></p>",
+            "page": ""
+          }
+        },
+        "topic_XaNd6e": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "VENTILAZIONE PARETI",
+            "text": "<p>Ventilazione pareti esterne<br/><br/>Ventilazione naturale esterna di pareti e volte con intercapedini interconnesse per la massima stabilizzazione delle temperature per l’ottimale conservazione di vini e prodotti alimentari</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "topic_XiYXAn",
+        "topic_9MVHhC",
+        "topic_ViirMW",
+        "topic_Lyik39",
+        "topic_tpLXMm",
+        "topic_XaNd6e"
+      ],
+      "name": "t:sections.accordions.name",
+      "settings": {
+        "heading": "Componenti",
+        "heading_size": "h3",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "4",
+        "spacing_bottom": "6"
+      }
+    },
+    "multitile_RdAeaU": {
+      "type": "multitile",
+      "blocks": {
+        "tile_RACzwQ": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "16/9",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Pelletier_1_750x_95965175-87ec-4e73-bbaa-6dc03265bc28.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_7XBt96": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 3,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-start text-start",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "Helicave - La Cantina Innovativa",
+            "heading_size": "h4",
+            "text": "<p><strong>Helicave</strong> rappresenta l'eccellenza nella conservazione del vino, con un <strong>design esclusivo</strong> e una tecnologia avanzata. Questa cantina è progettata per ottimizzare la ventilazione e garantire condizioni perfette per la conservazione del vino. Grazie alla sua <strong>volta ellittica</strong> e all'innovativo sistema di raffreddamento naturale, <strong>HelicaVe</strong> è una delle soluzioni più sofisticate e performanti disponibili oggi.</p><p>Se sei alla ricerca di una cantina che unisca <strong>innovazione</strong>, <strong>efficienza energetica</strong> e <strong>estetica esclusiva</strong>, <strong>HelicaVe</strong> è la scelta perfetta per te.</p>",
+            "button_label": "SCOPRI DI PIÙ SU HELICAVE",
+            "button_link": "shopify://pages/helicave",
+            "button_style": "button--filled",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_RACzwQ",
+        "tile_7XBt96"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "6"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "seo_content_RgNyP3",
+    "multitile_JWF8LH",
+    "seo_content_UQJVFY",
+    "custom_liquid_Ldbb8G",
+    "multitile_gNLXGh",
+    "multitile_EH9FBc",
+    "accordions_LbGgGh",
+    "multitile_RdAeaU"
+  ]
+}

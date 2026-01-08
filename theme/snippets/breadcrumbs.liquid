@@ -1,0 +1,66 @@
+{%- comment -%}
+  Accepts:
+
+  -class: {String} - Class to be applied
+  -alignment?: {String} - Alignemnt of the links. Accepts: 'center'
+  -product_collection?: {Collection} - Add's first collection if assigned to the breadcrumb
+{%- endcomment -%}
+
+{%- liquid
+  assign alignment = alignment | default: ''
+  if alignment != ''
+    assign class = class | default: '' | append: 'breadcrumbs--' | append: alignment
+  else
+    assign class = class | default: ''
+  endif
+-%}
+
+<nav class="breadcrumbs {{ class }} {{ template.name }}__breadcrumbs" role="navigation" aria-label="{{- 'theme.breadcrumb.label' | t -}}">
+  <ul class="breadcrumbs__list list-unstyled no-scrollbar" role="list">
+    <li>
+      <a href="{{- routes.root_url -}}" class="breadcrumbs__link">
+        {{- 'theme.breadcrumb.home' | t -}}
+      </a>
+    </li>
+
+    <li class="breadcrumbs__separator">/</li>
+
+    {%- if product and collection -%}
+      <li>
+        <a href="{{- collection.url -}}" class="breadcrumbs__link">
+          {{- collection.title | escape -}}
+        </a>
+      </li>
+
+      <li class="breadcrumbs__separator">/</li>
+    {%- endif -%}
+
+    {%- if product_collection -%}
+      <li>
+        <a href="{{- product_collection.url -}}" class="breadcrumbs__link">
+          {{- product_collection.title | escape -}}
+        </a>
+      </li>
+
+      <li class="breadcrumbs__separator">/</li>
+    {%- endif -%}
+
+    {%- if template.name == 'article' -%}
+      <li>
+        <a href="{{- blog.url -}}" class="breadcrumbs__link" title="{{- blog.title | escape -}}">
+          {{- blog.title | escape -}}
+        </a>
+      </li>
+      <li class="breadcrumbs__separator">/</li>
+    {%- endif -%}
+    <li>
+      <span>
+        {%- if template.name != 'search' -%}
+          {{- page_title | escape -}}
+        {%- else -%}
+          {{- 'theme.breadcrumb.search' | t -}}
+        {%- endif -%}
+      </span>
+    </li>
+  </ul>
+</nav>

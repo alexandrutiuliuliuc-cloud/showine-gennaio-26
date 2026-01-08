@@ -1,0 +1,730 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_banner_jzNnmn": {
+      "type": "hero-banner",
+      "blocks": {
+        "slide_QNwTg4": {
+          "type": "slide",
+          "settings": {
+            "banner_layout": "hero-banner--full",
+            "color_scheme": "scheme-2",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<h2>Helicave</h2>",
+            "subheading": "<strong>Cantina interrata?</strong>",
+            "subheading_link": "",
+            "text": "<p><strong>Fai un buco ed avrai una stanza in più a casa tua<br/>garantendo le migliori condizioni per le tue bottiglie.</strong></p>",
+            "button_link_1": "/",
+            "button_link_1_type": "button",
+            "button_label_1": "",
+            "button_style_1": "button--filled",
+            "button_link_2": "/",
+            "button_label_2": "",
+            "button_style_2": "button--outlined",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/helicave.png",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": true,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "slide_QNwTg4"
+      ],
+      "custom_css": [
+        "p {color: white;}"
+      ],
+      "settings": {
+        "enable_transparent_header": true,
+        "slider_height": 70,
+        "slideshow_autoplay_interval": 6,
+        "show_slideshow_navigation": true,
+        "slideshow_navigation_position": "hero__swiper-buttons--start",
+        "color_scheme_arrows": "",
+        "show_slideshow_pagination": false,
+        "slideshow_pagination_style": "style-1",
+        "floating_bar": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "multitile_BmmFdK": {
+      "type": "multitile",
+      "blocks": {
+        "tile_XHCxwF": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 2,
+            "color_scheme": "",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "5/4",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Soluzioni Personalizzate",
+            "heading_size": "h3",
+            "text": "<p>Showine ti offre una <strong>vasta gamma di opzioni</strong> con <strong>5 modelli</strong> di cantine personalizzate, pensati per soddisfare le diverse necessità di conservazione del vino. Grazie alla nostra esperienza, possiamo progettare cantine che si adattino perfettamente ai tuoi spazi e alle tue preferenze, con una <strong>capacità di stoccaggio</strong> che va da 800 fino a 3.000 bottiglie. Sia che tu sia un collezionista appassionato o un professionista del settore, troverai la soluzione ideale per conservare i tuoi vini al meglio.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Ronde_14.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_bA3xpK": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 1,
+            "color_scheme": "",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "5/4",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "top",
+            "heading": "Qualità, Velocità e Affidabilità",
+            "heading_size": "h3",
+            "text": "<p>Ogni cantina Showine viene realizzata in tempi brevi, con una <strong>tempistica di consegna</strong> che va dai <strong>8 ai 10 giorni</strong>. La qualità dei nostri materiali e il nostro impegno nella progettazione ti garantiscono un prodotto resistente e durevole. In più, con la nostra <strong>garanzia di 10 anni</strong>, puoi essere sicuro che la tua cantina manterrà inalterate le sue qualità per lungo tempo, proteggendo le tue bottiglie nel migliore dei modi.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Ronde_28.webp",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_XHCxwF",
+        "tile_bA3xpK"
+      ],
+      "name": "t:sections.multitile.name",
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "social_media_highlights_p6WmMr": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_ahdnfk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ronde_4_750x_b665d9ee-4020-4ae6-8d28-503d914e6432.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_cXaiHW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/helicave1m_750x_0e0b7b48-0563-4ec2-8cd9-8e0069298708.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_rTqCBN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5725_750x_f3c03cdc-6e2c-48e4-8634-6159d98fad7f.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_gNHEqN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ronde_2_750x_0465fa0c-d1ec-4eea-9969-b4d49a91c411.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_FYhHB7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ronde_7_750x_f66ba44d-59f1-40b8-9d25-e50b6d0807f8.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_xYyCJG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ronde_18_750x_5b67b17f-2579-49ee-b050-19f5b8aa3928.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_3dFgNf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/helicave2m_750x_2cb1005b-c726-4d79-b00d-bdd266ce4d61.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_CVLw4K": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ronde_21_750x_c705b5ed-077a-4329-9e69-725ac0a030bf.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_QCNBfr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ronde_23_750x_71f8acbe-7c0f-4571-a6c0-e87504043396.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "image_ahdnfk",
+        "image_cXaiHW",
+        "image_rTqCBN",
+        "image_gNHEqN",
+        "image_FYhHB7",
+        "image_xYyCJG",
+        "image_3dFgNf",
+        "image_CVLw4K",
+        "image_QCNBfr"
+      ],
+      "name": "t:sections.social_media_highlights.name",
+      "settings": {
+        "layout": "stacked",
+        "heading": "Ronde",
+        "heading_size": "h3",
+        "subheading": "Diametro esterno: mt. 2,00 – Prof.: da mt. 2,00 a mt. 3,00 – N° bott.: 860 / 1360. Lo spazio ideale per lo stoccaggio delle tue bottiglie – scala a chiocciola - Tempi di installazione: 5 giorni",
+        "button_label": "",
+        "button_link": "#",
+        "button_style": "button--filled",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "scheme-6",
+        "media_aspect_ratio": "4/3",
+        "autoplay_speed": 7,
+        "section_width": "max-w-full",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "social_media_highlights_f7qrEK": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_rRAazM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/maxironde11_750x_58abe3b0-38e8-4904-97d6-e1ff20f5c877.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_hi8hh4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/maxironde1m_750x_c21cf4a8-2666-482b-ba02-7684f3fbb201.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_GxMWYp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/maxironde2m_750x_978142d1-4ab0-42cd-b179-93af7211f4a7.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_wfX7Eh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GOPR1443_750x_9235cd7c-178a-4df5-9f9a-aebee9687e0b.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_QB4ygx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GOPR1444_750x_b9f64f44-1e9e-4176-9681-f58e498b9d5c.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_tyakbX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/maxironde3m_750x_e497cd2c-43aa-43a5-89be-e0fd0601b312.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_pJBGBQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Maxi_ronde_34_750x_c110dc69-2a9b-46c8-bdb7-17361e833b0a.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_TiYxjt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Pelletier_1_750x_95965175-87ec-4e73-bbaa-6dc03265bc28.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_ccT9MM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Pelletier_12_750x_4b96d25a-09e5-4649-a392-e2aae7c1c005.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_4nVBpc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Porto_8_750x_b2be15c5-082f-482a-8370-840e47b1b69c.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "image_rRAazM",
+        "image_hi8hh4",
+        "image_GxMWYp",
+        "image_wfX7Eh",
+        "image_QB4ygx",
+        "image_tyakbX",
+        "image_pJBGBQ",
+        "image_TiYxjt",
+        "image_ccT9MM",
+        "image_4nVBpc"
+      ],
+      "name": "t:sections.social_media_highlights.name",
+      "settings": {
+        "layout": "stacked",
+        "heading": "Maxi Ronde",
+        "heading_size": "h3",
+        "subheading": "Diametro esterno: mt. 2,43 – Prof.: da mt. 2,25 a mt. 2,75 – N° bott.: 1420 / 1860. Uno spazio comodo e pratico – scala a chiocciola. Tempi di installazione: 6 giorni",
+        "button_label": "",
+        "button_link": "#",
+        "button_style": "button--filled",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "scheme-6",
+        "media_aspect_ratio": "4/3",
+        "autoplay_speed": 7,
+        "section_width": "max-w-full",
+        "color_scheme": "",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "social_media_highlights_VPhiB9": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_xyX7zj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GOPR1414_500x_feaf858c-a09e-44fc-b320-97a09c2c4640.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_WDwnW6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GOPR1439_500x_e2a71c79-7ec9-4e42-9345-644ebdbfa69d.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_frf3fD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ovale_301_500x_3c5a18bc-0be3-46b8-adb3-d878bbbe2f7e.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_qmRJXQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_8163_500x_e96c990f-2512-42dd-aea0-371beb23623a.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_3Jwz6X": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ovale_19_500x_1779fa4c-9e98-4c34-bb34-02cb56383921.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_GpA9Ym": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ovale_21_500x_33c8ec19-a18c-4ad4-8998-379d3274e6a4.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_9yfWaz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ovale_25_500x_02ca0e4e-143b-46eb-bcf2-acbe29402a94.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_Nf8YkY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ovale_30_500x_0c715bd2-dcac-4160-87f4-05557fe64a56.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_NtPzRz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ovale_50_500x_b14ae76e-a28a-454d-a998-21b051524a36.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_7RcpBa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Wissous_1_500x_0c74901e-64b5-4ad5-885e-9f89ae7958c6.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "image_xyX7zj",
+        "image_WDwnW6",
+        "image_frf3fD",
+        "image_qmRJXQ",
+        "image_3Jwz6X",
+        "image_GpA9Ym",
+        "image_9yfWaz",
+        "image_Nf8YkY",
+        "image_NtPzRz",
+        "image_7RcpBa"
+      ],
+      "name": "t:sections.social_media_highlights.name",
+      "settings": {
+        "layout": "stacked",
+        "heading": "Oval",
+        "heading_size": "h3",
+        "subheading": "Dim: mt. 3,50 x 2,55 – Prof.: da mt. 2,25 a mt. 2,50 – N° bott.: 1600 / 1800. Una Stanza sotterranea: questa cantina combina fascino, comfort ed elevata capacità di stoccaggio.  Tempi di installazione: 10 giorni",
+        "button_label": "",
+        "button_link": "#",
+        "button_style": "button--filled",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "scheme-6",
+        "media_aspect_ratio": "4/3",
+        "autoplay_speed": 7,
+        "section_width": "max-w-full",
+        "color_scheme": "",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "social_media_highlights_PUkUmK": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_HRJyJX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GOPR1414_500x_feaf858c-a09e-44fc-b320-97a09c2c4640.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_qxwxJC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ovale_19_500x_1779fa4c-9e98-4c34-bb34-02cb56383921.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_wbiGMY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ovale_21_500x_33c8ec19-a18c-4ad4-8998-379d3274e6a4.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_mVPJJ6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ovale_301_500x_3c5a18bc-0be3-46b8-adb3-d878bbbe2f7e.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_kE9zJg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ovale_25_500x_02ca0e4e-143b-46eb-bcf2-acbe29402a94.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_cPJqfV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ovale_30_500x_0c715bd2-dcac-4160-87f4-05557fe64a56.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_MtWR8g": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GOPR1439_500x_e2a71c79-7ec9-4e42-9345-644ebdbfa69d.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_xthXFr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ovale_50_500x_b14ae76e-a28a-454d-a998-21b051524a36.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_Nrxibj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Wissous_1_500x_0c74901e-64b5-4ad5-885e-9f89ae7958c6.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_Hfhryg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_8163_500x_e96c990f-2512-42dd-aea0-371beb23623a.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "image_HRJyJX",
+        "image_qxwxJC",
+        "image_wbiGMY",
+        "image_mVPJJ6",
+        "image_kE9zJg",
+        "image_cPJqfV",
+        "image_MtWR8g",
+        "image_xthXFr",
+        "image_Nrxibj",
+        "image_Hfhryg"
+      ],
+      "name": "t:sections.social_media_highlights.name",
+      "settings": {
+        "layout": "stacked",
+        "heading": "Oval Plus",
+        "heading_size": "h3",
+        "subheading": "Dim: mt. 4,00 x 2,77 – Prof.: da mt. 2,25 a mt. 2,50 – N° bott.: 1900 / 2100. Una Stanza sotterranea: questa cantina combina fascino, comfort ed elevata capacità di stoccaggio. Tempi di installazione: 10 giorni",
+        "button_label": "",
+        "button_link": "#",
+        "button_style": "button--filled",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "scheme-6",
+        "media_aspect_ratio": "4/3",
+        "autoplay_speed": 7,
+        "section_width": "max-w-full",
+        "color_scheme": "",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "social_media_highlights_Dmqinf": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_GmR7iH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Maxi_ovale_21_750x_116739f5-4740-4662-865d-a1c9e2a38eb1.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_B6YNHL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Maxi_ovale_23_750x_978316c9-84d3-4fc5-b142-caf8613d3f13.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_hgUNxn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Maxi_ovale_34_750x_7ce29efc-2fa5-4df3-98f3-b3ae8137f216.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_eXUtxz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Maxi_ovale_51_750x_f5b9002b-a660-4e92-9256-190e905aaaa5.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_F6G9JF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Maxi_ovale_36_750x_b95efaed-d28e-439a-99cc-b22fd452b3ee.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_tAa78J": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Maxi_ovale_63_750x_a7750875-d903-4904-8fea-7b0f5d4f4ed2.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_iTBHiY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/moval1_copia_750x_0b9284a9-e928-44ee-82ef-59a6d594654b.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_H6Pbhp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Russe_1_750x_eb655bfc-5e57-4af3-828c-c8bf88fe275b.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_jRkGcq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/russ2_750x_46b55556-51f4-42ae-85fd-fd209fb47b72.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_C3acCT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2015_HVC_Cave_a_vins_interieure_750x_16603cac-d7f6-4c1a-9268-c8b9c1df7605.webp",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "image_GmR7iH",
+        "image_B6YNHL",
+        "image_hgUNxn",
+        "image_eXUtxz",
+        "image_F6G9JF",
+        "image_tAa78J",
+        "image_iTBHiY",
+        "image_H6Pbhp",
+        "image_jRkGcq",
+        "image_C3acCT"
+      ],
+      "name": "t:sections.social_media_highlights.name",
+      "settings": {
+        "layout": "stacked",
+        "heading": "Maxi Oval",
+        "heading_size": "h3",
+        "subheading": "Dim: mt. 5,00 x 3,20 – Prof.: da mt. 2,25 a mt. 2,75 – N° bott.: 2400 / 3000. Una cantina Superiore: grande superficie e volume, spazio di convivialità, grande capacità di stoccaggio. Tempi di installazione: 12 giorni",
+        "button_label": "",
+        "button_link": "#",
+        "button_style": "button--filled",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "scheme-6",
+        "media_aspect_ratio": "4/3",
+        "autoplay_speed": 7,
+        "section_width": "max-w-full",
+        "color_scheme": "",
+        "spacing_top": "4",
+        "spacing_bottom": "6"
+      }
+    }
+  },
+  "order": [
+    "hero_banner_jzNnmn",
+    "main",
+    "multitile_BmmFdK",
+    "social_media_highlights_p6WmMr",
+    "social_media_highlights_f7qrEK",
+    "social_media_highlights_VPhiB9",
+    "social_media_highlights_PUkUmK",
+    "social_media_highlights_Dmqinf"
+  ]
+}

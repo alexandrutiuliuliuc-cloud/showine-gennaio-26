@@ -1,0 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "seo_content_94MHrC": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "",
+        "heading_size": "h3",
+        "text": "<h3>Bonifico Bancario Anticipato</h3><p>In caso di pagamento tramite Bonifico Bancario Anticipato, l'invio di quanto ordinato avviene solo all'atto dell'effettivo accredito sul c/c di <strong>Showine srl</strong>, che deve avvenire entro 5 giorni lavorativi dalla data di accettazione dell'ordine, decorsi i quali l'ordine viene ritenuto automaticamente annullato. La causale del bonifico bancario deve riportare l'identificativo dell'ordine, che viene rilasciato nella mail di conferma ordine. <br/>Le coordinate bancarie su cui effettuare i bonifici sono:</p><p><strong>ISTITUTO BANCARIO</strong>: Banco BPM<br/><strong>DESTINATARIO</strong>:Showine srl<br/><strong>CAUSALE</strong>: Ordine #<br/><strong>IBAN</strong>: IT26 G050 3457 2500 0000 0000 838<strong><br/></strong></p><h3><br/>Carta di Credito</h3><p>Nei casi di acquisto della merce con modalità di pagamento Carta di Credito, contestualmente alla conclusione della transazione online, l'istituto bancario di riferimento provvede ad autorizzare il solo impegno dell'importo relativo all'acquisto effettuato.<br/>Le transazioni effettuate attraverso carta di credito sono gestite da <strong>Keyclient di CartaSi</strong> che garantisce attraverso le migliori tecnologie di crittografia (oppure OTP) la totale sicurezza dei pagamenti.<br/><strong>L'importo relativo alla merce evasa viene addebitato sulla carta di credito del Cliente al momento dell'effettiva evasione del bene ordinato</strong>.</p><h3><br/>PayPal</h3><p>Nei casi di acquisto della merce con modalità di pagamento <strong>PayPal </strong>(sistema di pagamento rapido e sicuro del gruppo eBay), l'acquirente verrà <strong>reindirizzato sul sito PayPal</strong> dove potrà completare l'ordine ed effettuare il pagamento accedendo al proprio conto (inserendo l'indirizzo e-mail personale e password) oppure creando un nuovo conto in modo facile e immediato.<br/>Scegliendo di pagare con PayPal l'importo viene addebitato direttamente sulla carta di credito (Visa, Visa Electron, Mastercard) o prepagata (PostePay) assegnata. <strong>PayPal tutela le informazioni dell'acquirente in quanto non vengono passate informazioni finanziare</strong>.<br/>Ad ogni transazione eseguita con questo metodo verrà inviata un'e-mail di conferma da PayPal. L'importo dell'ordine viene addebitato sul conto PayPal al momento dell'acquisizione dell'ordine. In caso di annullamento l'importo viene rimborsato sul conto PayPal del cliente.</p><h3><br/>Contrassegno</h3><p>Nei casi di acquisto con modalità di Contrassegno, il pagamento dovrà essere effettuato<strong> solo in contanti</strong> direttamente al corriere nel momento in cui viene consegnata la merce; utilizzando questo metodo di pagamento verrà richiesto un contributo alle spese di incasso pari a<strong> Euro 6,00 </strong>che il corriere ci addebita in aggiunta al costo della spedizione per importi fino a Euro 500,00; per importi superiori verrà applicato un contributo alle spese di incasso pari a <strong>Euro 8,00</strong>.</p><p>Per <strong>importi superiori a Euro 1000,00</strong> sarà inoltre <strong>richiesto un acconto anticipato a mezzo bonifico</strong> bancario pari al 50 % dell'importo dell'ordine. Il restante 50 % sarà pagato in contanti alla consegna dell'ordine.<br/><br/><br/></p>",
+        "content_alignment": "center",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_inner": "2",
+        "spacing_top": "1",
+        "spacing_bottom": "2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "seo_content_94MHrC"
+  ]
+}

@@ -1,0 +1,465 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "goback_zMzywG": {
+          "type": "goback",
+          "disabled": true,
+          "settings": {
+            "goback_style": "filled",
+            "goback_label": "",
+            "display_goback_mobile": "on-media",
+            "show_on": "desktop"
+          }
+        },
+        "breadcrumbs_JRrp9d": {
+          "type": "breadcrumbs",
+          "settings": {}
+        },
+        "text_w7iGN6": {
+          "type": "text",
+          "settings": {
+            "spacing_bottom": "1",
+            "heading": "",
+            "icon": "theme-check",
+            "link_to_resource": "vendor",
+            "text_before_link": false,
+            "heading_secondary": "",
+            "metafield_for_product_variant": "",
+            "show_block_content": true
+          }
+        },
+        "badge_dC66pN": {
+          "type": "badge",
+          "settings": {
+            "spacing_bottom": "1",
+            "show_badges": true,
+            "show_badges_discount": true,
+            "show_badges_sold": true
+          }
+        },
+        "1e0c79e9-7de0-4eee-b9c5-f27132635fb8": {
+          "type": "title",
+          "settings": {
+            "spacing_bottom": "2"
+          }
+        },
+        "rating_xAJNqD": {
+          "type": "rating",
+          "settings": {
+            "spacing_bottom": "1",
+            "rating": 3.5
+          }
+        },
+        "8effeb43-55b7-4ec4-ab9b-68bcd89b865b": {
+          "type": "price",
+          "settings": {
+            "spacing_bottom": "1",
+            "show_price_tax_info": true,
+            "show_price_shipping_info": true,
+            "show_price_custom_info": ""
+          }
+        },
+        "sku_HNK7Ka": {
+          "type": "sku",
+          "settings": {
+            "spacing_bottom": "1"
+          }
+        },
+        "divider_HGwyhB": {
+          "type": "divider",
+          "settings": {
+            "spacing_bottom": "3"
+          }
+        },
+        "description_qA3HqH": {
+          "type": "description",
+          "settings": {
+            "spacing_bottom": "4",
+            "behaviour": "plain",
+            "heading": "",
+            "text_truncate": 3,
+            "icon": "theme-release",
+            "metafield_for_product_variant": "",
+            "show_block_content": true
+          }
+        },
+        "1e939cd6-0955-4135-a9e5-c50faef01437": {
+          "type": "purchase_options",
+          "settings": {
+            "spacing_bottom": "1",
+            "show_subscription_title": true,
+            "show_subscription_custom_info": "",
+            "show_subscription_policy": true
+          }
+        },
+        "1e939cd6-0958-4135-a9e5-c50faef01437": {
+          "type": "variant_picker",
+          "settings": {
+            "spacing_bottom": "3",
+            "title": "Variant picker",
+            "picker_type": "swatch",
+            "variant_options_with_thumbnails": "Color",
+            "size_guide_page": "size-guide",
+            "sizes_option": "Size"
+          }
+        },
+        "8604a6ff-ad0b-44dd-8068-1de4e062f8e8": {
+          "type": "buy_buttons",
+          "settings": {
+            "spacing_bottom": "3",
+            "show_quantity": true,
+            "layout": "inline",
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "e6d841d6-2f71-40b3-956a-912df13f9f6e": {
+          "type": "inventory_notice",
+          "settings": {
+            "spacing_bottom": "1",
+            "inventory_threshold": 15,
+            "notice_just_text": false
+          }
+        },
+        "7be6b89c-da83-4ff2-9b85-44fb28cbfa27": {
+          "type": "pickup-availability",
+          "settings": {
+            "spacing_bottom": "2"
+          }
+        },
+        "content_grid_W3Mqy6": {
+          "type": "content_grid",
+          "settings": {
+            "heading": "Spedizioni veloci e sicure",
+            "icon": "theme-box"
+          }
+        },
+        "content_grid_aqTiGw": {
+          "type": "content_grid",
+          "disabled": true,
+          "settings": {
+            "heading": "Pagamenti sicuri",
+            "icon": "option-lock"
+          }
+        },
+        "content_grid_tW7rrh": {
+          "type": "content_grid",
+          "settings": {
+            "heading": "AUTENTICITÀ ITALIANA",
+            "icon": "theme-heart"
+          }
+        },
+        "content_grid_iCJFCN": {
+          "type": "content_grid",
+          "disabled": true,
+          "settings": {
+            "heading": "RESI GRATUITI",
+            "icon": "theme-return"
+          }
+        },
+        "richtext_H49VGq": {
+          "type": "richtext",
+          "settings": {
+            "spacing_bottom": "2",
+            "text": "<h6><strong><br/>Pagamento 100% sicuro</strong></h6><p>Accettiamo tutti i migliori sistemi di pagamento:</p><p>-Tutte le <strong>Carte di Credito</strong>-<strong>PayPal </strong>(anche in 3 rate mensili - fino a € 2.000)<br/><br/>-<strong>Bonifico Bancario<br/><br/></strong>-<strong>Contrassegno </strong>(in contanti alla consegna per ordini fino a € 1.000)</p><p>- Per richiedere il servizio di consegna al piano e/o il montaggio, contattaci, saremo felici di trovare la soluzione migliore per le tue esigenze.</p>"
+          }
+        },
+        "richtext_e3QeMp": {
+          "type": "richtext",
+          "settings": {
+            "spacing_bottom": "1",
+            "text": "<h6><strong>Hai bisogno di supporto? </strong></h6><p>Per richiedere il servizio di consegna al piano e/o il montaggio, contattaci, saremo felici di trovare la soluzione migliore per le tue esigenze.<br/><br/>Contattaci via e-mail a info@showine.it o e/o via telefono a 0376 408127</p>"
+          }
+        }
+      },
+      "block_order": [
+        "goback_zMzywG",
+        "breadcrumbs_JRrp9d",
+        "text_w7iGN6",
+        "badge_dC66pN",
+        "1e0c79e9-7de0-4eee-b9c5-f27132635fb8",
+        "rating_xAJNqD",
+        "8effeb43-55b7-4ec4-ab9b-68bcd89b865b",
+        "sku_HNK7Ka",
+        "divider_HGwyhB",
+        "description_qA3HqH",
+        "1e939cd6-0955-4135-a9e5-c50faef01437",
+        "1e939cd6-0958-4135-a9e5-c50faef01437",
+        "8604a6ff-ad0b-44dd-8068-1de4e062f8e8",
+        "e6d841d6-2f71-40b3-956a-912df13f9f6e",
+        "7be6b89c-da83-4ff2-9b85-44fb28cbfa27",
+        "content_grid_W3Mqy6",
+        "content_grid_aqTiGw",
+        "content_grid_tW7rrh",
+        "content_grid_iCJFCN",
+        "richtext_H49VGq",
+        "richtext_e3QeMp"
+      ],
+      "custom_css": [
+        "@media (min-width: 1024px) {h1 {font-size: 29px; }}",
+        "@media (max-width: 1024px) {h1 {font-size: 21px; }}"
+      ],
+      "settings": {
+        "product_media_layout": "product__media-layout--full",
+        "product_media_layout_mobile": "product__media-layout--full--sm",
+        "product_media_aspect_ratio": "auto",
+        "product_media_object_fit": "contain",
+        "product_slider_auto_height": true,
+        "media_transparent_background": false,
+        "display_media_zoom": "trigger",
+        "product_media_with_thumbs": "desktop_and_mobile",
+        "product_media_thumbs_ratio": "auto",
+        "product_media_thumbs_object_fit": "cover",
+        "gallery_arrows_show_on": "desktop",
+        "display_media_gallery_pagination": "none",
+        "media_gallery_info": "",
+        "metafield_as_seen_on": "",
+        "color_scheme_gallery": "scheme-1",
+        "enable_sticky_info": true,
+        "enable_actions_bar": true,
+        "media_grid_size": "large",
+        "media_grid_position": "start",
+        "grid_gap": "4",
+        "spacing_grid": 1.6,
+        "grid_content_alignment": "start",
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "complete_the_set_3xCq6j": {
+      "type": "complete-the-set",
+      "blocks": {
+        "collapsible_zCWDjG": {
+          "type": "collapsible",
+          "disabled": true,
+          "settings": {
+            "block_type": "collapsible",
+            "heading": "Content",
+            "link": "",
+            "content": "<p>{{ product.metafields.magento.scheda_tecnica | metafield_tag }}{{ product.metafields.global.scheda_tecnica | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_PiJFMF": {
+          "type": "collapsible",
+          "settings": {
+            "block_type": "collapsible",
+            "heading": "<strong>Descrizione </strong>",
+            "link": "",
+            "content": "<p>{{ product.metafields.magento.short_description | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_iWtakJ": {
+          "type": "collapsible",
+          "settings": {
+            "block_type": "collapsible",
+            "heading": "<strong>Ulteriori informazioni</strong>",
+            "link": "",
+            "content": "<p><strong>Materiale:</strong> {{ product.metafields.magento.materiale.value }}</p><p><strong>Larghezza:</strong> {{ product.metafields.magento.larghezza.value }}</p><p><strong>Altezza:</strong> {{ product.metafields.magento.altezza.value }}</p><p><strong>Profondità:</strong> {{ product.metafields.magento.cantina_profondita.value }}</p><p><strong>Nr. Bottiglie:</strong> {{ product.metafields.magento.cantina_capacita_bottiglie.value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_fFqynE": {
+          "type": "collapsible",
+          "settings": {
+            "block_type": "collapsible",
+            "heading": "<strong>Caratteristiche tecniche </strong>",
+            "link": "",
+            "content": "<p><strong>Installazione:</strong> {{ product.metafields.magento.cantina_tipo_installazione.value }}</p><p><strong>Capacità bottiglie (Bordelese da 750 ml):</strong> {{ product.metafields.magento.cantina_capacita_bottiglie.value }}</p><p><strong>Regolazione temperatura elettronica:</strong> {{ product.metafields.magento.cantina_elettronica.value }}</p><p><strong>Display termometro: </strong>{{ product.metafields.magento.cantina_display.value }}</p><p><strong>Numero Temperature:</strong> {{ product.metafields.magento.cantina_temperature.value }}</p><p><strong>Temperatura regolabile:</strong> </p><p><strong>Temperatura ambiente:</strong> {{ product.metafields.magento.cantina_ambiente.value }}</p><p><strong>Classe Energetica:</strong> {{ product.metafields.magento.cantina_classe_energetica.value }}</p><p><strong>Classe Climatica:</strong> {{ product.metafields.magento.cantina_classe_climatica.value }}</p><p><strong>Refrigerazione:</strong> {{ product.metafields.magento.cantina_refrigerazione.value }}</p><p><strong>Numero compressori:</strong> {{ product.metafields.magento.cantina_compressori.value }}</p><p><strong>Riscaldamento (funzione inverno):</strong> {{ product.metafields.magento.cantina_interno.value }}</p><p><strong>Gas Refrigerante:</strong> {{ product.metafields.magento.cantina_gas.value }}</p><p><strong>Consumo:</strong> {{ product.metafields.magento.cantina_consumo.value }}</p><p><strong>Rumorosità:</strong> {{ product.metafields.magento.cantina_rumorosita.value }}</p><p><strong>Garanzia:</strong> {{ product.metafields.magento.cantina_garanzia.value }}</p><p><strong>Larghezza:</strong> {{ product.metafields.magento.cantina_larghezza.value }}</p><p><strong>Altezza:</strong> {{ product.metafields.magento.altezza.value }}</p><p><strong>Profondità:</strong> {{ product.metafields.magento.cantina_profondita.value }}</p><p><strong>Peso:</strong> {{ product.metafields.magento.cantina_peso.value }}</p><p><strong>Finitura esterna:</strong> {{ product.metafields.magento.cantina_finitura_esterna.value }}</p><p><strong>Tipologia porta:</strong> {{ product.metafields.magento.cantina_tipologia_porta.value }}</p><p><strong>Serratura:</strong> {{ product.metafields.magento.cantina_serratura.value }}</p><p><strong>Porta reversibile:</strong> {{ product.metafields.magento.cantina_reversibile.value }}</p><p><strong>Vetro porta:</strong> {{ product.metafields.magento.cantina_vetro_porta.value }}</p><p><strong>Numero ripiani:</strong> {{ product.metafields.magento.allestimento_numero.value }}</p><p><strong>Materiale ripiani: </strong>{{ product.metafields.magento.materiale.value }}</p><p><strong>Ripiani estraibili:</strong> {{ product.metafields.magento.allestimento_estraibili.value }}</p><p><strong>Guide telescopiche:</strong> {{ product.metafields.magento.allestimento_guide.value }}</p><p><strong>Luce interna:</strong> {{ product.metafields.magento.cantina_luci.value }}</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_zCWDjG",
+        "collapsible_PiJFMF",
+        "collapsible_iWtakJ",
+        "collapsible_fFqynE"
+      ],
+      "settings": {
+        "heading": "Maggiori informazioni",
+        "content_heading": "",
+        "heading_size": "h3",
+        "content_type": "image",
+        "featured_image": "shopify://shop_images/il_team_SHOWINE.jpg",
+        "featured_image_aspect_ratio": "4/3",
+        "open_first_collapsible": true,
+        "flip_desktop": true,
+        "flip_mobile": true,
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "multitile_fHtyzp": {
+      "type": "multitile",
+      "blocks": {
+        "tile_DDzNVC": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 1,
+            "color_scheme": "",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "16/9",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/Composizione_3.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_fxk3Um": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 2,
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "L’arte di custodire",
+            "heading_size": "h3",
+            "text": "<p>Da oltre 15 anni trasformiamo la passione per il vino in ambienti unici, progettati per custodire e valorizzare ogni bottiglia.<br/><br/>La nostra missione è offrire soluzioni che uniscano tecnologia, design e cultura enologica, creando esperienze che durano nel tempo.</p><p>Ogni prodotto che selezioniamo o realizziamo riflette il nostro impegno per l’eccellenza, la funzionalità e l’estetica.<br/><br/>Perché il vino merita molto più di un semplice spazio: merita il meglio.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_DDzNVC",
+        "tile_fxk3Um"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "hero_banner_idqix3": {
+      "type": "hero-banner",
+      "blocks": {
+        "slide_HWjXPU": {
+          "type": "slide",
+          "settings": {
+            "banner_layout": "hero-banner--full",
+            "color_scheme": "scheme-2",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<h1>Il vino giusto. Al momento giusto.</h1>",
+            "subheading": "",
+            "subheading_link": "",
+            "text": "<p>Scopri come l’innovazione firmata Showine valorizza ogni bottiglia: dalla temperatura ideale alla degustazione perfetta, ogni dettaglio fa la differenza.</p>",
+            "button_link_1": "/",
+            "button_link_1_type": "button",
+            "button_label_1": "",
+            "button_style_1": "button--filled",
+            "button_link_2": "/",
+            "button_label_2": "",
+            "button_style_2": "button--outlined",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/slide_chi_siamo.png",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": true,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "slide_HWjXPU"
+      ],
+      "custom_css": [
+        "P {color: white;}",
+        "@media (min-width: 1024px) {h1 {font-size: 60px; }}",
+        "@media (max-width: 1024px) {h1 {font-size: 39px; }}"
+      ],
+      "settings": {
+        "enable_transparent_header": true,
+        "slider_height": 70,
+        "slideshow_autoplay_interval": 6,
+        "show_slideshow_navigation": true,
+        "slideshow_navigation_position": "hero__swiper-buttons--start",
+        "color_scheme_arrows": "",
+        "show_slideshow_pagination": false,
+        "slideshow_pagination_style": "style-1",
+        "floating_bar": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "layout": "layout-1",
+        "enable_slideshow_overflow": true,
+        "heading": "Ti potrebbe anche interessare",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "View all",
+        "button_link": "",
+        "button_style": "button--filled",
+        "show_navigation_arrows": true,
+        "slider_autoplay": 2,
+        "tabs_button_style": "tab-btn-filled",
+        "max_products": 8,
+        "show_unavailable_products": false,
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_top": "6",
+        "spacing_bottom": "2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "complete_the_set_3xCq6j",
+    "multitile_fHtyzp",
+    "hero_banner_idqix3",
+    "recommendations"
+  ]
+}

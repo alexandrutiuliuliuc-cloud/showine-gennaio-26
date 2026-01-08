@@ -1,0 +1,105 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "seo_content_icWFML": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Referenze",
+        "heading_size": "h2",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_inner": "2",
+        "spacing_top": "4",
+        "spacing_bottom": "1"
+      }
+    },
+    "accordions_TT89yL": {
+      "type": "accordions",
+      "blocks": {
+        "topic_N97Uyk": {
+          "type": "topic",
+          "settings": {
+            "is_open": true,
+            "title": "RISTORANTI - TRATTORIE - OSTERIE",
+            "text": "<ul><li>176 Srl - LINE Restaurant-Cafè - Vincenzo Iannece - SA</li><li>A casa di Luca di Gianluca e Claudio Angelini s.n.c - RN</li><li>Afrikabar snc - LU</li><li>Ai mitraglieri di Meggiato Cristina - VE</li><li>Airi snc di Labate Lorenzo Giorgio - TO</li><li>Al Mercato srl</li><li>Al Santuario RISTORANTE PIZZERIA dal 1979 - BG</li><li>Allforfood srl - PU</li><li>Alma srl - MN</li><li>Anticascuderia di Paiola Maurizio &c snc - BL</li><li>Az. Agricola Carla Maria Moretti - LI</li><li>Baita Fraina snc - BL</li><li>Belvedere snc Ristorante la Vela - LI</li><li>Bixtro snc - PV</li><li>Black Srl - SA</li><li>Blasi & Co. Srl - TR</li><li>Bonvecchi Andrea - Ristorante Rosina - AN</li><li>BORGO DEI CESARI SRL - UD</li><li>Caffè Positano di Caldiero Beniamino - SA</li><li>Casaldomus srl - CR</li><li>Chicchirichì snc di Pozzaglini Orietta & C. - RA</li><li>Confessore Maria Rosaria - CN</li><li>Da Sofia - Albergo Ristorante - SA</li><li>Donadio Turismo srl - FG</li><li>EFFEBI di Belardoni Marco & C. snc - BS</li><li>El Sbarlefo & C. snc - VE</li><li>Europa, s.g. di Selmin N. & c srl - PD</li><li>Family srl - MI</li><li>Fericio srl - BO</li><li>Fine food Company srl - MI</li><li>Fior di Loto dei F.lli Olivari & C. snc - BS</li><li>Gilda srl - PI</li><li>I Duecento srl - RM</li><li>Il fortino di Davide Rullo & c. snc - OR</li><li>Il ristorante di Paolo s.a.s di Cagliani Paolo & C. - CO</li><li>Immobiliare Dante International srl - AL</li><li>LA BUSSOLA - GR</li><li>LA CANTINA DI OPERA DI Filippo Augusto Marcello Infantino - MI</li><li>La Locanda snc - MI</li><li>La Zucca srl - SA</li><li>Lamelacandita snc - VA</li><li>Largo del Mulino Rist. di Di Stanislao Alberto - TE</li><li>LMD Ristorazione snc di Rodolfo Dessi - RM</li><li>Locanda della Cucullera Ac Agricola Scalamandrè e Cartigliani - CZ</li><li>Lodovico 131 srl - MI</li><li>Longo un Mondo di specialità srl - MI</li><li>L'Osteria del Ghiotto - PI</li><li>Magister Lactis s.r.l - FI</li><li>Map srl - RM</li><li>Master Zara srl - MI</li><li>MAYBE di Secondini Endrio & Company snc</li><li>Micheli Benito Jr e C. sas - RE</li><li>Nostromo snc dei Fratelli Canepa & C. - GE</li><li>Nunzianna s.r.l. - NA</li><li>Osteria Alba Chiara di Peli Silvano & C. s.a.s. - BS</li><li>Osteria della Cavazzona di Messori marco - MO</li><li>PIZZAROMA ITALY SRL - RM</li><li>Possemato Alessandro - CO</li><li>Ristorante \"Lo Stella\" - Maurizio Polo - GE</li><li>Ristorante Al Santuario di Colombo Davide - BG</li><li>Ristorante al Vecchio Mulino snc - CE</li><li>Ristorante Al Volt - di Poli Maurizio & C. - TN</li><li>Ristorante Bamboo di Dario Misiti & C. sas - RC</li><li>Ristorante Joia - MI</li><li>Ristorante La Bomboniera di Giulio Bussu - RM</li><li>Ristorante La Poventa di Scarsellini Federico - GR</li><li>Ristorante Naturasi - Alma snc - VR</li><li>Ristorante Paradiso - BL</li><li>Ristorante Piccolo Abruzzo di Mancini Odoardo - RM</li><li>Ristorante Pommeri di Nasi Germano - PR</li><li>San Gregorio srl - MI</li><li>San Lorenzo sas - Gabriele Gaetani - GE</li><li>SE.DI.L. srl - PC</li><li>SELENA & LUCA s.n.c di Baccanelli Luca & C. - CN</li><li>Sinergie sas di Bellucci Simonella e C. - SI</li><li>Sirocco srl - RN</li><li>Taparo Srl - PD</li><li>The Family snc di Mattiazzo Lucidalba & C. - VR</li><li>Trattoria alla Nave di Campigotto Luigi - PD</li><li>Trattoria del Pantheon - RM</li><li>Trattoria Pizzeria Il Libridinoso - SI</li><li>Trattoria Vigezzina - di Ianni Andrea - VB</li><li>Trio snc - MI</li><li>Trita Pepe snc di Garzulano Cinzia & C. - PE</li><li>Turris Clara Immobiliare s.r.l. - SA</li><li>VE.GA. Snc - LI</li><li>Vittoria sas - SO</li><li>Viveco srl - MI</li></ul>",
+            "page": ""
+          }
+        },
+        "topic_3xKERY": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "HOTEL - ALBERGHI",
+            "text": "<ul><li>Agriturismo Il Gelsomino Ritrovato - ME</li><li>Albergo Ercolini e Savi - PT</li><li>B&B ALBERGATORI SNC - RE</li><li>Cascina Caremma - MI</li><li>Cascina Spinerola srl - AT</li><li>Don Ferrante srl - BA</li><li>DUETORRIHOTELS SPA - MI</li><li>El Borgo srl - Laticastelli Country Relais - SI</li><li>Hapimag Italia srl - FC</li><li>Hotel Concorde Niva srl - FR</li><li>Hotel Mediterraneo Srl - Maresca Sergio - NA</li><li>HOTEL TIFERNO SRL - PG</li><li>Hotel Tyrol di Kasslatter Frida & C. s.n.c. - BZ</li><li>Hotel Ville Montefiori - BS</li><li>IBES srl - SS</li><li>Itafood Banqueting and Catering Service srl - MI</li><li>Kurhaus Cademario Hotel & Spa - SVIZZERA</li><li>Mant di Abbate M. & c. snc - SI</li><li>Nogarol Gian Pietro - VE</li><li>Nuova Immobiliare Pineta Srl - LI</li><li>Poggio ai Platani sas - PI</li><li>Sona Milena - BL</li><li>TM Property Management srl - FM</li><li>Villa Grassina Soc. Agr. a R. L. - FI</li><li>Villa Sparina Resort sas - AL</li></ul>",
+            "page": ""
+          }
+        },
+        "topic_GbJiWB": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "ENOTECHE - BAR - ALIMENTARI",
+            "text": "<ul><li>2.22 Cafè - Ceriani Matteo - VB</li><li>Acropoli Bar - LI</li><li>ADIPO SRL - BS</li><li>Alimentari Trapletti Luca - BG</li><li>Alloro Srl - BG</li><li>Aristippo - MN</li><li>Associazione Vino Roma - RM</li><li>Bar Filia Antonello - NU</li><li>Bar Haiti \"Ledueti snc\" - CN</li><li>Bar Il Pozzo di Bonacina Manuela - NO</li><li>Bar La Stua s.n.c - BZ</li><li>Bar Santini Pietro Paolo - VT</li><li>Bar Trattoria Fogna - MO</li><li>Bar Ulivi sas - LU</li><li>Bracali Stefano - PT</li><li>Caffè Cavour - BG</li><li>Caffè Centrale - Caren Bottamedi - TN</li><li>Caffetteria Gelateria la Paola - PG</li><li>Ciangherotti Daniele -Paninoteca bar - LI</li><li>Dal divino Bacco - AQ</li><li>DeGusto sas di Pohl Heinrich & Co. - BZ</li><li>Divini Sapori di Bencini Matteo - LI</li><li>Dolce e Salato snc - FC</li><li>Effeci Service srl - CA</li><li>Emporio del Vino - AL</li><li>Enoteca Botticella - GE</li><li>ENOTECA CARE VIGNE - RC</li><li>ENOTECA DE GUSTO SNC - CO</li><li>Enoteca di Ghino - SI</li><li>Enoteca La Moscheta S.n.c. di Salmaso & C. - PD</li><li>Enoteca Pensavo Meglio - CO</li><li>Enoteca Seriate - BG</li><li>EREDI DEBERTOLIS RENZO - TN</li><li>Feminabar - TO</li><li>Gidal SpA - NA</li><li>Gourmetteria SRL - TV</li><li>Gran Bar Sabato - NA</li><li>Green Bar - RM</li><li>Greens' bar Caffeteca - IM</li><li>Gusto & Degusto - MI</li><li>Hostaria del Borgo - GRAUBÜNDEN</li><li>I SALUMI DI CARNIA SRL U - UD</li><li>Infernot di Manlio Manganaro - PV</li><li>Kiwan Kiwan - FE</li><li>La Bella Michele snc - VV</li><li>La Bicicletta di Guassora Marco - TO</li><li>La Bottega del Gusto snc - PC</li><li>LA VARIANTE - PG</li><li>LADY FOOD - MC</li><li>Lanterna Magica S.r.l. - BG</li><li>Le Bar a Vins s.r.l. - LU</li><li>Le Rubinare sas di Mischi Andrea & c VR</li><li>L'Enoteca di Ghino di Poggialini Ghino - SI</li><li>LINOLEUM - AL</li><li>M&G Food sas - CL</li><li>Mamaf di Maffioli Angelo - VA</li><li>Meini Marco & C. snc - BS</li><li>MIRO srl - UD</li><li>Mura Antonello - AR</li><li>Nepente s.a.s. - VE</li><li>Nonsolovino snc di Stefano Bullegato & Co - MB</li><li>ONDA BLU SRL - GE</li><li>Palombi Simone - RM</li><li>Pane & Vino di Motto Sonia - VC</li><li>Pasta all'uovo giallo oro - AQ</li><li>Pasticceria dolci tentazioni di Diana Giuseppe - OT</li><li>Pasticceria Futura snc - FI</li><li>Pasticceria Zanella Bruno - VE</li><li>Pastificio Bossina Sas - TO</li><li>Rete189 srl - BO</li><li>Rubinare sas di Mischi Andrea - VR</li><li>Salumeria Roscioli i di Roscioli Alessandro e C sas - RM</li><li>Spartivento Group srl - RC</li><li>Supermercato Mela d'Oro s.r.l. - PO</li><li>To Wine di Gionni Bonistalli - PO</li><li>Vepp di Pier Paolo Porzio - NA</li><li>Vie del Gusto Store</li><li>VIGNAIOLI del TORTONESE - CANTINA SOCIALE di TORTONA S.c.a. - AL</li><li>VINERIA DEI TINTORI SAS - MB</li><li>Vox cafè di Lo Faro Luca e c sas - PC</li></ul>",
+            "page": ""
+          }
+        },
+        "topic_dERNzc": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "AZIENDE VINICOLE - VITICOLTORI",
+            "text": "<ul><li>Agricola Erario S.S. - TA</li><li>Az. Agr. Barone de Cles di Giorgio Bernardo de Cles - TN</li><li>Az. Agr. Corrado Capece Minutolo - BT</li><li>Az. Agr. Filippo Broccardo e fratelli - CN</li><li>Az. Agr. La Contessa s.r.l. - BS</li><li>Az. Agricola Carvinea - Div. Agr. di Centro Autoveicoli srl - BA</li><li>Az.Agr.Accordini Stefano di Accordini G. e Filippi E. Soc. Agr.S.S. - VR</li><li>Azienda Agraria Il Colle di Ernesta Giannelli - SI</li><li>Azienda Agricola Favaro Benito - TO</li><li>Cantine Conte C. Giorgi di Vistarino srl - PV</li><li>Cantine Lupo - LT</li><li>Cantine Pirovano Srl - LC</li><li>Cicco Salvatore - PA</li><li>COLLINE SAN BIAGIO SS AGRICOLA - RM</li><li>Cuneaz Nadir - AO</li><li>F.lli Bonelli s.r.l. - PC</li><li>Marchesi dè Cordano srl - PE</li><li>Mattioli Romano - MO</li><li>Padroggi Luigi e Figli - PV</li><li>Poggio al Sole - FI</li><li>Soc. Agr. Montecillario - VR</li><li>Società Agricola Ca.Pri. S.r.l. - FG</li><li>Società Agricola Podere Bellosguardo - AR</li><li>SOCIETA' AGRICOLA SAN FELICE SPA - SI</li><li>Società Agricola Ven. Tacinaia - PT</li><li>Società Agricola Villa Loggio Srl Unipersonale - AR</li><li>Tenuta Colfiorito - RM</li><li>Terre da Vino Spa - CN</li><li>Terre di Poggio srl - CH</li><li>VINICOLA SERENA S.R.L. - Laboratorio Vinicola Serena TV</li></ul>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "topic_N97Uyk",
+        "topic_3xKERY",
+        "topic_GbJiWB",
+        "topic_dERNzc"
+      ],
+      "name": "t:sections.accordions.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h5",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_top": "1",
+        "spacing_bottom": "6"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "seo_content_icWFML",
+    "accordions_TT89yL"
+  ]
+}

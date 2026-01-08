@@ -1,0 +1,74 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "seo_content_kqDKz3": {
+      "type": "seo-content",
+      "name": "t:sections.seo-content.name",
+      "settings": {
+        "section_layout": "boxed",
+        "heading": "Vuoi aumentare i tuoi fatturati con una partnership strategica?",
+        "heading_size": "h3",
+        "text": "<p>Nell’ambito di un programma di espansione con l’apertura di nuovi show-room sul territorio ed ampliamento del mercato estero, <strong>Showine</strong> intende avvalersi di <strong>partnership qualificate</strong> per dare visibilità concreta e immediata a tutto il mercato di riferimento dei suoi prodotti e dei suoi servizi in ambito di progettazione e realizzazione “su misura” di cantine climatizzate.<br/><br/>Stiamo cercando collobarazioni per <strong>Milano</strong>, <strong>Roma</strong>, <strong>Napoli</strong>, <strong>Svizzera</strong> ed <strong>Austria</strong> nei settori <strong>Architettura / Interior Design</strong> ed <strong>Enoteche</strong>.</p>",
+        "content_alignment": "center",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_inner": "2",
+        "spacing_top": "4",
+        "spacing_bottom": "2"
+      }
+    },
+    "1746452585818a4634": {
+      "type": "apps",
+      "blocks": {
+        "powerful_form_builder_app_block_bMe8fN": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTAwNjk2\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_bMe8fN"
+      ],
+      "settings": {}
+    },
+    "spacing_43nNDc": {
+      "type": "spacing",
+      "name": "t:sections.spacing.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "seo_content_kqDKz3",
+    "1746452585818a4634",
+    "spacing_43nNDc"
+  ]
+}

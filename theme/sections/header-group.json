@@ -1,0 +1,238 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "link_pEAxig": {
+          "type": "link",
+          "settings": {
+            "show_on": "desktop",
+            "link_label": "CONTATTACI SU WHATSAPP",
+            "link": "https://wa.me/0376408127",
+            "icon": "brand-whatsapp"
+          }
+        },
+        "5e0cad2e-d931-416e-ac29-51a4a683ade2": {
+          "type": "text-slide",
+          "settings": {
+            "content": "<p><strong>the best for your wine</strong></p>",
+            "icon": "theme-release"
+          }
+        },
+        "cee0c4f6-5546-43a3-bfc3-2f3afa36d9d5": {
+          "type": "text-slide",
+          "settings": {
+            "content": "<p>BENVENUTI SU SHOWINE</p>",
+            "icon": "theme-world"
+          }
+        },
+        "link_h8t4xz": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "show_on": "desktop",
+            "link_label": "Vinitaly 2025",
+            "link": "",
+            "icon": "option-discount"
+          }
+        },
+        "timer_UXXqcR": {
+          "type": "timer",
+          "disabled": true,
+          "settings": {
+            "show_on": "desktop",
+            "timer_year": 2025,
+            "timer_month": "08",
+            "timer_day": 1,
+            "timer_hour": 0,
+            "timer_minute": 0,
+            "timer_end_message": "Lo sconto è finito",
+            "show_timer_days": true,
+            "show_timer_hours": true,
+            "show_timer_minutes": true,
+            "show_timer_seconds": true
+          }
+        }
+      },
+      "block_order": [
+        "link_pEAxig",
+        "5e0cad2e-d931-416e-ac29-51a4a683ade2",
+        "cee0c4f6-5546-43a3-bfc3-2f3afa36d9d5",
+        "link_h8t4xz",
+        "timer_UXXqcR"
+      ],
+      "settings": {
+        "text_block_behaviour": "marquee",
+        "slider_autoplay_interval": 5,
+        "font_weight": "700",
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-6"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "image_link_text_FGh4ny": {
+          "type": "image-link-text",
+          "settings": {
+            "show_on": "both",
+            "menu_link_title": "CANTINETTE",
+            "color_scheme": "scheme-2",
+            "card_aspect_ratio": "same_as_section",
+            "content_position_horizontal": "align-start text-start",
+            "content_position_vertical": "justify-end",
+            "title": "",
+            "subtitle": "",
+            "link": ""
+          }
+        },
+        "image_link_text_kGnQEQ": {
+          "type": "image-link-text",
+          "settings": {
+            "show_on": "desktop",
+            "menu_link_title": "PORTABOTTIGLIE",
+            "color_scheme": "scheme-2",
+            "card_aspect_ratio": "16/9",
+            "content_position_horizontal": "align-start text-start",
+            "content_position_vertical": "justify-end",
+            "title": "",
+            "subtitle": "",
+            "link": ""
+          }
+        },
+        "image_link_text_wPLHRK": {
+          "type": "image-link-text",
+          "settings": {
+            "show_on": "both",
+            "menu_link_title": "CLIMATIZZATORI",
+            "color_scheme": "scheme-2",
+            "card_aspect_ratio": "same_as_section",
+            "content_position_horizontal": "align-start text-start",
+            "content_position_vertical": "justify-end",
+            "title": "",
+            "subtitle": "",
+            "link": ""
+          }
+        },
+        "image_link_text_9MgnxG": {
+          "type": "image-link-text",
+          "settings": {
+            "show_on": "both",
+            "menu_link_title": "MESCITA",
+            "color_scheme": "scheme-2",
+            "card_aspect_ratio": "same_as_section",
+            "content_position_horizontal": "align-start text-start",
+            "content_position_vertical": "justify-end",
+            "title": "",
+            "subtitle": "",
+            "link": ""
+          }
+        },
+        "image_link_text_whJLP4": {
+          "type": "image-link-text",
+          "settings": {
+            "show_on": "both",
+            "menu_link_title": "ACCESSORI",
+            "color_scheme": "scheme-2",
+            "card_aspect_ratio": "same_as_section",
+            "content_position_horizontal": "align-start text-start",
+            "content_position_vertical": "justify-end",
+            "title": "",
+            "subtitle": "",
+            "link": ""
+          }
+        },
+        "image_link_text_ty9WRm": {
+          "type": "image-link-text",
+          "settings": {
+            "show_on": "both",
+            "menu_link_title": "ARREDO",
+            "color_scheme": "scheme-2",
+            "card_aspect_ratio": "same_as_section",
+            "content_position_horizontal": "align-start text-start",
+            "content_position_vertical": "justify-end",
+            "title": "",
+            "subtitle": "",
+            "link": ""
+          }
+        },
+        "image_link_text_78WBGD": {
+          "type": "image-link-text",
+          "settings": {
+            "show_on": "both",
+            "menu_link_title": "ACCESSORI",
+            "color_scheme": "scheme-2",
+            "card_aspect_ratio": "same_as_section",
+            "content_position_horizontal": "align-start text-start",
+            "content_position_vertical": "justify-end",
+            "title": "",
+            "subtitle": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_link_text_FGh4ny",
+        "image_link_text_kGnQEQ",
+        "image_link_text_wPLHRK",
+        "image_link_text_9MgnxG",
+        "image_link_text_whJLP4",
+        "image_link_text_ty9WRm",
+        "image_link_text_78WBGD"
+      ],
+      "custom_css": [
+        "@media (min-width: 1024px) {.header__nav-item > .header__nav-link {font-size: 11px; }}",
+        ".header__nav-link {font-weight: bold;}",
+        ".btn-red {font-weight: bold;}"
+      ],
+      "settings": {
+        "layout": "header--logo-nav-aligned-start",
+        "sticky": true,
+        "nav_items_border": true,
+        "drawer_layer": true,
+        "logo": "shopify://shop_images/af965cb6-ffa6-4810-86f9-452277c09699.png",
+        "logo_transparent": "shopify://shop_images/af965cb6-ffa6-4810-86f9-452277c09699_1.png",
+        "logo_svg_code": "",
+        "logo_width": 150,
+        "logo_width_mobile": 120,
+        "logo_font_size": 0.5,
+        "transparent_header_bottom_border": true,
+        "country_drawer_header": true,
+        "country_drawer_navigation_menu": true,
+        "utils_link_display": "icon",
+        "first_additional_link_title": "",
+        "first_additional_link_url": "",
+        "second_additional_link_title": "",
+        "second_additional_link_url": "",
+        "menu": "menu-principale",
+        "menu_mobile": "",
+        "submenu": "",
+        "menu_mobile_card_column_count": "2",
+        "parent_link_size": "lg",
+        "parent_without_submenu_size": "lg",
+        "spacing_between_cards": "2",
+        "card_aspect_ratio": "3/4",
+        "card_aspect_ratio_mobile": "3/4",
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-1",
+        "color_scheme_for_dropdown": "",
+        "color_scheme_for_drawer": ""
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

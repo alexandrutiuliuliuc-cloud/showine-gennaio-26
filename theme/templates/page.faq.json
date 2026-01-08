@@ -1,0 +1,228 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "e4a22221-96e8-47eb-8e41-ff9780104ed3": {
+      "type": "page-banner",
+      "settings": {
+        "enable_transparent_header": true,
+        "heading": "",
+        "heading_size": "h2",
+        "text": "<p>Per qualsiasi dubbio o chiarimento, abbiamo raccolto in diverse categorie le domande più frequenti dei nostri clienti. <br/>Cliccando sulla domanda di tuo interesse potrai chiarire ogni tuo dubbio! Nel caso necessiti di ulteriori risposte non esitare a contattarci, accedi all'area di richiesta informazioni.</p>",
+        "show_default_description": false,
+        "show_on_description": "both",
+        "content_position": "center",
+        "content_alignment": "center",
+        "media_position": "background",
+        "page_menu": "",
+        "enable_breadcrumbs": true,
+        "section_height": "50svh",
+        "content_width": "100%",
+        "video_external": "",
+        "show_controls_on_video": false,
+        "section_height_mobile": "50svh",
+        "video_external_mobile": "",
+        "show_controls_on_video_mobile": false,
+        "section_width": "max-w-page",
+        "color_scheme": "scheme-6",
+        "color_scheme_for_media": "",
+        "spacing_top": "2",
+        "spacing_bottom": "1"
+      }
+    },
+    "15d37dcd-dfe5-404c-80f1-8f76c2017e23": {
+      "type": "accordions",
+      "blocks": {
+        "template--17062096503099__15d37dcd-dfe5-404c-80f1-8f76c2017e23-16696259764c4b7b62-0": {
+          "type": "topic",
+          "settings": {
+            "is_open": true,
+            "title": "Quanto costa la spedizione?",
+            "text": "<p>Le spese di spedizione sono calcolate in base al peso reale e/o peso volumetrico dei prodotti ordinati ed automaticamente calcolati nella procedura di acquisto all’interno della pagina “Carrello”. Nella sezione “Condizioni di acquisto” al paragrafo “Modalità di consegna” è riportata la tabella con i relativi costi di spedizione suddivisi per fascia di peso che verranno applicati in fase di acquisto.</p>",
+            "page": ""
+          }
+        },
+        "template--17062096503099__15d37dcd-dfe5-404c-80f1-8f76c2017e23-16696259764c4b7b62-1": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Le spese di spedizione sono uguali in tutta Italia (isole comprese)?",
+            "text": "<p>Le spese di spedizione sono uguali in tutta Italia Isole maggiori comprese (Sicilia, Sardegna e Isola d’Elba) per le isole minori e particolari località montane o lagunari, a noi segnalate dal corriere, Showine si riserva di comunicare preventivamente al cliente il relativo adeguamento del costo di spedizione.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17062096503099__15d37dcd-dfe5-404c-80f1-8f76c2017e23-16696259764c4b7b62-0",
+        "template--17062096503099__15d37dcd-dfe5-404c-80f1-8f76c2017e23-16696259764c4b7b62-1"
+      ],
+      "settings": {
+        "heading": "Spese di spedizione",
+        "heading_size": "h4",
+        "section_width": "max-w-narrower",
+        "color_scheme": "scheme-1",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "accordions": {
+      "type": "accordions",
+      "blocks": {
+        "06f97daa-496a-417b-aa49-d8a47260cf78": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "In quanti giorni avviene la consegna?",
+            "text": "<p>La consegna dei prodotti avviene nei giorni indicati nella tabella a destra del prodotto alla voce “Tempi di consegna” mediamente prevista tra i 3 e i 15 giorni in base all’articolo e alla tipologia della merce. Vedi nel dettaglio il paragrafo Modalità di consegna nella sezione Condizioni Generali di Vendita. Nel caso in cui il prodotto non sia disponibile, il cliente sarà tempestivamente informato via e-mail, o via Fax, o via SMS. I giorni di consegna indicati sono da considerarsi \"lavorativi\", tenendo presente che di sabato, domenica e festivi le consegne non vengono effettuate. In caso di pagamento a mezzo bonifico anticipato, i tempi di consegna indicati nella pagina prodotto partiranno dall'avvenuto accredito del bonifico. Per anticipare i tempi tecnici bancari, il cliente può inviare via email a info@showine.it o via fax al numero 0376 1760104 la contabile del bonifico effettuato con indicato il codice CRO dell'operazione.</p>",
+            "page": ""
+          }
+        },
+        "e957eb44-fbe4-4f40-a034-48a4d0a4099a": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Cosa succede se al momento della consegna non c'è nessuno a casa?",
+            "text": "<p>In assenza del cliente, viene lasciato dal corriere un avviso con contatto telefonico della filiale di consegna, il giorno successivo il corriere, se contattato consegna di nuovo i prodotti acquistati senza alcun addebito, dopo 72 ore se non contatto i prodotti vanno in giacenza e un ulteriore addebito può essere attribuito al cliente da parte di Showine in base alla quantità di giorni di giacenza. Un responsabile di Showine, in questo caso, contatterà il suddetto cliente telefonicamente o tramite mail.</p>",
+            "page": ""
+          }
+        },
+        "topic_bk3kdk": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "I prodotti sono consegnati già assemblati o necessitano di montaggio?",
+            "text": "<p>I prodotti che hanno bisogno di essere assemblati, sono tutti i prodotti della categoria “Portabottiglie” tranne gli articoli in Polipropilene che vengono consegnati già montati come tutto il resto del catalogo</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "06f97daa-496a-417b-aa49-d8a47260cf78",
+        "e957eb44-fbe4-4f40-a034-48a4d0a4099a",
+        "topic_bk3kdk"
+      ],
+      "settings": {
+        "heading": "Consegna dei prodotti",
+        "heading_size": "h4",
+        "section_width": "max-w-narrower",
+        "color_scheme": "scheme-5",
+        "spacing_top": "4",
+        "spacing_bottom": "6"
+      }
+    },
+    "accordions_iXcQib": {
+      "type": "accordions",
+      "blocks": {
+        "topic_nU7e7g": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Posso restituire il prodotto?",
+            "text": "<p>Showine riconosce il diritto di recesso come previsto dalla normativa vigente. Ai sensi dell'art. 5 del D. Lgs 22 maggio 1999 n. 185, il Cliente (qualora sia qualificabile come \"consumatore\" ai sensi dell'art. 1 lett b) del D. Lgs 22 maggio 1999 n. 185) ha il diritto di recedere dal contratto e di restituire i prodotti ordinati, senza alcuna penalità e senza specificarne il motivo, entro il termine di 10 (dieci) giorni lavorativi dal ricevimento dei prodotti stessi. Per i dettagli vedi il paragrafo “Diritto di Recesso” nella sezione “Condizioni di acquisto”</p>",
+            "page": ""
+          }
+        },
+        "topic_nMUAzr": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Cosa succede se il mio pacco si danneggia o si smarrisce?",
+            "text": "<p>Eventuali danni all'imballo e/o ai prodotti devono essere immediatamente contestati dal Cliente, apponendo la scritta “Accettato con Riserva” sulla ricevuta di consegna del corriere. Se la consegna non arriva bisogna contattare subito Showine all’indirizzo: assistenza@showine.it</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "topic_nU7e7g",
+        "topic_nMUAzr"
+      ],
+      "settings": {
+        "heading": "In caso di problemi",
+        "heading_size": "h4",
+        "section_width": "max-w-narrower",
+        "color_scheme": "scheme-3ecfe127-9e1a-41fc-b9f0-518d3d1cf67c",
+        "spacing_top": "4",
+        "spacing_bottom": "6"
+      }
+    },
+    "accordions_qVkDYE": {
+      "type": "accordions",
+      "blocks": {
+        "topic_kAw6Up": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Chi posso contattare se ho bisogno di assistenza durante l'acquisto?",
+            "text": "<p>Se hai bisogno di assistenza durante l’acquisto, puoi trovare i nostri riferimenti nella sezione “contattaci” oppure cliccando il tasto”Hai bisogno di informazioni” dove per una assistenza immediata ti basterà telefonare allo 0376 408127 (orario ufficio da lunedi a sabato)</p>",
+            "page": ""
+          }
+        },
+        "topic_hkK3HL": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Come posso effettuare il pagamento?",
+            "text": "<p>il pagamento può essere effettuato nelle seguenti modalità: - Bonifico Bancario Anticipato - Carta di Credito - Paypal - Contrassegno (per ordini di importo inferiore a Euro 1.000,00) - Per ordini superiori a Euro 1.000,00: 50% Bonifico Bancario Anticipato + 50% a Contrassegno Puoi leggere i dettagli sulle forme di pagamento nelle “condizioni generali di acquisto”</p>",
+            "page": ""
+          }
+        },
+        "topic_T7hKQD": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Per poter effettuare un ordine devo registrarmi obbligatoriamente?",
+            "text": "<p>No, nessun obbligo di registrazione, la nostra procedura di conferma ordine prevede anche la possibilità di confermare l’ordine come “Ospite” quindi senza registrazione</p>",
+            "page": ""
+          }
+        },
+        "topic_AFTYCw": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Quando viene fatto un acquisto viene emesso scontrino fiscale o fattura accompagnatoria?",
+            "text": "<p>Ad ogni acquisto viene emessa una fattura accompagnatoria</p>",
+            "page": ""
+          }
+        },
+        "topic_XNTQgd": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Posso effettuare i miei ordini telefonicamente?",
+            "text": "<p>Certo, sono accettati anche ordini telefonici o via fax o email, comunicando i propri dati e un recapito telefonico</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "topic_kAw6Up",
+        "topic_hkK3HL",
+        "topic_T7hKQD",
+        "topic_AFTYCw",
+        "topic_XNTQgd"
+      ],
+      "settings": {
+        "heading": "Effettuare, modificare e gestire gli ordini",
+        "heading_size": "h4",
+        "section_width": "max-w-narrower",
+        "color_scheme": "scheme-5",
+        "spacing_top": "4",
+        "spacing_bottom": "6"
+      }
+    }
+  },
+  "order": [
+    "e4a22221-96e8-47eb-8e41-ff9780104ed3",
+    "15d37dcd-dfe5-404c-80f1-8f76c2017e23",
+    "accordions",
+    "accordions_iXcQib",
+    "accordions_qVkDYE"
+  ]
+}

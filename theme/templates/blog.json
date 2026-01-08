@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page_banner_yKcnKA": {
+      "type": "page-banner",
+      "settings": {
+        "enable_transparent_header": true,
+        "heading": "{{ blog.title }}",
+        "heading_size": "h2",
+        "text": "",
+        "show_default_description": true,
+        "show_on_description": "desktop",
+        "content_position": "center",
+        "content_alignment": "center",
+        "media_position": "background",
+        "page_menu": "",
+        "enable_breadcrumbs": true,
+        "section_height": "33svh",
+        "content_width": "100%",
+        "video_external": "",
+        "show_controls_on_video": false,
+        "section_height_mobile": "33svh",
+        "video_external_mobile": "",
+        "show_controls_on_video_mobile": false,
+        "section_width": "max-w-narrower",
+        "color_scheme": "scheme-1",
+        "color_scheme_for_media": "",
+        "spacing_top": "1",
+        "spacing_bottom": "0"
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "enable_filtering_by_tags": true,
+        "articles_per_page": 16,
+        "pagination_style": "load_more",
+        "enable_infinity_scroll": false,
+        "show_excerpt": false,
+        "show_date": true,
+        "show_author": true,
+        "content_alignment": "text-center",
+        "card_media_aspect_ratio": "1/1",
+        "section_width": "max-w-narrow",
+        "color_scheme": "",
+        "spacing_grid": "2",
+        "spacing_top": "0",
+        "spacing_bottom": "6"
+      }
+    }
+  },
+  "order": [
+    "page_banner_yKcnKA",
+    "main"
+  ]
+}
