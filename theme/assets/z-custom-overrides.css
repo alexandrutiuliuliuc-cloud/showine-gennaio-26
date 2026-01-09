@@ -122,6 +122,15 @@
   }
 }
 
+/* Desktop header dropdown: prevent submenu flicker when moving cursor from top link to dropdown.
+   This creates a small "hover bridge" without affecting layout. */
+@media screen and (min-width: 990px) {
+  #header .header__nav-item.dropdown {
+    padding-block-end: 1.2rem;
+    margin-block-end: -1.2rem;
+  }
+}
+
 /* Technical sheet button (product page) */
 .technical-sheet-button {
   display: inline-flex;
@@ -180,6 +189,31 @@
 
 .delivery-time strong {
   font-weight: 600;
+}
+
+/* Global: Bordeaux headings on light sections (exclude header/menus by scoping to main).
+   We override the theme variable `--color-heading-text` only for the "light" color schemes used on white/grey backgrounds.
+   Dark/media/bordeaux schemes keep their own heading colors (e.g. white on images, white on bordeaux). */
+:root {
+  --showine-bordeaux: 99, 31, 34; /* #631F22 */
+}
+
+/* IMPORTANT: do NOT apply on transparent-header sections (typically headings over images / hero banners).
+   Those must keep their own (often white) heading color. */
+main .color-scheme-1:not(.header-is-transparent),
+main .color-scheme-2:not(.header-is-transparent),
+main .color-scheme-5:not(.header-is-transparent) {
+  --color-heading-text: var(--showine-bordeaux);
+}
+
+/* Homepage: "Categorie in Evidenza" (Mega links section) title in Bordeaux */
+.template--index .mega-links__section-title {
+  color: #631F22 !important;
+}
+
+/* Also make the mega-links column headings bordeaux (still on light background) */
+.template--index .mega-links__heading {
+  color: #631F22 !important;
 }
 
 /* Lavori eseguiti: force all project tiles to be left-aligned (both columns) */

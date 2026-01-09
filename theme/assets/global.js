@@ -1439,10 +1439,35 @@ if (megaMenu) {
     }
   }
 
+  // Prevent occasional flicker when moving the cursor from a top-level item into its dropdown:
+  // use a short close delay and cancel it if the cursor re-enters.
+  let closeDropdownsTimer = null;
+  const CLOSE_DROPDOWNS_DELAY_MS = 180;
+
+  function cancelCloseDropdowns() {
+    if (closeDropdownsTimer) {
+      clearTimeout(closeDropdownsTimer);
+      closeDropdownsTimer = null;
+    }
+  }
+
+  function scheduleCloseDropdowns() {
+    cancelCloseDropdowns();
+    closeDropdownsTimer = setTimeout(() => {
+      closeAllDropdowns();
+      toggleHeaderTransparency();
+    }, CLOSE_DROPDOWNS_DELAY_MS);
+  }
+
+  megaMenu.addEventListener('mouseenter', () => {
+    cancelCloseDropdowns();
+  });
+
   megaMenu.querySelectorAll('.js-nav-item').forEach(item => {
     const menuContent = item.querySelector('.js-dropdown');
 
     item.addEventListener('mouseenter', () => {
+      cancelCloseDropdowns();
       const menuItem = item.getAttribute('data-menu-item');
       if (menuItem === null) {
         return; // if menu item is not defined, return
@@ -1459,8 +1484,7 @@ if (megaMenu) {
       if (related && (menuContent?.contains(related) || item.contains(related) || megaMenu.contains(related))) {
         return; // if mouse is still in the menu, keep the dropdown open
       }
-      closeAllDropdowns();
-      toggleHeaderTransparency(); // update header transparency
+      scheduleCloseDropdowns();
     });
 
     if (menuContent) {
@@ -1469,14 +1493,12 @@ if (megaMenu) {
         if (related && (menuContent.contains(related) || item.contains(related) || megaMenu.contains(related))) {
           return; // if mouse is still in the menu, keep the dropdown open
         }
-        closeAllDropdowns();
-        toggleHeaderTransparency(); // update header transparency
+        scheduleCloseDropdowns();
       });
     }
   });
   megaMenu.addEventListener('mouseleave', () => {
-    closeAllDropdowns();
-    toggleHeaderTransparency(); // update header transparency
+    scheduleCloseDropdowns();
   });
 
   function closeAllDropdowns() {
