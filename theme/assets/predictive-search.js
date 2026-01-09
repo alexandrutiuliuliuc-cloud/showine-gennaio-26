@@ -159,6 +159,20 @@ if (!customElements.get('predictive-search')) {
       // Ignore clicks on the header navigation/menu area so dropdown menus can be used without closing search.
       const headerNav = document.querySelector('#header .header__nav-below, #header .header__nav');
       if (headerNav && e.target && headerNav.contains(e.target)) return;
+      const isMessageOnly = !!this.resultsContainer?.querySelector('.predictive-search__results--message-only');
+
+      // If the search produced no results, clicking outside should clear the input as well.
+      if (isMessageOnly) {
+        this.hideResults();
+        this.input.value = '';
+        this.btnClearText.setAttribute('disabled', true);
+        this.hasInteractedWithSearch = false;
+        this.input?.setAttribute('aria-expanded', 'false');
+        // Let the click proceed to the outside target; don't force focus back into the input.
+        this.input.blur();
+        return;
+      }
+
       this.hideResults();
     }
 

@@ -120,6 +120,12 @@
   #header .header__search-center predictive-search.is-open {
     z-index: 70;
   }
+
+  /* Predictive search: when there are NO results, the markup contains only `.predictive-search__message`.
+     Remove the extra top spacing added by `.predictive-search__results` so the popup fits the single line nicely. */
+  #header .header__search-center .search__body .predictive-search__results.predictive-search__results--message-only {
+    margin-block-start: 0 !important;
+  }
 }
 
 /* Desktop header dropdown: prevent submenu flicker when moving cursor from top link to dropdown.

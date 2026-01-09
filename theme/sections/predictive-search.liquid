@@ -1,7 +1,11 @@
 {%- if predictive_search.performed -%}
   {{- 'component-card-product.css' | asset_url | stylesheet_tag -}}
-  <div class="predictive-search__results" id="predictive-search-results">
-    {%- if predictive_search.resources.pages == blank and predictive_search.resources.products == blank and predictive_search.resources.queries.size == 0 and predictive_search.resources.collections.size == 0 and predictive_search.resources.pages.size == 0 and predictive_search.resources.articles.size == 0 -%}
+  {%- assign is_message_only = false -%}
+  {%- if predictive_search.resources.pages == blank and predictive_search.resources.products == blank and predictive_search.resources.queries.size == 0 and predictive_search.resources.collections.size == 0 and predictive_search.resources.pages.size == 0 and predictive_search.resources.articles.size == 0 -%}
+    {%- assign is_message_only = true -%}
+  {%- endif -%}
+  <div class="predictive-search__results{% if is_message_only %} predictive-search__results--message-only{% endif %}" id="predictive-search-results">
+    {%- if is_message_only -%}
       <div class="predictive-search__message">
         <p>
           {{- 'search.no_results_with_terms' | t: terms: predictive_search.terms | append: " " -}}

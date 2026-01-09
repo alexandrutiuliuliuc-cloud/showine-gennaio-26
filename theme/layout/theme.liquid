@@ -63,6 +63,18 @@
     <script src="{{ 'z-local-preview-links.js' | asset_url }}" defer="defer"></script>
     {%- comment -%} Sync header search width with centered menu width (desktop) {%- endcomment -%}
     <script src="{{ 'z-header-sync-search-width.js' | asset_url }}" defer="defer"></script>
+    {%- comment -%}
+      Showine: prevent a brief header search width flicker on navigation.
+      Use the last measured menu width immediately (before paint), then the sync script will refine it.
+    {%- endcomment -%}
+    <script>
+      (function () {
+        try {
+          var v = sessionStorage.getItem('showine_header_menu_width');
+          if (v) document.documentElement.style.setProperty('--header-menu-width', v);
+        } catch (e) {}
+      })();
+    </script>
     {%- comment -%} Inject info request form on "lavori eseguiti" subpages when arriving from the index page {%- endcomment -%}
     <script src="{{ 'z-lavori-eseguiti-contact-form.js' | asset_url }}" defer="defer"></script>
     {%- comment -%} Mobile: keep header height variable correct when the menu opens (search row hidden) {%- endcomment -%}

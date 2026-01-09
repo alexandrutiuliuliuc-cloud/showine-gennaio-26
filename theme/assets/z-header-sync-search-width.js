@@ -18,7 +18,13 @@
 
     const width = Math.round(menuList.getBoundingClientRect().width);
     if (width > 0) {
-      header.style.setProperty('--header-menu-width', `${width}px`);
+      const v = `${width}px`;
+      header.style.setProperty('--header-menu-width', v);
+      // Cache to avoid a brief width "shrink" on page navigation before DOMContentLoaded.
+      try {
+        sessionStorage.setItem('showine_header_menu_width', v);
+        document.documentElement.style.setProperty('--header-menu-width', v);
+      } catch (e) {}
     }
   };
 
