@@ -163,7 +163,8 @@
 }
 
 
-@media screen and (max-width: 989px) {
+/* Mobile + iPad/tablet touch: use the mobile header/drawer logic to avoid desktop menu wrapping */
+@media screen and (max-width: 989px), (hover: none) and (pointer: coarse) and (max-width: 1366px) {
   .header {
     padding-block-end: 0.1rem;
   }
@@ -208,6 +209,15 @@
     max-width: none;
     justify-self: stretch;
     margin-top: 0.6rem;
+  }
+
+  /* On tablet touch (e.g. iPad), force the mobile drawer trigger visible and hide the desktop nav rows */
+  #header header-drawer.header__drawer.large-up-hide {
+    display: block !important;
+  }
+  #header .header__nav,
+  #header .header__nav-below {
+    display: none !important;
   }
 }
 
@@ -1167,7 +1177,7 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
   padding-block-end: 4.8rem;
 }
 
-@media screen and (max-width: 989px) {
+@media screen and (max-width: 989px), (hover: none) and (pointer: coarse) and (max-width: 1366px) {
   .header__utils-item:has(.country-drawer) {
     display: none;
   }

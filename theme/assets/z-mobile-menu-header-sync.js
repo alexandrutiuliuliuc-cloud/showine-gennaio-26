@@ -3,7 +3,8 @@
  * Needed because we hide the search bar when #header has .menu-open, changing header height.
  */
 (function () {
-  const MQ = window.matchMedia('(max-width: 989px)');
+  // Mobile + iPad/tablet touch should use the "mobile" header height sync logic.
+  const MQ = window.matchMedia('(max-width: 989px), (hover: none) and (pointer: coarse) and (max-width: 1366px)');
 
   function isDisplayed(el) {
     if (!el) return false;

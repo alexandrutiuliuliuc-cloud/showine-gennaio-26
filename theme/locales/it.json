@@ -85,7 +85,7 @@
     },
     "newsletter": {
       "label": "Email",
-      "email_placeholder": "Indirizzo email",
+      "email_placeholder": "E-mail",
       "button_label": "Iscriviti",
       "success": "Grazie per esserti iscritto"
     }
