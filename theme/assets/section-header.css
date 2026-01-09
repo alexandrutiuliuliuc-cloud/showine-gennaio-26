@@ -1237,11 +1237,12 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
      The drawer starts right under (announcement visible height + header height) and covers the page content (hero/slideshow). */
   html.js .header__drawer > .drawer__container[open] > .drawer__content,
   html.no-js .header__drawer > .drawer__container[open] {
-    inset-block-start: calc(var(--announcement-bars-before-header-visible-heights, 0px) + var(--header-height, 5.6rem)) !important;
+    /* Overlap by 2px to avoid sub-pixel gaps where the hero/slideshow can peek through */
+    inset-block-start: calc(var(--announcement-bars-before-header-visible-heights, 0px) + var(--header-height, 5.6rem) - 2px) !important;
   }
 
   html.js .header__drawer > .drawer__container.menu-opening > .drawer__content {
-    height: calc(100dvh - var(--announcement-bars-before-header-visible-heights, 0px) - var(--header-height, 5.6rem));
+    height: calc(100dvh - var(--announcement-bars-before-header-visible-heights, 0px) - var(--header-height, 5.6rem) + 2px);
     margin-block-start: 0;
     /* Force a solid background so the hero/slideshow never shows through */
     background: rgb(var(--color-background)) !important;
@@ -1249,6 +1250,87 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
     padding-inline: var(--page-gutter);
     padding-block-start: 1.6rem;
     padding-block-end: 2.4rem;
+  }
+
+  /* Showine: harden the nav drawer background (covers cases where .menu-opening may not be present yet)
+     and ensure no gradient/background-image can reveal the slider behind. */
+  html.js #header.menu-open .header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav,
+  html.js #header.menu-open .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav {
+    background-color: rgb(var(--color-background)) !important;
+    background-image: none !important;
+    isolation: isolate;
+  }
+
+  /* Showine: prevent scrolling "past" the menu footer (Account/Italia/social).
+     Only the menu list scrolls; the footer stays pinned to the bottom of the drawer. */
+  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav {
+    display: flex;
+    flex-direction: column;
+    /* Keep the drawer itself from scrolling, but don't clip nested drawers like the Country drawer */
+    overflow: visible;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav .slide-out-menu {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav .drawer__row--bottom {
+    margin-top: auto;
+  }
+
+  /* Showine: "Lavori eseguiti" as a proper mobile menu row (red background, same spacing, separator line) */
+  html.js #header .drawer__content--nav .drawer__menu-extra-row {
+    border-block-start: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    /* Match the vertical rhythm of the other menu rows */
+    margin: 0;
+    padding-block: 2rem;
+  }
+
+  /* "Lavori eseguiti" row: match menu typography + alignment, with a red pill background behind the text */
+  html.js #header .drawer__content--nav .drawer__menu-extra-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.6rem 1.2rem; /* symmetric left/right */
+    background-color: #631F22;
+    border-radius: 14px;
+    color: #fff !important;
+    text-transform: none;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  /* Showine: ensure the Country/Locale drawer opened from the mobile menu footer appears above the nav drawer */
+  html.js #header .header__drawer .drawer__content--nav .country-drawer > .drawer__content {
+    z-index: calc(var(--z-modals) + 600);
+  }
+  html.js #header .header__drawer .drawer__content--nav .country-drawer > .drawer__button::after {
+    z-index: calc(var(--z-modals) + 599);
+  }
+
+  /* Showine: align "Italia" with "Account" in the mobile drawer footer */
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs-items {
+    align-items: center;
+  }
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs-link,
+  html.js #header .drawer__content--nav .drawer__row--bottom summary.drawer__button.drawer__button--text.drawer__subs-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    line-height: var(--line-height-static-sm);
+  }
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__button-text {
+    line-height: inherit;
+    display: inline-flex;
+    align-items: center;
   }
 
   /* Hide the internal drawer close button on mobile to avoid the extra arrow overlapping the menu.

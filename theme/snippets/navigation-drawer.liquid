@@ -184,28 +184,11 @@
             {% endfor %}
           {% endfor %}
         </div>
-        <a href="https://www.showine.it/pages/lavori-eseguiti" class="btn-red">
-          Lavori Eseguiti
-        </a>
-        <style>
-          @media screen and (max-width: 749px) {
-            .btn-red{
-              background-color: #631F22;
-              color: white !important;
-              padding: 0.6rem 1.2rem;
-              border-radius: 14px;
-              position: relative;
-              font-family: var(--font-heading-family);
-              font-size: 13px !important;
-              font-weight: var(--font-heading-weight);
-              line-height: var(--line-height-static-sm);
-              text-transform: uppercase;
-              letter-spacing: .14rem;
-              margin-block-end: -.4rem;
-              padding-block: .625rem;
-            }
-          }
-        </style>
+        <div class="drawer__menu-extra-row">
+          <a href="/pages/lavori-eseguiti" class="drawer__menu-extra-link h4" aria-label="Lavori eseguiti">
+            Lavori eseguiti
+          </a>
+        </div>
       </nav>
 
       {%- if submenu != blank -%}
