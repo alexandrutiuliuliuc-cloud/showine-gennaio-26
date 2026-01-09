@@ -200,4 +200,54 @@
   margin-bottom: 2.2rem;
 }
 
+/* Floating WhatsApp button */
+.z-whatsapp-float {
+  position: fixed;
+  inset-inline-start: 1.6rem;
+  inset-block-end: calc(1.6rem + env(safe-area-inset-bottom, 0px));
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 999px;
+  background: #25D366; /* WhatsApp green */
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: calc(var(--z-modals) - 1);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+  text-decoration: none;
+}
+
+.z-whatsapp-float:hover {
+  text-decoration: none;
+  filter: brightness(0.98);
+}
+
+.z-whatsapp-float__icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.z-whatsapp-float__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Force icon to white if SVG uses strokes/fills */
+.z-whatsapp-float__icon svg * {
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+@media screen and (min-width: 990px) {
+  .z-whatsapp-float {
+    inset-inline-start: 2.4rem;
+    inset-block-end: 2.4rem;
+  }
+}
+
 

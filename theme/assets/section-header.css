@@ -1308,6 +1308,46 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
     white-space: nowrap;
   }
 
+  /* WhatsApp CTA (small, uppercase) placed right above the footer separator */
+  html.js #header .drawer__content--nav .drawer__whatsapp-cta {
+    /* Push the whole bottom group down, right above the footer separator */
+    margin-top: auto;
+    padding: 0;
+    margin: 0;
+  }
+  html.js #header .drawer__content--nav .drawer__whatsapp-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: rgb(var(--color-foreground));
+    text-decoration: none;
+    font-size: var(--font-size-static-xs);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.14rem;
+    text-transform: uppercase;
+  }
+  html.js #header .drawer__content--nav .drawer__whatsapp-cta a .icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  html.js #header .drawer__content--nav .drawer__whatsapp-cta a .icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  html.js #header .drawer__content--nav .drawer__whatsapp-cta a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  /* Keep WhatsApp + footer together at the bottom (avoid extra "white container" feeling) */
+  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav .drawer__row--bottom {
+    margin-top: 0 !important;
+  }
+
   /* Showine: ensure the Country/Locale drawer opened from the mobile menu footer appears above the nav drawer */
   html.js #header .header__drawer .drawer__content--nav .country-drawer > .drawer__content {
     z-index: calc(var(--z-modals) + 600);

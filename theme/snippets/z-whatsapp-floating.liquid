@@ -1,0 +1,19 @@
+{%- comment -%}
+  Showine: Floating WhatsApp button (bottom-left).
+  Uses the same wa.me link configured in header-group.json.
+{%- endcomment -%}
+
+<a
+  class="z-whatsapp-float"
+  href="https://wa.me/0376408127"
+  target="_blank"
+  rel="noopener"
+  aria-label="Contattaci su WhatsApp"
+>
+  <span class="z-whatsapp-float__icon" aria-hidden="true">
+    {%- render 'icon', icon_name: 'brand-whatsapp' -%}
+  </span>
+  <span class="visually-hidden">Contattaci su WhatsApp</span>
+</a>
+
+
