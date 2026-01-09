@@ -1,0 +1,26 @@
+{%- comment -%}
+  Showine: Product delivery time (Avone compatibility)
+  Reads `product.metafields.magento.tempiconsegna` and prints:
+  "Tempi di consegna: <value>"
+{%- endcomment -%}
+
+{%- liquid
+  assign delivery_time = product.metafields.magento.tempiconsegna
+  assign delivery_time_value = blank
+
+  if delivery_time != blank
+    if delivery_time.value != blank
+      assign delivery_time_value = delivery_time.value
+    else
+      assign delivery_time_value = delivery_time
+    endif
+  endif
+-%}
+
+{%- if delivery_time_value != blank -%}
+  <p class="delivery-time">
+    <strong>Tempi di consegna:</strong> {{ delivery_time_value }}
+  </p>
+{%- endif -%}
+
+

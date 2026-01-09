@@ -167,6 +167,21 @@
   height: 1.6rem;
 }
 
+/* Product delivery time */
+.delivery-time {
+  margin: 0 0 1.2rem;
+  font-size: 1.35rem;
+  color: rgb(var(--color-foreground));
+}
+
+.product__variant-picker .delivery-time {
+  padding-top: 2.4rem; /* match the visual spacing before buy buttons */
+}
+
+.delivery-time strong {
+  font-weight: 600;
+}
+
 /* Lavori eseguiti: force all project tiles to be left-aligned (both columns) */
 .template--lavori-eseguiti .section-multitile__content.align-center {
   align-items: flex-start !important;

@@ -333,6 +333,7 @@
         <div class="{{ product_block_class }}" {{ block.shopify_attributes }}>
           {%- render 'product-groups', product: product, on: 'page' -%}
           {% render 'main-product__variant-picker', product: product, block: block, product_form_id: product_form_id %}
+          {%- render 'delivery-time', product: product -%}
         </div>
 
       {%- when 'purchase_options' -%}
