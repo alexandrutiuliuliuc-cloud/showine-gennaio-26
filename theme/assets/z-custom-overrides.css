@@ -248,11 +248,13 @@ main .color-scheme-5:not(.header-is-transparent) {
 
 .form-contact--info-request .form-contact__heading {
   margin-bottom: 2.2rem;
+  text-align: center; /* center only title + intro text */
 }
 
 .form-contact--info-request .contact-form {
   margin-top: 0;
   margin-bottom: 2.2rem;
+  text-align: left; /* keep fields left-aligned */
 }
 
 /* Floating WhatsApp button */

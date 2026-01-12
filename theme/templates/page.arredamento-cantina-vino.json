@@ -880,13 +880,27 @@
         "section_layout": "normal",
         "heading": "",
         "heading_size": "h3",
-        "text": "<h3>Arredo Taverna Cantina, Arredamento Per Vineria ed Enoteca</h3><p><br/>Grazie alla stretta collaborazione con artigiani e aziende specializzate, siamo in grado di offrirti una <strong>consulenza completa per arredare la cantina e per l'arredamento di enoteche e wine bar,<br/>Arredamenti per cantine o taverne</strong> di degustazione per privati e attività commerciali, con <strong>soluzioni personalizzate.</strong></p><p><strong>Showine è il</strong> <strong>partner ideale </strong>perché, una volta capite le tue esigenze, può consigliarti sulle migliori soluzioni di progettazione e realizzazione di ambienti e arredamenti su misura (anche con fornitori di tua fiducia).<br/>Potrai ammirare le tue bottiglie e conservarle nel tempo nelle migliori condizioni possibili, per poi degustarle in un ambiente caldo e confortevole, finemente arredato e studiato appositamente per te, impreziosendo così il valore di casa tua o del tuo locale.</p><p>Lo staff di Showine ti guida nel progetto della tua cantina, passo dopo passo, dalla consulenza alla realizzazione completa e curata in ogni dettaglio.</p><p>Per condividere al meglio la passione per il vino con parenti e amici, gli esperti Showine ti seguiranno anche in caso di ristrutturazione e arredo d’interni con un servizio completo “chiavi in mano”.</p><p><strong>Scopri insieme a noi come possiamo ideare e realizzare al meglio la tua cantina privata!<br/><br/></strong><a href=\"/pages/info-cantinette-portabottiglie-vino\" target=\"_blank\" title=\"Contattaci\"><strong>RICHIEDI INFORMAZIONI</strong></a></p>",
+        "text": "<h3>Arredo Taverna Cantina, Arredamento Per Vineria ed Enoteca</h3><p><br/>Grazie alla stretta collaborazione con artigiani e aziende specializzate, siamo in grado di offrirti una <strong>consulenza completa per arredare la cantina e per l'arredamento di enoteche e wine bar,<br/>Arredamenti per cantine o taverne</strong> di degustazione per privati e attività commerciali, con <strong>soluzioni personalizzate.</strong></p><p><strong>Showine è il</strong> <strong>partner ideale </strong>perché, una volta capite le tue esigenze, può consigliarti sulle migliori soluzioni di progettazione e realizzazione di ambienti e arredamenti su misura (anche con fornitori di tua fiducia).<br/>Potrai ammirare le tue bottiglie e conservarle nel tempo nelle migliori condizioni possibili, per poi degustarle in un ambiente caldo e confortevole, finemente arredato e studiato appositamente per te, impreziosendo così il valore di casa tua o del tuo locale.</p><p>Lo staff di Showine ti guida nel progetto della tua cantina, passo dopo passo, dalla consulenza alla realizzazione completa e curata in ogni dettaglio.</p><p>Per condividere al meglio la passione per il vino con parenti e amici, gli esperti Showine ti seguiranno anche in caso di ristrutturazione e arredo d’interni con un servizio completo “chiavi in mano”.</p>",
         "content_alignment": "center",
         "section_width": "max-w-fluid",
         "color_scheme": "",
         "spacing_inner": "2",
         "spacing_top": "4",
-        "spacing_bottom": "4"
+        "spacing_bottom": "2"
+      }
+    },
+    "form_contact_info_arredo": {
+      "type": "form-contact-info",
+      "settings": {
+        "heading": "Richiedi informazioni",
+        "request_type": "Richiesta informazioni",
+        "text": "<p>Compila il modulo per ricevere maggiori informazioni. Ti ricontatteremo il prima possibile.</p>",
+        "submit_label": "Invia richiesta",
+        "success_message": "Abbiamo ricevuto la tua richiesta, verrai contattato al più presto.",
+        "section_width": "max-w-narrower",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
       }
     }
   },
@@ -906,6 +920,7 @@
     "social_media_highlights_zc3A4X",
     "seo_content_rcfxaC",
     "social_media_highlights_8dHJdm",
-    "seo_content_dpY9rV"
+    "seo_content_dpY9rV",
+    "form_contact_info_arredo"
   ]
 }
