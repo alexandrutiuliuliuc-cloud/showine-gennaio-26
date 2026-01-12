@@ -352,7 +352,8 @@ main .color-scheme-5:not(.header-is-transparent) {
   height: 5.2rem;
   border-radius: 999px;
   background: #25D366; /* WhatsApp green */
-  color: #fff;
+  /* Softer than pure white */
+  color: rgba(255, 255, 255, 0.78);
   display: inline-flex;
   align-items: center;
   justify-content: center;
