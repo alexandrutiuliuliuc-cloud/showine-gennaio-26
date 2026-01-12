@@ -59,7 +59,7 @@
 }
 
 @media (hover: hover) {
-  .section-multitile__block:hover .section-multitile__media>img {
+  .section-multitile__block:hover .section-multitile__media img {
     transform: scale(1.05);
   }
 }
@@ -130,6 +130,18 @@
 
 .section-multitile__media img {
   transition: transform 0.6s ease;
+}
+
+/* Showine: allow image tiles to be fully clickable when paired with an adjacent text tile button link */
+.section-multitile__media-link {
+  /* Cover the entire media area (avoid "clickable only on edges") */
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 /* color bleed from corner radius issue fix */
