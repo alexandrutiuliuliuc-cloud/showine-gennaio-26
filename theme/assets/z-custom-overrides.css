@@ -398,6 +398,10 @@ main .color-scheme-5:not(.header-is-transparent) {
   html.showine-mobile-menu-open .z-whatsapp-float {
     display: none !important;
   }
+  /* More robust: global.js adds/removes this class when any drawer (including burger) is open/closed */
+  body.drawer--is-open .z-whatsapp-float {
+    display: none !important;
+  }
 }
 
 /* Collection: "Carica altri" button (load more) */

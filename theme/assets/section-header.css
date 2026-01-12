@@ -1230,12 +1230,11 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
 
   html.js .header__drawer > .drawer__container > .drawer__content {
     opacity: 0;
-    transform: none;
+    /* Do not override transform here; component-drawer.css controls the slide-in/out animation */
   }
 
   /* Showine: stable mobile nav drawer (do NOT rely on `.menu-opening`). */
   html.js .header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav {
-    opacity: 1;
     position: fixed;
     inset-inline: 0;
     /* Start under header + announcement; overlap slightly to avoid sub-pixel gaps */
@@ -1245,10 +1244,12 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
     max-width: unset;
     background-color: rgb(var(--color-background)) !important;
     background-image: none !important;
-    z-index: calc(var(--z-header) - 1); /* keep header clickable */
+    /* Must sit ABOVE page content (slideshow) but since it starts below the header, it won't cover the header */
+    z-index: calc(var(--z-modals) - 2);
     padding-inline: var(--page-gutter);
     padding-block-start: 1.6rem;
-    padding-block-end: 2.4rem;
+    /* Keep bottom padding minimal; safe-area is handled by the footer row to keep its content visually centered */
+    padding-block-end: 0;
     display: flex;
     flex-direction: column;
     /* IMPORTANT: prevent the drawer itself from scrolling (this creates the "infinite blank scroll").
@@ -1275,16 +1276,11 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
 
   /* Background is handled by the nav-drawer rule above */
 
-  /* Showine: prevent scrolling "past" the menu footer (Account/Italia/social).
-     Only the menu list scrolls; the footer stays pinned to the bottom of the drawer. */
-
-  /* Showine: footer overlay sizing (measured via JS to avoid "blank white block" regressions) */
-  html.js .header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav,
-  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav {
-    --showine-drawer-footer-bottom-height: 0px; /* height of .drawer__row--bottom */
-    --showine-drawer-footer-stack-height: 0px; /* height of bottom row */
-  }
-
+  /* Showine: mobile drawer layout (simple + stable)
+     - drawer is flex column
+     - menu list scrolls
+     - footer row stays at the bottom
+     NOTE: we accept some white space if the menu is short (per request). */
   html.js .header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav .slide-out-menu,
   html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav .slide-out-menu {
     flex: 1 1 auto;
@@ -1293,48 +1289,67 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
     overflow-x: hidden;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
-    /* Stop scrolling exactly above the footer (no extra "white scroll") */
-    padding-block-end: 0;
-    max-height: calc(100% - var(--showine-drawer-footer-stack-height, 0px));
   }
 
-  /* Footer overlay: keep the footer stack visible and let menu items scroll behind it */
-  html.js #header .drawer__content--nav .drawer__row--bottom {
-    position: absolute;
-    inset-inline: 0;
-    z-index: 2;
-    background-color: rgb(var(--color-background));
-    background-image: none;
-    /* Keep footer content aligned with the drawer gutter (avoid "too close to left edge") */
-    padding-inline: var(--page-gutter);
+  /* Prevent scroll chaining to the page behind the drawer (fixes "scroll into blank white" after menu ends) */
+  html.showine-mobile-menu-open,
+  html.showine-mobile-menu-open body {
+    overflow: hidden !important;
+    height: 100%;
   }
 
   html.js #header .drawer__content--nav .drawer__row--bottom {
-    inset-block-end: 0;
-    margin-top: 0 !important;
-    /* keep safe area on iOS without changing measured heights too much */
-    padding-block-end: env(safe-area-inset-bottom);
-    /* Layout: row 1 = Account/Italia (left) + Social (right); row 2 = WhatsApp (left) */
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-auto-rows: min-content;
-    column-gap: 2rem;
-    row-gap: 0.8rem;
-    align-items: start;
+    margin-top: auto;
+    /* Footer group height + true vertical centering */
+    padding-block: var(--spacing-2);
+    padding-block-end: calc(var(--spacing-2) + env(safe-area-inset-bottom));
+    min-height: calc(5.6rem + env(safe-area-inset-bottom));
+    /* One single row: left = Account/Italia, right = icons (WhatsApp first + socials) */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
   }
 
-  /* Ensure Account + Italia align perfectly on the same baseline/line */
+  /* Showine: slightly larger "Account" + "Italia" only in the mobile drawer footer */
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs-link,
+  html.js #header .drawer__content--nav .drawer__row--bottom summary.drawer__button.drawer__button--text.drawer__subs-link,
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs-items .drawer__button-text {
+    font-size: calc(var(--font-size-static-md) * 1.12);
+  }
+
+  /* Showine: tiny optical alignment - social icons sit slightly lower than text on some mobile browsers */
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__social {
+    transform: translateY(-1px);
+  }
+
+  /* Showine: tiny optical alignment - nudge Account/Italia slightly down */
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs {
+    transform: translateY(1px);
+  }
+
   html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs-items {
     align-items: center;
   }
+
+  /* Footer group: ensure both sides are vertically centered and "straight" */
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs,
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__social {
+    display: flex;
+    align-items: center;
+  }
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__social-list {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Fix iOS baseline shift: Italia is a <summary> and can render slightly lower than <a> */
   html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs-link,
   html.js #header .drawer__content--nav .drawer__row--bottom summary.drawer__button.drawer__button--text.drawer__subs-link {
     display: inline-flex;
     align-items: center;
     line-height: var(--line-height-static-sm);
   }
-
-  /* Country drawer trigger is a <summary> (browser default markers/padding can shift baseline on iOS) */
   html.js #header .drawer__content--nav .drawer__row--bottom summary.drawer__button.drawer__button--text.drawer__subs-link {
     padding: 0 !important;
     margin: 0;
@@ -1345,18 +1360,6 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
   }
   html.js #header .drawer__content--nav .drawer__row--bottom summary.drawer__button.drawer__button--text.drawer__subs-link::marker {
     content: '';
-  }
-
-  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__social {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    justify-self: end;
-    align-self: center;
   }
 
   /* Showine: "Lavori eseguiti" as a proper mobile menu row (red background, same spacing, separator line) */
@@ -1383,43 +1386,7 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
     white-space: nowrap;
   }
 
-  html.js #header .drawer__content--nav .drawer__whatsapp-cta {
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: start;
-    margin: 0;
-    /* no extra bottom padding: keep it balanced inside the footer block */
-    padding-block: 0;
-  }
-  html.js #header .drawer__content--nav .drawer__whatsapp-cta a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
-    color: rgb(var(--color-foreground));
-    text-decoration: none;
-    font-size: var(--font-size-static-xs);
-    font-weight: var(--font-weight-semibold);
-    letter-spacing: 0.14rem;
-    text-transform: uppercase;
-  }
-  html.js #header .drawer__content--nav .drawer__whatsapp-cta a .icon {
-    width: 1.8rem;
-    height: 1.8rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  html.js #header .drawer__content--nav .drawer__whatsapp-cta a .icon svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  html.js #header .drawer__content--nav .drawer__whatsapp-cta a:hover {
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-  }
-
-  /* WhatsApp CTA should NOT push content up; it lives above the pinned footer row */
+  /* WhatsApp CTA removed from footer row (now an icon inside .drawer__social-list) */
 
   /* Showine: ensure the Country/Locale drawer opened from the mobile menu footer appears above the nav drawer */
   html.js #header .header__drawer .drawer__content--nav .country-drawer > .drawer__content {
@@ -1431,7 +1398,7 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
 
   /* NOTE (Showine): keep footer link layout/spacing as per theme defaults (component-drawer.css). */
 
-  /* Showine: make social icons larger and visually centered in the right column */
+  /* Showine: make footer icons a bit larger and centered on the row */
   html.js #header .drawer__content--nav .drawer__row--bottom .drawer__social-list {
     align-items: center;
     justify-content: center;
@@ -1439,8 +1406,8 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
   }
   html.js #header .drawer__content--nav .drawer__row--bottom .drawer__social a,
   html.js #header .drawer__content--nav .drawer__row--bottom .drawer__social svg {
-    width: 2.6rem;
-    height: 2.6rem;
+    width: 2.4rem;
+    height: 2.4rem;
   }
 
   /* Hide the internal drawer close button on mobile to avoid the extra arrow overlapping the menu.
@@ -1690,13 +1657,35 @@ nav.slide-out-menu div.menu-panel.is-active {
   height: 100dvh;
 }
 
-/* Showine: inside the mobile drawer, a menu panel must not force 100dvh (creates scrollable blank space). */
+/* Showine: reduce wasted blank space under short menus on mobile.
+   The slide-out-menu already defines the available height; matching the active panel to 100% prevents extra scroll area. */
 @media screen and (max-width: 989px), (hover: none) and (pointer: coarse) and (max-width: 1366px) {
+  /* Fix blank scroll: the menu uses absolutely positioned panels; anchor them to the menu container, not the viewport */
+  html.js .header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav nav.slide-out-menu,
+  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav nav.slide-out-menu {
+    position: relative;
+    height: 100%;
+  }
+  html.js .header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav nav.slide-out-menu .menu-panels,
+  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav nav.slide-out-menu .menu-panels {
+    position: relative;
+    height: 100%;
+    min-height: 0;
+  }
+
   html.js .header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav nav.slide-out-menu div.menu-panel.is-active,
   html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav nav.slide-out-menu div.menu-panel.is-active {
     height: 100% !important;
   }
+
+  /* Also prevent hidden/absolute panels from inflating scroll height */
+  html.js .header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav nav.slide-out-menu div.menu-panel,
+  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav nav.slide-out-menu div.menu-panel {
+    max-height: 100% !important;
+  }
 }
+
+/* NOTE (Showine): keep drawer menu panel behavior as per theme defaults. */
 
 nav.slide-out-menu li.menu-card-group {
   display: flex;

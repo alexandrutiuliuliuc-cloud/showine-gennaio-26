@@ -58,7 +58,12 @@
                   {%- endif -%}
                 </li>
               {% endfor %}
-              
+
+              <li class="drawer__menu-extra-row">
+                <a href="/pages/lavori-eseguiti" class="drawer__menu-extra-link h4" aria-label="Lavori eseguiti">
+                  Lavori eseguiti
+                </a>
+              </li>
             </ul>
           </div>
           {% for link in menu.links %}
@@ -184,12 +189,6 @@
             {% endfor %}
           {% endfor %}
         </div>
-        <div class="drawer__menu-extra-row">
-          <a href="/pages/lavori-eseguiti" class="drawer__menu-extra-link h4" aria-label="Lavori eseguiti">
-            Lavori eseguiti
-          </a>
-        </div>
-
       </nav>
 
       {%- if submenu != blank -%}
@@ -238,15 +237,13 @@
           </ul>
         </nav>
 
-        <div class="drawer__whatsapp-cta">
-          <a href="https://wa.me/0376408127" target="_blank" rel="noopener" aria-label="Contattaci su WhatsApp">
-            {% render 'icon', icon_name: 'brand-whatsapp', class: 'icon' %}
-            <span>CONTATTACI SU WHATSAPP</span>
-          </a>
-        </div>
-
         <div class="drawer__social">
           <ul class="drawer__social-list list-unstyled">
+            <li class="drawer__social-item drawer__social-item--whatsapp">
+              <a href="https://wa.me/0376408127" target="_blank" rel="noopener" aria-label="WhatsApp">
+                {% render 'icon', icon_name: 'brand-whatsapp' %}
+              </a>
+            </li>
             {% render 'social-media', item_tag: 'li', in_new_tab: true, item_icon: true %}
           </ul>
         </div>

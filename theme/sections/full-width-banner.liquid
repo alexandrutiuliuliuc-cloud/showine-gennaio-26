@@ -197,8 +197,8 @@
               endcomment
 
               if section.settings.media_position == 'background'
-                assign section_buttons = section.blocks | where: 'type', 'buttons'
-                for section_button in section_buttons
+              assign section_buttons = section.blocks | where: 'type', 'buttons'
+              for section_button in section_buttons
                   assign overlay_href = blank
                   if section_button.settings.button_link_1 != blank
                     assign overlay_href = section_button.settings.button_link_1
@@ -211,8 +211,8 @@
 
                   if overlay_href != blank
                     echo '<a href="' | append: overlay_href | append: '" class="section-full-width-banner__link" aria-label="' | append: overlay_label | append: '"></a>'
-                  endif
-                endfor
+                endif
+              endfor
               endif
             -%}
           </div>

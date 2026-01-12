@@ -38,33 +38,18 @@
   function syncMobileMenuOpenClass() {
     const header = document.querySelector('#header');
     if (!header) return;
-    const isOpen = header.classList.contains('menu-open');
+    const drawerContainer = header.querySelector('.header__drawer > .drawer__container');
+    // Rely on the actual <details open> state (more reliable than #header.menu-open).
+    const isOpen =
+      (drawerContainer && drawerContainer.hasAttribute('open')) ||
+      (drawerContainer && drawerContainer.classList.contains('menu-opening')) ||
+      header.classList.contains('menu-open');
     document.documentElement.classList.toggle('showine-mobile-menu-open', isOpen);
   }
 
   /**
-   * Showine: measure the mobile drawer footer stack (WhatsApp CTA + Account/Italia/social row)
-   * so the scrollable menu can reserve *exactly* that space and avoid a "blank white block".
+   * (Removed) Footer measurement logic: footer is now a simple one-row flex layout.
    */
-  function updateDrawerFooterHeights() {
-    if (!MQ.matches) return;
-    const header = document.querySelector('#header');
-    if (!header) return;
-
-    const drawerContent =
-      header.querySelector('.header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav') ||
-      header.querySelector('.header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav');
-    if (!drawerContent) return;
-
-    const bottom = drawerContent.querySelector('.drawer__row--bottom');
-    if (!bottom) return;
-
-    const bottomH = Math.max(0, Math.round(bottom.getBoundingClientRect().height || 0));
-    const stackH = bottomH;
-
-    drawerContent.style.setProperty('--showine-drawer-footer-bottom-height', `${bottomH}px`);
-    drawerContent.style.setProperty('--showine-drawer-footer-stack-height', `${stackH}px`);
-  }
 
   function init() {
     if (!MQ.matches) return;
@@ -77,7 +62,6 @@
         requestAnimationFrame(() => {
           syncMobileMenuOpenClass();
           updateHeaderHeight();
-          updateDrawerFooterHeights();
         }),
       );
     };
