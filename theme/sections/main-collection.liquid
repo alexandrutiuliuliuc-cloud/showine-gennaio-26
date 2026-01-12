@@ -30,7 +30,6 @@
 
 {%- if section.settings.pagination_style == 'load_more' -%}
   <script src="{{- 'collection-load-more.js' | asset_url -}}" defer="defer"></script>
-  <script src="{{- 'collection-load-previous.js' | asset_url -}}" defer="defer"></script>
   {%- if section.settings.enable_infinity_scroll -%}
     <script src="{{- 'collection-infinity-scroll.js' | asset_url -}}" defer="defer"></script>
   {%- endif -%}
@@ -147,15 +146,10 @@
       
         <div class="collection-grid-container collection-grid-container--{{ section.settings.filters }} js-collection-grid{% if section.settings.pagination_style == 'load_more' and section.settings.enable_infinity_scroll %} infinity-scroll-active{% endif %}">
           
-          {% if section.settings.pagination_style == 'load_more' and paginate.previous and paginate.pages > 1 and paginate.current_page <= paginate.pages %}
-            <collection-load-previous class="text-center no-js-hidden color-{{ section.settings.color_scheme }}" data-current-page="{{- paginate.current_page -}}">
-              {%- liquid
-                assign load_more_button_data_href = 'data-href="' | append: paginate.previous.url | append: '"'
-                assign load_previous_value = 'theme.actions.load_previous' | t
-                render 'button', class: 'button js-btn-load-previous', button_style: 'button--outlined', attr: load_more_button_data_href, value: load_previous_value, loading_spinner: true
-              -%}
-            </collection-load-previous>
-          {% endif %}
+          {%- comment -%}
+            NOTE (Showine): we intentionally don't expose a "Load previous" control.
+            The collection experience always starts from page 1; "Load more" only appends next pages.
+          {%- endcomment -%}
           <div
             class="collection__grid{% if section.settings.products_per_row_mobile != '2' %} collection__grid-single{% endif %}{% if section.settings.filters == 'drawer' %} collection-grid-container__products{% endif %}"
             id="product-grid"

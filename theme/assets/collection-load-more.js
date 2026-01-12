@@ -225,7 +225,8 @@ if (!customElements.get('collection-load-more')) {
         }
 
         this.resetHiddenProducts();
-        history.replaceState({}, "", this.btnLoadMore.dataset.href);
+        // NOTE (Showine): don't change the URL to a later pagination page.
+        // This prevents "load previous" UX and keeps the collection anchored to page 1 on refresh.
 
         if (isLoadMoreHidden) {
           this.isLastPage = true;
