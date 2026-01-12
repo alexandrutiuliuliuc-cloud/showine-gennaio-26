@@ -393,4 +393,18 @@ main .color-scheme-5:not(.header-is-transparent) {
   }
 }
 
+/* Collection: "Carica altri" button (load more) */
+.section-collection collection-load-more .button.js-btn-load-more {
+  background-color: #631F22 !important;
+  border-color: #631F22 !important;
+  color: #fff !important;
+}
+
+.section-collection collection-load-more .button.js-btn-load-more:hover,
+.section-collection collection-load-more .button.js-btn-load-more:focus-visible {
+  background-color: #531518 !important; /* slightly darker */
+  border-color: #531518 !important;
+  color: #fff !important;
+}
+
 
