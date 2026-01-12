@@ -1417,7 +1417,7 @@
           "settings": {
             "author": "",
             "quote": "<p>Gucci Hosteria - FI<br/>Castello Banfi<br/>Carpineto<br/>Masi<br/>Cà RugateI <br/>Due Cippi - GR<br/>Enoproject<br/>Bottega<br/>Zorzetti<br/>Az. Agr. Bussia <br/>Soprana<br/>Barone Ricasoli<br/>Ruffino<br/>Fattoria di Calcinaia<br/>Podere Salicutti<br/>Ruggeri<br/>Montalbera<br/>Lebovitz<br/>Soc. Agr. San Felice<br/>Tenuta di Biserno<br/>IYO Restaurant – MI<br/>eWibe - Advisory<br/>Masciarelli Tenute Agricole<br/>Ristorante Oseleta - VR<br/>Glam - VE<br/>Dopolavoro - VE<br/>Osteria Enoteca 325 - PO<br/>Cuzziol Grandi Vini<br/>Widder Restaurant – Zug <br/>Tenuta di Ghizzano<br/>Retrobottega – Roma<br/>Enoteche Piave<br/>Osteria Casa del Vino - VR<br/>Gueuleton  - Crans Montana <br/>Da Giannino - MI<br/>Achilli al Parlamento - Roma<br/>Checco Er Carettiere - Roma<br/>Sucar Brusc - MN<br/>Tiratappi - MN<br/>Laboratorio - MN</p>",
-            "rating_score": 5,
+            "rating_score": 0,
             "color_scheme": ""
           }
         }
@@ -1440,8 +1440,8 @@
         "spacing_inner": "2",
         "section_width": "max-w-fluid",
         "color_scheme": "",
-        "spacing_top": "2",
-        "spacing_bottom": "2"
+        "spacing_top": "0",
+        "spacing_bottom": "0"
       }
     },
     "mega_links_iXqhB6": {

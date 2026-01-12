@@ -255,6 +255,69 @@ main .color-scheme-5:not(.header-is-transparent) {
   }
 }
 
+/* Homepage "Hanno scelto Showine": split the activities list into two equal columns (20 + 20) */
+.z-hanno-scelto-list {
+  text-align: left;
+}
+
+.z-hanno-scelto-list__col {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.z-hanno-scelto-list__col li {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 750px) {
+  /* Allow the right-side content to use the full available width (theme sets a max-width on desktop). */
+  .z-hanno-scelto-showine .testimonials__content-in {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Reduce internal vertical padding of this block (the theme uses 6.4rem 0 by default). */
+  .z-hanno-scelto-showine .testimonials__content {
+    padding: 2.4rem 0 !important;
+  }
+
+  /* Hanno scelto Showine: slightly crop the image top/bottom (make it a bit more landscape) */
+  .z-hanno-scelto-showine .testimonials__media {
+    aspect-ratio: 5 / 4;
+  }
+  .z-hanno-scelto-showine .testimonials__media img,
+  .z-hanno-scelto-showine .testimonials__media picture,
+  .z-hanno-scelto-showine .testimonials__media .media {
+    height: 100%;
+  }
+  .z-hanno-scelto-showine .testimonials__media img {
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  /* Hanno scelto Showine: reduce padding between title and activities list */
+  .z-hanno-scelto-showine .section__heading {
+    margin-block-end: 2.4rem !important;
+  }
+  .z-hanno-scelto-showine .section-testimonials__ratings {
+    margin-block-end: 1.2rem !important;
+  }
+
+  /* Center the 2-column list block under the centered title (shift it right vs left-aligned). */
+  .z-hanno-scelto-showine .z-hanno-scelto-list {
+    display: grid;
+    width: max-content;
+    max-width: 100%;
+    margin-inline: auto;
+    /* Give more width to the 2nd column to avoid wrapping long venue names */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr);
+    column-gap: clamp(2.4rem, 2.6vw, 4.2rem);
+  }
+}
+
 /* Lavori eseguiti: injected info request form spacing */
 .z-info-request-form {
   margin-top: 3.2rem;

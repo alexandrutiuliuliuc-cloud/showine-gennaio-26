@@ -14,6 +14,10 @@
   {%- endstyle -%}
 
   {%- assign rating_icon = section.settings.rating_icon -%}
+  {%- assign is_hanno_scelto_showine = false -%}
+  {%- if section.settings.heading contains 'Hanno scelto Showine' -%}
+    {%- assign is_hanno_scelto_showine = true -%}
+  {%- endif -%}
   {%- if section.settings.heading != blank or section.settings.subheading != blank or rating_icon != 'none' -%}
     {%- capture section_title -%}
       <div class="text-center">
@@ -41,7 +45,7 @@
   {%- endif -%}
 
   <div class="color-{{ section.settings.color_scheme }} gradient">
-    <div class="container {{ section.settings.section_width }} js-animation-fade-in section-testimonials--{{ section.settings.layout }} position--{{ section.settings.image_position }} overflow-hidden">
+    <div class="container {{ section.settings.section_width }} js-animation-fade-in section-testimonials--{{ section.settings.layout }} position--{{ section.settings.image_position }} overflow-hidden{% if is_hanno_scelto_showine %} z-hanno-scelto-showine{% endif %}">
       {%- liquid
         if section.settings.media_show_on == 'mobile'
           assign media_classes = 'large-up-hide'
@@ -122,7 +126,7 @@
                           </cite>
                         {%- endif -%}
                         {%- assign rating_score = block.settings.rating_score -%}
-                        {%- if rating_score > 0 -%}
+                        {%- if rating_score > 0 and is_hanno_scelto_showine == false -%}
                         <div class="testimonial__rating">
                           {% for i in (1..5) %}
                             {% if i <= rating_score %}
@@ -146,9 +150,40 @@
                         </div>
                         {%- endif -%}
                         {%- if block.settings.quote != blank -%}
-                          <blockquote class="testimonial__quote">
-                            {{- block.settings.quote -}}
-                          </blockquote>
+                          {%- if is_hanno_scelto_showine -%}
+                            {%- assign quote_raw = block.settings.quote -%}
+                            {%- assign quote_raw = quote_raw | replace: '<br />', '<br/>' | replace: '<br>', '<br/>' -%}
+                            {%- assign quote_raw = quote_raw | replace: '</p>', '' | replace: '<p>', '' -%}
+
+                            {%- assign quote_parts = quote_raw | split: '<br/>' -%}
+                            {%- assign left_items = '' -%}
+                            {%- assign right_items = '' -%}
+                            {%- assign item_index = 0 -%}
+
+                            {%- for part in quote_parts -%}
+                              {%- assign item = part | strip -%}
+                              {%- if item != blank -%}
+                                {%- assign item_index = item_index | plus: 1 -%}
+                                {%- if item_index <= 20 -%}
+                                  {%- capture left_items -%}{{ left_items }}<li>{{ item }}</li>{%- endcapture -%}
+                                {%- else -%}
+                                  {%- capture right_items -%}{{ right_items }}<li>{{ item }}</li>{%- endcapture -%}
+                                {%- endif -%}
+                              {%- endif -%}
+                            {%- endfor -%}
+                            <div class="testimonial__quote z-hanno-scelto-list" aria-label="Attività che hanno scelto Showine">
+                              <ul class="z-hanno-scelto-list__col" role="list">
+                                {{- left_items -}}
+                              </ul>
+                              <ul class="z-hanno-scelto-list__col" role="list">
+                                {{- right_items -}}
+                              </ul>
+                            </div>
+                          {%- else -%}
+                            <blockquote class="testimonial__quote">
+                              {{- block.settings.quote -}}
+                            </blockquote>
+                          {%- endif -%}
                         {%- endif -%}
                       </div>
                     </div>
