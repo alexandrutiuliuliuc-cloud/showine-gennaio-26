@@ -35,6 +35,37 @@
     document.documentElement.style.setProperty('--header-height', `${Math.round(h)}px`);
   }
 
+  function syncMobileMenuOpenClass() {
+    const header = document.querySelector('#header');
+    if (!header) return;
+    const isOpen = header.classList.contains('menu-open');
+    document.documentElement.classList.toggle('showine-mobile-menu-open', isOpen);
+  }
+
+  /**
+   * Showine: measure the mobile drawer footer stack (WhatsApp CTA + Account/Italia/social row)
+   * so the scrollable menu can reserve *exactly* that space and avoid a "blank white block".
+   */
+  function updateDrawerFooterHeights() {
+    if (!MQ.matches) return;
+    const header = document.querySelector('#header');
+    if (!header) return;
+
+    const drawerContent =
+      header.querySelector('.header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav') ||
+      header.querySelector('.header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav');
+    if (!drawerContent) return;
+
+    const bottom = drawerContent.querySelector('.drawer__row--bottom');
+    if (!bottom) return;
+
+    const bottomH = Math.max(0, Math.round(bottom.getBoundingClientRect().height || 0));
+    const stackH = bottomH;
+
+    drawerContent.style.setProperty('--showine-drawer-footer-bottom-height', `${bottomH}px`);
+    drawerContent.style.setProperty('--showine-drawer-footer-stack-height', `${stackH}px`);
+  }
+
   function init() {
     if (!MQ.matches) return;
     const header = document.querySelector('#header');
@@ -42,13 +73,25 @@
 
     // Measure after layout has applied (menu-open hides the search via CSS).
     const updateSoon = () => {
-      requestAnimationFrame(() => requestAnimationFrame(updateHeaderHeight));
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => {
+          syncMobileMenuOpenClass();
+          updateHeaderHeight();
+          updateDrawerFooterHeights();
+        }),
+      );
     };
 
     updateSoon();
 
     const mo = new MutationObserver(() => updateSoon());
     mo.observe(header, { attributes: true, attributeFilter: ['class'] });
+
+    const drawerContainer = header.querySelector('.header__drawer > .drawer__container');
+    if (drawerContainer) {
+      const moDrawer = new MutationObserver(() => updateSoon());
+      moDrawer.observe(drawerContainer, { attributes: true, attributeFilter: ['open', 'class'] });
+    }
 
     window.addEventListener('resize', updateSoon, { passive: true });
 

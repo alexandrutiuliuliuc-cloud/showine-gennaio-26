@@ -1233,65 +1233,130 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
     transform: none;
   }
 
-  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content {
+  /* Showine: stable mobile nav drawer (do NOT rely on `.menu-opening`). */
+  html.js .header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav {
     opacity: 1;
-    height: calc(100dvh - var(--header-height, 5.6rem) - var(--announcement-bars-before-header-visible-heights, 4.0rem) + 0.1rem);
-    overflow-x: hidden;
-    overflow-y: auto;
-    margin-block-start: -0.1rem;
-    z-index: var(--z-modals);
     position: fixed;
+    inset-inline: 0;
+    /* Start under header + announcement; overlap slightly to avoid sub-pixel gaps */
+    inset-block-start: calc(var(--announcement-bars-before-header-visible-heights, 0px) + var(--header-height, 5.6rem) - 2px) !important;
+    height: calc(100dvh - var(--announcement-bars-before-header-visible-heights, 0px) - var(--header-height, 5.6rem) + 2px);
+    width: 100%;
+    max-width: unset;
+    background-color: rgb(var(--color-background)) !important;
+    background-image: none !important;
+    z-index: calc(var(--z-header) - 1); /* keep header clickable */
+    padding-inline: var(--page-gutter);
+    padding-block-start: 1.6rem;
+    padding-block-end: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    /* IMPORTANT: prevent the drawer itself from scrolling (this creates the "infinite blank scroll").
+       Only `.slide-out-menu` should scroll.
+       Keep x visible so nested drawers (Country drawer) can overlay correctly. */
+    overflow-x: visible !important;
+    overflow-y: hidden !important;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    isolation: isolate;
+  }
+
+  /* Keep the "menu-opening" state consistent with [open] state for nav drawer */
+  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav {
+    opacity: 1;
   }
 
   /* Showine: when mobile menu is open, keep announcement + header visible and clickable.
      The drawer starts right under (announcement visible height + header height) and covers the page content (hero/slideshow). */
-  html.js .header__drawer > .drawer__container[open] > .drawer__content,
   html.no-js .header__drawer > .drawer__container[open] {
-    /* Overlap by 2px to avoid sub-pixel gaps where the hero/slideshow can peek through */
-    inset-block-start: calc(var(--announcement-bars-before-header-visible-heights, 0px) + var(--header-height, 5.6rem) - 2px) !important;
+    /* Keep no-js drawer aligned under the visible header */
+    inset-block-start: calc(var(--announcement-bars-before-header-visible-heights, 0px) + var(--header-height, 5.6rem));
   }
 
-  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content {
-    height: calc(100dvh - var(--announcement-bars-before-header-visible-heights, 0px) - var(--header-height, 5.6rem) + 2px);
-    margin-block-start: 0;
-    /* Force a solid background so the hero/slideshow never shows through */
-    background: rgb(var(--color-background)) !important;
-    z-index: var(--z-modals);
-    padding-inline: var(--page-gutter);
-    padding-block-start: 1.6rem;
-    padding-block-end: 2.4rem;
-  }
-
-  /* Showine: harden the nav drawer background (covers cases where .menu-opening may not be present yet)
-     and ensure no gradient/background-image can reveal the slider behind. */
-  html.js #header.menu-open .header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav,
-  html.js #header.menu-open .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav {
-    background-color: rgb(var(--color-background)) !important;
-    background-image: none !important;
-    isolation: isolate;
-  }
+  /* Background is handled by the nav-drawer rule above */
 
   /* Showine: prevent scrolling "past" the menu footer (Account/Italia/social).
      Only the menu list scrolls; the footer stays pinned to the bottom of the drawer. */
+
+  /* Showine: footer overlay sizing (measured via JS to avoid "blank white block" regressions) */
+  html.js .header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav,
   html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav {
-    display: flex;
-    flex-direction: column;
-    /* Keep the drawer itself from scrolling, but don't clip nested drawers like the Country drawer */
-    overflow: visible;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
+    --showine-drawer-footer-bottom-height: 0px; /* height of .drawer__row--bottom */
+    --showine-drawer-footer-stack-height: 0px; /* height of bottom row */
   }
 
+  html.js .header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav .slide-out-menu,
   html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav .slide-out-menu {
     flex: 1 1 auto;
+    min-height: 0;
     overflow-y: auto;
     overflow-x: hidden;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
+    /* Stop scrolling exactly above the footer (no extra "white scroll") */
+    padding-block-end: 0;
+    max-height: calc(100% - var(--showine-drawer-footer-stack-height, 0px));
   }
 
-  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav .drawer__row--bottom {
-    margin-top: auto;
+  /* Footer overlay: keep the footer stack visible and let menu items scroll behind it */
+  html.js #header .drawer__content--nav .drawer__row--bottom {
+    position: absolute;
+    inset-inline: 0;
+    z-index: 2;
+    background-color: rgb(var(--color-background));
+    background-image: none;
+    /* Keep footer content aligned with the drawer gutter (avoid "too close to left edge") */
+    padding-inline: var(--page-gutter);
+  }
+
+  html.js #header .drawer__content--nav .drawer__row--bottom {
+    inset-block-end: 0;
+    margin-top: 0 !important;
+    /* keep safe area on iOS without changing measured heights too much */
+    padding-block-end: env(safe-area-inset-bottom);
+    /* Layout: row 1 = Account/Italia (left) + Social (right); row 2 = WhatsApp (left) */
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: min-content;
+    column-gap: 2rem;
+    row-gap: 0.8rem;
+    align-items: start;
+  }
+
+  /* Ensure Account + Italia align perfectly on the same baseline/line */
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs-items {
+    align-items: center;
+  }
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs-link,
+  html.js #header .drawer__content--nav .drawer__row--bottom summary.drawer__button.drawer__button--text.drawer__subs-link {
+    display: inline-flex;
+    align-items: center;
+    line-height: var(--line-height-static-sm);
+  }
+
+  /* Country drawer trigger is a <summary> (browser default markers/padding can shift baseline on iOS) */
+  html.js #header .drawer__content--nav .drawer__row--bottom summary.drawer__button.drawer__button--text.drawer__subs-link {
+    padding: 0 !important;
+    margin: 0;
+    list-style: none;
+  }
+  html.js #header .drawer__content--nav .drawer__row--bottom summary.drawer__button.drawer__button--text.drawer__subs-link::-webkit-details-marker {
+    display: none;
+  }
+  html.js #header .drawer__content--nav .drawer__row--bottom summary.drawer__button.drawer__button--text.drawer__subs-link::marker {
+    content: '';
+  }
+
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__social {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    justify-self: end;
+    align-self: center;
   }
 
   /* Showine: "Lavori eseguiti" as a proper mobile menu row (red background, same spacing, separator line) */
@@ -1318,12 +1383,13 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
     white-space: nowrap;
   }
 
-  /* WhatsApp CTA (small, uppercase) placed right above the footer separator */
   html.js #header .drawer__content--nav .drawer__whatsapp-cta {
-    /* Push the whole bottom group down, right above the footer separator */
-    margin-top: auto;
-    padding: 0;
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
     margin: 0;
+    /* no extra bottom padding: keep it balanced inside the footer block */
+    padding-block: 0;
   }
   html.js #header .drawer__content--nav .drawer__whatsapp-cta a {
     display: inline-flex;
@@ -1353,10 +1419,7 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
     text-underline-offset: 0.2em;
   }
 
-  /* Keep WhatsApp + footer together at the bottom (avoid extra "white container" feeling) */
-  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav .drawer__row--bottom {
-    margin-top: 0 !important;
-  }
+  /* WhatsApp CTA should NOT push content up; it lives above the pinned footer row */
 
   /* Showine: ensure the Country/Locale drawer opened from the mobile menu footer appears above the nav drawer */
   html.js #header .header__drawer .drawer__content--nav .country-drawer > .drawer__content {
@@ -1366,21 +1429,18 @@ html.js .drawer--search>.drawer__container[open]>.drawer__content.drawer__conten
     z-index: calc(var(--z-modals) + 599);
   }
 
-  /* Showine: align "Italia" with "Account" in the mobile drawer footer */
-  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs-items {
+  /* NOTE (Showine): keep footer link layout/spacing as per theme defaults (component-drawer.css). */
+
+  /* Showine: make social icons larger and visually centered in the right column */
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__social-list {
     align-items: center;
+    justify-content: center;
+    gap: 2.2rem;
   }
-  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__subs-link,
-  html.js #header .drawer__content--nav .drawer__row--bottom summary.drawer__button.drawer__button--text.drawer__subs-link {
-    display: inline-flex;
-    align-items: center;
-    padding: 0;
-    line-height: var(--line-height-static-sm);
-  }
-  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__button-text {
-    line-height: inherit;
-    display: inline-flex;
-    align-items: center;
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__social a,
+  html.js #header .drawer__content--nav .drawer__row--bottom .drawer__social svg {
+    width: 2.6rem;
+    height: 2.6rem;
   }
 
   /* Hide the internal drawer close button on mobile to avoid the extra arrow overlapping the menu.
@@ -1628,6 +1688,14 @@ nav.slide-out-menu div.menu-panel.was-active {
 }
 nav.slide-out-menu div.menu-panel.is-active {
   height: 100dvh;
+}
+
+/* Showine: inside the mobile drawer, a menu panel must not force 100dvh (creates scrollable blank space). */
+@media screen and (max-width: 989px), (hover: none) and (pointer: coarse) and (max-width: 1366px) {
+  html.js .header__drawer > .drawer__container[open] > .drawer__content.drawer__content--nav nav.slide-out-menu div.menu-panel.is-active,
+  html.js .header__drawer > .drawer__container.menu-opening > .drawer__content.drawer__content--nav nav.slide-out-menu div.menu-panel.is-active {
+    height: 100% !important;
+  }
 }
 
 nav.slide-out-menu li.menu-card-group {

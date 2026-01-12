@@ -393,6 +393,13 @@ main .color-scheme-5:not(.header-is-transparent) {
   }
 }
 
+/* Showine: hide floating WhatsApp only while the mobile burger menu is open */
+@media screen and (max-width: 989px), (hover: none) and (pointer: coarse) and (max-width: 1366px) {
+  html.showine-mobile-menu-open .z-whatsapp-float {
+    display: none !important;
+  }
+}
+
 /* Collection: "Carica altri" button (load more) */
 .section-collection collection-load-more .button.js-btn-load-more {
   background-color: #631F22 !important;
