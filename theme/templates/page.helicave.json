@@ -715,6 +715,20 @@
         "spacing_top": "4",
         "spacing_bottom": "6"
       }
+    },
+    "form_contact_info_quote": {
+      "type": "form-contact-info",
+      "settings": {
+        "heading": "Richiedi un preventivo",
+        "request_type": "Richiesta preventivo",
+        "text": "<p>Compila il modulo per ricevere un preventivo e maggiori informazioni su Helicave. Ti ricontatteremo il prima possibile.</p>",
+        "submit_label": "Richiedi preventivo",
+        "success_message": "Abbiamo ricevuto la tua richiesta, verrai contattato al più presto.",
+        "section_width": "max-w-narrower",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
     }
   },
   "order": [
@@ -725,6 +739,7 @@
     "social_media_highlights_f7qrEK",
     "social_media_highlights_VPhiB9",
     "social_media_highlights_PUkUmK",
-    "social_media_highlights_Dmqinf"
+    "social_media_highlights_Dmqinf",
+    "form_contact_info_quote"
   ]
 }

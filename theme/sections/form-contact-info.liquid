@@ -11,8 +11,7 @@
   <div class="form-contact form-contact--info-request">
     <div class="container {{ section.settings.section_width }}">
       {%- liquid
-        assign email_label = 'theme.form.email' | t
-        assign message_label = 'contact.message' | t
+        assign request_type = section.settings.request_type | default: 'Richiesta informazioni'
       -%}
 
       <div class="form-contact__heading col-span-6">
@@ -24,7 +23,8 @@
         {%- endif -%}
       </div>
 
-      {%- form 'contact', id: 'InfoRequestForm', class: 'contact-form grid', data-no-return-to: 'true' -%}
+      {%- assign form_dom_id = 'InfoRequestForm-' | append: section.id -%}
+      {%- form 'contact', id: form_dom_id, class: 'contact-form grid', data-no-return-to: 'true' -%}
         {%- if form.posted_successfully? -%}
           <p class="form-contact__message--success h4 col-span-6" tabindex="-1" autofocus>
             {{- section.settings.success_message -}}
@@ -35,13 +35,13 @@
           </div>
         {%- endif -%}
 
-        <input type="hidden" name="contact[richiesta]" value="Richiesta informazioni">
+        <input type="hidden" name="contact[richiesta]" value="{{ request_type }}">
         <input type="hidden" name="contact[pagina]" value="{{ request.path }}">
 
         <div class="col-span-3">
           {%- render 'text-input',
             type: 'text',
-            id: 'InfoRequestForm-first_name',
+            id: form_dom_id | append: '-first_name',
             label: 'Nome',
             name: 'contact[first_name]',
             placeholder: '',
@@ -53,7 +53,7 @@
         <div class="col-span-3">
           {%- render 'text-input',
             type: 'text',
-            id: 'InfoRequestForm-last_name',
+            id: form_dom_id | append: '-last_name',
             label: 'Cognome',
             name: 'contact[last_name]',
             placeholder: '',
@@ -64,19 +64,19 @@
 
         <div class="col-span-6">
           <div class="flex checkbox">
-            <label class="field__label" for="InfoRequestForm-contact_method">COME PREFERISCI ESSERE RICONTATTATO?</label>
-            <div class="field__options" id="InfoRequestForm-contact_method">
+            <label class="field__label" for="{{ form_dom_id }}-contact_method">COME PREFERISCI ESSERE RICONTATTATO?</label>
+            <div class="field__options" id="{{ form_dom_id }}-contact_method">
               <div class="field__option">
-                <input type="checkbox" name="contact[contact_method]" value="Email" id="InfoRequestForm-contact_method-email">
-                <label for="InfoRequestForm-contact_method-email">Email</label>
+                <input type="checkbox" name="contact[contact_method]" value="Email" id="{{ form_dom_id }}-contact_method-email">
+                <label for="{{ form_dom_id }}-contact_method-email">Email</label>
               </div>
               <div class="field__option">
-                <input type="checkbox" name="contact[contact_method]" value="CHIAMATA" id="InfoRequestForm-contact_method-call">
-                <label for="InfoRequestForm-contact_method-call">CHIAMATA</label>
+                <input type="checkbox" name="contact[contact_method]" value="CHIAMATA" id="{{ form_dom_id }}-contact_method-call">
+                <label for="{{ form_dom_id }}-contact_method-call">CHIAMATA</label>
               </div>
               <div class="field__option">
-                <input type="checkbox" name="contact[contact_method]" value="SMS" id="InfoRequestForm-contact_method-sms">
-                <label for="InfoRequestForm-contact_method-sms">SMS</label>
+                <input type="checkbox" name="contact[contact_method]" value="SMS" id="{{ form_dom_id }}-contact_method-sms">
+                <label for="{{ form_dom_id }}-contact_method-sms">SMS</label>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@
         <div class="col-span-6">
           {%- render 'text-input',
             type: 'tel',
-            id: 'InfoRequestForm-phone',
+            id: form_dom_id | append: '-phone',
             label: 'Numero di telefono',
             name: 'contact[phone]',
             placeholder: '',
@@ -98,8 +98,8 @@
         <div class="col-span-6">
           {%- render 'text-input',
             type: 'email',
-            id: 'InfoRequestForm-email',
-            label: email_label,
+            id: form_dom_id | append: '-email',
+            label: 'Email',
             name: 'contact[email]',
             placeholder: '',
             required: true,
@@ -110,8 +110,8 @@
 
         <div class="col-span-6">
           {%- render 'textarea-input',
-            id: 'InfoRequestForm-body',
-            label: message_label,
+            id: form_dom_id | append: '-body',
+            label: 'Messaggio',
             name: 'contact[message]',
             placeholder: '',
             body: form.body
@@ -140,6 +140,12 @@
       "id": "heading",
       "label": "Titolo",
       "default": "Richiedi informazioni"
+    },
+    {
+      "type": "text",
+      "id": "request_type",
+      "label": "Tipo richiesta (campo nascosto)",
+      "default": "Richiesta informazioni"
     },
     {
       "type": "richtext",
