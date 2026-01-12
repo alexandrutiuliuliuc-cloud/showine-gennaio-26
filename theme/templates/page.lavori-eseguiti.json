@@ -29,9 +29,9 @@
       "name": "t:sections.seo-content.name",
       "settings": {
         "section_layout": "normal",
-        "heading": "Lavori eseguiti",
+        "heading": "Realizzazioni Showine - Cantine climatizzate su misura",
         "heading_size": "h2",
-        "text": "<p>Una selezioni di nostri lavori eseguiti per tipologia di intervento, scopri come abbiamo trasformato molti ambienti in splendide cantine vino.</p>",
+        "text": "<p>Progetti realizzati per privati e professionisti - esempi di cantine vino, wine room e soluzioni personalizzate per la conservazione e valorizzazione del vino.</p>",
         "content_alignment": "center",
         "section_width": "max-w-fluid",
         "color_scheme": "",
@@ -96,26 +96,7 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        }
-      },
-      "block_order": [
-        "tile_MmeCGk",
-        "tile_M9KefV"
-      ],
-      "settings": {
-        "block_order_mobile": false,
-        "heading": "",
-        "heading_size": "h3",
-        "heading_alignment": "start",
-        "color_scheme": "",
-        "section_width": "max-w-page",
-        "spacing_top": "2",
-        "spacing_bottom": "0"
-      }
-    },
-    "multitile_fM3qmf": {
-      "type": "multitile",
-      "blocks": {
+        },
         "tile_Qm9mx8": {
           "type": "tile",
           "settings": {
@@ -142,7 +123,27 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        },
+        }
+      },
+      "block_order": [
+        "tile_MmeCGk",
+        "tile_M9KefV",
+        "tile_Qm9mx8"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_fM3qmf": {
+      "type": "multitile",
+      "blocks": {
         "tile_AyGcNA": {
           "type": "tile",
           "settings": {
@@ -169,26 +170,7 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        }
-      },
-      "block_order": [
-        "tile_Qm9mx8",
-        "tile_AyGcNA"
-      ],
-      "settings": {
-        "block_order_mobile": false,
-        "heading": "",
-        "heading_size": "h3",
-        "heading_alignment": "start",
-        "color_scheme": "",
-        "section_width": "max-w-page",
-        "spacing_top": "2",
-        "spacing_bottom": "0"
-      }
-    },
-    "multitile_XVz9PN": {
-      "type": "multitile",
-      "blocks": {
+        },
         "tile_JnX7TJ": {
           "type": "tile",
           "settings": {
@@ -245,6 +227,7 @@
         }
       },
       "block_order": [
+        "tile_AyGcNA",
         "tile_JnX7TJ",
         "tile_QCRKxg"
       ],
@@ -259,7 +242,7 @@
         "spacing_bottom": "0"
       }
     },
-    "multitile_twVPVy": {
+    "multitile_XVz9PN": {
       "type": "multitile",
       "blocks": {
         "tile_jQgMB7": {
@@ -315,26 +298,7 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        }
-      },
-      "block_order": [
-        "tile_jQgMB7",
-        "tile_EKPBn8"
-      ],
-      "settings": {
-        "block_order_mobile": false,
-        "heading": "",
-        "heading_size": "h3",
-        "heading_alignment": "start",
-        "color_scheme": "",
-        "section_width": "max-w-page",
-        "spacing_top": "2",
-        "spacing_bottom": "0"
-      }
-    },
-    "multitile_8fPKFh": {
-      "type": "multitile",
-      "blocks": {
+        },
         "tile_MpQChW": {
           "type": "tile",
           "settings": {
@@ -361,7 +325,27 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        },
+        }
+      },
+      "block_order": [
+        "tile_jQgMB7",
+        "tile_EKPBn8",
+        "tile_MpQChW"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_twVPVy": {
+      "type": "multitile",
+      "blocks": {
         "tile_FrDCPE": {
           "type": "tile",
           "settings": {
@@ -388,26 +372,7 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        }
-      },
-      "block_order": [
-        "tile_MpQChW",
-        "tile_FrDCPE"
-      ],
-      "settings": {
-        "block_order_mobile": false,
-        "heading": "",
-        "heading_size": "h3",
-        "heading_alignment": "start",
-        "color_scheme": "",
-        "section_width": "max-w-page",
-        "spacing_top": "2",
-        "spacing_bottom": "0"
-      }
-    },
-    "multitile_fjRtrH": {
-      "type": "multitile",
-      "blocks": {
+        },
         "tile_3bYXLc": {
           "type": "tile",
           "settings": {
@@ -464,6 +429,7 @@
         }
       },
       "block_order": [
+        "tile_FrDCPE",
         "tile_3bYXLc",
         "tile_dVkRar"
       ],
@@ -478,7 +444,7 @@
         "spacing_bottom": "0"
       }
     },
-    "multitile_HkCzqz": {
+    "multitile_8fPKFh": {
       "type": "multitile",
       "blocks": {
         "tile_PxkrA3": {
@@ -534,26 +500,7 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        }
-      },
-      "block_order": [
-        "tile_PxkrA3",
-        "tile_MTTqyJ"
-      ],
-      "settings": {
-        "block_order_mobile": false,
-        "heading": "",
-        "heading_size": "h3",
-        "heading_alignment": "start",
-        "color_scheme": "",
-        "section_width": "max-w-page",
-        "spacing_top": "2",
-        "spacing_bottom": "0"
-      }
-    },
-    "multitile_r7wcjm": {
-      "type": "multitile",
-      "blocks": {
+        },
         "tile_XYPC4a": {
           "type": "tile",
           "settings": {
@@ -580,7 +527,27 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        },
+        }
+      },
+      "block_order": [
+        "tile_PxkrA3",
+        "tile_MTTqyJ",
+        "tile_XYPC4a"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_fjRtrH": {
+      "type": "multitile",
+      "blocks": {
         "tile_HDLBAT": {
           "type": "tile",
           "settings": {
@@ -607,26 +574,7 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        }
-      },
-      "block_order": [
-        "tile_XYPC4a",
-        "tile_HDLBAT"
-      ],
-      "settings": {
-        "block_order_mobile": false,
-        "heading": "",
-        "heading_size": "h3",
-        "heading_alignment": "start",
-        "color_scheme": "",
-        "section_width": "max-w-page",
-        "spacing_top": "2",
-        "spacing_bottom": "0"
-      }
-    },
-    "multitile_argLbw": {
-      "type": "multitile",
-      "blocks": {
+        },
         "tile_PPYELi": {
           "type": "tile",
           "settings": {
@@ -683,6 +631,7 @@
         }
       },
       "block_order": [
+        "tile_HDLBAT",
         "tile_PPYELi",
         "tile_RWqpFw"
       ],
@@ -697,7 +646,7 @@
         "spacing_bottom": "0"
       }
     },
-    "multitile_AwtMB3": {
+    "multitile_HkCzqz": {
       "type": "multitile",
       "blocks": {
         "tile_4KVmTM": {
@@ -753,26 +702,7 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        }
-      },
-      "block_order": [
-        "tile_4KVmTM",
-        "tile_iga4Aa"
-      ],
-      "settings": {
-        "block_order_mobile": false,
-        "heading": "",
-        "heading_size": "h3",
-        "heading_alignment": "start",
-        "color_scheme": "",
-        "section_width": "max-w-page",
-        "spacing_top": "2",
-        "spacing_bottom": "0"
-      }
-    },
-    "multitile_YPFqbd": {
-      "type": "multitile",
-      "blocks": {
+        },
         "tile_6ynt8Y": {
           "type": "tile",
           "settings": {
@@ -799,7 +729,27 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        },
+        }
+      },
+      "block_order": [
+        "tile_4KVmTM",
+        "tile_iga4Aa",
+        "tile_6ynt8Y"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_r7wcjm": {
+      "type": "multitile",
+      "blocks": {
         "tile_HTREeh": {
           "type": "tile",
           "settings": {
@@ -826,26 +776,7 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        }
-      },
-      "block_order": [
-        "tile_6ynt8Y",
-        "tile_HTREeh"
-      ],
-      "settings": {
-        "block_order_mobile": false,
-        "heading": "",
-        "heading_size": "h3",
-        "heading_alignment": "start",
-        "color_scheme": "",
-        "section_width": "max-w-page",
-        "spacing_top": "2",
-        "spacing_bottom": "0"
-      }
-    },
-    "multitile_9zrMYC": {
-      "type": "multitile",
-      "blocks": {
+        },
         "tile_wWpwBU": {
           "type": "tile",
           "settings": {
@@ -902,6 +833,7 @@
         }
       },
       "block_order": [
+        "tile_HTREeh",
         "tile_wWpwBU",
         "tile_T9rUbz"
       ],
@@ -916,7 +848,7 @@
         "spacing_bottom": "0"
       }
     },
-    "multitile_7c8HCH": {
+    "multitile_argLbw": {
       "type": "multitile",
       "blocks": {
         "tile_dMUVyL": {
@@ -972,26 +904,7 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        }
-      },
-      "block_order": [
-        "tile_dMUVyL",
-        "tile_TqwUTA"
-      ],
-      "settings": {
-        "block_order_mobile": false,
-        "heading": "",
-        "heading_size": "h3",
-        "heading_alignment": "start",
-        "color_scheme": "",
-        "section_width": "max-w-page",
-        "spacing_top": "2",
-        "spacing_bottom": "0"
-      }
-    },
-    "multitile_qnxCzW": {
-      "type": "multitile",
-      "blocks": {
+        },
         "tile_VcM6Hj": {
           "type": "tile",
           "settings": {
@@ -1018,7 +931,27 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        },
+        }
+      },
+      "block_order": [
+        "tile_dMUVyL",
+        "tile_TqwUTA",
+        "tile_VcM6Hj"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_AwtMB3": {
+      "type": "multitile",
+      "blocks": {
         "tile_TWPdK6": {
           "type": "tile",
           "settings": {
@@ -1045,26 +978,7 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        }
-      },
-      "block_order": [
-        "tile_VcM6Hj",
-        "tile_TWPdK6"
-      ],
-      "settings": {
-        "block_order_mobile": false,
-        "heading": "",
-        "heading_size": "h3",
-        "heading_alignment": "start",
-        "color_scheme": "",
-        "section_width": "max-w-page",
-        "spacing_top": "2",
-        "spacing_bottom": "0"
-      }
-    },
-    "multitile_BBTbpP": {
-      "type": "multitile",
-      "blocks": {
+        },
         "tile_eRKacE": {
           "type": "tile",
           "settings": {
@@ -1121,6 +1035,7 @@
         }
       },
       "block_order": [
+        "tile_TWPdK6",
         "tile_eRKacE",
         "tile_4CJ8dR"
       ],
@@ -1135,7 +1050,7 @@
         "spacing_bottom": "0"
       }
     },
-    "multitile_BYwAp7": {
+    "multitile_YPFqbd": {
       "type": "multitile",
       "blocks": {
         "tile_XTrYNb": {
@@ -1191,26 +1106,7 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        }
-      },
-      "block_order": [
-        "tile_XTrYNb",
-        "tile_N8NHzH"
-      ],
-      "settings": {
-        "block_order_mobile": false,
-        "heading": "",
-        "heading_size": "h3",
-        "heading_alignment": "start",
-        "color_scheme": "",
-        "section_width": "max-w-page",
-        "spacing_top": "2",
-        "spacing_bottom": "0"
-      }
-    },
-    "multitile_Fp9gBU": {
-      "type": "multitile",
-      "blocks": {
+        },
         "tile_8HPKUD": {
           "type": "tile",
           "settings": {
@@ -1237,7 +1133,27 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        },
+        }
+      },
+      "block_order": [
+        "tile_XTrYNb",
+        "tile_N8NHzH",
+        "tile_8HPKUD"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_9zrMYC": {
+      "type": "multitile",
+      "blocks": {
         "tile_WPazga": {
           "type": "tile",
           "settings": {
@@ -1264,26 +1180,7 @@
             "show_controls_on_video_mobile": false,
             "spacing_inner": "2"
           }
-        }
-      },
-      "block_order": [
-        "tile_8HPKUD",
-        "tile_WPazga"
-      ],
-      "settings": {
-        "block_order_mobile": false,
-        "heading": "",
-        "heading_size": "h3",
-        "heading_alignment": "start",
-        "color_scheme": "",
-        "section_width": "max-w-page",
-        "spacing_top": "2",
-        "spacing_bottom": "0"
-      }
-    },
-    "multitile_XJyPUh": {
-      "type": "multitile",
-      "blocks": {
+        },
         "tile_wiXKkR": {
           "type": "tile",
           "settings": {
@@ -1340,6 +1237,7 @@
         }
       },
       "block_order": [
+        "tile_WPazga",
         "tile_wiXKkR",
         "tile_4WQ4TF"
       ],
@@ -1354,7 +1252,7 @@
         "spacing_bottom": "0"
       }
     },
-    "multitile_Fd3Hi6": {
+    "multitile_7c8HCH": {
       "type": "multitile",
       "blocks": {
         "tile_64dNm6": {
@@ -1423,8 +1321,23 @@
         "heading_alignment": "start",
         "color_scheme": "",
         "section_width": "max-w-page",
+        "spacing_top": "1",
+        "spacing_bottom": "6"
+      }
+    }
+    ,
+    "form_contact_info_lavori": {
+      "type": "form-contact-info",
+      "settings": {
+        "heading": "Richiedi informazioni",
+        "request_type": "Richiesta informazioni",
+        "text": "<p>Hai bisogno di informazioni su un progetto o vuoi capire quale soluzione è più adatta al tuo spazio? Compila il modulo e ti ricontatteremo il prima possibile.</p>",
+        "submit_label": "Invia richiesta",
+        "success_message": "Abbiamo ricevuto la tua richiesta, verrai contattato al più presto.",
+        "section_width": "max-w-narrower",
+        "color_scheme": "scheme-1",
         "spacing_top": "2",
-        "spacing_bottom": "4"
+        "spacing_bottom": "6"
       }
     }
   },
@@ -1444,11 +1357,6 @@
     "multitile_YPFqbd",
     "multitile_9zrMYC",
     "multitile_7c8HCH",
-    "multitile_qnxCzW",
-    "multitile_BBTbpP",
-    "multitile_BYwAp7",
-    "multitile_Fp9gBU",
-    "multitile_XJyPUh",
-    "multitile_Fd3Hi6"
+    "form_contact_info_lavori"
   ]
 }

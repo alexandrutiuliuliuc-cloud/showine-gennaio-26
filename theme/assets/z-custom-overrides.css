@@ -239,6 +239,22 @@ main .color-scheme-5:not(.header-is-transparent) {
   text-align: left !important;
 }
 
+/* Lavori eseguiti: 3 lavori per riga (desktop only) */
+@media screen and (min-width: 990px) {
+  .template--lavori-eseguiti .section-multitile__block {
+    grid-column: span 2 !important; /* 6-col grid -> 3 per row */
+  }
+}
+
+/* Lavori eseguiti: keep the main heading on one line on desktop */
+@media screen and (min-width: 990px) {
+  .template--lavori-eseguiti .seo-content .section__heading.h2 {
+    font-size: clamp(3.8rem, 3.35vw, 5.2rem);
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+}
+
 /* Lavori eseguiti: injected info request form spacing */
 .z-info-request-form {
   margin-top: 3.2rem;
