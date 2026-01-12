@@ -12,6 +12,18 @@
     <div class="container {{ section.settings.section_width }}">
       {%- liquid
         assign request_type = section.settings.request_type | default: 'Richiesta informazioni'
+        assign page_title_for_email = ''
+        if page != blank
+          assign page_title_for_email = page.title
+        elsif product != blank
+          assign page_title_for_email = product.title
+        elsif collection != blank
+          assign page_title_for_email = collection.title
+        elsif article != blank
+          assign page_title_for_email = article.title
+        elsif blog != blank
+          assign page_title_for_email = blog.title
+        endif
       -%}
 
       <div class="form-contact__heading col-span-6">
@@ -37,6 +49,10 @@
 
         <input type="hidden" name="contact[richiesta]" value="{{ request_type }}">
         <input type="hidden" name="contact[pagina]" value="{{ request.path }}">
+        <input type="hidden" name="contact[pagina_url]" value="{{ shop.url }}{{ request.path }}">
+        {%- if page_title_for_email != blank -%}
+          <input type="hidden" name="contact[pagina_titolo]" value="{{ page_title_for_email | escape }}">
+        {%- endif -%}
 
         <div class="col-span-3">
           {%- render 'text-input',
