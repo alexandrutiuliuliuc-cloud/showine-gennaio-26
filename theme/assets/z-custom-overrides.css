@@ -14,6 +14,13 @@
   --header-search-ring: rgba(var(--color-foreground), 0.18);
 }
 
+/* Hero main heading: desktop-only line break */
+@media screen and (max-width: 989px) {
+  .hero-banner h2 br {
+    display: none;
+  }
+}
+
 /* NOTE: keep search readable even if header transparency logic changes.
    If you need white-on-transparent again, reintroduce a dedicated `.is-transparent` class. */
 
