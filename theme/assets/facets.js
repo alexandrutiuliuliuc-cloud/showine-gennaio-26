@@ -3,6 +3,7 @@ class FacetFiltersForm extends HTMLElement {
     super();
 
     this.onActiveFilterClick = this.onActiveFilterClick.bind(this);
+    this.onApplyFiltersClick = this.onApplyFiltersClick.bind(this);
 
     this.debouncedOnSubmit = debounce((event) => {
       this.onSubmitHandler(event);
@@ -11,8 +12,45 @@ class FacetFiltersForm extends HTMLElement {
     const facetForm = this.querySelector('form');
     facetForm.addEventListener('input', this.debouncedOnSubmit.bind(this));
 
+    // Mobile drawer: "Apply filters" button closes the drawer but doesn't fire an input event.
+    // If the user drags the price slider and immediately taps "Apply", the debounced submit may not run yet.
+    // Force an immediate apply on click, without relying on `event.target.closest('.js-filter')`.
+    this.querySelectorAll('.drawer__content-facets .drawer__row--buttons .js-btn-close-drawer').forEach((btn) => {
+      btn.addEventListener('click', this.onApplyFiltersClick);
+    });
+
     const facetWrapper = this.querySelector('#FacetsWrapperDesktop');
     if (facetWrapper) facetWrapper.addEventListener('keyup', onKeyUpEscape);
+  }
+
+  onApplyFiltersClick(event) {
+    // Don't block the drawer close behavior; just trigger an immediate render.
+    try {
+      const params = new URLSearchParams();
+
+      // Keep sort_by if present
+      const currentParams = new URLSearchParams(window.location.search);
+      const sortParam = currentParams.get('sort_by');
+      if (sortParam) params.set('sort_by', sortParam);
+
+      // Collect current form state from all facet forms (same logic as onSubmitHandler)
+      const sortFilterForms = document.querySelectorAll('facet-filters-form form');
+      sortFilterForms.forEach((form) => {
+        const checkboxInputs = form.querySelectorAll('input[type="checkbox"]');
+        checkboxInputs.forEach((input) => {
+          if (input.checked) params.append(input.name, input.value);
+        });
+
+        const otherInputs = form.querySelectorAll('input[name]:not([type="checkbox"]):not([type="range"])');
+        otherInputs.forEach((input) => {
+          if (input.value) params.set(input.name, input.value);
+        });
+      });
+
+      FacetFiltersForm.renderPage(params.toString(), null, true);
+    } catch (e) {
+      // noop: never break the drawer UX
+    }
   }
 
   static setListeners() {

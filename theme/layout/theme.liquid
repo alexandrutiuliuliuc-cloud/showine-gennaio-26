@@ -189,8 +189,13 @@
       Let Shopify show the in-page success message instead.
     {%- endcomment -%}
   
-  <!-- auto: open only Price filter -->
+  {%- comment -%}
+    Disabled: this script forces the price filter accordion open via a MutationObserver and can cause
+    buggy mobile behavior in the facets drawer (range UI appears to reset / flicker).
+  {%- endcomment -%}
+  {%- comment -%}
   <script src="{{ 'z-open-price-filter.js' | asset_url }}" defer></script>
+  {%- endcomment -%}
 
   {%- comment -%}
     Disabled: this script injects a fallback search in the header and can create a duplicate "mini" search.

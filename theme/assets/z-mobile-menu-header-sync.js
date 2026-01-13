@@ -5,11 +5,23 @@
 (function () {
   // Mobile + iPad/tablet touch should use the "mobile" header height sync logic.
   const MQ = window.matchMedia('(max-width: 989px), (hover: none) and (pointer: coarse) and (max-width: 1366px)');
+  let moHeader = null;
+  let moDrawer = null;
 
   function isDisplayed(el) {
     if (!el) return false;
     const cs = window.getComputedStyle(el);
     return cs.display !== 'none' && cs.visibility !== 'hidden';
+  }
+
+  function isMenuDrawerOpen(header) {
+    if (!header) return false;
+    const drawerContainer = header.querySelector('.header__drawer > .drawer__container');
+    return (
+      header.classList.contains('menu-open') ||
+      (drawerContainer && drawerContainer.hasAttribute('open')) ||
+      (drawerContainer && drawerContainer.classList.contains('menu-opening'))
+    );
   }
 
   function measureVisibleHeaderHeight(header) {
@@ -19,8 +31,12 @@
     let h = 0;
     if (inner) h += inner.getBoundingClientRect().height || 0;
 
-    // On mobile the search sits below the inner row and is hidden when the menu is open.
-    if (isDisplayed(search)) h += search.getBoundingClientRect().height || 0;
+    // IMPORTANT: when the drawer is open, only the inner row must count as header height.
+    // Otherwise the drawer will start too low and reveal the slideshow behind it.
+    if (!isMenuDrawerOpen(header)) {
+      // On mobile the search sits below the inner row.
+      if (isDisplayed(search)) h += search.getBoundingClientRect().height || 0;
+    }
 
     // Fallback to overall header height if structure changes.
     if (!h) h = header.getBoundingClientRect().height || 0;
@@ -53,9 +69,6 @@
 
   function init() {
     if (!MQ.matches) return;
-    const header = document.querySelector('#header');
-    if (!header) return;
-
     // Measure after layout has applied (menu-open hides the search via CSS).
     const updateSoon = () => {
       requestAnimationFrame(() =>
@@ -66,24 +79,48 @@
       );
     };
 
+    // Disconnect previous observers (important in Shopify Theme Editor where sections re-render)
+    try {
+      if (moHeader) moHeader.disconnect();
+      if (moDrawer) moDrawer.disconnect();
+    } catch (e) {}
+    moHeader = null;
+    moDrawer = null;
+
+    const header = document.querySelector('#header');
+    if (!header) return;
+
     updateSoon();
 
-    const mo = new MutationObserver(() => updateSoon());
-    mo.observe(header, { attributes: true, attributeFilter: ['class'] });
+    moHeader = new MutationObserver(() => updateSoon());
+    moHeader.observe(header, { attributes: true, attributeFilter: ['class'] });
 
     const drawerContainer = header.querySelector('.header__drawer > .drawer__container');
     if (drawerContainer) {
-      const moDrawer = new MutationObserver(() => updateSoon());
+      moDrawer = new MutationObserver(() => updateSoon());
       moDrawer.observe(drawerContainer, { attributes: true, attributeFilter: ['open', 'class'] });
     }
 
-    window.addEventListener('resize', updateSoon, { passive: true });
+    // One-time global listeners
+    if (!window.__showineMobileMenuSyncBound) {
+      window.__showineMobileMenuSyncBound = true;
+      window.addEventListener('resize', updateSoon, { passive: true });
 
-    // Global theme code also recalculates --header-height on scroll; keep ours authoritative on mobile.
-    window.addEventListener('scroll', () => setTimeout(updateHeaderHeight, 0), { passive: true });
+      // Global theme code also recalculates --header-height on scroll; keep ours authoritative on mobile.
+      window.addEventListener('scroll', () => setTimeout(updateHeaderHeight, 0), { passive: true });
+
+      // Shopify Theme Editor: sections can be re-rendered without a full page reload.
+      // Re-init so observers attach to the new #header node.
+      document.addEventListener('shopify:section:load', init);
+      document.addEventListener('shopify:section:select', init);
+      document.addEventListener('shopify:section:deselect', init);
+      document.addEventListener('shopify:section:reorder', init);
+    }
   }
 
   document.addEventListener('DOMContentLoaded', init);
+  // In case this script is loaded after DOMContentLoaded (Theme Editor partial reloads), run once.
+  if (document.readyState !== 'loading') init();
 })();
 
 
