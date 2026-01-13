@@ -566,23 +566,24 @@ function updateProductsShownProgress() {
   const progress = document.querySelector('[data-products-progress]');
   if (!progress) return;
 
-  // Source of truth:
-  // - total = progress dataset (comes from Liquid, updated via renderProductCount())
-  // - shown = number of product cards currently rendered
+  // Source of truth comes from Liquid (updated via renderProductCount()):
+  // - total = collection total
+  // - now   = filtered results count (or total when no filters)
   const total = Number(progress.dataset.total || 0);
-  const shown = document.querySelectorAll('#product-grid product-card').length;
+  const now = Number(progress.dataset.now || 0);
 
   if (!total) return;
 
   const bar = progress.querySelector('[data-products-progress-bar]');
   if (!bar) return;
 
-  const pct = Math.max(0, Math.min(100, (shown / total) * 100));
+  const safeNow = Math.max(0, Math.min(total, now || 0));
+  const pct = Math.max(0, Math.min(100, (safeNow / total) * 100));
   bar.style.width = `${pct}%`;
 
   progress.setAttribute('aria-valuemin', '0');
   progress.setAttribute('aria-valuemax', String(total));
-  progress.setAttribute('aria-valuenow', String(shown));
+  progress.setAttribute('aria-valuenow', String(safeNow));
 }
 
 document.addEventListener('DOMContentLoaded', () => {

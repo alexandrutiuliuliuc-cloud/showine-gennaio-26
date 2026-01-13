@@ -458,6 +458,21 @@ main .color-scheme-5:not(.header-is-transparent) {
   /* Count row goes full width below */
   .template--collection .section-collection .collection-facets__item.facets__product-count {
     flex: 1 0 100%;
+    margin-block-start: 0.8rem; /* more space below Filters/Sorting row */
+  }
+
+  /* Give a bit more breathing room between count text and progress bar */
+  .template--collection .section-collection .collection-facets__item.facets__product-count .collection-facets__status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* count left, bar right */
+    gap: 1.2rem;
+  }
+
+  /* Make the progress bar take less horizontal space on mobile */
+  .template--collection .section-collection .collection-facets__products-progress[data-products-progress] {
+    flex: 0 0 clamp(9.6rem, 34vw, 14.4rem);
+    max-width: clamp(9.6rem, 34vw, 14.4rem);
   }
 }
 
@@ -468,6 +483,14 @@ main .color-scheme-5:not(.header-is-transparent) {
    while the banner itself already adds internal padding to keep content readable under the header. */
 body.template--collection:has(main#MainContent > .shopify-section.section-page-banner:first-of-type .header-is-transparent) main#MainContent {
   margin-block-start: calc(-1 * var(--header-height, 0px));
+}
+
+/* Fix: on mobile this rule can clip the page banner/breadcrumb under the header.
+   Keep the banner intact on mobile. */
+@media screen and (max-width: 749px) {
+  body.template--collection:has(main#MainContent > .shopify-section.section-page-banner:first-of-type .header-is-transparent) main#MainContent {
+    margin-block-start: 0 !important;
+  }
 }
 
 /* Collection: "Carica altri" button (load more) */

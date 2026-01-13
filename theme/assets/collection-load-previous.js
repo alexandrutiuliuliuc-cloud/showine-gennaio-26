@@ -10,21 +10,11 @@ if (!customElements.get("collection-load-previous")) {
 
       this.setProperties();
 
-      const updateProductCount = () => {
-        const productCount = document.querySelectorAll('.collection__grid .product-card').length;
-        const productCountOfAll = document.querySelector('.collection-facets__product-count .product-count-of-all');
-        if (productCountOfAll) {
-          productCountOfAll.innerText = productCount;
-        }
-      };
-      updateProductCount();
-
       this.btnLoadPrevious.addEventListener('click', e => {
         e.preventDefault();
         this.btnLoadPrevious.setAttribute('disabled', true);
 
         this.loadPreviousProducts().then(() => {
-          updateProductCount();
           this.btnLoadPrevious.removeAttribute('disabled');
         });
       });

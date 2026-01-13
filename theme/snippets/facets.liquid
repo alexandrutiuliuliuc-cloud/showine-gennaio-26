@@ -187,91 +187,50 @@
               <span>{{- 'collection.product_show' | t -}}</span>
             {%- endunless -%}
             <span class="collection-facets__product-count" id="ProductCount">
-        {%- if section.settings.pagination_style == 'load_more' -%}
-          {%- liquid
-            comment
-              Showine:
-              For "load more" collections we want the counter to represent TOTAL results,
-              not "currently rendered" items. So we render "N di N prodotti".
-            endcomment
+        {%- liquid
+          comment
+            Showine:
+            Display a stable count that always uses the collection total as denominator:
+            - No filters active: "47 di 47"
+            - Filters active:    "6 di 47" (filtered results / total products in collection)
+          endcomment
 
-            if results.results_count != blank
-              assign total_count = results.results_count
-            elsif has_active_filters
-              assign total_count = results.products_count | default: results.all_products_count
-            else
-              assign total_count = results.all_products_count | default: results.products_count
-            endif
+          assign total_count = results.all_products_count | default: results.products_count | default: results.results_count
 
-            if total_count != blank and total_count > 0
-              echo 'collection.product_count_html' | t: product_count: total_count, count: total_count
-            endif
-          -%}
-        {%- else -%}
-          {%- if results.results_count -%}
-            {%- liquid
-              if results.results_count > 0
-                if products_per_page > results.results_count
-                  echo 'collection.product_count_html' | t: product_count: results.results_count, count: results.results_count
-                else
-                  echo 'collection.product_count_html' | t: product_count: products_per_page, count: results.results_count
-                endif
-              endif
-            -%}
-          {%- elsif results.products_count == results.all_products_count -%}
-            {%- if section.settings.pagination_style == 'default' -%}
-              {%- if results.all_products_count == 1 -%}
-                {{ 'collection.product_count.one' | t: product_count: results.products_count, count: results.all_products_count }}
-              {%- else -%}
-                {%- if results.products_count > products_per_page -%}
-                  {% paginate collection.products by products_per_page -%}
-                    {%- if paginate.pages > 1 and paginate.pages == paginate.current_page -%}
-                      {% assign product_count =  results.products_count | minus: paginate.current_offset %}
-                      {{ 'collection.product_count.other' | t: product_count: product_count, count: results.all_products_count }}
-                    {%- else-%}
-                      {{ 'collection.product_count.other' | t: product_count: products_per_page, count: results.all_products_count }}
-                    {%- endif-%}
-                  {%- endpaginate %}
-                {%- else -%}
-                  {{ 'collection.product_count.other' | t: product_count: results.products_count, count: results.all_products_count }}
-                {%- endif -%}
-              {%- endif -%}
-            {%- else -%}
-              {% paginate collection.products by products_per_page -%}
-                {%- if paginate.pages > 1 -%}
-                  {{ 'collection.product_count_html' | t: product_count: results.products_count, count: results.all_products_count }}
-                {%- else -%}
-                  {{ 'collection.product_count' | t: product_count: results.products_count, count: results.all_products_count }}
-                {%- endif -%}
-              {%- endpaginate %}
-            {%- endif -%}
-          {%- else -%}
-            {{ 'collection.product_count_html' | t: product_count: results.products_count, count: results.all_products_count }}
-          {%- endif -%}
-        {%- endif -%}
+          if has_active_filters
+            assign current_count = results.results_count | default: results.products_count
+          else
+            assign current_count = total_count
+          endif
+
+          if total_count != blank and total_count > 0 and current_count != blank
+            echo 'collection.product_count_html' | t: product_count: current_count, count: total_count
+          endif
+        -%}
             </span>
             {%- liquid
               comment
-                Progressbar "prodotti mostrati / totali":
-                - total = risultati correnti (dopo filtri) dove possibile
-                - shown = calcolato via JS contando i <product-card> renderizzati
+                Progressbar:
+                Keep it coherent with the visible count "X di Y":
+                - now   = X (filtered results count or total when no filters)
+                - total = Y (collection total)
               endcomment
 
-        if results.results_count != blank
-          assign total_for_progress = results.results_count
-        elsif has_active_filters
-          assign total_for_progress = results.products_count | default: results.all_products_count
-        else
-          assign total_for_progress = results.all_products_count | default: results.products_count
-        endif
+              assign total_for_progress = total_count
+              assign now_for_progress = current_count
+
               if total_for_progress == blank or total_for_progress < 1
                 assign total_for_progress = 0
+              endif
+              if now_for_progress == blank or now_for_progress < 0
+                assign now_for_progress = 0
               endif
             -%}
             {%- if total_for_progress > 0 -%}
               <span
                 class="collection-facets__products-progress"
                 data-products-progress
+                data-now="{{ now_for_progress }}"
                 data-total="{{ total_for_progress }}"
                 role="progressbar"
                 aria-label="Prodotti mostrati"

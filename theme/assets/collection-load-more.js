@@ -17,21 +17,11 @@ if (!customElements.get('collection-load-more')) {
         this.toggleProductsVisibility();
       });
 
-      const updateProductCount = () => {
-        const productCount = document.querySelectorAll('.collection__grid .product-card').length;
-        const productCountOfAll = document.querySelector('.collection-facets__product-count .product-count-of-all');
-        if (productCountOfAll) {
-          productCountOfAll.innerText = productCount;
-        }
-      };
-      updateProductCount();
-
       this.btnLoadMore.addEventListener("click", e => {
         e.preventDefault();
         this.btnLoadMore.setAttribute("disabled", true);
 
         this.loadMoreProducts().then(() => {
-          updateProductCount();
           this.btnLoadMore.removeAttribute("disabled");
         });
       });
