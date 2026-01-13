@@ -36,20 +36,14 @@
 {%- endif -%}
 
 {%- liquid
-  assign product_cells_on_page = section.settings.products_per_page
-  assign card_cells_on_page = 0
-  for block in section.blocks
-    assign block_area = block.settings.column_factor | times: block.settings.row_factor
-    assign card_cells_on_page = card_cells_on_page | plus: block_area
-  endfor
-  assign cells_on_page = product_cells_on_page | plus: card_cells_on_page
-  assign cells_correction = cells_on_page | modulo: section.settings.products_per_row
-  assign cells_correction = section.settings.products_per_row | minus: cells_correction
+  comment
+    IMPORTANT (Showine):
+    `products_per_page` must represent the number of PRODUCTS, not "grid cells".
+    Card-text blocks are additional tiles and must NOT inflate product pagination/counts.
+    This fixes issues like "28 di 47 prodotti" when `products_per_page` is 24 and card-text blocks exist.
+  endcomment
 
-  assign products_per_page = section.settings.products_per_page | plus: cells_correction
-  if products_per_page > 50
-    assign products_per_page = 50
-  endif
+  assign products_per_page = section.settings.products_per_page | times: 1
 
   if section.settings.filters != 'none' or section.settings.enable_sorting or section.settings.enable_products_count
     render 'css', css: 'component-facets.css'

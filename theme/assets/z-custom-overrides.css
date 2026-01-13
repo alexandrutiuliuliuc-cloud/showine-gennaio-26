@@ -419,63 +419,55 @@ main .color-scheme-5:not(.header-is-transparent) {
     white-space: nowrap;
   }
 
-  /* Reserve space so the fixed filters control doesn't overlap "Carica altri" */
-  .template--collection .section-collection .collection__container {
-    padding-bottom: calc(7.2rem + env(safe-area-inset-bottom, 0px));
+  /* Mobile: place Filters (left) + Sorting (right) on the SAME row. */
+  .template--collection .section-collection .collection-facets__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1.2rem;
+    row-gap: 0.8rem;
   }
 
-  /* Bottom-center floating Filters button (clickable): position the SUMMARY itself (not the whole container). */
+  /* Filters (left) */
   .template--collection .section-collection .collection-facets__item.facets__filters {
-    position: static !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    border: 0 !important;
-    transform: none !important;
+    flex: 0 0 auto;
   }
 
-  /* Override theme's mobile sticky rule (it was forcing a fixed position with a big top margin). */
+  /* Override theme's old mobile sticky rule (it was forcing a fixed position with a big top margin). */
   .template--collection .section-collection .facets__filters--sticky {
     position: static !important;
     margin-top: 0 !important;
   }
 
   .template--collection .section-collection summary.drawer__button.facets__button-filters {
-    position: fixed !important;
-    inset-inline-start: 50% !important;
-    inset-block-end: calc(1.2rem + env(safe-area-inset-bottom, 0px)) !important;
-    transform: translateX(-50%) !important;
-    /* Keep it above page content, but BELOW the facets drawer (which uses --z-modals). */
-    z-index: calc(var(--z-modals) - 2) !important;
-    width: max-content;
-    max-width: calc(100% - (var(--page-gutter) * 2));
-    padding: 0.9rem 1.4rem !important;
-    border-radius: 999px !important;
-    background: rgb(var(--color-background)) !important;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
-    border: 0.1rem solid rgba(var(--color-foreground), 0.08) !important;
-    pointer-events: auto !important;
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    z-index: auto !important;
+    width: auto;
+    max-width: none;
     touch-action: manipulation;
   }
 
-  /* Ensure the filters summary doesn't stretch to huge height (theme sets height:100% in some cases). */
-  .template--collection .section-collection summary.drawer__button.facets__button-filters.facets__actions-button {
-    height: auto !important;
+  /* Sorting (right) */
+  .template--collection .section-collection facet-filters-form.collection-facets.facets__sorting {
+    margin-inline-start: auto;
   }
 
-  /* When the drawer is open, ensure the fixed summary button never sits on top of the drawer buttons. */
-  .template--collection .section-collection .facets__drawer details[open] > summary.drawer__button.facets__button-filters {
-    display: none !important;
+  /* Count row goes full width below */
+  .template--collection .section-collection .collection-facets__item.facets__product-count {
+    flex: 1 0 100%;
   }
+}
 
-  /* Theme editor (design mode): lift slightly above the bottom toolbar, but not too high. */
-  html.shopify-design-mode .template--collection .section-collection summary.drawer__button.facets__button-filters {
-    inset-block-end: calc(1.2rem + env(safe-area-inset-bottom, 0px) + 3.2rem) !important;
-  }
-  html.shopify-design-mode .template--collection .section-collection .collection__container {
-    padding-bottom: calc(7.2rem + env(safe-area-inset-bottom, 0px) + 3.2rem);
-  }
+/* (Reverted) Collection page banner spacing: keep the page banner padding intact. */
+
+/* Collection: remove the "blank strip" between header and the first page banner WITHOUT moving banner content.
+   If the first banner enables transparent header (`.header-is-transparent`), pull `main` up by header height,
+   while the banner itself already adds internal padding to keep content readable under the header. */
+body.template--collection:has(main#MainContent > .shopify-section.section-page-banner:first-of-type .header-is-transparent) main#MainContent {
+  margin-block-start: calc(-1 * var(--header-height, 0px));
 }
 
 /* Collection: "Carica altri" button (load more) */

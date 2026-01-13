@@ -626,6 +626,7 @@ class MenuDrawer extends HTMLElement {
       }
     } else {
       this.details.classList.remove("menu-opening");
+      if (headerDiv) headerDiv.classList.remove("menu-open");
       this.toggleButtons.forEach(toggleButton => {
         toggleButton.classList.remove("menu-is-open");
         toggleButton.setAttribute("aria-expanded", false);
@@ -642,6 +643,21 @@ class MenuDrawer extends HTMLElement {
       setTimeout(() => {
         this.details.removeAttribute("open");
       }, 500);
+
+      // Failsafe: if DOM updates interrupt transitions, scroll lock can remain stuck on mobile.
+      // After the close transition window, ensure scroll is restored if no drawer is open.
+      setTimeout(() => {
+        try {
+          const anyDrawerOpen = Boolean(document.querySelector("details.menu-opening"));
+          if (anyDrawerOpen) return;
+
+          document.body.style.overflow = "";
+          document.body.classList.remove("drawer--is-open");
+          document.documentElement.style.overflow = "";
+          document.documentElement.style.position = "";
+          document.documentElement.style.width = "";
+        } catch (e) {}
+      }, 650);
     }
 
     const handleDropdownTransition = e => {
@@ -671,11 +687,29 @@ class MenuDrawer extends HTMLElement {
         });
       }
 
+      // Restore/lock scrolling based on whether the drawer is ACTUALLY open.
+      // `details[open]` can remain true briefly during close transitions (attr removed after timeout),
+      // so use the runtime class `menu-opening` as the source of truth to avoid getting stuck.
+      const isDrawerOpen = this.details.classList.contains("menu-opening");
+
       if (this.isParentDrawerOpen) {
-        this.parentDrawer.style.overflow = "";
-        document.body.style.overflow = "";
+        this.parentDrawer.style.overflow = isDrawerOpen ? "hidden" : "";
+        document.body.style.overflow = isDrawerOpen ? "hidden" : "";
       } else {
-        document.body.style.overflow = "hidden";
+        document.body.style.overflow = isDrawerOpen ? "hidden" : "";
+
+        // Keep html/body lock state consistent with drawer state (iOS especially needs html position reset).
+        if (isDrawerOpen) {
+          document.body.classList.add("drawer--is-open");
+          document.documentElement.style.overflow = "hidden";
+          document.documentElement.style.position = "fixed";
+          document.documentElement.style.width = "100%";
+        } else {
+          document.body.classList.remove("drawer--is-open");
+          document.documentElement.style.overflow = "";
+          document.documentElement.style.position = "";
+          document.documentElement.style.width = "";
+        }
       }
 
       e.target.removeEventListener(

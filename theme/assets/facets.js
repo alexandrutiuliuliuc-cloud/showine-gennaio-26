@@ -25,6 +25,8 @@ class FacetFiltersForm extends HTMLElement {
   onApplyFiltersClick(event) {
     // Apply immediately using the current (visible) filter form state, then close the drawer.
     try {
+      if (event && typeof event.preventDefault === 'function') event.preventDefault();
+
       const params = new URLSearchParams();
 
       // Keep sort_by if present
@@ -58,16 +60,23 @@ class FacetFiltersForm extends HTMLElement {
         });
       }
 
-      FacetFiltersForm.renderPage(params.toString(), null, true);
-
-      // Close the facets drawer using the same menu-drawer logic as desktop/mobile.
-      // (This keeps scroll lock handling centralized in global.js, avoiding stuck states.)
+      // Close the facets drawer FIRST using the theme's menu-drawer logic.
+      // If we re-render filters while the drawer is open/closing, the DOM replacement can interrupt
+      // the scroll-lock cleanup (html position: fixed), leaving the page unscrollable on mobile.
       const menuDrawer = event && event.currentTarget && event.currentTarget.closest
         ? event.currentTarget.closest('menu-drawer')
         : null;
       if (menuDrawer && typeof menuDrawer.toggleDrawer === 'function') {
         menuDrawer.toggleDrawer();
       }
+
+      // Apply AFTER the drawer close transition has finished (~500ms in global.js).
+      // This mirrors desktop smoothness and avoids scroll-lock glitches.
+      setTimeout(() => {
+        try {
+          FacetFiltersForm.renderPage(params.toString(), null, true);
+        } catch (e) {}
+      }, 550);
     } catch (e) {
       // noop: never break the drawer UX
     }
@@ -361,6 +370,40 @@ FacetFiltersForm.searchParamsInitial = window.location.search.slice(1);
 FacetFiltersForm.searchParamsPrev = window.location.search.slice(1);
 customElements.define('facet-filters-form', FacetFiltersForm);
 FacetFiltersForm.setListeners();
+
+/**
+ * Showine: Fix stale filter/count state on back/forward cache (bfcache) and cross-page returns.
+ *
+ * Root cause:
+ * - Browsers (especially mobile Safari) can restore collection pages from bfcache, preserving in-memory JS state.
+ * - `FacetFiltersForm.searchParamsPrev` / `.filterData` can remain from the previous visit, causing mismatches like:
+ *   price UI reset but product count stays from the previous filtered state (or vice versa).
+ *
+ * Fix:
+ * - On `pageshow` persisted restores, clear cached state and re-render based on the current URL.
+ */
+(function () {
+  function isCollectionPage() {
+    return document.body && document.body.classList && document.body.classList.contains('template--collection');
+  }
+
+  function resetFacetsStateFromUrl() {
+    try {
+      FacetFiltersForm.filterData = [];
+      FacetFiltersForm.searchParamsInitial = window.location.search.slice(1);
+      // Force a render even if the URL params match the previous in-memory value.
+      FacetFiltersForm.searchParamsPrev = '__reset__';
+      FacetFiltersForm.renderPage(FacetFiltersForm.searchParamsInitial, null, false);
+    } catch (e) {}
+  }
+
+  window.addEventListener('pageshow', (event) => {
+    if (!isCollectionPage()) return;
+    if (event && event.persisted) {
+      resetFacetsStateFromUrl();
+    }
+  });
+})();
 
 class PriceRange extends HTMLElement {
   constructor() {
