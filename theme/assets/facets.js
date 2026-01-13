@@ -160,14 +160,26 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static renderProductCount(html) {
-    const count = new DOMParser().parseFromString(html, 'text/html').getElementById('ProductCount').innerHTML;
-    const container = document.getElementById('ProductCount');
-    const containerDesktop = document.getElementById('ProductCountDesktop');
-    container.innerHTML = count;
-    container.classList.remove('loading');
-    if (containerDesktop) {
-      containerDesktop.innerHTML = count;
-      containerDesktop.classList.remove('loading');
+    const parsed = new DOMParser().parseFromString(html, 'text/html');
+
+    // Prefer updating the whole status block so we also refresh the progressbar `data-total`.
+    const newStatus = parsed.querySelector('.collection-facets__status');
+    const curStatus = document.querySelector('.collection-facets__status');
+    if (newStatus && curStatus) {
+      curStatus.outerHTML = newStatus.outerHTML;
+    } else {
+      // Fallback to legacy behavior (text only).
+      const nextCount = parsed.getElementById('ProductCount')?.innerHTML;
+      const container = document.getElementById('ProductCount');
+      const containerDesktop = document.getElementById('ProductCountDesktop');
+      if (container && typeof nextCount === 'string') {
+        container.innerHTML = nextCount;
+        container.classList.remove('loading');
+      }
+      if (containerDesktop && typeof nextCount === 'string') {
+        containerDesktop.innerHTML = nextCount;
+        containerDesktop.classList.remove('loading');
+      }
     }
 
     if (typeof updateProductsShownProgress === 'function') updateProductsShownProgress();
@@ -554,31 +566,11 @@ function updateProductsShownProgress() {
   const progress = document.querySelector('[data-products-progress]');
   if (!progress) return;
 
-  // Prefer parsing the already-rendered count text (source of truth in the UI),
-  // e.g. "12 di 15 prodotti" / "12 of 15 products".
-  let shown = 0;
-  let total = 0;
-  const countEl = document.getElementById('ProductCount');
-  if (countEl) {
-    const text = (countEl.textContent || '').replace(/\s+/g, ' ').trim();
-    // Try "X di Y" or "X of Y"
-    const m = text.match(/(\d+)\s*(?:di|of)\s*(\d+)/i);
-    if (m) {
-      shown = Number(m[1]);
-      total = Number(m[2]);
-    } else {
-      // Fallback: first two integers in the string
-      const nums = text.match(/\d+/g);
-      if (nums && nums.length >= 2) {
-        shown = Number(nums[0]);
-        total = Number(nums[1]);
-      }
-    }
-  }
-
-  // Fallback to dataset total + DOM count if parsing failed
-  if (!total) total = Number(progress.dataset.total || 0);
-  if (!shown) shown = document.querySelectorAll('#product-grid product-card').length;
+  // Source of truth:
+  // - total = progress dataset (comes from Liquid, updated via renderProductCount())
+  // - shown = number of product cards currently rendered
+  const total = Number(progress.dataset.total || 0);
+  const shown = document.querySelectorAll('#product-grid product-card').length;
 
   if (!total) return;
 

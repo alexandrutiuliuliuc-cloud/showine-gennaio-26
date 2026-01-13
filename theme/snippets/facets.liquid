@@ -158,6 +158,26 @@
         </facet-filters-form>
       {%- endif -%}
       {%- if section.settings.enable_products_count -%}
+  {%- liquid
+    comment
+      Showine: determine whether any filters are active.
+      We use this to control how we present the product count.
+    endcomment
+    assign has_active_filters = false
+    if results.filters != empty
+      for f in results.filters
+        if f.active_values != blank and f.active_values.size > 0
+          assign has_active_filters = true
+          break
+        endif
+        if f.active
+          assign has_active_filters = true
+          break
+        endif
+      endfor
+    endif
+  -%}
+
         <div class="collection-facets__item facets__product-count">
           {%- if results.filters != empty -%}
             <div class="facets__divider small-hide {% if filters == 'sidebar' %} small-up-hide{% endif %}">&nbsp;</div>
@@ -167,46 +187,68 @@
               <span>{{- 'collection.product_show' | t -}}</span>
             {%- endunless -%}
             <span class="collection-facets__product-count" id="ProductCount">
-              {%- if results.results_count -%}
-                {%- liquid
-                  if results.results_count > 0
-                    if products_per_page > results.results_count
-                      echo 'collection.product_count_html' | t: product_count: results.results_count, count: results.results_count
-                    else
-                      echo 'collection.product_count_html' | t: product_count: products_per_page, count: results.results_count
-                    endif
-                  endif
-                -%}
-              {%- elsif results.products_count == results.all_products_count -%}
-                {%- if section.settings.pagination_style == 'default' -%}
-                  {%- if results.all_products_count == 1 -%}
-                    {{ 'collection.product_count.one' | t: product_count: results.products_count, count: results.all_products_count }}
-                  {%- else -%}
-                    {%- if results.products_count > products_per_page -%}
-                      {% paginate collection.products by products_per_page -%}
-                        {%- if paginate.pages > 1 and paginate.pages == paginate.current_page -%}
-                          {% assign product_count =  results.products_count | minus: paginate.current_offset %}
-                          {{ 'collection.product_count.other' | t: product_count: product_count, count: results.all_products_count }}
-                        {%- else-%}
-                          {{ 'collection.product_count.other' | t: product_count: products_per_page, count: results.all_products_count }}
-                        {%- endif-%}
-                      {%- endpaginate %}
-                    {%- else -%}
-                      {{ 'collection.product_count.other' | t: product_count: results.products_count, count: results.all_products_count }}
-                    {%- endif -%}
-                  {%- endif -%}
-                {%- else -%}
-                  {% paginate collection.products by products_per_page -%}
-                    {%- if paginate.pages > 1 -%}
-                      {{ 'collection.product_count_html' | t: product_count: results.products_count, count: results.all_products_count }}
-                    {%- else -%}
-                      {{ 'collection.product_count' | t: product_count: results.products_count, count: results.all_products_count }}
-                    {%- endif -%}
-                  {%- endpaginate %}
-                {%- endif -%}
+        {%- if section.settings.pagination_style == 'load_more' -%}
+          {%- liquid
+            comment
+              Showine:
+              For "load more" collections we want the counter to represent TOTAL results,
+              not "currently rendered" items. So we render "N di N prodotti".
+            endcomment
+
+            if results.results_count != blank
+              assign total_count = results.results_count
+            elsif has_active_filters
+              assign total_count = results.products_count | default: results.all_products_count
+            else
+              assign total_count = results.all_products_count | default: results.products_count
+            endif
+
+            if total_count != blank and total_count > 0
+              echo 'collection.product_count_html' | t: product_count: total_count, count: total_count
+            endif
+          -%}
+        {%- else -%}
+          {%- if results.results_count -%}
+            {%- liquid
+              if results.results_count > 0
+                if products_per_page > results.results_count
+                  echo 'collection.product_count_html' | t: product_count: results.results_count, count: results.results_count
+                else
+                  echo 'collection.product_count_html' | t: product_count: products_per_page, count: results.results_count
+                endif
+              endif
+            -%}
+          {%- elsif results.products_count == results.all_products_count -%}
+            {%- if section.settings.pagination_style == 'default' -%}
+              {%- if results.all_products_count == 1 -%}
+                {{ 'collection.product_count.one' | t: product_count: results.products_count, count: results.all_products_count }}
               {%- else -%}
-                {{ 'collection.product_count_html' | t: product_count: results.products_count, count: results.all_products_count }}
+                {%- if results.products_count > products_per_page -%}
+                  {% paginate collection.products by products_per_page -%}
+                    {%- if paginate.pages > 1 and paginate.pages == paginate.current_page -%}
+                      {% assign product_count =  results.products_count | minus: paginate.current_offset %}
+                      {{ 'collection.product_count.other' | t: product_count: product_count, count: results.all_products_count }}
+                    {%- else-%}
+                      {{ 'collection.product_count.other' | t: product_count: products_per_page, count: results.all_products_count }}
+                    {%- endif-%}
+                  {%- endpaginate %}
+                {%- else -%}
+                  {{ 'collection.product_count.other' | t: product_count: results.products_count, count: results.all_products_count }}
+                {%- endif -%}
               {%- endif -%}
+            {%- else -%}
+              {% paginate collection.products by products_per_page -%}
+                {%- if paginate.pages > 1 -%}
+                  {{ 'collection.product_count_html' | t: product_count: results.products_count, count: results.all_products_count }}
+                {%- else -%}
+                  {{ 'collection.product_count' | t: product_count: results.products_count, count: results.all_products_count }}
+                {%- endif -%}
+              {%- endpaginate %}
+            {%- endif -%}
+          {%- else -%}
+            {{ 'collection.product_count_html' | t: product_count: results.products_count, count: results.all_products_count }}
+          {%- endif -%}
+        {%- endif -%}
             </span>
             {%- liquid
               comment
@@ -215,7 +257,13 @@
                 - shown = calcolato via JS contando i <product-card> renderizzati
               endcomment
 
-              assign total_for_progress = results.results_count | default: results.products_count | default: results.all_products_count
+        if results.results_count != blank
+          assign total_for_progress = results.results_count
+        elsif has_active_filters
+          assign total_for_progress = results.products_count | default: results.all_products_count
+        else
+          assign total_for_progress = results.all_products_count | default: results.products_count
+        endif
               if total_for_progress == blank or total_for_progress < 1
                 assign total_for_progress = 0
               endif
