@@ -88,7 +88,12 @@
                                 {%- render 'button', type: 'link', class: 'button button--full facets__clear-button', button_style: 'button--outlined', value: clear_text, href: results_sort_url -%}
                               </facet-remove>
                               {%- assign show_results_button_value = 'collection.apply_filters' | t -%}
-                              {%- render 'button', type: 'button', class: 'button button--full js-btn-close-drawer no-js-hidden', button_style: 'button--filled', value: show_results_button_value -%}
+                              {%- comment -%}
+                                Important: do NOT use `.js-btn-close-drawer` for the Apply button.
+                                That class is handled by `menu-drawer` (global.js) and can interfere with
+                                the facets AJAX re-render + scroll lock on mobile.
+                              {%- endcomment -%}
+                              {%- render 'button', type: 'button', class: 'button button--full js-facets-apply no-js-hidden', button_style: 'button--filled', value: show_results_button_value -%}
                             </div>
                           </div>
                         </details>
@@ -112,7 +117,7 @@
             <div class="collection-facets__sorting">
               <div class="collection-facets__item {{ section.settings.button_style }}">
                 <div class="facets">
-                  <form id="FacetFiltersForm" class="facets__form">
+                  <form id="FacetSortForm" class="facets__form">
                     <ul class="facets__actions-list list-unstyled">
                       <li class="facets__actions-item js-filter" data-index="sort-by">
                         {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}

@@ -1,10 +1,4 @@
 {% liquid
-  assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
-  assign uses_comma_decimals = false
-  if currencies_using_comma_decimals contains cart.currency.iso_code
-    assign uses_comma_decimals = true
-  endif
-
   assign opened_accordions = opened_accordions | default: false
 
   assign total_active_values = total_active_values | plus: filter.active_values.size
@@ -99,16 +93,16 @@
               - For slider + input[type=number] we use major units (e.g. 19.99) via divided_by: 100.0 (locale-agnostic).
             endcomment
 
-            assign range_max_major = filter.range_max | divided_by: 100.0
+            assign range_max_major = filter.range_max | divided_by: 100.0 | round: 0
 
             assign current_min_major = 0
             if filter.min_value.value
-              assign current_min_major = filter.min_value.value | divided_by: 100.0
+              assign current_min_major = filter.min_value.value | divided_by: 100.0 | round: 0
             endif
 
             assign current_max_major = range_max_major
             if filter.max_value.value
-              assign current_max_major = filter.max_value.value | divided_by: 100.0
+              assign current_max_major = filter.max_value.value | divided_by: 100.0 | round: 0
             endif
           -%}
 

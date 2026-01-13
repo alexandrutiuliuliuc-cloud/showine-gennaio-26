@@ -12,10 +12,9 @@ class FacetFiltersForm extends HTMLElement {
     const facetForm = this.querySelector('form');
     facetForm.addEventListener('input', this.debouncedOnSubmit.bind(this));
 
-    // Mobile drawer: "Apply filters" button closes the drawer but doesn't fire an input event.
-    // If the user drags the price slider and immediately taps "Apply", the debounced submit may not run yet.
-    // Force an immediate apply on click, without relying on `event.target.closest('.js-filter')`.
-    this.querySelectorAll('.drawer__content-facets .drawer__row--buttons .js-btn-close-drawer').forEach((btn) => {
+    // Mobile drawer: Apply button should trigger an immediate apply and then close the drawer.
+    // We deliberately DO NOT rely on `.js-btn-close-drawer` (handled by menu-drawer), to avoid scroll-lock glitches.
+    this.querySelectorAll('.drawer__content-facets .drawer__row--buttons .js-facets-apply').forEach((btn) => {
       btn.addEventListener('click', this.onApplyFiltersClick);
     });
 
@@ -24,7 +23,7 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   onApplyFiltersClick(event) {
-    // Don't block the drawer close behavior; just trigger an immediate render.
+    // Apply immediately using the current (visible) filter form state, then close the drawer.
     try {
       const params = new URLSearchParams();
 
@@ -33,21 +32,42 @@ class FacetFiltersForm extends HTMLElement {
       const sortParam = currentParams.get('sort_by');
       if (sortParam) params.set('sort_by', sortParam);
 
-      // Collect current form state from all facet forms (same logic as onSubmitHandler)
-      const sortFilterForms = document.querySelectorAll('facet-filters-form form');
-      sortFilterForms.forEach((form) => {
-        const checkboxInputs = form.querySelectorAll('input[type="checkbox"]');
-        checkboxInputs.forEach((input) => {
+      const form = this.querySelector('form#FacetFiltersForm') || this.querySelector('form');
+      if (form) {
+        // Checkboxes (multiple values)
+        form.querySelectorAll('input[type="checkbox"]').forEach((input) => {
           if (input.checked) params.append(input.name, input.value);
         });
 
-        const otherInputs = form.querySelectorAll('input[name]:not([type="checkbox"]):not([type="range"])');
-        otherInputs.forEach((input) => {
-          if (input.value) params.set(input.name, input.value);
+        // Other named inputs (price gte/lte, search terms, etc.) - omit empty values
+        form.querySelectorAll('input[name]:not([type="checkbox"]):not([type="range"])').forEach((input) => {
+          if (!input.value) return;
+
+          // Make price filter "intelligent": don't send defaults (0 → max)
+          if (input.name === 'filter.v.price.gte') {
+            const v = Number(String(input.value).replace(',', '.'));
+            if (!Number.isFinite(v) || v <= 0) return;
+          }
+          if (input.name === 'filter.v.price.lte') {
+            const v = Number(String(input.value).replace(',', '.'));
+            const maxAttr = Number(String(input.getAttribute('max') || '').replace(',', '.'));
+            if (Number.isFinite(maxAttr) && Number.isFinite(v) && v >= maxAttr) return;
+          }
+
+          params.set(input.name, input.value);
         });
-      });
+      }
 
       FacetFiltersForm.renderPage(params.toString(), null, true);
+
+      // Close the facets drawer using the same menu-drawer logic as desktop/mobile.
+      // (This keeps scroll lock handling centralized in global.js, avoiding stuck states.)
+      const menuDrawer = event && event.currentTarget && event.currentTarget.closest
+        ? event.currentTarget.closest('menu-drawer')
+        : null;
+      if (menuDrawer && typeof menuDrawer.toggleDrawer === 'function') {
+        menuDrawer.toggleDrawer();
+      }
     } catch (e) {
       // noop: never break the drawer UX
     }
@@ -156,13 +176,24 @@ class FacetFiltersForm extends HTMLElement {
       }
     });
 
+    // `event` can be null/undefined (e.g. when we force-apply on button click).
+    // Also, `event.target.closest('.js-filter')` can be null (e.g. if target isn't inside a filter block).
+    const jsFilterFromEvent = (() => {
+      try {
+        if (!event || !event.target) return undefined;
+        if (typeof event.target.closest !== 'function') return undefined;
+        return event.target.closest('.js-filter') || undefined;
+      } catch (e) {
+        return undefined;
+      }
+    })();
+
     const matchesId = (element) => {
-      const jsFilter = event ? event.target.closest('.js-filter') : undefined;
-      return jsFilter ? element.id === jsFilter.id : false;
+      return jsFilterFromEvent ? element.id === jsFilterFromEvent.id : false;
     };
 
     const facetsToRender = Array.from(facetDetailsElementsFromFetch).filter((element) => !matchesId(element));
-    const countsToRender = Array.from(facetDetailsElementsFromFetch).find(matchesId);
+    const countsToRender = jsFilterFromEvent ? Array.from(facetDetailsElementsFromFetch).find(matchesId) : null;
 
     facetsToRender.forEach((elementToRender, index) => {
       const currentElement = document.getElementById(elementToRender.id);
@@ -188,19 +219,22 @@ class FacetFiltersForm extends HTMLElement {
 
     FacetFiltersForm.renderActiveFacets(parsedHTML);
 
-    if (countsToRender) {
-      const closestJSFilterID = event.target.closest('.js-filter').id;
+    if (countsToRender && jsFilterFromEvent && jsFilterFromEvent.id) {
+      const closestJSFilterID = jsFilterFromEvent.id;
+      FacetFiltersForm.renderCounts(countsToRender, jsFilterFromEvent);
 
-      if (closestJSFilterID) {
-        FacetFiltersForm.renderCounts(countsToRender, event.target.closest('.js-filter'));
+      const newFacetDetailsElement = document.getElementById(closestJSFilterID);
+      const newElementToActivate = newFacetDetailsElement ? newFacetDetailsElement.querySelector('.facets__summary') : null;
 
-        const newFacetDetailsElement = document.getElementById(closestJSFilterID);
-        const newElementToActivate = newFacetDetailsElement.querySelector('.facets__summary');
+      const isTextInput = (() => {
+        try {
+          return event && event.target && event.target.getAttribute && event.target.getAttribute('type') === 'text';
+        } catch (e) {
+          return false;
+        }
+      })();
 
-        const isTextInput = event.target.getAttribute('type') === 'text';
-
-        if (newElementToActivate && !isTextInput) newElementToActivate.focus();
-      }
+      if (newElementToActivate && !isTextInput) newElementToActivate.focus();
     }
   }
 

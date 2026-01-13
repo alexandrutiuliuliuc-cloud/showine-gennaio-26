@@ -446,7 +446,8 @@ main .color-scheme-5:not(.header-is-transparent) {
     inset-inline-start: 50% !important;
     inset-block-end: calc(1.2rem + env(safe-area-inset-bottom, 0px)) !important;
     transform: translateX(-50%) !important;
-    z-index: calc(var(--z-modals) + 50) !important;
+    /* Keep it above page content, but BELOW the facets drawer (which uses --z-modals). */
+    z-index: calc(var(--z-modals) - 2) !important;
     width: max-content;
     max-width: calc(100% - (var(--page-gutter) * 2));
     padding: 0.9rem 1.4rem !important;
@@ -461,6 +462,11 @@ main .color-scheme-5:not(.header-is-transparent) {
   /* Ensure the filters summary doesn't stretch to huge height (theme sets height:100% in some cases). */
   .template--collection .section-collection summary.drawer__button.facets__button-filters.facets__actions-button {
     height: auto !important;
+  }
+
+  /* When the drawer is open, ensure the fixed summary button never sits on top of the drawer buttons. */
+  .template--collection .section-collection .facets__drawer details[open] > summary.drawer__button.facets__button-filters {
+    display: none !important;
   }
 
   /* Theme editor (design mode): lift slightly above the bottom toolbar, but not too high. */
