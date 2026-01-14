@@ -3,10 +3,15 @@
 {{- 'component-card-text.css' | asset_url | stylesheet_tag -}}
 
 {%- style -%}
+  /* Apply TOP section spacing to both subcats block and collection (as before),
+     but apply BOTTOM spacing only to the collection to avoid the large blank gap
+     under the subcategory pills + scrollbar. */
   #shopify-section-{{ section.id }} > div {
     padding-block-start: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_top }});
-    padding-block-end: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_bottom }});
     --products_per_row: {{ section.settings.products_per_row_mobile }};
+  }
+  #shopify-section-{{ section.id }} > .collection {
+    padding-block-end: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_bottom }});
   }
   {%- if section.settings.show_top_border_for_utilities_bar -%}
     #shopify-section-{{ section.id }} .collection-facets__inner {

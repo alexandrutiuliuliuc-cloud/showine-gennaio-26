@@ -493,7 +493,7 @@ body.template--product .product__sticky-cart .product__title {
 .template--collection .collection__subcats {
   width: 100%;
   padding-inline: var(--page-gutter);
-  margin-block: 1.2rem 0;
+  margin-block: 0.6rem 0; /* tighter gap before the collection content */
   font-size: 14px;
 }
 
@@ -531,10 +531,11 @@ body.template--product .product__sticky-cart .product__title {
   border-color: rgba(var(--color-border), 0.85);
 }
 
+/* No “active” highlight for subcategory pills (keep all equal). */
 .template--collection .collection__subcats .subcats.list-unstyled > li > a.is-current {
-  background: rgba(var(--showine-bordeaux), 0.08);
-  border-color: rgba(var(--showine-bordeaux), 0.35);
-  color: rgb(var(--showine-bordeaux));
+  background: rgba(var(--color-foreground), 0.03);
+  border-color: rgba(var(--color-border), 0.6);
+  color: rgb(var(--color-foreground));
 }
 
 /* Scroller: always scrollable (hidden native scrollbar) */
@@ -552,7 +553,7 @@ body.template--product .product__sticky-cart .product__title {
 
 /* Custom scroll indicator: track (light) + thumb (dark, draggable) */
 .template--collection .collection__subcats-scrollbar {
-  margin-top: 1rem;
+  margin-top: 1rem; /* restore comfortable spacing between pills and scrollbar */
   height: 4px;
   border-radius: 999px;
   background: rgba(var(--color-foreground), 0.08); /* light track */
