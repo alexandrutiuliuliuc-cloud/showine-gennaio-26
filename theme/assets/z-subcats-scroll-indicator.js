@@ -7,6 +7,7 @@
   const SCROLLER_SELECTOR = '[data-subcats-scroller]';
   const TRACK_SELECTOR = '[data-subcats-scrollbar]';
   const THUMB_SELECTOR = '[data-subcats-thumb]';
+  const WRAP_SELECTOR = '.collection__subcats';
 
   function clamp(min, v, max) {
     return Math.max(min, Math.min(max, v));
@@ -19,14 +20,16 @@
 
   function updateScroller(scroller) {
     const el = getScrollableEl(scroller);
-    const track = scroller.querySelector(TRACK_SELECTOR);
-    const thumb = scroller.querySelector(THUMB_SELECTOR);
+    const wrap = scroller.closest(WRAP_SELECTOR);
+    if (!wrap) return;
+    const track = wrap.querySelector(TRACK_SELECTOR);
+    const thumb = wrap.querySelector(THUMB_SELECTOR);
     if (!track || !thumb) return;
 
     const maxScroll = el.scrollWidth - el.clientWidth;
     const isOverflowing = maxScroll > 2;
 
-    scroller.classList.toggle('is-overflowing', isOverflowing);
+    wrap.classList.toggle('is-overflowing', isOverflowing);
     if (!isOverflowing) {
       thumb.style.width = '';
       thumb.style.transform = '';
@@ -50,8 +53,10 @@
 
     for (const scroller of scrollers) {
       const el = getScrollableEl(scroller);
-      const track = scroller.querySelector(TRACK_SELECTOR);
-      const thumb = scroller.querySelector(THUMB_SELECTOR);
+      const wrap = scroller.closest(WRAP_SELECTOR);
+      if (!wrap) continue;
+      const track = wrap.querySelector(TRACK_SELECTOR);
+      const thumb = wrap.querySelector(THUMB_SELECTOR);
       if (!track || !thumb) continue;
 
       let raf = 0;
@@ -67,7 +72,7 @@
 
       // Click track to jump
       track.addEventListener('pointerdown', (e) => {
-        if (!scroller.classList.contains('is-overflowing')) return;
+        if (!wrap.classList.contains('is-overflowing')) return;
         // If user clicked the thumb itself, let the thumb handler manage it.
         if (e.target && e.target.closest && e.target.closest(THUMB_SELECTOR)) return;
 
@@ -83,7 +88,7 @@
 
       // Drag thumb
       thumb.addEventListener('pointerdown', (e) => {
-        if (!scroller.classList.contains('is-overflowing')) return;
+        if (!wrap.classList.contains('is-overflowing')) return;
         e.preventDefault();
         thumb.setPointerCapture(e.pointerId);
 

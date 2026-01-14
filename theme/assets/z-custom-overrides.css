@@ -545,10 +545,8 @@ body.template--product .product__sticky-cart .product__title {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     cursor: grab;
-    /* give space so the custom indicator sits well below the pills */
-    padding-block: 0.6rem 2.2rem;
     /* make sure pills are not clipped at the right edge (no "cut last pill") */
-    padding-inline-end: 2.6rem;
+    padding-inline-end: 2.4rem;
     scrollbar-width: none; /* rely on custom indicator */
   }
 
@@ -597,7 +595,6 @@ body.template--product .product__sticky-cart .product__title {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     cursor: grab;
-    padding-block: 0.6rem 2.2rem; /* push indicator down */
     padding-inline-end: 2.2rem; /* avoid clipped last pill */
     scrollbar-width: none; /* rely on custom indicator */
   }
@@ -644,13 +641,8 @@ body.template--product .product__sticky-cart .product__title {
 /* Custom always-visible scroll indicator (track + thumb).
    This avoids relying on OS scrollbars (macOS can hide them). */
 /* Real draggable scroll indicator (track + thumb). */
-.template--collection .collection__subcats-scroller {
-  position: relative;
-}
-
 .template--collection .collection__subcats-scrollbar {
-  position: sticky;
-  inset-block-end: 0.6rem; /* distance from pills */
+  margin-top: 0.8rem; /* keep it clearly below the pills */
   height: 3px; /* thin */
   border-radius: 999px;
   background: rgba(var(--color-foreground), 0.10);
@@ -659,7 +651,7 @@ body.template--product .product__sticky-cart .product__title {
   transition: opacity 160ms ease;
 }
 
-.template--collection .collection__subcats-scroller.is-overflowing .collection__subcats-scrollbar {
+.template--collection .collection__subcats.is-overflowing .collection__subcats-scrollbar {
   opacity: 1;          /* always visible when overflowing */
   pointer-events: auto; /* enable drag/click */
 }
