@@ -55,7 +55,11 @@ if [[ -z "${repo_root}" ]]; then
   exit 1
 fi
 
-mapfile -t changed_files < <(
+changed_files=()
+while IFS= read -r f; do
+  [[ -n "${f}" ]] || continue
+  changed_files+=("${f}")
+done < <(
   {
     git diff --name-only --relative -- "${THEME_PATH}/" || true
     git diff --name-only --relative --cached -- "${THEME_PATH}/" || true
