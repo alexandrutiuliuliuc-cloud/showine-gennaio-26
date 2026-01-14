@@ -1,0 +1,4 @@
+# Shopify Theme Editor changes live in settings_data.json.
+# To avoid losing manual edits when pushing from local, do NOT push it by default.
+config/settings_data.json
+
