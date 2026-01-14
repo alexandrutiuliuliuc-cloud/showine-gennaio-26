@@ -497,22 +497,21 @@ body.template--product .product__sticky-cart .product__title {
   font-size: 14px;
 }
 
-.template--collection .collection__subcats-scroller {
-  /* Default: no scroll, just a normal container */
-  overflow: visible;
-}
-
+/* Subcategory pills: always single-row, scrollable when overflow */
 .template--collection .collection__subcats .subcats.list-unstyled {
   margin: 0 !important;
   padding: 0 !important;
   display: flex !important;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.6rem !important;
-  row-gap: 1.2rem;
+  flex-wrap: nowrap;
+  gap: 1.2rem !important;
+  white-space: nowrap;
 }
 
-/* Make each subcategory look like a pill (search-style) */
+.template--collection .collection__subcats .subcats.list-unstyled > li {
+  flex: 0 0 auto;
+}
+
+/* Pill styling */
 .template--collection .collection__subcats .subcats.list-unstyled > li > a {
   display: inline-flex;
   align-items: center;
@@ -538,136 +537,58 @@ body.template--product .product__sticky-cart .product__title {
   color: rgb(var(--showine-bordeaux));
 }
 
-@media screen and (min-width: 750px) {
-  /* Heuristic: 10+ items => likely overflow on one line, use slider */
-  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10)) .collection__subcats-scroller {
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    cursor: grab;
-    /* make sure pills are not clipped at the right edge (no "cut last pill") */
-    padding-inline-end: 2.4rem;
-    scrollbar-width: none; /* rely on custom indicator */
-  }
-
-  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10)) .collection__subcats-scroller::-webkit-scrollbar {
-    display: none;
-  }
-
-  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10)) .subcats.list-unstyled {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    white-space: nowrap;
-    scroll-snap-type: x mandatory;
-  }
-
-  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10)) .subcats.list-unstyled > li {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-  }
-
-  /* Scroll hint: subtle fades at the edges when in slider mode */
-  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10)) {
-    position: relative;
-  }
-  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10))::before,
-  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10))::after {
-    content: "";
-    position: absolute;
-    inset-block: 0;
-    width: 2.6rem;
-    pointer-events: none;
-    z-index: 1;
-  }
-  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10))::before {
-    inset-inline-start: 0;
-    background: linear-gradient(to right, rgb(var(--color-background)) 0%, rgba(var(--color-background), 0) 100%);
-  }
-  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10))::after {
-    inset-inline-end: 0;
-    background: linear-gradient(to left, rgb(var(--color-background)) 0%, rgba(var(--color-background), 0) 100%);
-  }
+/* Scroller: always scrollable (hidden native scrollbar) */
+.template--collection .collection__subcats-scroller {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-inline-end: 2rem; /* so last pill isn't cut */
 }
 
-@media screen and (max-width: 749px) {
-  .template--collection .collection__subcats-scroller {
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    cursor: grab;
-    padding-inline-end: 2.2rem; /* avoid clipped last pill */
-    scrollbar-width: none; /* rely on custom indicator */
-  }
-
-  .template--collection .collection__subcats-scroller::-webkit-scrollbar {
-    display: none;
-  }
-
-  .template--collection .collection__subcats .subcats.list-unstyled {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    white-space: nowrap;
-    scroll-snap-type: x mandatory;
-  }
-
-  .template--collection .collection__subcats .subcats.list-unstyled > li {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-  }
-
-  /* Mobile scroll hint: subtle fades at the edges */
-  .template--collection .collection__subcats {
-    position: relative;
-  }
-  .template--collection .collection__subcats::before,
-  .template--collection .collection__subcats::after {
-    content: "";
-    position: absolute;
-    inset-block: 0;
-    width: 2.2rem;
-    pointer-events: none;
-    z-index: 1;
-  }
-  .template--collection .collection__subcats::before {
-    inset-inline-start: 0;
-    background: linear-gradient(to right, rgb(var(--color-background)) 0%, rgba(var(--color-background), 0) 100%);
-  }
-  .template--collection .collection__subcats::after {
-    inset-inline-end: 0;
-    background: linear-gradient(to left, rgb(var(--color-background)) 0%, rgba(var(--color-background), 0) 100%);
-  }
+.template--collection .collection__subcats-scroller::-webkit-scrollbar {
+  display: none;
 }
 
-/* Custom always-visible scroll indicator (track + thumb).
-   This avoids relying on OS scrollbars (macOS can hide them). */
-/* Real draggable scroll indicator (track + thumb). */
+/* Custom scroll indicator: track (light) + thumb (dark, draggable) */
 .template--collection .collection__subcats-scrollbar {
-  margin-top: 0.8rem; /* keep it clearly below the pills */
-  height: 3px; /* thin */
+  margin-top: 1rem;
+  height: 4px;
   border-radius: 999px;
-  background: rgba(var(--color-foreground), 0.10);
+  background: rgba(var(--color-foreground), 0.08); /* light track */
   opacity: 0;
   pointer-events: none;
   transition: opacity 160ms ease;
+  position: relative;
 }
 
 .template--collection .collection__subcats.is-overflowing .collection__subcats-scrollbar {
-  opacity: 1;          /* always visible when overflowing */
-  pointer-events: auto; /* enable drag/click */
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .template--collection .collection__subcats-scrollbar-thumb {
+  display: block !important; /* override theme's div:empty { display: none } */
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
-  width: 48px;
+  min-width: 40px;
   border-radius: 999px;
-  background: rgba(var(--color-foreground), 0.28);
+  background: rgba(var(--color-foreground), 0.5); /* DARK thumb - clearly visible */
   transform: translateX(0);
   will-change: transform, width;
   cursor: grab;
+  touch-action: none;
+}
+
+.template--collection .collection__subcats-scrollbar-thumb:hover {
+  background: rgba(var(--color-foreground), 0.65);
 }
 
 .template--collection .collection__subcats-scrollbar-thumb:active {
   cursor: grabbing;
+  background: rgba(var(--color-foreground), 0.7);
 }
 
 /* (Reverted) Collection page banner spacing: keep the page banner padding intact. */
