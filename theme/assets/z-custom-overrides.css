@@ -598,6 +598,12 @@ body.template--collection:has(main#MainContent > .shopify-section.section-page-b
   margin-block-start: calc(-1 * var(--header-height, 0px));
 }
 
+/* Remove the extra gap between header and the first page banner (mobile + desktop).
+   The theme sets a margin-top (~44px) on the banner section which creates a visible white strip. */
+main#MainContent > .shopify-section.section-page-banner:first-of-type {
+  margin-block-start: 0 !important;
+}
+
 /* Fix: on mobile this rule can clip the page banner/breadcrumb under the header.
    Keep the banner intact on mobile. */
 @media screen and (max-width: 749px) {
