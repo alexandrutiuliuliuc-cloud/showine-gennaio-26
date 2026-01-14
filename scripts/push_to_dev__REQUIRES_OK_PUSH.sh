@@ -39,6 +39,57 @@ echo "Store: ${SHOPIFY_STORE}"
 echo "Local theme path: ./${THEME_PATH}"
 echo
 
-shopify theme push --store "${SHOPIFY_STORE}" --theme "${THEME_DEV_ID}" --path "${THEME_PATH}"
+if [[ "${FULL_PUSH:-}" == "YES" ]]; then
+  echo "FULL_PUSH=YES: pushing the full theme (may overwrite manual Theme Editor changes)."
+  shopify theme push --store "${SHOPIFY_STORE}" --theme "${THEME_DEV_ID}" --path "${THEME_PATH}"
+  exit 0
+fi
+
+# Default: push only changed files under theme/ (safer, avoids overwriting Theme Editor edits).
+# - Includes staged + unstaged + untracked files
+# - Excludes editor-managed settings_data.json
+repo_root="$(git rev-parse --show-toplevel 2>/dev/null || true)"
+if [[ -z "${repo_root}" ]]; then
+  echo "ERROR: Not a git repo; refusing to push the full theme by default." >&2
+  echo "Run with FULL_PUSH=YES to override, or run Shopify CLI with --only for specific files." >&2
+  exit 1
+fi
+
+mapfile -t changed_files < <(
+  {
+    git diff --name-only --relative -- "${THEME_PATH}/" || true
+    git diff --name-only --relative --cached -- "${THEME_PATH}/" || true
+    git ls-files --others --exclude-standard -- "${THEME_PATH}/" || true
+  } | sort -u
+)
+
+only_args=()
+for f in "${changed_files[@]}"; do
+  # Exclude Theme Editor managed file to avoid overwriting manual edits.
+  if [[ "${f}" == "${THEME_PATH}/config/settings_data.json" ]]; then
+    continue
+  fi
+  # Convert repo-relative (theme/...) to theme-root relative (config/..., sections/...)
+  rel="${f#${THEME_PATH}/}"
+  [[ -n "${rel}" ]] || continue
+  only_args+=(--only "${rel}")
+done
+
+if [[ ${#only_args[@]} -eq 0 ]]; then
+  echo "No changed files under ${THEME_PATH}/ to push. Skipping."
+  exit 0
+fi
+
+echo "Pushing only changed theme files:"
+for ((i=0; i<${#only_args[@]}; i+=2)); do
+  echo "  - ${only_args[i+1]}"
+done
+echo
+
+shopify theme push \
+  --store "${SHOPIFY_STORE}" \
+  --theme "${THEME_DEV_ID}" \
+  --path "${THEME_PATH}" \
+  "${only_args[@]}"
 
 
