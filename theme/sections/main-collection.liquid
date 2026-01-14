@@ -83,38 +83,23 @@
 
 {%- if child_links and child_links.size > 0 -%}
   <div class="collection__subcats">
-    <ul class="subcats list-unstyled" style="display:flex;gap:4rem;margin-top:4rem;">
-      {%- for l in child_links -%}
-        <li>
-          <a href="{{ l.url }}"
-             class="{% if l.url == collection.url %}is-current{% endif %}">
-            {{ l.title }}
-          </a>
-        </li>
-      {%- endfor -%}
-    </ul>
+    <div class="collection__subcats-scroller" data-subcats-scroller>
+      <ul class="subcats list-unstyled">
+        {%- for l in child_links -%}
+          <li>
+            <a href="{{ l.url }}"
+               class="{% if l.url == collection.url %}is-current{% endif %}">
+              {{ l.title }}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    <div class="collection__subcats-scrollbar" data-subcats-scrollbar aria-hidden="true">
+      <div class="collection__subcats-scrollbar-thumb" data-subcats-thumb></div>
+    </div>
   </div>
 {%- endif -%}
-<style>
-  .collection__subcats{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-  }
-  @media screen and (max-width: 767px) {
-    .list-unstyled{
-      display: flex !important;
-      flex-wrap: wrap !important;
-      gap: 2rem !important;
-      margin-top: 0rem !important;
-    }
-    .collection__subcats li {
-      flex: 1 1 45%;
-      text-align: center;
-    }
-  }
-</style>
 
 <div class="collection js-animation-fade-in color-{{ section.settings.color_scheme }} filters--{{ section.settings.filters }} {{ settings.card_product_layout }}">
   {{ facets_html }}

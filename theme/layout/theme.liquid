@@ -79,6 +79,8 @@
     <script src="{{ 'z-lavori-eseguiti-contact-form.js' | asset_url }}" defer="defer"></script>
     {%- comment -%} Mobile: keep header height variable correct when the menu opens (search row hidden) {%- endcomment -%}
     <script src="{{ 'z-mobile-menu-header-sync.js' | asset_url }}" defer="defer"></script>
+    {%- comment -%} Collection subcategories: always-visible scroll indicator when the row overflows {%- endcomment -%}
+    <script src="{{ 'z-subcats-scroll-indicator.js' | asset_url }}" defer="defer"></script>
 
     {{ content_for_header }}
 

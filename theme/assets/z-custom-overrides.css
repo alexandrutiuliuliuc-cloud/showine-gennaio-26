@@ -486,6 +486,198 @@ body.template--product .product__sticky-cart .product__title {
   }
 }
 
+/* Collection subcategories (under page banner): intelligent layout
+   - Default: wrap + centered when few items
+   - Desktop: switch to horizontal slider when many items (heuristic)
+   - Mobile: always horizontal slider (prevents cut-off) */
+.template--collection .collection__subcats {
+  width: 100%;
+  padding-inline: var(--page-gutter);
+  margin-block: 1.2rem 0;
+  font-size: 14px;
+}
+
+.template--collection .collection__subcats-scroller {
+  /* Default: no scroll, just a normal container */
+  overflow: visible;
+}
+
+.template--collection .collection__subcats .subcats.list-unstyled {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.6rem !important;
+  row-gap: 1.2rem;
+}
+
+/* Make each subcategory look like a pill (search-style) */
+.template--collection .collection__subcats .subcats.list-unstyled > li > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--color-border), 0.6);
+  background: rgba(var(--color-foreground), 0.03);
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+  line-height: 1.1;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.template--collection .collection__subcats .subcats.list-unstyled > li > a:hover {
+  background: rgba(var(--color-foreground), 0.06);
+  border-color: rgba(var(--color-border), 0.85);
+}
+
+.template--collection .collection__subcats .subcats.list-unstyled > li > a.is-current {
+  background: rgba(var(--showine-bordeaux), 0.08);
+  border-color: rgba(var(--showine-bordeaux), 0.35);
+  color: rgb(var(--showine-bordeaux));
+}
+
+@media screen and (min-width: 750px) {
+  /* Heuristic: 10+ items => likely overflow on one line, use slider */
+  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10)) .collection__subcats-scroller {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    /* give space so the custom indicator sits well below the pills */
+    padding-block: 0.6rem 2.2rem;
+    /* make sure pills are not clipped at the right edge (no "cut last pill") */
+    padding-inline-end: 2.6rem;
+    scrollbar-width: none; /* rely on custom indicator */
+  }
+
+  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10)) .collection__subcats-scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10)) .subcats.list-unstyled {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+  }
+
+  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10)) .subcats.list-unstyled > li {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  /* Scroll hint: subtle fades at the edges when in slider mode */
+  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10)) {
+    position: relative;
+  }
+  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10))::before,
+  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10))::after {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    width: 2.6rem;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10))::before {
+    inset-inline-start: 0;
+    background: linear-gradient(to right, rgb(var(--color-background)) 0%, rgba(var(--color-background), 0) 100%);
+  }
+  .template--collection .collection__subcats:has(.subcats.list-unstyled > li:nth-child(10))::after {
+    inset-inline-end: 0;
+    background: linear-gradient(to left, rgb(var(--color-background)) 0%, rgba(var(--color-background), 0) 100%);
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .template--collection .collection__subcats-scroller {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    padding-block: 0.6rem 2.2rem; /* push indicator down */
+    padding-inline-end: 2.2rem; /* avoid clipped last pill */
+    scrollbar-width: none; /* rely on custom indicator */
+  }
+
+  .template--collection .collection__subcats-scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  .template--collection .collection__subcats .subcats.list-unstyled {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+  }
+
+  .template--collection .collection__subcats .subcats.list-unstyled > li {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  /* Mobile scroll hint: subtle fades at the edges */
+  .template--collection .collection__subcats {
+    position: relative;
+  }
+  .template--collection .collection__subcats::before,
+  .template--collection .collection__subcats::after {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    width: 2.2rem;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .template--collection .collection__subcats::before {
+    inset-inline-start: 0;
+    background: linear-gradient(to right, rgb(var(--color-background)) 0%, rgba(var(--color-background), 0) 100%);
+  }
+  .template--collection .collection__subcats::after {
+    inset-inline-end: 0;
+    background: linear-gradient(to left, rgb(var(--color-background)) 0%, rgba(var(--color-background), 0) 100%);
+  }
+}
+
+/* Custom always-visible scroll indicator (track + thumb).
+   This avoids relying on OS scrollbars (macOS can hide them). */
+/* Real draggable scroll indicator (track + thumb). */
+.template--collection .collection__subcats-scroller {
+  position: relative;
+}
+
+.template--collection .collection__subcats-scrollbar {
+  position: sticky;
+  inset-block-end: 0.6rem; /* distance from pills */
+  height: 3px; /* thin */
+  border-radius: 999px;
+  background: rgba(var(--color-foreground), 0.10);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease;
+}
+
+.template--collection .collection__subcats-scroller.is-overflowing .collection__subcats-scrollbar {
+  opacity: 1;          /* always visible when overflowing */
+  pointer-events: auto; /* enable drag/click */
+}
+
+.template--collection .collection__subcats-scrollbar-thumb {
+  height: 100%;
+  width: 48px;
+  border-radius: 999px;
+  background: rgba(var(--color-foreground), 0.28);
+  transform: translateX(0);
+  will-change: transform, width;
+  cursor: grab;
+}
+
+.template--collection .collection__subcats-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
 /* (Reverted) Collection page banner spacing: keep the page banner padding intact. */
 
 /* Collection: remove the "blank strip" between header and the first page banner WITHOUT moving banner content.
