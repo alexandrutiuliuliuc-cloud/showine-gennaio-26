@@ -219,6 +219,13 @@ main .color-scheme-5:not(.header-is-transparent) {
   --color-heading-text: var(--showine-bordeaux);
 }
 
+/* Product page: product title uses `--color-primary-text` in section-product.css, not `--color-heading-text`.
+   Force product H1 (and sticky title) to bordeaux on the product template. */
+body.template--product .product__content .product__title,
+body.template--product .product__sticky-cart .product__title {
+  color: #631F22 !important;
+}
+
 /* Homepage: "Categorie in Evidenza" (Mega links section) title in Bordeaux */
 .template--index .mega-links__section-title {
   color: #631F22 !important;
@@ -352,8 +359,8 @@ main .color-scheme-5:not(.header-is-transparent) {
   height: 5.2rem;
   border-radius: 999px;
   background: #25D366; /* WhatsApp green */
-  /* Softer than pure white */
-  color: rgba(255, 255, 255, 0.78);
+  /* Keep icon white; "less bold" is achieved by sizing, not opacity */
+  color: #fff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -368,8 +375,9 @@ main .color-scheme-5:not(.header-is-transparent) {
 }
 
 .z-whatsapp-float__icon {
-  width: 2.6rem;
-  height: 2.6rem;
+  /* Slightly smaller icon so the white details look thinner */
+  width: 2.2rem;
+  height: 2.2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -379,6 +387,8 @@ main .color-scheme-5:not(.header-is-transparent) {
   width: 100%;
   height: 100%;
   display: block;
+  transform: scale(0.92);
+  transform-origin: center;
 }
 
 /* Force icon to white if SVG uses strokes/fills */
