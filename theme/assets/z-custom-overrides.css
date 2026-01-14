@@ -412,6 +412,13 @@ body.template--product .product__sticky-cart .product__title {
   }
 }
 
+/* Mobile burger menu: keep header opaque while a drawer is open (prevents seeing hero/slideshow behind header inconsistently). */
+@media screen and (max-width: 989px) {
+  body.drawer--is-open .header {
+    --header-background-alpha: 1 !important;
+  }
+}
+
 /* Collection (mobile): move Filters button to bottom-center and hide product count text */
 @media screen and (max-width: 749px) {
   /* Hide only the "Visualizzazione" label, keep the actual count text visible */
@@ -500,8 +507,13 @@ body.template--product .product__sticky-cart .product__title {
   padding: 0 !important;
   display: flex !important;
   flex-wrap: nowrap;
+  justify-content: center; /* default: centered when it fits */
   gap: 1.2rem !important;
   white-space: nowrap;
+}
+
+.template--collection .collection__subcats.is-overflowing .subcats.list-unstyled {
+  justify-content: flex-start; /* overflow/scroll mode: align left */
 }
 
 .template--collection .collection__subcats .subcats.list-unstyled > li {
