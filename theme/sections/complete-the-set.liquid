@@ -4,6 +4,27 @@
   if section.settings.content_type != 'products'
     assign show_products = false
   endif
+
+  comment
+    Showine: "Caratteristiche tecniche" block is valid only for products in the
+    "Cantine Frigo Vino" collection. For other products, hide the whole block
+    (title + content) so empty metafields don't show.
+  endcomment
+  assign showine_is_cantine_frigo_vino = false
+  assign showine_target_collection_title = 'Cantine Frigo Vino'
+  assign showine_target_collection_handle = 'cantine-frigo-vino'
+  for c in product.collections
+    if c.handle == showine_target_collection_handle or c.title == showine_target_collection_title
+      assign showine_is_cantine_frigo_vino = true
+      break
+    endif
+  endfor
+
+  comment
+    Showine: open the first *rendered* collapsible (not necessarily the first block in JSON),
+    so skipping a collapsible doesn't break the "open first" UX.
+  endcomment
+  assign showine_first_collapsible_opened = false
   capture section_style_classes
     if section.settings.flip_desktop
       echo 'section-complete-the-set--flipped-desktop '
@@ -193,19 +214,33 @@
                   </details>
                 </menu-drawer>
               {%- elsif block.settings.block_type == 'collapsible' -%}
-                {% assign is_open = section.settings.open_first_collapsible %}
-                {% unless is_open and forloop.first %}
-                  {% assign is_open = false %}
-                {% endunless %}
-                <accordion-default class="drawer__container accordion product__accordion" data-hide-multiple>
-                  <details class="accordion__section{% if is_open %} is-active{% endif %}" id="Details-{{- block.id -}}" {{- block.shopify_attributes -}}{% if is_open %} open{% endif %}>
-                    <summary class="accordion__button h5 js-btn" id="Details-Summary-{{- block.id -}}"{% if is_open %} aria-expanded="true"{% endif %}>
-                      <span>{{ block.settings.heading }}</span>
-                      <div class="accordion__icon">
-                        {%- render 'icon', icon_name: 'theme-minus' -%}
-                        {%- render 'icon', icon_name: 'theme-minus' -%}
-                      </div>
-                    </summary>
+                {%- liquid
+                  assign heading_plain = block.settings.heading | strip_html | strip
+                  assign show_block = true
+
+                  if heading_plain == 'Caratteristiche tecniche' or heading_plain contains 'Caratteristiche tecniche'
+                    if showine_is_cantine_frigo_vino == false
+                      assign show_block = false
+                    endif
+                  endif
+
+                  assign is_open = false
+                  if show_block and section.settings.open_first_collapsible and showine_first_collapsible_opened == false
+                    assign is_open = true
+                    assign showine_first_collapsible_opened = true
+                  endif
+                -%}
+
+                {%- if show_block -%}
+                  <accordion-default class="drawer__container accordion product__accordion" data-hide-multiple>
+                    <details class="accordion__section{% if is_open %} is-active{% endif %}" id="Details-{{- block.id -}}" {{- block.shopify_attributes -}}{% if is_open %} open{% endif %}>
+                      <summary class="accordion__button h5 js-btn" id="Details-Summary-{{- block.id -}}"{% if is_open %} aria-expanded="true"{% endif %}>
+                        <span>{{ block.settings.heading }}</span>
+                        <div class="accordion__icon">
+                          {%- render 'icon', icon_name: 'theme-minus' -%}
+                          {%- render 'icon', icon_name: 'theme-minus' -%}
+                        </div>
+                      </summary>
 
                     <div class="accordion__body" id="Details-Content-{{- block.id -}}"{% if is_open %} style="height: auto;"{% endif %}>
                       <div class="accordion__body-inner">
@@ -250,8 +285,9 @@
                         </div>
                       </div>
                     </div>
-                  </details>
-                </accordion-default>
+                    </details>
+                  </accordion-default>
+                {%- endif -%}
               {%- endif -%}
             {%- endfor -%}
           </div>
