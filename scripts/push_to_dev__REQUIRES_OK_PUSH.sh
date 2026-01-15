@@ -17,6 +17,21 @@ EOF
   exit 1
 fi
 
+# Hard guard: prevent accidental full theme pushes.
+# A FULL push overwrites remote files and can wipe Theme Editor changes.
+if [[ "${FULL_PUSH:-}" == "YES" && "${OK_FULL_PUSH:-}" != "YES" ]]; then
+  cat >&2 <<'EOF'
+BLOCKED: FULL_PUSH=YES is dangerous and is disabled by default.
+
+If you really intend to do a FULL theme push (overwrites remote files),
+you MUST set BOTH:
+  FULL_PUSH=YES OK_FULL_PUSH=YES
+
+Otherwise, use the default safe mode (push only changed files).
+EOF
+  exit 1
+fi
+
 if [[ ! -d "${THEME_PATH}" ]]; then
   echo "ERROR: ./${THEME_PATH} not found. Nothing to push." >&2
   exit 1
