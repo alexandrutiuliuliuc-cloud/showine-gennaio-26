@@ -236,6 +236,14 @@ body.template--product .product__sticky-cart .product__title {
   color: #631F22 !important;
 }
 
+/* Homepage (mobile): reduce huge bottom whitespace before footer/Trustpilot.
+   Note: Theme Editor injects extra CSS for `.mega-links-section` via settings_data.json. Override it here. */
+@media screen and (max-width: 749px) {
+  .template--index .mega-links-section {
+    padding: 16px 16px 8px !important;
+  }
+}
+
 /* Lavori eseguiti: force all project tiles to be left-aligned (both columns) */
 .template--lavori-eseguiti .section-multitile__content.align-center {
   align-items: flex-start !important;
