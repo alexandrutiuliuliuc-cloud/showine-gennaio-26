@@ -1565,6 +1565,15 @@ nav.slide-out-menu:has(.menu-panel.was-active) {
   background-color: rgb(var(--color-background));
 }
 
+/* Showine: when navigating into a submenu, the primary menu must not remain visible underneath.
+   This prevents any overlap/ghosting on mobile (especially when a submenu is short). */
+nav.slide-out-menu:has(.menu-panel.is-active) .primary-menu-panel,
+nav.slide-out-menu:has(.menu-panel.was-active) .primary-menu-panel {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 nav.slide-out-menu {
   transform: translateZ(0);
   opacity: 1;
