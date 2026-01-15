@@ -1,5 +1,13 @@
 {%- liquid
   assign sort_by = results.sort_by | default: results.default_sort_by
+  # Showine: remove "Best seller" sorting on collection pages.
+  # If the URL explicitly requests sort_by=best-selling, fall back to the default (or manual).
+  if request.page_type == 'collection' and sort_by == 'best-selling'
+    assign sort_by = results.default_sort_by
+    if sort_by == blank or sort_by == 'best-selling'
+      assign sort_by = 'manual'
+    endif
+  endif
   # assign total_active_values = 0
   if results.url
     assign results_url = results.url
@@ -138,11 +146,13 @@
                               aria-describedby="a11y-refresh-page-message"
                             >
                               {%- for option in results.sort_options -%}
-                                <option value="{{- option.value | escape -}}"
-                                  {% if option.value == sort_by %}selected="selected"{% endif %}
-                                >
-                                  {{- option.name | escape -}}
-                                </option>
+                                {%- unless request.page_type == 'collection' and option.value == 'best-selling' -%}
+                                  <option value="{{- option.value | escape -}}"
+                                    {% if option.value == sort_by %}selected="selected"{% endif %}
+                                  >
+                                    {{- option.name | escape -}}
+                                  </option>
+                                {%- endunless -%}
                               {%- endfor -%}
                             </select>
                           </div>
