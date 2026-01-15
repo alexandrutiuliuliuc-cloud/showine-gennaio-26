@@ -5,6 +5,17 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck source=shopify_env.sh
 source "${SCRIPT_DIR}/shopify_env.sh"
 
+if [[ -z "${THEME_DEV_ID:-}" ]]; then
+  cat >&2 <<'EOF'
+ERROR: THEME_DEV_ID is not set.
+
+Set THEME_DEV_ID to the ID of the *draft* theme "Release [MASSIMO EDIT - DEV]" and retry.
+
+Tip: run `shopify theme list --store <store> --json` to find the correct ID.
+EOF
+  exit 1
+fi
+
 if [[ "${OK_PUSH:-}" != "YES" ]]; then
   cat >&2 <<'EOF'
 BLOCKED: push is disabled by default.
