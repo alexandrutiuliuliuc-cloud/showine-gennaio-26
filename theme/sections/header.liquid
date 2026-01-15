@@ -66,15 +66,35 @@
     }
   {%- endif -%}
   {%- if section.settings.utils_link_display == 'icon' -%}
-    .cart-count-badge,
-    .header__utils-link span.cart-count-badge {
-      width: 1.5rem; height: 1.5rem;
-      border-radius: 100%;
+    /* Showine: cart counter badge should sit outside the cart icon (top-right) without overlapping the SVG */
+    .header__utils-link--cart {
+      position: relative;
+    }
+    .header__utils-link--cart .cart-count-badge {
+      position: absolute;
+      inset-block-start: -0.6rem;
+      inset-inline-end: -0.6rem;
+      inset-block-end: auto;
+      inset-inline-start: auto;
+
+      min-width: 1.6rem;
+      height: 1.6rem;
+      padding: 0 0.35rem;
+      border-radius: 999px;
+
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 1.1rem;
+      line-height: 1;
+      letter-spacing: 0;
+
       color: rgb(var(--color-filled-button-text));
       background: rgb(var(--color-filled-button));
-      position: absolute;
-      inset-block-end: 1.5rem;
-      inset-inline-start: 0.2rem;
+      box-shadow: 0 0 0 2px rgb(var(--color-background));
+      pointer-events: none;
+      z-index: 2;
     }
     @media screen and (min-width: 990px) {
       .header__utils-item .icon-with-text .icon {
