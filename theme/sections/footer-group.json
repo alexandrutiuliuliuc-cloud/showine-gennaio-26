@@ -76,6 +76,15 @@
         "spacing_bottom": "2"
       }
     },
+    "trustpilot_carousel_Dnu8pE": {
+      "type": "trustpilot-carousel",
+      "settings": {
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
     "footer_XJF67G": {
       "type": "footer",
       "blocks": {
@@ -221,6 +230,7 @@
   },
   "order": [
     "trust_indicators_DXmKCE",
+    "trustpilot_carousel_Dnu8pE",
     "footer_XJF67G",
     "footer_JadcgE"
   ]

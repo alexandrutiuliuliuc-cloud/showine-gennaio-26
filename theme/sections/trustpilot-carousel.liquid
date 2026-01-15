@@ -1,0 +1,92 @@
+{{- 'section-trustpilot-carousel.css' | asset_url | stylesheet_tag -}}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} > div {
+    padding-block-start: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_top }});
+    padding-block-end: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_bottom }});
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="section-trustpilot-carousel container {{ section.settings.section_width }}">
+    <!-- TrustBox widget - Carousel -->
+    <div
+      class="trustpilot-widget"
+      data-locale="it-IT"
+      data-template-id="53aa8912dec7e10d38f59f36"
+      data-businessunit-id="4e394c39000064000510a72d"
+      data-style-height="140px"
+      data-style-width="100%"
+      data-token="b7967487-623c-4249-9790-c6e21e8fb12a"
+      data-stars="5"
+      data-review-languages="it"
+    >
+      <a
+        href="https://it.trustpilot.com/review/showine.it"
+        target="_blank"
+        rel="noopener"
+      >
+        Trustpilot
+      </a>
+    </div>
+    <!-- End TrustBox widget -->
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Trustpilot Carousel",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "options": [
+        { "value": "max-w-page", "label": "Pagina" },
+        { "value": "max-w-fluid", "label": "Fluid" },
+        { "value": "max-w-full", "label": "Full" }
+      ],
+      "default": "max-w-fluid",
+      "label": "Larghezza sezione"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-1",
+      "label": "Schema colori"
+    },
+    {
+      "type": "select",
+      "id": "spacing_top",
+      "label": "Spazio sopra",
+      "options": [
+        { "value": "0", "label": "No" },
+        { "value": "1", "label": "S" },
+        { "value": "2", "label": "M" },
+        { "value": "4", "label": "L" },
+        { "value": "6", "label": "XL" }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "spacing_bottom",
+      "label": "Spazio sotto",
+      "options": [
+        { "value": "0", "label": "No" },
+        { "value": "1", "label": "S" },
+        { "value": "2", "label": "M" },
+        { "value": "4", "label": "L" },
+        { "value": "6", "label": "XL" }
+      ],
+      "default": "2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trustpilot Carousel"
+    }
+  ]
+}
+{% endschema %}
+

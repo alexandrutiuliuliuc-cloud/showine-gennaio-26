@@ -1,0 +1,13 @@
+.section-trustpilot-carousel {
+  display: block;
+}
+
+.section-trustpilot-carousel .trustpilot-widget {
+  margin: 0 auto;
+}
+
+/* Hide fallback link text inside the TrustBox container (JS will render the real widget). */
+.section-trustpilot-carousel .trustpilot-widget > a {
+  display: none !important;
+}
+
