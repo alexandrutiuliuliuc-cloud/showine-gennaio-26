@@ -135,6 +135,14 @@
   }
 }
 
+/* ============================
+   Showine: "Richiedi la fattura" button (app injected)
+   Make corners consistent with theme buttons.
+   ============================ */
+button.fi-trigger-button[data-trigger="invoice-data"] {
+  border-radius: var(--button-border-radius, 999px) !important;
+}
+
 /* Desktop header dropdown: prevent submenu flicker when moving cursor from top link to dropdown.
    This creates a small "hover bridge" without affecting layout. */
 @media screen and (min-width: 990px) {
