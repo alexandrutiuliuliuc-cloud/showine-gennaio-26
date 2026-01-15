@@ -143,39 +143,118 @@ button.fi-trigger-button[data-trigger="invoice-data"] {
   border-radius: var(--button-border-radius, 999px) !important;
 }
 
-/* Showine: cart drawer invoice button — reduce vertical gaps + match theme button typography */
-cart-drawer .cart-drawer__summary-actions {
-  gap: var(--spacing-2) !important; /* was var(--spacing-4) */
-}
-cart-drawer .cart-drawer__action-buttons {
-  gap: var(--spacing-2) !important; /* was 1.2rem */
+/* ============================
+   Showine: cart drawer invoice button — AGGRESSIVE FIX
+   The app injects its button somewhere in the cart drawer bottom area.
+   We don't know the exact structure, so we nuke ALL vertical margins
+   in the entire bottom section and control spacing via flex gap only.
+   ============================ */
+
+/* 1. Remove ALL vertical margins from ANY element inside cart drawer bottom/summary */
+cart-drawer .cart-drawer__bottom *,
+cart-drawer .cart-drawer__summary * {
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
 }
 
-/* Some apps wrap the invoice button with extra margins/padding: normalize spacing in the cart drawer */
-cart-drawer [data-trigger="invoice-data"],
-cart-drawer [data-trigger="invoice-data"] * {
-  margin-block-start: 0 !important;
-  margin-block-end: 0 !important;
-}
-cart-drawer [data-trigger="invoice-data"] {
-  padding-block-start: 0 !important;
-  padding-block-end: 0 !important;
-}
-cart-drawer .cart-drawer__summary-actions > * {
-  margin-block-start: 0 !important;
-  margin-block-end: 0 !important;
-}
-/* Wrapper is a <p> (default browser margins). Remove it to avoid huge vertical gaps. */
-cart-drawer .cart-drawer__summary-actions p.fi-block.fi-w-full:has(> button[data-trigger="invoice-data"]) {
+/* 2. Specifically target any app wrapper (fi-* classes are from the invoice app) */
+cart-drawer [class*="fi-"] {
   margin: 0 !important;
   padding: 0 !important;
 }
+cart-drawer p[class*="fi-"] {
+  display: contents !important; /* Remove the <p> wrapper entirely */
+}
 
+/* 3. Force vertical flex layout with tight gap on all action containers */
+cart-drawer .cart-drawer__summary-actions {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important; /* Full width children */
+  gap: 0.8rem !important;
+  row-gap: 0.8rem !important;
+  width: 100% !important;
+}
+cart-drawer .cart-drawer__summary-actions > * {
+  width: 100% !important; /* All direct children full width */
+}
+cart-drawer .cart-drawer__action-buttons {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 0.8rem !important;
+  row-gap: 0.8rem !important;
+  width: 100% !important;
+}
+cart-drawer .cart-drawer__action-buttons > * {
+  width: 100% !important; /* All buttons full width */
+}
+
+/* 4. Re-add small space between totals and buttons */
+cart-drawer .cart-drawer__summary-total {
+  margin-block-end: 1.6rem !important;
+}
+
+/* 5. Style the invoice button to match theme buttons */
 cart-drawer button.fi-trigger-button[data-trigger="invoice-data"] {
   display: block !important;
   width: 100% !important;
   margin: 0 !important;
   padding: 1.6rem 2.4rem !important;
+  font-family: var(--font-button-family) !important;
+  font-size: calc(var(--font-button-scale) * 1rem) !important;
+  line-height: calc(1 + 0.0 / var(--font-button-scale)) !important;
+  font-weight: var(--font-button-weight) !important;
+  letter-spacing: var(--font-button-letter-spacing) !important;
+  text-transform: var(--button-text-transform) !important;
+}
+
+/* ============================
+   Showine: CART PAGE (/cart) — invoice button spacing + typography
+   - Reduce excessive vertical space introduced by app wrappers
+   - Keep button widths untouched (theme already manages full width)
+   - Match invoice button typography to the theme "Pagamento" button
+   ============================ */
+body.template--cart .cart__summary-actions p.fi-block.fi-w-full,
+body.template--cart .cart__summary-actions p[class*="fi-"] {
+  margin: 0 !important;
+  padding: 0 !important;
+  /* Same approach as cart drawer: remove the <p> wrapper box that can add extra spacing */
+  display: contents !important;
+}
+body.template--cart .cart__summary-actions [data-trigger="invoice-data"] {
+  margin: 0 !important;
+}
+body.template--cart .cart__summary-actions {
+  /* Keep widths as in theme (full width), just remove big gaps */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 0.8rem !important; /* controls spacing between invoice + pagamento + shop pay */
+}
+/* Remove any app-injected spacing inside the actions stack (fi-* is used by the invoice app)
+   IMPORTANT: don't zero padding on the actual button (it would collapse its height). */
+body.template--cart .cart__summary-actions :is(p, div, span)[class*="fi-"] {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* Make all primary action blocks full-width and marginless, without affecting the small "continue shopping" link */
+body.template--cart .cart__summary-actions > :not(a.button.button--text) {
+  width: 100% !important;
+  margin: 0 !important;
+}
+/* Keep theme styling for the small text-link CTA */
+body.template--cart .cart__summary-actions a.button.button--text {
+  width: fit-content;
+  margin: var(--spacing-3) auto 0;
+}
+body.template--cart button.fi-trigger-button[data-trigger="invoice-data"] {
+  display: block !important;
+  width: 100% !important;
+  /* Restore the original button “shape” (padding/height/radius) */
+  padding: 1.6rem 2.4rem !important;
+  min-height: 5rem;
+  border-radius: var(--button-border-radius, 999px) !important;
   font-family: var(--font-button-family) !important;
   font-size: calc(var(--font-button-scale) * 1rem) !important;
   line-height: calc(1 + 0.0 / var(--font-button-scale)) !important;
