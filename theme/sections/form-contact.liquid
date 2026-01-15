@@ -23,6 +23,30 @@
         {% for block in section.blocks %}
           {%- assign field_type_list = field_type_list | append: block.settings.type | append: ',' -%}
 
+          {%- liquid
+            comment
+              Showine: remove the "COME PREFERISCI ESSERE RICONTATTATO?" field from all contact forms.
+              We skip rendering the block even if it's still configured in template JSON, to avoid
+              touching editor-generated files.
+            endcomment
+            assign label_default = 'field-' | append: forloop.index
+            assign label = block.settings.heading | default: label_default
+            assign label_description = block.settings.label_description | default: ''
+            assign heading_plain = label | strip_html | strip
+            assign label_desc_plain = label_description | strip_html | strip
+
+            assign showine_skip_field = false
+            if label_desc_plain != blank and label_desc_plain contains 'PREFERISCI' and label_desc_plain contains 'RICONTATT'
+              assign showine_skip_field = true
+            elsif heading_plain == 'Contact Method'
+              assign showine_skip_field = true
+            endif
+          -%}
+
+          {%- if showine_skip_field -%}
+            {% continue %}
+          {%- endif -%}
+
           <div class="col-span-{{ block.settings.column_factor }}" {{ block.shopify_attributes }}>
 
             {% liquid

@@ -78,25 +78,9 @@
           -%}
         </div>
 
-        <div class="col-span-6">
-          <div class="flex checkbox">
-            <label class="field__label" for="{{ form_dom_id }}-contact_method">COME PREFERISCI ESSERE RICONTATTATO?</label>
-            <div class="field__options" id="{{ form_dom_id }}-contact_method">
-              <div class="field__option">
-                <input type="checkbox" name="contact[contact_method]" value="Email" id="{{ form_dom_id }}-contact_method-email">
-                <label for="{{ form_dom_id }}-contact_method-email">Email</label>
-              </div>
-              <div class="field__option">
-                <input type="checkbox" name="contact[contact_method]" value="CHIAMATA" id="{{ form_dom_id }}-contact_method-call">
-                <label for="{{ form_dom_id }}-contact_method-call">CHIAMATA</label>
-              </div>
-              <div class="field__option">
-                <input type="checkbox" name="contact[contact_method]" value="SMS" id="{{ form_dom_id }}-contact_method-sms">
-                <label for="{{ form_dom_id }}-contact_method-sms">SMS</label>
-              </div>
-            </div>
-          </div>
-        </div>
+        {%- comment -%}
+          Showine: removed "COME PREFERISCI ESSERE RICONTATTATO?" field from all contact forms.
+        {%- endcomment -%}
 
         <div class="col-span-6">
           {%- render 'text-input',
