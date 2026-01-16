@@ -354,6 +354,93 @@ body.template--product .product__sticky-cart .product__title {
   color: #631F22 !important;
 }
 
+/* ============================
+   Showine: Product page main image (desktop) — prevent "zoom to viewport"
+   When the section setting is "fit", markup adds `data-height-limited` and the theme
+   forces the gallery height to the viewport. Combined with object-fit: cover this
+   makes the featured image look zoomed/cropped. Keep the image at its natural size.
+   ============================ */
+@media screen and (min-width: 990px) {
+  body.template--product .main-product__media[data-height-limited],
+  body.template--product .main-product__media[data-height-limited] .main-product__media--slider-wrapper,
+  body.template--product .main-product__media[data-height-limited] .swiper--product-gallery .swiper-slide {
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  body.template--product .main-product__media[data-height-limited] .swiper--product-gallery .swiper-slide {
+    aspect-ratio: initial !important;
+  }
+
+  body.template--product .main-product__media[data-height-limited] .swiper--product-gallery .swiper-slide .media {
+    height: auto !important;
+  }
+
+  body.template--product .main-product__media[data-height-limited] .swiper--product-gallery .swiper-slide .media > img,
+  body.template--product .main-product__media[data-height-limited] .swiper--product-gallery .swiper-slide .media > a > img {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+  }
+}
+
+/* ============================
+   Showine: Product page desktop layout
+   - Right column should NOT be sticky (it was forcing the left media column to "keep scrolling")
+   - Thumbnails should sit UNDER the main image (not on the side)
+   ============================ */
+@media screen and (min-width: 990px) {
+  /* 1) Disable sticky only for the right (content) column */
+  body.template--product .product-grid__item--content .product-grid__sticky {
+    position: static !important;
+    inset-block-start: auto !important;
+    top: auto !important;
+    z-index: auto !important;
+  }
+
+  /* 2) Media column: stack slider + thumbs vertically on desktop too */
+  body.template--product .main-product__media {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  body.template--product .main-product__media--slider-wrapper {
+    width: 100% !important;
+    order: 1 !important;
+  }
+
+  /* 3) Keep the main image height independent from the (usually long) right column.
+        Limit the displayed image height on desktop so it doesn't "grow" to match content length. */
+  body.template--product .main-product__media--slider-wrapper .swiper--product-gallery .swiper-slide .media {
+    /* remove placeholder grey area + keep image centered inside the column */
+    background-color: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  body.template--product .main-product__media--slider-wrapper .swiper--product-gallery .swiper-slide .media > img,
+  body.template--product .main-product__media--slider-wrapper .swiper--product-gallery .swiper-slide .media > a > img {
+    /* keep it compact but not tiny; adapt width from height without distortion */
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: clamp(520px, 65vh, 820px) !important;
+    object-fit: contain !important;
+  }
+
+  body.template--product .main-product__media--thumbs-wrapper {
+    width: 100% !important;
+    order: 2 !important;
+    height: auto !important; /* remove fixed desktop height */
+  }
+
+  body.template--product .main-product__media .main-product__media--thumbs-wrapper swiper-product-thumbs,
+  body.template--product .main-product__media .main-product__media--thumbs-wrapper .swiper--product-thumbs {
+    height: auto !important;
+  }
+}
+
 /* Homepage: "Categorie in Evidenza" (Mega links section) title in Bordeaux */
 .template--index .mega-links__section-title {
   color: #631F22 !important;
